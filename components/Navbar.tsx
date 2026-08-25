@@ -15,6 +15,7 @@ export default function Navbar() {
     { href: '/boat/', label: 'Boat' },
     { href: '/multiplayer/', label: 'Co-op' },
     { href: '/settings/', label: 'Settings' },
+    { href: '/troubleshooting/', label: 'Fixes' },
   ];
 
   return (

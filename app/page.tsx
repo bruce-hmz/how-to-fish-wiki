@@ -223,6 +223,18 @@ export default function HomePage() {
             <h3 className="font-bold text-white text-sm mb-1">Co-op Crew Guide</h3>
             <p className="text-xs text-gray-400">Crew roles, boss HP scaling table, and loot-sharing rules for 4-player crews.</p>
           </Link>
+          <Link href="/bosses/giant-piranha/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-coral/50 transition-all">
+            <h3 className="font-bold text-white text-sm mb-1">Giant Piranha Boss Guide</h3>
+            <p className="text-xs text-gray-400">3-Leech Island 2 quest, escape-bar race, and the skeleton that unlocks Island 3.</p>
+          </Link>
+          <Link href="/troubleshooting/what-to-do-next/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
+            <h3 className="font-bold text-white text-sm mb-1">What to Do Next</h3>
+            <p className="text-xs text-gray-400">Progression troubleshooter for stuck runs — find your state, get the exact next step.</p>
+          </Link>
+          <Link href="/troubleshooting/save-file/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
+            <h3 className="font-bold text-white text-sm mb-1">Save Bug &amp; Lost Items</h3>
+            <p className="text-xs text-gray-400">What Patch 1.0.9 fixed, the autosave rules, and the safe recovery order.</p>
+          </Link>
         </div>
       </section>
 

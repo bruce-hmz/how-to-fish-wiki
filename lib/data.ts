@@ -63,7 +63,7 @@ export const BOSSES_DATABASE: BossInfo[] = [
     ]
   },
   {
-    id: "pufferfish-boss",
+    id: "pufferfish",
     name: "Colossal Spiky Pufferfish",
     location: "Coral Maze Lagoon",
     summonBait: "Hot Dog Feast Lure",
@@ -90,6 +90,36 @@ export const BOSSES_DATABASE: BossInfo[] = [
       "Avoid lava projectiles by constantly moving; do not stay stationary in the boat.",
       "When the Magma Whale breaches, shoot water containers or frost lures to solidify its armor.",
       "For the secret achievement, land the final finishing blow with your bare fists!"
+    ]
+  },
+  {
+    id: "giant-piranha",
+    name: "Giant Piranha (Second Boss)",
+    location: "Island 2 Lake",
+    summonBait: "Modified Leech (Quest Item)",
+    hp: "1,200 HP",
+    weakness: "Open mouth during jump recovery",
+    keyRewards: ["Giant Piranha Skeleton", "Island 3 Coordinates", "1,500 Cash"],
+    strategy: [
+      "Collect three ground-spawned Leeches on Island 2 and hand them to the lady by the lake for the Modified Leech.",
+      "Equip the Modified Leech as bait and cast only when healing items and ammo are ready.",
+      "Sidestep its leap attack instead of backing away, then punish the landing recovery.",
+      "Clear just enough small piranhas to open a firing lane, then focus the boss before its escape bar refills."
+    ]
+  },
+  {
+    id: "albatross",
+    name: "Albatross (Terrorizing Bird)",
+    location: "Island 4 Skies",
+    summonBait: "Fresh Tuna Carcass",
+    hp: "2,200 HP",
+    weakness: "Breast & wing joints after a committed dive pass",
+    keyRewards: ["Albatross Head", "Terrorizing Bird Achievement", "Sky Compass"],
+    strategy: [
+      "Finish the Pufferfish hand-in first, then reach Island 4 and buy the Professional Boss Lure.",
+      "Catch a Tuna with the lure, defeat it, and drop the carcass on open ground as bait.",
+      "Stay in open sightlines and keep strafing sideways — the bird commits to each dive pass.",
+      "Fire during the post-dive recovery window; never stand still under its shadow."
     ]
   }
 ];

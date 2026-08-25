@@ -4,11 +4,11 @@ import { BOSSES_DATABASE } from '@/lib/data';
 
 export const metadata = {
   title: 'All Boss Battles, Summon Baits & Strategies',
-  description: 'Complete boss fight guide for How to Fish. How to summon and defeat the Spider Crab, Colossal Pufferfish, and Volcanic Magma Whale.',
+  description: 'Complete boss fight guide for How to Fish. How to summon and defeat all five bosses: Spider Crab, Giant Piranha, Colossal Pufferfish, Albatross, and Volcanic Magma Whale.',
   alternates: { canonical: 'https://howtofish101.com/bosses/' },
   openGraph: {
     title: 'All Boss Battles, Summon Baits & Strategies',
-    description: 'Complete boss fight guide for How to Fish. How to summon and defeat the Spider Crab, Colossal Pufferfish, and Volcanic Magma Whale.',
+    description: 'Complete boss fight guide for How to Fish. How to summon and defeat all five bosses: Spider Crab, Giant Piranha, Colossal Pufferfish, Albatross, and Volcanic Magma Whale.',
     url: 'https://howtofish101.com/bosses/',
   },
 };
@@ -45,7 +45,7 @@ export default function BossesPage() {
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">How the Boss System Works</h2>
         <p>
-          How to Fish features three colossal marine bosses that guard the Boat Key Parts you need to unlock the full archipelago. Bosses are not random encounters — you must deliberately summon each one by casting a specific <strong>Rage Bait</strong> into their designated arena. Rage Baits are special items obtained through quests, NPC trades, or crafting. Once the bait hits the water, the boss emerges after a short cinematic, and the arena becomes sealed until the fight ends in victory or defeat.
+          How to Fish features five colossal bosses that guard the Boat Key Parts and island coordinates you need to unlock the full archipelago. Bosses are not random encounters — you must deliberately summon each one through a specific <strong>bait chain</strong>: an NPC trade, a quest item, or a crafted lure tied to their arena. Once the chain completes, the boss emerges after a short cinematic, and the fight ends in victory or defeat.
         </p>
         <p>
           Each boss has multiple combat phases with escalating attack patterns. Depleting a boss HP to certain thresholds triggers phase transitions with new mechanics, faster attacks, and environmental hazards. Understanding these phase breaks is the key to consistent wins.
@@ -66,11 +66,25 @@ export default function BossesPage() {
                 <td className="p-3">Boat Key #1</td>
               </tr>
               <tr>
+                <td className="p-3 font-bold text-white"><Link href="/bosses/giant-piranha/" className="text-aqua hover:underline">Giant Piranha</Link></td>
+                <td className="p-3 text-yellow-400">Medium</td>
+                <td className="p-3">1,200 HP</td>
+                <td className="p-3">Harpoon / Rifle, Healing Items</td>
+                <td className="p-3">Island 3 Coordinates</td>
+              </tr>
+              <tr>
                 <td className="p-3 font-bold text-white"><Link href="/bosses/pufferfish/" className="text-aqua hover:underline">Colossal Pufferfish</Link></td>
                 <td className="p-3 text-yellow-400">Medium</td>
                 <td className="p-3">1,500 HP</td>
                 <td className="p-3">Deep-Sea Rod, Harpoon, Hull Armor Tier 1</td>
                 <td className="p-3">Boat Key #2</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-bold text-white"><Link href="/bosses/albatross/" className="text-aqua hover:underline">Albatross (Terrorizing Bird)</Link></td>
+                <td className="p-3 text-orange-400">Very Hard</td>
+                <td className="p-3">2,200 HP</td>
+                <td className="p-3">Professional Boss Lure, Ranged Weapon</td>
+                <td className="p-3">Albatross Head + Achievement</td>
               </tr>
               <tr>
                 <td className="p-3 font-bold text-white"><Link href="/bosses/magma-whale/" className="text-aqua hover:underline">Volcanic Magma Whale</Link></td>
