@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://how-to-fish.wiki'),
+  metadataBase: new URL('https://howtofish101.com'),
   title: {
     default: 'How to Fish Guide & Complete Wiki | Walkthrough, Bosses & Fish Database',
     template: '%s | How to Fish Wiki'
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'How to Fish Wiki & Complete Player Walkthrough',
     description: 'All 49 fish species, boss battle guides, secret boat keys, and co-op tactics for How to Fish.',
-    url: 'https://how-to-fish.wiki',
+    url: 'https://howtofish101.com',
     siteName: 'How to Fish Wiki',
     locale: 'en_US',
     type: 'website',

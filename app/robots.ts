@@ -5,6 +5,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://how-to-fish.wiki/sitemap.xml',
+    sitemap: 'https://howtofish101.com/sitemap.xml',
   };
 }
