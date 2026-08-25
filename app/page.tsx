@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import FishTable from '@/components/FishTable';
+import { WebSiteJsonLd } from '@/components/JsonLd';
 
 export default function HomePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+      <WebSiteJsonLd />
       <section className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-ocean-800/80 to-ocean-950 border border-ocean-700/60 p-8 sm:p-12 shadow-2xl">
         <div className="max-w-3xl space-y-4">
           <div className="inline-flex items-center space-x-2 bg-aqua/10 border border-aqua/30 rounded-full px-3 py-1 text-xs font-semibold text-aqua">

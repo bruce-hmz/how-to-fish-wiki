@@ -24,20 +24,22 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'How to Fish Community Anglers' }],
   openGraph: {
-    title: 'How to Fish Wiki & Complete Player Walkthrough',
-    description: 'All 49 fish species, boss battle guides, secret boat keys, and co-op tactics for How to Fish.',
-    url: 'https://howtofish101.com',
     siteName: 'How to Fish Wiki',
     locale: 'en_US',
-    type: 'website',
   },
   robots: {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: 'https://howtofish101.com',
+  },
+  icons: {
+    icon: '/favicon.svg',
+  },
   verification: {
     google: 'bfdwwVIHII1JNt3C7uEu-9d23-qVHSuincNMZWS3V4w',
-  }
+  },
 };
 
 export default function RootLayout({

@@ -5,6 +5,12 @@ import { BOSSES_DATABASE } from '@/lib/data';
 export const metadata = {
   title: 'All Boss Battles, Summon Baits & Strategies',
   description: 'Complete boss fight guide for How to Fish. How to summon and defeat the Spider Crab, Colossal Pufferfish, and Volcanic Magma Whale.',
+  alternates: { canonical: 'https://howtofish101.com/bosses/' },
+  openGraph: {
+    title: 'All Boss Battles, Summon Baits & Strategies',
+    description: 'Complete boss fight guide for How to Fish. How to summon and defeat the Spider Crab, Colossal Pufferfish, and Volcanic Magma Whale.',
+    url: 'https://howtofish101.com/bosses/',
+  },
 };
 
 export default function BossesPage() {
@@ -34,6 +40,56 @@ export default function BossesPage() {
             </Link>
           </div>
         ))}
+      </div>
+
+      <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">How the Boss System Works</h2>
+        <p>
+          How to Fish features three colossal marine bosses that guard the Boat Key Parts you need to unlock the full archipelago. Bosses are not random encounters — you must deliberately summon each one by casting a specific <strong>Rage Bait</strong> into their designated arena. Rage Baits are special items obtained through quests, NPC trades, or crafting. Once the bait hits the water, the boss emerges after a short cinematic, and the arena becomes sealed until the fight ends in victory or defeat.
+        </p>
+        <p>
+          Each boss has multiple combat phases with escalating attack patterns. Depleting a boss HP to certain thresholds triggers phase transitions with new mechanics, faster attacks, and environmental hazards. Understanding these phase breaks is the key to consistent wins.
+        </p>
+
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Boss Difficulty Ranking & Recommended Gear</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-xs">
+            <thead className="bg-ocean-950 text-gray-400 border-b border-ocean-800">
+              <tr><th className="p-3">Boss</th><th className="p-3">Difficulty</th><th className="p-3">HP</th><th className="p-3">Recommended Gear</th><th className="p-3">Key Reward</th></tr>
+            </thead>
+            <tbody className="divide-y divide-ocean-800/50">
+              <tr>
+                <td className="p-3 font-bold text-white"><Link href="/bosses/spider-crab/" className="text-aqua hover:underline">Giant Spider Crab</Link></td>
+                <td className="p-3 text-green-400">Easy</td>
+                <td className="p-3">800 HP</td>
+                <td className="p-3">Knife, Crab Rod, Hot Dogs</td>
+                <td className="p-3">Boat Key #1</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-bold text-white"><Link href="/bosses/pufferfish/" className="text-aqua hover:underline">Colossal Pufferfish</Link></td>
+                <td className="p-3 text-yellow-400">Medium</td>
+                <td className="p-3">1,500 HP</td>
+                <td className="p-3">Deep-Sea Rod, Harpoon, Hull Armor Tier 1</td>
+                <td className="p-3">Boat Key #2</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-bold text-white"><Link href="/bosses/magma-whale/" className="text-aqua hover:underline">Volcanic Magma Whale</Link></td>
+                <td className="p-3 text-red-400">Hard</td>
+                <td className="p-3">3,000 HP</td>
+                <td className="p-3">Titanium Rod, Rifle, Heat-Shielded Hull</td>
+                <td className="p-3">Boat Key #3 + Legendary Rod</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Boss Scaling in Co-op</h2>
+        <p>
+          When playing multiplayer, boss HP scales based on the number of players in the session at the time of summoning. This prevents groups from trivializing fights through sheer numbers. The scaling is linear: a 2-player session gives the boss 1.5x HP, 3 players gives 2x, and a full 4-player crew faces 2.5x the base HP pool. Attack damage and phase thresholds remain the same regardless of player count, so coordinated crews with assigned roles (tank, DPS, healer) will always have an advantage over uncoordinated groups of the same size.
+        </p>
+        <p>
+          Loot from boss kills is shared among all participants — every player receives the Boat Key Part and a split of the gold reward. However, rare cosmetic drops like the Puffer Spike Launcher skin are rolled individually, so each player has an independent chance at rare loot.
+        </p>
       </div>
     </div>
   );
