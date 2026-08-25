@@ -4,3 +4,5 @@ node_modules
 *.log
 .env.local
 .vercel
+favicon_io/
+favicon_io.zip
