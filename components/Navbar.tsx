@@ -23,7 +23,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2 group">
-            <span className="text-2xl">🎣</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/favicon-32x32.png" alt="How to Fish Wiki" width={28} height={28} className="rounded-md" />
             <span className="font-extrabold text-xl tracking-tight text-white group-hover:text-aqua transition-colors">
               How to Fish <span className="text-aqua font-normal text-xs border border-aqua/30 rounded px-1.5 py-0.5 ml-1">Wiki</span>
             </span>
