@@ -15,7 +15,7 @@ export default function Footer() {
             <p className="text-xs text-aqua font-semibold">🎮 268,000+ Concurrent Anglers</p>
           </div>
           <div>
-            <h4 className="font-bold text-white mb-3 text-xs tracking-wider uppercase">Guides & Bosses</h4>
+            <div className="font-bold text-white mb-3 text-xs tracking-wider uppercase">Guides & Bosses</div>
             <ul className="space-y-2 text-xs">
               <li><Link href="/guide/" className="hover:text-aqua transition-colors">Beginner Walkthrough</Link></li>
               <li><Link href="/fish/" className="hover:text-aqua transition-colors">All 49 Fish Database</Link></li>
@@ -24,7 +24,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-white mb-3 text-xs tracking-wider uppercase">Exploration</h4>
+            <div className="font-bold text-white mb-3 text-xs tracking-wider uppercase">Exploration</div>
             <ul className="space-y-2 text-xs">
               <li><Link href="/map/" className="hover:text-aqua transition-colors">Archipelago Interactive Map</Link></li>
               <li><Link href="/boat/" className="hover:text-aqua transition-colors">Boat Keys & Motor Upgrades</Link></li>
@@ -33,7 +33,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-white mb-3 text-xs tracking-wider uppercase">Legal & Support</h4>
+            <div className="font-bold text-white mb-3 text-xs tracking-wider uppercase">Legal & Support</div>
             <ul className="space-y-2 text-xs">
               <li><Link href="/about/" className="hover:text-aqua transition-colors">About Us</Link></li>
               <li><Link href="/privacy/" className="hover:text-aqua transition-colors">Privacy Policy</Link></li>

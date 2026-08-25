@@ -6,10 +6,10 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   metadataBase: new URL('https://howtofish101.com'),
   title: {
-    default: 'How to Fish Guide & Complete Wiki | Walkthrough, Bosses & Fish Database',
+    default: 'How to Fish Wiki: Walkthrough, Boss Guide & Fish List',
     template: '%s | How to Fish Wiki'
   },
-  description: 'Master Dazed Games 1-4 player physics fishing hit How to Fish. Complete fish list, rare Drip Fish locations, Pufferfish & Magma Whale boss guides, boat keys, and best settings.',
+  description: 'Complete How to Fish wiki: 49 fish locations, Pufferfish & Magma Whale boss guides, boat keys, Drip Fish secrets, and beginner co-op tips.',
   keywords: [
     'how to fish',
     'how to fish game',
@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: 'How to Fish Wiki',
     locale: 'en_US',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'How to Fish Wiki — Complete Walkthrough & Fish Database' }],
   },
   robots: {
     index: true,
