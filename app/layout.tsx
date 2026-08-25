@@ -1,0 +1,56 @@
+import type { Metadata } from 'next';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://how-to-fish.wiki'),
+  title: {
+    default: 'How to Fish Guide & Complete Wiki | Walkthrough, Bosses & Fish Database',
+    template: '%s | How to Fish Wiki'
+  },
+  description: 'Master Dazed Games 1-4 player physics fishing hit How to Fish. Complete fish list, rare Drip Fish locations, Pufferfish & Magma Whale boss guides, boat keys, and best settings.',
+  keywords: [
+    'how to fish',
+    'how to fish game',
+    'how to fish wiki',
+    'how to fish guide',
+    'how to fish pufferfish boss',
+    'how to fish all fish',
+    'how to fish drip fish',
+    'how to fish map',
+    'how to fish boat keys',
+    'how to fish coop'
+  ],
+  authors: [{ name: 'How to Fish Community Anglers' }],
+  openGraph: {
+    title: 'How to Fish Wiki & Complete Player Walkthrough',
+    description: 'All 49 fish species, boss battle guides, secret boat keys, and co-op tactics for How to Fish.',
+    url: 'https://how-to-fish.wiki',
+    siteName: 'How to Fish Wiki',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className="dark">
+      <body className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
