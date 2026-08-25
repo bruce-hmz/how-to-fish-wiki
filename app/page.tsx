@@ -77,6 +77,7 @@ export default function HomePage() {
             { src: '/images/screenshots/shot-3.webp', alt: 'Reeling in a catch on a tropical beach in How to Fish' },
             { src: '/images/screenshots/shot-4.webp', alt: 'Cooking catches on the beach grill in How to Fish' },
             { src: '/images/screenshots/shot-5.webp', alt: 'The shack interior with weapons and tools mounted on the wall in How to Fish' },
+            { src: '/images/screenshots/shot-6.webp', alt: 'Climbing a palm tree in the tropical islands of How to Fish' },
           ].map((shot) => (
             <div key={shot.src} className="rounded-xl overflow-hidden border border-ocean-800 hover:border-aqua/50 transition-all">
               {/* eslint-disable-next-line @next/next/no-img-element */}
