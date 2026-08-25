@@ -5,11 +5,6 @@ export const metadata = {
   title: 'Frequently Asked Questions',
   description: 'Answers to common questions about How to Fish: controller support, save files, progression caps, multiplayer, modding, and game length.',
   alternates: { canonical: 'https://howtofish101.com/faq/' },
-  openGraph: {
-    title: 'How to Fish FAQ — Frequently Asked Questions',
-    description: 'Answers to common questions about How to Fish: controller support, save files, progression caps, multiplayer, modding, and game length.',
-    url: 'https://howtofish101.com/faq/',
-  },
 };
 
 const faqs = [

@@ -3,14 +3,9 @@ import Link from 'next/link';
 import { FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
-  title: 'Trick Shots & Killscore Multipliers: 1.5x to 5x',
+  title: 'Trick Shots & Killscore Multipliers',
   description: 'How to Fish killscore explained: the confirmed 1.5x and 5x multipliers, how trick shots raise kill money, the 360 no scope method, and where to practice safely.',
   alternates: { canonical: 'https://howtofish101.com/trick-shots/' },
-  openGraph: {
-    title: 'How to Fish Trick Shots & Killscore Multipliers',
-    description: 'How to Fish killscore explained: the confirmed 1.5x and 5x multipliers, how trick shots raise kill money, the 360 no scope method, and where to practice safely.',
-    url: 'https://howtofish101.com/trick-shots/',
-  },
 };
 
 const faqs = [

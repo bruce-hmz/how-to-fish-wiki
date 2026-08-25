@@ -2,14 +2,9 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Cannot Join Friends: Lobby & Black Screen Fixes',
+  title: 'Cannot Join Friends: Lobby Fixes',
   description: 'How to Fish co-op fixes: join black screens, version mismatch, private lobbies, and player limits. What Patches 1.0.4 and 1.0.5 changed about sessions.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/join-friends/' },
-  openGraph: {
-    title: 'How to Fish: Cannot Join Friends — Lobby & Black Screen Fixes',
-    description: 'How to Fish co-op fixes: join black screens, version mismatch, private lobbies, and player limits. What Patches 1.0.4 and 1.0.5 changed about sessions.',
-    url: 'https://howtofish101.com/troubleshooting/join-friends/',
-  },
 };
 
 export default function JoinFriendsPage() {

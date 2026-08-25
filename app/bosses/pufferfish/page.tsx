@@ -2,14 +2,9 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Colossal Pufferfish Boss Strategy & Weaknesses',
+  title: 'Pufferfish Boss Strategy & Weaknesses',
   description: 'How to summon and beat the Colossal Spiky Pufferfish boss in How to Fish. Dodge spike waves and claim the Puffer Spike Launcher.',
   alternates: { canonical: 'https://howtofish101.com/bosses/pufferfish/' },
-  openGraph: {
-    title: 'Colossal Pufferfish Boss Strategy & Weaknesses',
-    description: 'How to summon and beat the Colossal Spiky Pufferfish boss in How to Fish. Dodge spike waves and claim the Puffer Spike Launcher.',
-    url: 'https://howtofish101.com/bosses/pufferfish/',
-  },
 };
 
 export default function PufferfishPage() {

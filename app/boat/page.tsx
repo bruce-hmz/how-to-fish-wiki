@@ -4,11 +4,6 @@ export const metadata = {
   title: 'Boat Keys Location & Engine Upgrades',
   description: 'Where to find lost boat keys in How to Fish. Complete upgrade tree for engine horsepower, fuel tank capacity, and hull armor.',
   alternates: { canonical: 'https://howtofish101.com/boat/' },
-  openGraph: {
-    title: 'Boat Keys Location & Engine Upgrades',
-    description: 'Where to find lost boat keys in How to Fish. Complete upgrade tree for engine horsepower, fuel tank capacity, and hull armor.',
-    url: 'https://howtofish101.com/boat/',
-  },
 };
 
 export default function BoatPage() {

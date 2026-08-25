@@ -3,14 +3,9 @@ import Link from 'next/link';
 import { BOSSES_DATABASE } from '@/lib/data';
 
 export const metadata = {
-  title: 'All Boss Battles, Summon Baits & Strategies',
-  description: 'Complete boss fight guide for How to Fish. How to summon and defeat all five bosses: Spider Crab, Giant Piranha, Colossal Pufferfish, Albatross, and Volcanic Magma Whale.',
+  title: 'All Bosses: Summon Baits & Strategies',
+  description: 'Summon and defeat all five How to Fish bosses — Spider Crab, Giant Piranha, Pufferfish, Albatross, and Magma Whale — with bait chains and phase tactics.',
   alternates: { canonical: 'https://howtofish101.com/bosses/' },
-  openGraph: {
-    title: 'All Boss Battles, Summon Baits & Strategies',
-    description: 'Complete boss fight guide for How to Fish. How to summon and defeat all five bosses: Spider Crab, Giant Piranha, Colossal Pufferfish, Albatross, and Volcanic Magma Whale.',
-    url: 'https://howtofish101.com/bosses/',
-  },
 };
 
 export default function BossesPage() {
@@ -27,7 +22,7 @@ export default function BossesPage() {
           <div key={boss.id} className="bg-ocean-900 border border-ocean-800 rounded-xl p-6 flex flex-col justify-between hover:border-coral/50 transition-all">
             <div className="space-y-3">
               <div className="text-3xl">👾</div>
-              <h3 className="text-xl font-bold text-white">{boss.name}</h3>
+              <h2 className="text-xl font-bold text-white">{boss.name}</h2>
               <p className="text-xs text-gray-400">Location: <span className="text-gray-300">{boss.location}</span></p>
               <p className="text-xs text-gray-400">Summon Bait: <span className="text-gold font-semibold">{boss.summonBait}</span></p>
               <p className="text-xs text-gray-400">HP: <span className="text-coral-light font-bold">{boss.hp}</span></p>

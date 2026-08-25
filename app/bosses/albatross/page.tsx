@@ -3,14 +3,9 @@ import Link from 'next/link';
 import { FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
-  title: 'Albatross Boss Guide: Tuna Bait Chain & Strategy',
-  description: 'How to spawn and beat the Albatross (terrorizing bird) in How to Fish. Catch the Tuna with a Professional Boss Lure on Island 4, bait the dive passes, and keep the Albatross Head.',
+  title: 'Albatross Boss Guide: Tuna Bait Chain',
+  description: 'Spawn and beat the Albatross in How to Fish: catch the Tuna with a Professional Boss Lure on Island 4, bait the dive passes, and claim the Albatross Head.',
   alternates: { canonical: 'https://howtofish101.com/bosses/albatross/' },
-  openGraph: {
-    title: 'Albatross Boss Guide: Tuna Bait Chain & Strategy',
-    description: 'How to spawn and beat the Albatross (terrorizing bird) in How to Fish. Catch the Tuna with a Professional Boss Lure on Island 4, bait the dive passes, and keep the Albatross Head.',
-    url: 'https://howtofish101.com/bosses/albatross/',
-  },
 };
 
 const faqs = [

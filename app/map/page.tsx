@@ -4,11 +4,6 @@ export const metadata = {
   title: 'Archipelago Interactive Map & Hotspots',
   description: 'Complete map of How to Fish archipelago. Coordinates for all islands, merchant docks, boat repair bays, and secret deep trenches.',
   alternates: { canonical: 'https://howtofish101.com/map/' },
-  openGraph: {
-    title: 'Archipelago Interactive Map & Hotspots',
-    description: 'Complete map of How to Fish archipelago. Coordinates for all islands, merchant docks, boat repair bays, and secret deep trenches.',
-    url: 'https://howtofish101.com/map/',
-  },
 };
 
 export default function MapPage() {
@@ -20,31 +15,31 @@ export default function MapPage() {
         <p>The game takes place across 5 main islands and outer reef zones. Use your boat's Sonar Radar to avoid shallow sandbars.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">1. Starter Island (Lighthouse)</h3>
+            <h2 className="font-bold text-white text-base mb-1">1. Starter Island (Lighthouse)</h2>
             <p className="text-xs text-gray-400">Safe harbor with shopkeeper NPC, clam beaches, and the Spider Crab tidepool.</p>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">2. Coral Maze Lagoon</h3>
+            <h2 className="font-bold text-white text-base mb-1">2. Coral Maze Lagoon</h2>
             <p className="text-xs text-gray-400">Home of the Colossal Pufferfish and high-tier tropical species.</p>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">3. Casino & Gachapon Atoll</h3>
+            <h2 className="font-bold text-white text-base mb-1">3. Casino & Gachapon Atoll</h2>
             <p className="text-xs text-gray-400">Trade rare Drip creatures for cosmetic weapon wraps and boat customizations.</p>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">4. Mount Inferno Caldera</h3>
+            <h2 className="font-bold text-white text-base mb-1">4. Mount Inferno Caldera</h2>
             <p className="text-xs text-gray-400">Volcanic crater lake housing the final Magma Whale titan.</p>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">5. Coral Reef Atoll</h3>
+            <h2 className="font-bold text-white text-base mb-1">5. Coral Reef Atoll</h2>
             <p className="text-xs text-gray-400">A ring-shaped reef surrounding a shallow turquoise lagoon. Home to tropical species like Parrot Wrasse, Clownfish, and the rare Golden Seahorse. The atoll has an underwater cave system accessible by diving — inside you will find the Coral Merchant who sells the Rainbow Lure and unique cosmetic shell accessories.</p>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">6. Volcanic Trench</h3>
+            <h2 className="font-bold text-white text-base mb-1">6. Volcanic Trench</h2>
             <p className="text-xs text-gray-400">A deep oceanic rift south of Mount Inferno where superheated water glows orange. Requires Heat-Shielded Hull to survive. Contains Magma Eels, Lava Carp, and the Obsidian Shards needed for the Volcano Core boss bait. Depth reaches 800 meters — the deepest point in the game.</p>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">7. Mangrove Swamp</h3>
+            <h2 className="font-bold text-white text-base mb-1">7. Mangrove Swamp</h2>
             <p className="text-xs text-gray-400">A dense tidal wetland east of Casino Island with tangled root systems and murky water. Visibility is low, making navigation tricky. Unique catches include Mudskipper, Swamp Eel, and the elusive Ghost Catfish. The swamp also hides a secret NPC vendor who sells Lantern Bait at a 50% discount.</p>
           </div>
         </div>

@@ -3,14 +3,9 @@ import Link from 'next/link';
 import { FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
-  title: 'Casino & Reel of Fortune Guide: Gachapon Skins',
-  description: 'How to Fish Casino Island explained: Reel of Fortune spins, the Drip Rock Crab gachapon route, slot machine skins, and why gambling is a money sink — not an income strategy.',
+  title: 'Casino Guide: Reel of Fortune & Gachapon',
+  description: 'How to Fish Casino Island explained: Reel of Fortune spins, the Drip Rock Crab gachapon route, slot skins, and why gambling is a money sink.',
   alternates: { canonical: 'https://howtofish101.com/casino/' },
-  openGraph: {
-    title: 'How to Fish Casino & Reel of Fortune Guide',
-    description: 'How to Fish Casino Island explained: Reel of Fortune spins, the Drip Rock Crab gachapon route, slot machine skins, and why gambling is a money sink — not an income strategy.',
-    url: 'https://howtofish101.com/casino/',
-  },
 };
 
 const faqs = [

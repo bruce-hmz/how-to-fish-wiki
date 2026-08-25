@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import FishTable from '@/components/FishTable';
-import { WebSiteJsonLd, FaqJsonLd } from '@/components/JsonLd';
+import { FaqJsonLd } from '@/components/JsonLd';
 
 const homeFaqs = [
   {
@@ -32,7 +32,6 @@ const homeFaqs = [
 export default function HomePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
-      <WebSiteJsonLd />
       <FaqJsonLd faqs={homeFaqs} />
 
       <section className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-ocean-800/80 to-ocean-950 border border-ocean-700/60 p-8 sm:p-12 shadow-2xl">

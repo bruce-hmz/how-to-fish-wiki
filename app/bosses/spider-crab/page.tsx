@@ -1,14 +1,9 @@
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Giant Spider Crab Boss & Empty Beer Can Guide',
+  title: 'Giant Spider Crab Boss Guide',
   description: 'How to summon and beat the Giant Spider Crab on starter lighthouse reef using the Empty Beer Can rage bait in How to Fish.',
   alternates: { canonical: 'https://howtofish101.com/bosses/spider-crab/' },
-  openGraph: {
-    title: 'Giant Spider Crab Boss & Empty Beer Can Guide',
-    description: 'How to summon and beat the Giant Spider Crab on starter lighthouse reef using the Empty Beer Can rage bait in How to Fish.',
-    url: 'https://howtofish101.com/bosses/spider-crab/',
-  },
 };
 
 export default function SpiderCrabPage() {

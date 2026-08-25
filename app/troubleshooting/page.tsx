@@ -2,14 +2,9 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Troubleshooting: Save Bugs, Lost Items & Multiplayer Fixes',
-  description: 'Fixes for the most common How to Fish problems: corrupted saves, weapons and items disappearing after loading, join black screens, and stuck progression after a boss kill.',
+  title: 'Troubleshooting: Saves, Items & Co-op',
+  description: 'Fixes for common How to Fish problems: corrupted saves, items disappearing after loading, join black screens, and stuck progression after boss kills.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/' },
-  openGraph: {
-    title: 'How to Fish Troubleshooting: Save Bugs, Lost Items & Multiplayer Fixes',
-    description: 'Fixes for the most common How to Fish problems: corrupted saves, weapons and items disappearing after loading, join black screens, and stuck progression after a boss kill.',
-    url: 'https://howtofish101.com/troubleshooting/',
-  },
 };
 
 const issues = [

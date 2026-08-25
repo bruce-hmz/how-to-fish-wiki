@@ -3,14 +3,9 @@ import Link from 'next/link';
 import { FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
-  title: 'What to Do Next: Progression Troubleshooter',
-  description: 'Stuck in How to Fish? Find your game state — Island 1, missing Island 2 or 3 coordinates, or a boss kill that changed nothing — and get the exact next quest step.',
+  title: 'What to Do Next: Progression Help',
+  description: 'Stuck in How to Fish? Match your game state — Island 1, missing coordinates, or a boss kill that changed nothing — and get the exact next step.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/what-to-do-next/' },
-  openGraph: {
-    title: 'How to Fish: What to Do Next — Progression Troubleshooter',
-    description: 'Stuck in How to Fish? Find your game state — Island 1, missing Island 2 or 3 coordinates, or a boss kill that changed nothing — and get the exact next quest step.',
-    url: 'https://howtofish101.com/troubleshooting/what-to-do-next/',
-  },
 };
 
 const faqs = [

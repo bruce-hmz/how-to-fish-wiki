@@ -3,14 +3,9 @@ import Link from 'next/link';
 import { FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
-  title: 'Items or Weapons Disappeared After Loading — Fix',
-  description: 'How to Fish fix for weapons, radar, boat, and quest items disappearing after a save, crash, death, or co-op disconnect. Identify the symptom and recover without overwriting your save.',
+  title: 'Fix: Items Disappeared After Loading',
+  description: 'How to Fish fix for weapons, radar, boat, and quest items vanishing after a save, crash, or co-op disconnect — recover without overwriting your save.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/items-disappeared/' },
-  openGraph: {
-    title: 'How to Fish: Items or Weapons Disappeared After Loading — Fix',
-    description: 'How to Fish fix for weapons, radar, boat, and quest items disappearing after a save, crash, death, or co-op disconnect. Identify the symptom and recover without overwriting your save.',
-    url: 'https://howtofish101.com/troubleshooting/items-disappeared/',
-  },
 };
 
 const faqs = [

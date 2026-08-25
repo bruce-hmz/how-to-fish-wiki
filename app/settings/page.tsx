@@ -1,14 +1,9 @@
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Black Screen Fix & Steam Deck Best Settings',
+  title: 'Best Settings & Black Screen Fix',
   description: 'Troubleshooting guide for How to Fish. Fix launch black screens, audio stutter bugs, and configure optimal Steam Deck 60 FPS graphics.',
   alternates: { canonical: 'https://howtofish101.com/settings/' },
-  openGraph: {
-    title: 'Black Screen Fix & Steam Deck Best Settings',
-    description: 'Troubleshooting guide for How to Fish. Fix launch black screens, audio stutter bugs, and configure optimal Steam Deck 60 FPS graphics.',
-    url: 'https://howtofish101.com/settings/',
-  },
 };
 
 export default function SettingsPage() {

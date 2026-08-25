@@ -4,11 +4,6 @@ export const metadata = {
   title: '1-4 Player Co-op & Multiplayer Guide',
   description: 'How to host and play 1-4 player co-op in How to Fish. Crew roles, boat controls, and boss scaling mechanics.',
   alternates: { canonical: 'https://howtofish101.com/multiplayer/' },
-  openGraph: {
-    title: '1-4 Player Co-op & Multiplayer Guide',
-    description: 'How to host and play 1-4 player co-op in How to Fish. Crew roles, boat controls, and boss scaling mechanics.',
-    url: 'https://howtofish101.com/multiplayer/',
-  },
 };
 
 export default function MultiplayerPage() {

@@ -5,11 +5,6 @@ export const metadata = {
   title: 'Beginner Walkthrough & Early Game Guide',
   description: 'Step-by-step beginner guide for How to Fish. Master casting, starter island survival, crab farming, and knife upgrades.',
   alternates: { canonical: 'https://howtofish101.com/guide/' },
-  openGraph: {
-    title: 'Beginner Walkthrough & Early Game Guide',
-    description: 'Step-by-step beginner guide for How to Fish. Master casting, starter island survival, crab farming, and knife upgrades.',
-    url: 'https://howtofish101.com/guide/',
-  },
 };
 
 export default function GuidePage() {

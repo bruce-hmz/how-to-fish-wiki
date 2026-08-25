@@ -4,11 +4,6 @@ export const metadata = {
   title: 'Volcanic Magma Whale Final Boss Strategy',
   description: 'Beat the final Magma Whale boss in Mount Inferno crater. Bare hand achievement strategy and golden rod reward in How to Fish.',
   alternates: { canonical: 'https://howtofish101.com/bosses/magma-whale/' },
-  openGraph: {
-    title: 'Volcanic Magma Whale Final Boss Strategy',
-    description: 'Beat the final Magma Whale boss in Mount Inferno crater. Bare hand achievement strategy and golden rod reward in How to Fish.',
-    url: 'https://howtofish101.com/bosses/magma-whale/',
-  },
 };
 
 export default function MagmaWhalePage() {

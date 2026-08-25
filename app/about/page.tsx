@@ -6,12 +6,6 @@ export const metadata: Metadata = {
   description:
     'Learn about How to Fish Wiki, an independent community resource for the 2026 fishing game by Dazed Games. Our mission, coverage, and how to get in touch.',
   alternates: { canonical: 'https://howtofish101.com/about/' },
-  openGraph: {
-    title: 'About Us – How to Fish Wiki',
-    description:
-      'Learn about How to Fish Wiki, an independent community resource for the 2026 fishing game by Dazed Games.',
-    url: 'https://howtofish101.com/about/',
-  },
 };
 
 export default function AboutPage() {

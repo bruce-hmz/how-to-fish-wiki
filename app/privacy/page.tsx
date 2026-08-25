@@ -6,12 +6,6 @@ export const metadata: Metadata = {
   description:
     'Privacy policy for How to Fish Wiki. Learn how we handle analytics, cookies, third-party services, and your rights under GDPR and CCPA.',
   alternates: { canonical: 'https://howtofish101.com/privacy/' },
-  openGraph: {
-    title: 'Privacy Policy – How to Fish Wiki',
-    description:
-      'Privacy policy for How to Fish Wiki. Learn how we handle analytics, cookies, and your data rights.',
-    url: 'https://howtofish101.com/privacy/',
-  },
 };
 
 export default function PrivacyPage() {

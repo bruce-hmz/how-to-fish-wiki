@@ -6,12 +6,6 @@ export const metadata: Metadata = {
   description:
     'Terms of service for How to Fish Wiki. Understand acceptable use, intellectual property, disclaimers, and liability limitations.',
   alternates: { canonical: 'https://howtofish101.com/terms/' },
-  openGraph: {
-    title: 'Terms of Service – How to Fish Wiki',
-    description:
-      'Terms of service for How to Fish Wiki. Acceptable use, IP, disclaimers, and liability.',
-    url: 'https://howtofish101.com/terms/',
-  },
 };
 
 export default function TermsPage() {

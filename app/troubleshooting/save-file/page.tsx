@@ -2,14 +2,9 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Save Bug Fix: Corruption, Autosave & Lost Progress',
-  description: 'How to Fish save bug explained: what Patch 1.0.9 actually fixed, the Patch 1.0.6 save rules, where saves live, and the safe recovery order when weapons or progress disappear.',
+  title: 'Save Bug Fix & Lost Progress',
+  description: 'How to Fish save bug explained: what Patch 1.0.9 fixed, the 1.0.6 save rules, and the safe recovery order when weapons or progress disappear.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/save-file/' },
-  openGraph: {
-    title: 'How to Fish Save Bug Fix: Corruption, Autosave & Lost Progress',
-    description: 'What Patch 1.0.9 actually fixed, the Patch 1.0.6 save rules, where saves live, and the safe recovery order when weapons or progress disappear.',
-    url: 'https://howtofish101.com/troubleshooting/save-file/',
-  },
 };
 
 export default function SaveFilePage() {

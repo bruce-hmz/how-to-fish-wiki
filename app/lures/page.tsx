@@ -4,11 +4,6 @@ export const metadata = {
   title: 'All Lures & Baits Unlock Guide',
   description: 'Full list of lures, baits, and rage attractors in How to Fish. Learn unlock requirements, costs, and fish affinities.',
   alternates: { canonical: 'https://howtofish101.com/lures/' },
-  openGraph: {
-    title: 'All Lures & Baits Unlock Guide',
-    description: 'Full list of lures, baits, and rage attractors in How to Fish. Learn unlock requirements, costs, and fish affinities.',
-    url: 'https://howtofish101.com/lures/',
-  },
 };
 
 export default function LuresPage() {

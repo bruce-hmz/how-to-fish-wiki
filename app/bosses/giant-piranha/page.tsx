@@ -3,14 +3,9 @@ import Link from 'next/link';
 import { FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
-  title: 'Giant Piranha Boss Guide: Leech Quest & Strategy',
-  description: 'How to spawn and beat the Giant Piranha (second boss) in How to Fish. Complete the 3-Leech Island 2 quest, earn the Modified Leech, and claim the skeleton for Island 3.',
+  title: 'Giant Piranha Boss Guide: Leech Quest',
+  description: 'Beat the Giant Piranha in How to Fish: finish the 3-Leech quest on Island 2, earn the Modified Leech bait, and claim the skeleton for Island 3 access.',
   alternates: { canonical: 'https://howtofish101.com/bosses/giant-piranha/' },
-  openGraph: {
-    title: 'Giant Piranha Boss Guide: Leech Quest & Strategy',
-    description: 'How to spawn and beat the Giant Piranha (second boss) in How to Fish. Complete the 3-Leech Island 2 quest, earn the Modified Leech, and claim the skeleton for Island 3.',
-    url: 'https://howtofish101.com/bosses/giant-piranha/',
-  },
 };
 
 const faqs = [
