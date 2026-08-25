@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import FishTable from '@/components/FishTable';
-import { WebSiteJsonLd } from '@/components/JsonLd';
+import { WebSiteJsonLd, FaqJsonLd } from '@/components/JsonLd';
 
 const homeFaqs = [
   {
@@ -33,6 +33,7 @@ export default function HomePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
       <WebSiteJsonLd />
+      <FaqJsonLd faqs={homeFaqs} />
 
       <section className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-ocean-800/80 to-ocean-950 border border-ocean-700/60 p-8 sm:p-12 shadow-2xl">
         <div className="max-w-3xl space-y-4">
@@ -64,6 +65,24 @@ export default function HomePage() {
               Pufferfish Boss Strategy
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-white">Straight from the Game</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { src: '/images/screenshots/shot-1.webp', alt: 'How to Fish gameplay — casting a rod at the island dock with the equipment rack and NPC hut' },
+            { src: '/images/screenshots/shot-2.webp', alt: 'Fighting the spiky Pufferfish boss with damage numbers in How to Fish' },
+            { src: '/images/screenshots/shot-3.webp', alt: 'Reeling in a catch on a tropical beach in How to Fish' },
+            { src: '/images/screenshots/shot-4.webp', alt: 'Cooking catches on the beach grill in How to Fish' },
+            { src: '/images/screenshots/shot-5.webp', alt: 'The shack interior with weapons and tools mounted on the wall in How to Fish' },
+          ].map((shot) => (
+            <div key={shot.src} className="rounded-xl overflow-hidden border border-ocean-800 hover:border-aqua/50 transition-all">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={shot.src} alt={shot.alt} width={640} height={360} loading="lazy" className="w-full h-auto" />
+            </div>
+          ))}
         </div>
       </section>
 

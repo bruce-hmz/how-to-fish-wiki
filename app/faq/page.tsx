@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb';
+import { FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
   title: 'Frequently Asked Questions',
@@ -28,6 +29,7 @@ export default function FAQPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6 text-sm text-gray-300">
       <Breadcrumb items={[{ name: 'FAQ', href: '/faq/' }]} />
+      <FaqJsonLd faqs={faqs} />
       <h1 className="text-3xl font-bold text-white">Frequently Asked Questions</h1>
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-5">
         {faqs.map((item) => (
