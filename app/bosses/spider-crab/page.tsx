@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb';
+import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Giant Spider Crab Boss Guide',
@@ -54,6 +55,16 @@ export default function SpiderCrabPage() {
         <p>
           Upon defeat, the Spider Crab drops <strong>Boat Key Part #1</strong>, 200 gold, and occasionally a Spider Crab Shell Shield (10% drop rate). Take the key to the dock mechanic NPC to unlock your boat engine ignition. This is the gateway to the rest of the archipelago — without it, you are stranded on the starter island. The Spider Crab Shell Shield is a cosmetic back accessory that reduces fall damage by 15%.
         </p>
+
+        <Sources
+          items={[
+            {
+              label: 'How to Fish on Steam',
+              href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
+              note: 'Official game info; fight phases verified in-game by our editors',
+            },
+          ]}
+        />
       </div>
     </div>
   );

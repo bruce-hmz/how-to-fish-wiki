@@ -1,6 +1,7 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { FaqJsonLd } from '@/components/JsonLd';
+import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Albatross Boss Guide: Tuna Bait Chain',
@@ -101,6 +102,16 @@ export default function AlbatrossPage() {
           ))}
         </div>
       </section>
+
+      <Sources
+        items={[
+          {
+            label: 'How to Fish on Steam',
+            href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
+            note: 'Official game info; fight phases verified in-game by our editors',
+          },
+        ]}
+      />
     </div>
   );
 }

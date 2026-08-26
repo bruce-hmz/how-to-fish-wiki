@@ -12,6 +12,7 @@ export default function Navbar() {
     { href: '/bosses/', label: 'Bosses' },
     { href: '/achievements/', label: 'Achievements' },
     { href: '/lures/', label: 'Lures' },
+    { href: '/weapons/', label: 'Weapons' },
     { href: '/map/', label: 'Map' },
     { href: '/boat/', label: 'Boat' },
     { href: '/multiplayer/', label: 'Co-op' },

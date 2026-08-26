@@ -1,6 +1,7 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import AchievementChecklist from '@/components/AchievementChecklist';
 import { ItemListJsonLd } from '@/components/JsonLd';
+import Sources from '@/components/Sources';
 import { ACHIEVEMENTS } from '@/lib/achievements';
 
 export const metadata = {
@@ -24,6 +25,21 @@ export default function AchievementsPage() {
           and the global unlock percentage straight from Steam — so you can see exactly how rare each trophy really is.
           Click any row to tick it off; progress is saved locally in your browser.
         </p>
+
+        <Sources
+          items={[
+            {
+              label: 'Steam Community Achievements — How to Fish',
+              href: 'https://steamcommunity.com/stats/4001890/achievements',
+              note: 'All 28 global unlock percentages, captured August 26, 2026',
+            },
+            {
+              label: 'How to Fish on Steam',
+              href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
+              note: 'Official achievement icons and descriptions',
+            },
+          ]}
+        />
       </div>
 
       <AchievementChecklist />

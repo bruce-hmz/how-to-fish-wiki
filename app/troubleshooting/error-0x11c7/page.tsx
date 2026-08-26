@@ -1,6 +1,7 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 import { FaqJsonLd } from '@/components/JsonLd';
+import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Error 0x11C7 Fix: Smart App Control',
@@ -49,6 +50,21 @@ export default function Error0x11c7Page() {
           You click Play, the process flashes, and Windows reports error 0x11C7. This is a security-policy block, not a
           game bug — and the fix order matters if you do not want to lower your whole system&apos;s defenses.
         </p>
+
+        <Sources
+          items={[
+            {
+              label: 'Smart App Control frequently asked questions — Microsoft Support',
+              href: 'https://support.microsoft.com/en-us/windows/security/threat-malware-protection/smart-app-control-frequently-asked-questions',
+              note: 'Official Microsoft documentation on Smart App Control behavior',
+            },
+            {
+              label: 'App & browser control in the Windows Security app — Microsoft Support',
+              href: 'https://support.microsoft.com/en-us/windows/security/windows-security/app-browser-control-in-the-windows-security-app',
+              note: 'Where to find the Smart App Control toggle',
+            },
+          ]}
+        />
       </div>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-5 text-sm text-gray-300">

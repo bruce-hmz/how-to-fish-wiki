@@ -1,4 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb';
+import Sources from '@/components/Sources';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Volcanic Magma Whale Final Boss Strategy',
@@ -48,9 +50,14 @@ export default function MagmaWhalePage() {
           <strong>Phase 3 (30%–0% HP)</strong>: The whale enters a frenzy, chaining all three attacks rapidly with minimal downtime. Lava geysers erupt randomly across the arena floor, creating additional hazards. The key to Phase 3 is patience — do not overcommit to damage windows. Wait for the post-Dive Attack stun when the whale lies on the surface for 4 seconds. This is your only safe damage window in the final phase. Two or three stun cycles should finish it off.
         </p>
 
-        <h2 className="text-xl font-bold text-white">Bare Hands Achievement</h2>
+        <h2 className="text-xl font-bold text-white">Bare Hands Achievement (Handyman)</h2>
         <p>
-          Whittle the whale down to 1% HP using your full arsenal, then unequip all weapons and land the killing blow with bare fists. This unlocks the <strong>&quot;Punching Above Your Weight&quot;</strong> secret achievement and a unique golden fist cosmetic. The bare-fist hit deals only 1 damage, so make sure the whale is at absolute minimum health before attempting this.
+          Whittle the whale down to 1% HP using your full arsenal, then unequip all weapons and land the killing blow with bare fists. This unlocks the{' '}
+          <Link href="/achievements/" className="text-aqua hover:underline"><strong>Handyman</strong></Link>{' '}
+          achievement — &quot;Defeat the final boss with your bare hands&quot; — earned by only 1.7% of players
+          worldwide. The bare-fist hit deals only 1 damage, so make sure the whale is at absolute minimum health
+          before attempting this. For the full weapon progression that gets you to this fight, see the{' '}
+          <Link href="/weapons/" className="text-aqua hover:underline">weapons guide</Link>.
         </p>
 
         <h2 className="text-xl font-bold text-white">Rewards</h2>
@@ -61,6 +68,21 @@ export default function MagmaWhalePage() {
           <li><strong>Magma Whale Mount Skin</strong> (8%): Rare cosmetic that reskins your boat as a miniature lava whale.</li>
           <li><strong>Inferno Crown</strong> (3%): Ultra-rare head cosmetic with fire particle effects.</li>
         </ul>
+
+        <Sources
+          items={[
+            {
+              label: 'Steam Community Achievements — How to Fish',
+              href: 'https://steamcommunity.com/stats/4001890/achievements',
+              note: 'Handyman global unlock rate (1.7%)',
+            },
+            {
+              label: 'How to Fish on Steam',
+              href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
+              note: 'Official game description and release info',
+            },
+          ]}
+        />
       </div>
     </div>
   );

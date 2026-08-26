@@ -1,5 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
+import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'System Requirements & Platform Guide',
@@ -23,6 +24,16 @@ export default function SystemRequirementsPage() {
           Everything below comes from the official Steam store page for How to Fish (Dazed Games, released August 20, 2026).
           The game is Windows-only at launch — here is exactly what you need to run it and what platforms it does and does not support.
         </p>
+
+        <Sources
+          items={[
+            {
+              label: 'How to Fish on Steam',
+              href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
+              note: 'Official minimum and recommended specs, language list, and platform availability',
+            },
+          ]}
+        />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

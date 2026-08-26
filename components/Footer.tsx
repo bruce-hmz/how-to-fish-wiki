@@ -22,6 +22,7 @@ export default function Footer() {
               <li><Link href="/fish/drip-fish/" className="hover:text-aqua transition-colors">Rare Drip Fish & Casino</Link></li>
               <li><Link href="/bosses/pufferfish/" className="hover:text-aqua transition-colors">Pufferfish Boss Fight</Link></li>
               <li><Link href="/achievements/" className="hover:text-aqua transition-colors">All 28 Achievements</Link></li>
+              <li><Link href="/weapons/" className="hover:text-aqua transition-colors">Weapons & Attachments</Link></li>
               <li><Link href="/game/system-requirements/" className="hover:text-aqua transition-colors">System Requirements</Link></li>
             </ul>
           </div>
@@ -38,6 +39,7 @@ export default function Footer() {
             <div className="font-bold text-white mb-3 text-xs tracking-wider uppercase">Legal & Support</div>
             <ul className="space-y-2 text-xs">
               <li><Link href="/about/" className="hover:text-aqua transition-colors">About Us</Link></li>
+              <li><Link href="/editorial-policy/" className="hover:text-aqua transition-colors">Editorial Policy</Link></li>
               <li><Link href="/privacy/" className="hover:text-aqua transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms/" className="hover:text-aqua transition-colors">Terms of Service</Link></li>
               <li><Link href="/faq/" className="hover:text-aqua transition-colors">FAQ</Link></li>
