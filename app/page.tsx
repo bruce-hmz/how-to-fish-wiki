@@ -226,6 +226,18 @@ export default function HomePage() {
             <h3 className="font-bold text-white text-sm mb-1">Giant Piranha Boss Guide</h3>
             <p className="text-xs text-gray-400">3-Leech Island 2 quest, escape-bar race, and the skeleton that unlocks Island 3.</p>
           </Link>
+          <Link href="/achievements/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-gold/50 transition-all">
+            <h3 className="font-bold text-white text-sm mb-1">All 28 Achievements</h3>
+            <p className="text-xs text-gray-400">Real Steam unlock rates, rarity tiers, and a browser checklist for 100% completion.</p>
+          </Link>
+          <Link href="/game/system-requirements/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
+            <h3 className="font-bold text-white text-sm mb-1">System Requirements</h3>
+            <p className="text-xs text-gray-400">Official PC specs, controller and language support, and console availability.</p>
+          </Link>
+          <Link href="/troubleshooting/error-0x11c7/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
+            <h3 className="font-bold text-white text-sm mb-1">Error 0x11C7 Fix</h3>
+            <p className="text-xs text-gray-400">Smart App Control blocking the launch? The safe fix order before disabling security.</p>
+          </Link>
           <Link href="/troubleshooting/what-to-do-next/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">What to Do Next</h3>
             <p className="text-xs text-gray-400">Progression troubleshooter for stuck runs — find your state, get the exact next step.</p>

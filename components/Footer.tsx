@@ -21,6 +21,8 @@ export default function Footer() {
               <li><Link href="/fish/" className="hover:text-aqua transition-colors">All 49 Fish Database</Link></li>
               <li><Link href="/fish/drip-fish/" className="hover:text-aqua transition-colors">Rare Drip Fish & Casino</Link></li>
               <li><Link href="/bosses/pufferfish/" className="hover:text-aqua transition-colors">Pufferfish Boss Fight</Link></li>
+              <li><Link href="/achievements/" className="hover:text-aqua transition-colors">All 28 Achievements</Link></li>
+              <li><Link href="/game/system-requirements/" className="hover:text-aqua transition-colors">System Requirements</Link></li>
             </ul>
           </div>
           <div>

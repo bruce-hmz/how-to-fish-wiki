@@ -10,6 +10,7 @@ export default function Navbar() {
     { href: '/guide/', label: 'Guide' },
     { href: '/fish/', label: 'Fish List' },
     { href: '/bosses/', label: 'Bosses' },
+    { href: '/achievements/', label: 'Achievements' },
     { href: '/lures/', label: 'Lures' },
     { href: '/map/', label: 'Map' },
     { href: '/boat/', label: 'Boat' },

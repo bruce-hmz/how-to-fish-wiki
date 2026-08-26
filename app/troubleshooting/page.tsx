@@ -9,6 +9,12 @@ export const metadata = {
 
 const issues = [
   {
+    href: '/troubleshooting/error-0x11c7/',
+    icon: '🛡️',
+    title: 'Error 0x11C7 — Game Will Not Launch',
+    desc: 'Windows Smart App Control blocks the game exe before it starts. Verify files, reboot, and only then touch the security setting.',
+  },
+  {
     href: '/troubleshooting/save-file/',
     icon: '💾',
     title: 'Save File Bug & Autosave Problems',

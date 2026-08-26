@@ -3,7 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { WebSiteJsonLd } from '@/components/JsonLd';
+import { WebSiteJsonLd, VideoGameJsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://howtofish101.com'),
@@ -61,6 +61,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="flex flex-col min-h-screen">
         <WebSiteJsonLd />
+        <VideoGameJsonLd />
         <Navbar />
         <main className="flex-grow">
           {children}

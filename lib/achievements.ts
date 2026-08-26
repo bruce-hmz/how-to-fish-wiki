@@ -1,0 +1,208 @@
+export interface Achievement {
+  slug: string;
+  name: string;
+  description: string;
+  globalPercent: number;
+  icon: string;
+}
+
+// Source: Steam Community global achievement stats for app 4001890
+// Fetched 2026-08-26. Percentages are global unlock rates at fetch time.
+export const ACHIEVEMENTS: Achievement[] = [
+  {
+    slug: 'getting-started',
+    name: 'Getting started',
+    description: 'Kill your first creature',
+    globalPercent: 98.3,
+    icon: '/images/achievements/getting-started.jpg',
+  },
+  {
+    slug: 'drip',
+    name: 'Drip',
+    description: 'Kill a drip creature',
+    globalPercent: 96.4,
+    icon: '/images/achievements/drip.jpg',
+  },
+  {
+    slug: 'who-stole-my-beer',
+    name: 'Who stole my beer',
+    description: 'Find and kill the culprit, and bring it to the lighthouse keeper',
+    globalPercent: 89.9,
+    icon: '/images/achievements/who-stole-my-beer.jpg',
+  },
+  {
+    slug: 'noob',
+    name: 'Noob',
+    description: 'Get a kill with no kill score multiplier',
+    globalPercent: 82.6,
+    icon: '/images/achievements/noob.jpg',
+  },
+  {
+    slug: 'getting-an-upgrade',
+    name: 'Getting an upgrade',
+    description: 'Upgrade the engine on the boat',
+    globalPercent: 82.5,
+    icon: '/images/achievements/getting-an-upgrade.jpg',
+  },
+  {
+    slug: 'dinnertime',
+    name: 'Dinnertime',
+    description: 'Catch dinner for the lady in the forest',
+    globalPercent: 78.9,
+    icon: '/images/achievements/dinnertime.jpg',
+  },
+  {
+    slug: 'let-me-go',
+    name: 'Let me go',
+    description: 'Get picked up by a seagull',
+    globalPercent: 78.3,
+    icon: '/images/achievements/let-me-go.jpg',
+  },
+  {
+    slug: 'impressive',
+    name: 'Impressive',
+    description: 'Get a 5x killscore multiplier',
+    globalPercent: 75.6,
+    icon: '/images/achievements/impressive.jpg',
+  },
+  {
+    slug: 'grillmaster',
+    name: 'Grillmaster',
+    description: 'Start the grill',
+    globalPercent: 73.1,
+    icon: '/images/achievements/grillmaster.jpg',
+  },
+  {
+    slug: 'gold-gold-gold',
+    name: 'GOLD GOLD GOLD',
+    description: 'Unlock a legendary skin from the slot machine',
+    globalPercent: 63.1,
+    icon: '/images/achievements/gold-gold-gold.jpg',
+  },
+  {
+    slug: 'vacation',
+    name: 'Vacation',
+    description: 'Help the tourist swim on his vacation',
+    globalPercent: 62.0,
+    icon: '/images/achievements/vacation.jpg',
+  },
+  {
+    slug: '360-no-scope',
+    name: '360 no scope',
+    description: 'Kill a creature with a 360 no scope',
+    globalPercent: 58.1,
+    icon: '/images/achievements/360-no-scope.jpg',
+  },
+  {
+    slug: 'i-am-speed',
+    name: 'I am speed',
+    description: 'Buy the best engine for the boat',
+    globalPercent: 51.4,
+    icon: '/images/achievements/i-am-speed.jpg',
+  },
+  {
+    slug: 'fully-equipped',
+    name: 'Fully equipped',
+    description: 'Apply all attachments to a single weapon',
+    globalPercent: 49.8,
+    icon: '/images/achievements/fully-equipped.jpg',
+  },
+  {
+    slug: 'terrorizing-bird',
+    name: 'Terrorizing bird',
+    description: 'Defend the scared islanders from the terrorizing bird',
+    globalPercent: 42.8,
+    icon: '/images/achievements/terrorizing-bird.jpg',
+  },
+  {
+    slug: 'yummy-in-my-tummy',
+    name: 'Yummy in my tummy',
+    description: 'Eat a burnt creature',
+    globalPercent: 41.6,
+    icon: '/images/achievements/yummy-in-my-tummy.jpg',
+  },
+  {
+    slug: 'deadliest-catch',
+    name: 'Deadliest catch',
+    description: 'Help the military defeat the big creature they located',
+    globalPercent: 29.3,
+    icon: '/images/achievements/deadliest-catch.jpg',
+  },
+  {
+    slug: 'we-are-so-back',
+    name: 'We are so back',
+    description: 'Finish the game',
+    globalPercent: 28.5,
+    icon: '/images/achievements/we-are-so-back.jpg',
+  },
+  {
+    slug: 'all-in',
+    name: 'All in',
+    description: 'Bet on green and win at roulette',
+    globalPercent: 27.7,
+    icon: '/images/achievements/all-in.jpg',
+  },
+  {
+    slug: 'easy',
+    name: 'Easy',
+    description: 'Kill a boss within 10 seconds',
+    globalPercent: 20.5,
+    icon: '/images/achievements/easy.jpg',
+  },
+  {
+    slug: 'i-m-the-bird-now',
+    name: 'I\'m the bird now',
+    description: 'Make the boat fly',
+    globalPercent: 18.6,
+    icon: '/images/achievements/i-m-the-bird-now.jpg',
+  },
+  {
+    slug: 'competitive-eating',
+    name: 'Competitive eating',
+    description: 'Eat a mini-boss',
+    globalPercent: 17.3,
+    icon: '/images/achievements/competitive-eating.jpg',
+  },
+  {
+    slug: 'collector',
+    name: 'Collector',
+    description: 'Find and kill all the creatures',
+    globalPercent: 10.8,
+    icon: '/images/achievements/collector.jpg',
+  },
+  {
+    slug: 'rich-millionaire',
+    name: 'Rich! Millionaire',
+    description: 'Sell something worth 100,000 or more',
+    globalPercent: 10.2,
+    icon: '/images/achievements/rich-millionaire.jpg',
+  },
+  {
+    slug: 'everyone-s-dream',
+    name: 'Everyone\'s dream',
+    description: 'Kill a seagull with dynamite',
+    globalPercent: 4.1,
+    icon: '/images/achievements/everyone-s-dream.jpg',
+  },
+  {
+    slug: 'handyman',
+    name: 'Handyman',
+    description: 'Defeat the final boss with your bare hands',
+    globalPercent: 1.7,
+    icon: '/images/achievements/handyman.jpg',
+  },
+  {
+    slug: 'fishipedia',
+    name: 'Fishipedia',
+    description: 'Find and kill all drip creatures',
+    globalPercent: 1.4,
+    icon: '/images/achievements/fishipedia.jpg',
+  },
+  {
+    slug: 'bean',
+    name: 'Bean',
+    description: 'Finish the game within 1 hour',
+    globalPercent: 1.0,
+    icon: '/images/achievements/bean.jpg',
+  },
+];
