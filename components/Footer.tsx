@@ -24,6 +24,7 @@ export default function Footer() {
               <li><Link href="/achievements/" className="hover:text-aqua transition-colors">All 28 Achievements</Link></li>
               <li><Link href="/weapons/" className="hover:text-aqua transition-colors">Weapons & Attachments</Link></li>
               <li><Link href="/game/system-requirements/" className="hover:text-aqua transition-colors">System Requirements</Link></li>
+              <li><Link href="/updates/" className="hover:text-aqua transition-colors">Patch Notes 1.0.4–1.0.9</Link></li>
             </ul>
           </div>
           <div>

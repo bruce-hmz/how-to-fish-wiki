@@ -21,6 +21,10 @@ export default function MagmaWhalePage() {
           <div><span className="text-gray-400">Summon Bait:</span> <strong className="text-gold block">Volcano Core</strong></div>
           <div><span className="text-gray-400">Key Weakness:</span> <strong className="text-aqua block">Blowhole (during surface)</strong></div>
         </div>
+        <p className="text-[11px] text-gray-500 -mt-4">
+          HP and damage figures are community-tested and can shift between patches — the Magma Whale was explicitly
+          nerfed in <Link href="/updates/" className="text-gray-400 hover:text-aqua underline underline-offset-2">Patch 1.0.4</Link>.
+        </p>
       </div>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">

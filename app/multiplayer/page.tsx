@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb';
+import Link from 'next/link';
 
 export const metadata = {
   title: '1-4 Player Co-op & Multiplayer Guide',
@@ -17,6 +18,12 @@ export default function MultiplayerPage() {
         <h2 className="text-xl font-bold text-white">Hosting & Joining Games</h2>
         <p>
           To host a co-op session, open the pause menu and select <strong>Host Game</strong>. You can invite friends directly through Steam friend invites, or generate a 6-digit lobby code that anyone can use to join via the <strong>Join Game</strong> menu. The host player world save is used for the session — guest progress (inventory, unlocks) is synced to their own save file, but world state changes (boss kills, NPC interactions) only persist on the host save. Sessions support 2–4 players with the host always present.
+        </p>
+        <p className="text-xs text-gray-400">
+          Note: Patch 1.0.4 raised the lobby cap from 4 to{' '}
+          <Link href="/updates/" className="text-aqua hover:underline">8 players</Link>
+          , so big groups can now fish together. The strategies below are written for the classic 1–4 player crew,
+          but the crew-role logic scales directly to bigger lobbies.
         </p>
         <p>
           Connection requires all players to be on the same game version. If someone cannot connect, verify that everyone has updated to the latest patch through Steam. Port forwarding is not required — the game uses Steam relay servers for matchmaking.

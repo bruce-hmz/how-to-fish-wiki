@@ -20,6 +20,10 @@ export default function PufferfishPage() {
           <div><span className="text-gray-400">Required Bait:</span> <strong className="text-gold block">Hot Dog Feast</strong></div>
           <div><span className="text-gray-400">Key Weakness:</span> <strong className="text-aqua block">Mouth & Dorsal Fin</strong></div>
         </div>
+        <p className="text-[11px] text-gray-500">
+          HP and damage figures are community-tested and can shift between patches — the Pufferfish was explicitly
+          nerfed in <Link href="/updates/" className="text-gray-400 hover:text-aqua underline underline-offset-2">Patch 1.0.4</Link>.
+        </p>
         <h2 className="text-xl font-bold text-white">Phase 1: The Rolling Spike Rush</h2>
         <p>Position your boat behind large coral rocks. When the Pufferfish rolls forward, it gets wedged between rock arches for 4 seconds.</p>
         <h2 className="text-xl font-bold text-white">Phase 2: 360-Degree Spike Barrage</h2>

@@ -29,6 +29,11 @@ export default function GiantPiranhaPage() {
           <div><span className="text-gray-400">Required Bait:</span> <strong className="text-gold block">Modified Leech</strong></div>
           <div><span className="text-gray-400">Key Weakness:</span> <strong className="text-aqua block">Mouth (jump recovery)</strong></div>
         </div>
+        <p className="text-[11px] text-gray-500">
+          HP and damage figures are community-tested and can shift between patches — see the{' '}
+          <Link href="/updates/" className="text-gray-400 hover:text-aqua underline underline-offset-2">official patch notes history</Link>{' '}
+          for balance changes.
+        </p>
 
         <h2 className="text-xl font-bold text-white">How to Spawn It: The 3-Leech Quest</h2>
         <p>

@@ -1,5 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Sources from '@/components/Sources';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Giant Spider Crab Boss Guide',
@@ -19,6 +20,11 @@ export default function SpiderCrabPage() {
           <div><span className="text-gray-400">Summon Bait:</span> <strong className="text-gold block">Empty Beer Can</strong></div>
           <div><span className="text-gray-400">Key Weakness:</span> <strong className="text-aqua block">Soft Belly (when flipped)</strong></div>
         </div>
+        <p className="text-[11px] text-gray-500 -mt-4">
+          HP and damage figures are community-tested and can shift between patches — see the{' '}
+          <Link href="/updates/" className="text-gray-400 hover:text-aqua underline underline-offset-2">official patch notes history</Link>{' '}
+          for balance changes.
+        </p>
       </div>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">

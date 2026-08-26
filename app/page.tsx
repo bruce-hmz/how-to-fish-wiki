@@ -238,6 +238,10 @@ export default function HomePage() {
             <h3 className="font-bold text-white text-sm mb-1">Weapons &amp; Attachments</h3>
             <p className="text-xs text-gray-400">Every weapon ranked, boss loadout cheatsheet, and the Fully equipped achievement route.</p>
           </Link>
+          <Link href="/updates/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
+            <h3 className="font-bold text-white text-sm mb-1">Patch Notes &amp; Updates</h3>
+            <p className="text-xs text-gray-400">Every official patch 1.0.4–1.0.9: boss nerfs, difficulty modes, save fixes, 8-player lobbies.</p>
+          </Link>
           <Link href="/troubleshooting/error-0x11c7/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Error 0x11C7 Fix</h3>
             <p className="text-xs text-gray-400">Smart App Control blocking the launch? The safe fix order before disabling security.</p>

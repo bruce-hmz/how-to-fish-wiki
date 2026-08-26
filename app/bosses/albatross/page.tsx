@@ -29,6 +29,11 @@ export default function AlbatrossPage() {
           <div><span className="text-gray-400">Required Bait:</span> <strong className="text-gold block">Fresh Tuna Carcass</strong></div>
           <div><span className="text-gray-400">Key Weakness:</span> <strong className="text-aqua block">Wing joints (post-dive)</strong></div>
         </div>
+        <p className="text-[11px] text-gray-500">
+          HP and damage figures are community-tested and can shift between patches — see the{' '}
+          <Link href="/updates/" className="text-gray-400 hover:text-aqua underline underline-offset-2">official patch notes history</Link>{' '}
+          for balance changes.
+        </p>
 
         <h2 className="text-xl font-bold text-white">Spawn Chain: Lure the Tuna, Bait the Bird</h2>
         <p>
