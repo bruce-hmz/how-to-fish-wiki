@@ -19,6 +19,11 @@ export default function GuidePage() {
         <p className="text-gray-300 text-sm leading-relaxed">
           After crashing your boat onto the starter archipelago, you have no keys, no rod, and an empty stomach. Follow this step-by-step checklist to survive, make your first $500, and unlock the open sea.
         </p>
+        <p className="text-xs text-gray-400">
+          Learn better by watching? The{' '}
+          <Link href="/videos/" className="text-aqua hover:underline">trailers &amp; gameplay videos page</Link>{' '}
+          has the official trailers and a full-game community walkthrough.
+        </p>
       </div>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
