@@ -25,6 +25,7 @@ export default function Footer() {
               <li><Link href="/weapons/" className="hover:text-aqua transition-colors">Weapons & Attachments</Link></li>
               <li><Link href="/game/system-requirements/" className="hover:text-aqua transition-colors">System Requirements</Link></li>
               <li><Link href="/updates/" className="hover:text-aqua transition-colors">Patch Notes 1.0.4–1.0.9</Link></li>
+              <li><Link href="/difficulty/" className="hover:text-aqua transition-colors">Difficulty Modes Guide</Link></li>
             </ul>
           </div>
           <div>

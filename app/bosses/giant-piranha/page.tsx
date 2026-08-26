@@ -94,7 +94,7 @@ export default function GiantPiranhaPage() {
         <div className="bg-ocean-950 border border-ocean-700 rounded-lg p-4 text-xs text-gray-400">
           <strong className="text-gold">Stuck on this fight?</strong> Patch 1.0.9 added Easy Mode: creatures
           have 25% less health and deal 50% less damage. Switch difficulty from the main menu or in-game via
-          the <Link href="/settings/" className="text-aqua hover:underline">settings guide</Link>.
+          the <Link href="/difficulty/" className="text-aqua hover:underline">difficulty guide</Link>.
         </div>
       </div>
 

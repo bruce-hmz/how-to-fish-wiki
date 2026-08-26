@@ -179,7 +179,8 @@ export default function UpdatesPage() {
         <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
           <li>
             <strong>Struggling with a boss?</strong> Patch 1.0.9 added an Easy difficulty that cuts creature damage
-            by half — no shame in switching, then switching back.
+            by half — no shame in switching, then switching back. Full details in the{' '}
+            <Link href="/difficulty/" className="text-aqua hover:underline">difficulty modes guide</Link>.
           </li>
           <li>
             <strong>Lost progress or weapons?</strong> The save rules changed in 1.0.6 and corruption was addressed
