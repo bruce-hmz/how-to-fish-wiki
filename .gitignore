@@ -4,5 +4,6 @@ node_modules
 *.log
 .env.local
 .vercel
+tsconfig.tsbuildinfo
 favicon_io/
 favicon_io.zip
