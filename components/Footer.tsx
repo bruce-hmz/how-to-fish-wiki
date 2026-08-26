@@ -27,6 +27,7 @@ export default function Footer() {
               <li><Link href="/updates/" className="hover:text-aqua transition-colors">Patch Notes 1.0.4–1.0.9</Link></li>
               <li><Link href="/difficulty/" className="hover:text-aqua transition-colors">Difficulty Modes Guide</Link></li>
               <li><Link href="/videos/" className="hover:text-aqua transition-colors">Trailers & Gameplay Videos</Link></li>
+              <li><Link href="/cooking/" className="hover:text-aqua transition-colors">Cooking & Grill Recipes</Link></li>
             </ul>
           </div>
           <div>
@@ -34,6 +35,8 @@ export default function Footer() {
             <ul className="space-y-2 text-xs">
               <li><Link href="/map/" className="hover:text-aqua transition-colors">Archipelago Interactive Map</Link></li>
               <li><Link href="/boat/" className="hover:text-aqua transition-colors">Boat Keys & Motor Upgrades</Link></li>
+              <li><Link href="/islands/" className="hover:text-aqua transition-colors">Island Unlock Order</Link></li>
+              <li><Link href="/game/launch/" className="hover:text-aqua transition-colors">Launch Report & Milestones</Link></li>
               <li><Link href="/lures/" className="hover:text-aqua transition-colors">Best Lures & Baits</Link></li>
               <li><Link href="/multiplayer/" className="hover:text-aqua transition-colors">4-Player Co-op Guide</Link></li>
             </ul>

@@ -258,6 +258,18 @@ export default function HomePage() {
             <h3 className="font-bold text-white text-sm mb-1">Save Bug &amp; Lost Items</h3>
             <p className="text-xs text-gray-400">What Patch 1.0.9 fixed, the autosave rules, and the safe recovery order.</p>
           </Link>
+          <Link href="/islands/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
+            <h3 className="font-bold text-white text-sm mb-1">Island Unlock Order</h3>
+            <p className="text-xs text-gray-400">The five-stage chain from Starter Island to the Deep Trench endgame.</p>
+          </Link>
+          <Link href="/cooking/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-coral/50 transition-all">
+            <h3 className="font-bold text-white text-sm mb-1">Cooking &amp; Grill Recipes</h3>
+            <p className="text-xs text-gray-400">Every station recipe, boss-summon feasts, and cooked-fish healing food.</p>
+          </Link>
+          <Link href="/game/launch/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-gold/50 transition-all">
+            <h3 className="font-bold text-white text-sm mb-1">Launch Report</h3>
+            <p className="text-xs text-gray-400">1M players in 10 days, 268K concurrent peak, and the two-dev story.</p>
+          </Link>
         </div>
       </section>
 
