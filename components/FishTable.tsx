@@ -114,7 +114,7 @@ export default function FishTable() {
               <tr key={fish.id} className="hover:bg-ocean-850/60 transition-colors">
                 <td className="px-4 py-3.5 font-bold text-white flex items-center space-x-2"><span>🐟</span><span>{fish.name}</span></td>
                 <td className="px-4 py-3.5"><span className={`px-2 py-0.5 rounded text-xs border font-medium ${getRarityBadge(fish.rarity)}`}>{fish.rarity}</span></td>
-                <td className="px-4 py-3.5 font-semibold text-gold">{fish.value > 0 ? <>${fish.value}</> : <span className="text-gray-500">—</span>}{fish.status === 'community' && <span className="ml-1 text-[10px] text-gray-500" title="Community-sourced, pending in-game verification">~</span>}</td>
+                <td className="px-4 py-3.5 font-semibold text-gold">{fish.value > 0 ? <>${fish.value}</> : <span className="text-gray-500">—</span>}{fish.status && fish.status !== 'verified' && <span className="ml-1 text-[10px] text-gray-500" title={fish.status === 'cross-checked' ? 'Confirmed by two independent community sources' : 'Single community source, pending in-game verification'}>~</span>}</td>
                 <td className="px-4 py-3.5 text-gray-300">{fish.habitat}</td>
                 <td className="px-4 py-3.5 text-gray-300">{fish.bait}</td>
                 <td className="px-4 py-3.5 text-gray-400 text-xs">{fish.weather}</td>

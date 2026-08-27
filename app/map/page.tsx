@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import ArchipelagoMap from '@/components/ArchipelagoMap';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Archipelago Zones, Hotspots & Navigation',
+  title: 'Interactive Route Map, Zones & Hotspots',
   description: 'The How to Fish archipelago in canonical stage order: what each zone contains, navigation tools worth buying, and which circulating map rumors survived fact-checking.'
 };
 
@@ -22,6 +23,10 @@ export default function MapPage() {
         </p>
       </div>
 
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-white">Interactive Route Map</h2>
+        <ArchipelagoMap />
+      </section>
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-white">The Five Stages, In Order</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
