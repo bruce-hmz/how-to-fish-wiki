@@ -16,6 +16,13 @@ const patches = [
     version: 'Patch 1.0.9',
     date: 'August 24, 2026',
     url: ANN + '711158520539514352',
+    affects: [
+      { href: '/difficulty/', label: 'Difficulty modes guide' }, 
+      { href: '/bosses/', label: 'Boss strategy pages (difficulty context)' }, 
+      { href: '/troubleshooting/save-file/', label: 'Save file guide' }, 
+      { href: '/troubleshooting/join-friends/', label: 'Connection fixes (relay readout)' }, 
+      { href: '/achievements/bean/', label: 'Bean route (Easy mode note)' },
+    ],
     sections: [
       {
         title: 'New',
@@ -38,6 +45,10 @@ const patches = [
     version: 'Patch 1.0.8',
     date: 'August 24, 2026',
     url: ANN + '711158520539514106',
+    affects: [
+      { href: '/settings/', label: 'Settings & Deck setup' }, 
+      { href: '/game/system-requirements/', label: 'Controller support matrix' },
+    ],
     sections: [
       {
         title: 'Fixes',
@@ -52,6 +63,10 @@ const patches = [
     version: 'Patch 1.0.6',
     date: 'August 23, 2026',
     url: ANN + '711158520539514081',
+    affects: [
+      { href: '/troubleshooting/save-file/', label: 'Save rules changed here' }, 
+      { href: '/troubleshooting/items-disappeared/', label: 'Gear-loss triage' },
+    ],
     sections: [
       {
         title: 'Fixes',
@@ -66,6 +81,14 @@ const patches = [
     version: 'Patch 1.0.5',
     date: 'August 22, 2026',
     url: ANN + '711158520539513993',
+    affects: [
+      { href: '/troubleshooting/join-friends/', label: 'Private lobbies & session types' }, 
+      { href: '/multiplayer/', label: 'Co-op guide' }, 
+      { href: '/settings/', label: 'FPS floor & axis inversion' }, 
+      { href: '/casino/', label: 'Slot-machine skin fix' }, 
+      { href: '/islands/', label: 'Island-unlock exploit closed' }, 
+      { href: '/achievements/', label: 'Collection achievement fix' },
+    ],
     sections: [
       {
         title: 'New',
@@ -94,6 +117,13 @@ const patches = [
     version: 'Patch 1.0.4',
     date: 'August 21, 2026',
     url: ANN + '711158520539513916',
+    affects: [
+      { href: '/bosses/pufferfish/', label: 'Pufferfish nerf context' }, 
+      { href: '/bosses/magma-whale/', label: 'Whale nerf context' }, 
+      { href: '/multiplayer/', label: '8-player lobby guide' }, 
+      { href: '/troubleshooting/join-friends/', label: 'Join black-screen fix' }, 
+      { href: '/troubleshooting/save-file/', label: 'Server-name corruption fix' },
+    ],
     sections: [
       {
         title: 'Changes',
@@ -159,6 +189,17 @@ export default function UpdatesPage() {
               >
               Official announcement on Steam ↗
               </a>
+
+              {p.affects && p.affects.length > 0 && (
+                <div className="pt-1">
+                  <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Guides affected by this patch:</span>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {p.affects.map((a) => (
+                      <Link key={a.href + a.label} href={a.href} className="text-[11px] bg-ocean-950 border border-ocean-700 rounded-full px-2.5 py-1 text-gray-300 hover:border-aqua/60 hover:text-white transition-colors">{a.label}</Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </article>
         ))}

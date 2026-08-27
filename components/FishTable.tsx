@@ -1,17 +1,60 @@
 'use client';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { FISH_DATABASE, FishItem } from '@/lib/data';
+
+const RARITY_RANK: Record<FishItem['rarity'], number> = {
+  Common: 1,
+  Uncommon: 2,
+  Rare: 3,
+  Epic: 4,
+  Legendary: 5,
+  Drip: 6,
+};
+
+type SortKey = 'default' | 'name' | 'value' | 'rarity';
 
 export default function FishTable() {
   const [searchTerm, setSearchTerm] = useState('');
   const [rarityFilter, setRarityFilter] = useState('All');
-  const filteredFish = FISH_DATABASE.filter(f => {
-    const matchesSearch = f.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          f.habitat.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          f.bait.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesRarity = rarityFilter === 'All' || f.rarity === rarityFilter;
-    return matchesSearch && matchesRarity;
-  });
+  const [sortKey, setSortKey] = useState<SortKey>('default');
+  const [sortAsc, setSortAsc] = useState(true);
+
+  const filteredFish = useMemo(() => {
+    const term = searchTerm.toLowerCase();
+    const filtered = FISH_DATABASE.filter(f => {
+      const matchesSearch =
+        f.name.toLowerCase().includes(term) ||
+        f.habitat.toLowerCase().includes(term) ||
+        f.bait.toLowerCase().includes(term);
+      const matchesRarity = rarityFilter === 'All' || f.rarity === rarityFilter;
+      return matchesSearch && matchesRarity;
+    });
+    if (sortKey === 'default') return filtered;
+    const sorted = [...filtered].sort((a, b) => {
+      switch (sortKey) {
+        case 'name':
+          return a.name.localeCompare(b.name);
+        case 'value':
+          return a.value - b.value;
+        case 'rarity':
+          return RARITY_RANK[a.rarity] - RARITY_RANK[b.rarity];
+      }
+    });
+    return sortAsc ? sorted : sorted.reverse();
+  }, [searchTerm, rarityFilter, sortKey, sortAsc]);
+
+  function toggleSort(key: Exclude<SortKey, 'default'>) {
+    if (sortKey === key) {
+      setSortAsc(v => !v);
+    } else {
+      setSortKey(key);
+      setSortAsc(true);
+    }
+  }
+
+  const sortIndicator = (key: Exclude<SortKey, 'default'>) =>
+    sortKey === key ? (sortAsc ? ' ▲' : ' ▼') : '';
+
   const getRarityBadge = (rarity: FishItem['rarity']) => {
     switch (rarity) {
       case 'Common': return 'bg-gray-700 text-gray-200 border-gray-600';
@@ -44,9 +87,21 @@ export default function FishTable() {
         <table className="w-full text-left text-sm">
           <thead className="bg-ocean-950/80 text-xs text-gray-400 uppercase border-b border-ocean-800">
             <tr>
-              <th className="px-4 py-3">Fish Species</th>
-              <th className="px-4 py-3">Rarity</th>
-              <th className="px-4 py-3">Sell Value</th>
+              <th className="px-4 py-3">
+                <button onClick={() => toggleSort('name')} className="uppercase tracking-wide hover:text-white transition-colors" aria-sort={sortKey === 'name' ? (sortAsc ? 'ascending' : 'descending') : 'none'}>
+                  Fish Species{sortIndicator('name')}
+                </button>
+              </th>
+              <th className="px-4 py-3">
+                <button onClick={() => toggleSort('rarity')} className="uppercase tracking-wide hover:text-white transition-colors" aria-sort={sortKey === 'rarity' ? (sortAsc ? 'ascending' : 'descending') : 'none'}>
+                  Rarity{sortIndicator('rarity')}
+                </button>
+              </th>
+              <th className="px-4 py-3">
+                <button onClick={() => toggleSort('value')} className="uppercase tracking-wide hover:text-white transition-colors" aria-sort={sortKey === 'value' ? (sortAsc ? 'ascending' : 'descending') : 'none'}>
+                  Sell Value{sortIndicator('value')}
+                </button>
+              </th>
               <th className="px-4 py-3">Habitat Location</th>
               <th className="px-4 py-3">Preferred Bait</th>
               <th className="px-4 py-3">Weather</th>
@@ -66,7 +121,10 @@ export default function FishTable() {
           </tbody>
         </table>
       </div>
-      <p className="text-xs text-gray-500 mt-4 text-center">Showing {filteredFish.length} of {FISH_DATABASE.length} documented marine species.</p>
+      <p className="text-xs text-gray-500 mt-4 text-center">
+        Showing {filteredFish.length} of {FISH_DATABASE.length} documented marine species.
+        {sortKey !== 'default' ? ` Sorted by ${sortKey} (${sortAsc ? 'ascending' : 'descending'}).` : ' Click a column header to sort.'}
+      </p>
     </div>
   );
 }

@@ -1,9 +1,22 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import { ACHIEVEMENTS } from '@/lib/achievements';
 
 const STORAGE_KEY = 'htf101-achievements';
+
+// Route guides for achievements whose how-to lives on a dedicated page.
+const ROUTE_LINKS: Record<string, { href: string; label: string }> = {
+  bean: { href: '/achievements/bean/', label: 'Sub-hour route guide' },
+  fishipedia: { href: '/fish/drip-fish/', label: 'Drip hunting guide' },
+  handyman: { href: '/bosses/magma-whale/', label: 'Bare-fist finale walkthrough' },
+  collector: { href: '/fish/', label: 'Verified fish database' },
+  easy: { href: '/difficulty/', label: 'Difficulty tuning explained' },
+  'everyone-s-dream': { href: '/trick-shots/', label: 'Stylish-kill setup' },
+  'rich-millionaire': { href: '/money/', label: 'Income planning' },
+  'terrorizing-bird': { href: '/bosses/albatross/', label: 'Albatross route' },
+};
 
 function rarityOf(pct: number): { label: string; className: string } {
   if (pct >= 80) return { label: 'Very common', className: 'text-green-400 border-green-500/40 bg-green-500/10' };
@@ -81,8 +94,9 @@ export default function AchievementChecklist() {
         {shown.map((a) => {
           const isUnlocked = unlocked.has(a.slug);
           const rarity = rarityOf(a.globalPercent);
+          const route = ROUTE_LINKS[a.slug];
           return (
-            <li key={a.slug}>
+            <li key={a.slug} className="space-y-1.5">
               <button
                 type="button"
                 onClick={() => toggle(a.slug)}
@@ -119,6 +133,14 @@ export default function AchievementChecklist() {
                   </span>
                 </span>
               </button>
+              {route ? (
+                <Link
+                  href={route.href}
+                  className="ml-1 inline-block text-[11px] text-aqua hover:underline"
+                >
+                  {route.label} →
+                </Link>
+              ) : null}
             </li>
           );
         })}
