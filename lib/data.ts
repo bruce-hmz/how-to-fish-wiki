@@ -1,12 +1,13 @@
 export interface FishItem {
   id: string;
   name: string;
-  rarity: 'Common' | 'Uncommon' | 'Rare' | 'Epic' | 'Legendary' | 'Drip';
+  rarity: 'Common' | 'Uncommon' | 'Rare' | 'Epic' | 'Legendary' | 'Drip' | 'Uncatalogued';
   value: number;
   habitat: string;
   bait: string;
   weather: string;
-  description: string;
+  description: string;
+  status?: 'verified' | 'community';
 }
 
 export interface BossInfo {
@@ -43,7 +44,37 @@ export const FISH_DATABASE: FishItem[] = [
   { id: "drip-rock-crab", name: "Drip Rock Crab", rarity: "Drip", value: 5, habitat: "Secret Tidepools", bait: "Rainbow Clam", weather: "Rain", description: "Glowing blue variant. Insert into Casino Gachapon machine to spin for exclusive skins." },
   { id: "drip-fish", name: "Drip Fish", rarity: "Drip", value: 250, habitat: "Volcano Undersea Vent", bait: "Beer / Special Lure", weather: "Thunderstorm", description: "Legendary iridescent fish. Key requirement for end-game weapon ascensions." },
   { id: "golden-tuna", name: "Golden Tuna", rarity: "Epic", value: 450, habitat: "Far Outer Ocean", bait: "Squid Strips", weather: "Sunset", description: "Massive fast-swimming game fish that tests rod tensile strength." },
-  { id: "kraken-spawn", name: "Kraken Spawn", rarity: "Legendary", value: 1200, habitat: "Bermuda Whirlpool", bait: "Boss Meat", weather: "Night Storm", description: "Tentacled mythological creature. Requires upgraded reinforced boat." }
+  { id: "kraken-spawn", name: "Kraken Spawn", rarity: "Legendary", value: 1200, habitat: "Bermuda Whirlpool", bait: "Boss Meat", weather: "Night Storm", description: "Tentacled mythological creature. Requires upgraded reinforced boat." },
+  { id: "lobster", name: "Lobster", rarity: "Uncatalogued", value: 0, habitat: "Starter Island (Lighthouse)", bait: "Hot Dog", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "piranha", name: "Piranha", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Hot Dog", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "mackerel", name: "Mackerel", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Free Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "gar", name: "Gar", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Free Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "pike", name: "Pike", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Free Lure / Beginner Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "cod", name: "Cod", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Beginner Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "goldfish", name: "Goldfish", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Free Lure / Beginner Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "perch", name: "Perch", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Beginner Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "triggerfish", name: "Triggerfish", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Beginner Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "angelfish", name: "Angelfish", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "boxfish", name: "Boxfish", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "catfish", name: "Catfish", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "sea-urchin", name: "Sea Urchin", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "seahorse", name: "Seahorse", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "clownfish", name: "Clownfish", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "salmon", name: "Salmon", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "needlefish", name: "Needlefish", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "parrotfish", name: "Parrotfish", rarity: "Uncatalogued", value: 0, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "voxelfish", name: "Voxelfish", rarity: "Uncatalogued", value: 0, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "halibut", name: "Halibut", rarity: "Uncatalogued", value: 0, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "eel", name: "Eel", rarity: "Uncatalogued", value: 0, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "tigerfish", name: "Tigerfish", rarity: "Uncatalogued", value: 0, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "flying-fish", name: "Flying Fish", rarity: "Uncatalogued", value: 0, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "sengarat", name: "Sengarat", rarity: "Uncatalogued", value: 0, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "anglerfish", name: "Anglerfish", rarity: "Uncatalogued", value: 0, habitat: "Mount Inferno & Deep Trench", bait: "Scientific Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "blobfish", name: "Blobfish", rarity: "Uncatalogued", value: 0, habitat: "Mount Inferno & Deep Trench", bait: "Scientific Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "oarfish", name: "Oarfish", rarity: "Uncatalogued", value: 0, habitat: "Mount Inferno & Deep Trench", bait: "Scientific Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "superdwarf-fish", name: "Superdwarf Fish", rarity: "Uncatalogued", value: 0, habitat: "Mount Inferno & Deep Trench", bait: "Scientific Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "stonefish", name: "Stonefish", rarity: "Uncatalogued", value: 0, habitat: "Mount Inferno & Deep Trench", bait: "Scientific Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
+  { id: "rock-crab", name: "Rock Crab", rarity: "Uncatalogued", value: 0, habitat: "Starter Island (Lighthouse)", bait: "Free Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "community" },
 ];
 
 export const BOSSES_DATABASE: BossInfo[] = [
@@ -62,6 +93,9 @@ export const BOSSES_DATABASE: BossInfo[] = [
       "Equip your sharpened Knife or Brass Knuckles and attack the glowing joint plates."
     ]
   },
+
+
+
   {
     id: "pufferfish",
     name: "Colossal Spiky Pufferfish",

@@ -39,8 +39,7 @@ export default function FishPage() {
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p>
-          <strong className="text-white">Catalog status:</strong> community catalogs track <strong className="text-aqua">49 marine species</strong> across six rarity tiers. This table publishes{' '}
-          <strong className="text-white">verified entries only</strong> — every row below has had its habitat, bait preference, and weather window cross-checked against gameplay sources. Additional species move into the table as each one is confirmed.
+          <strong className="text-white">Catalog status:</strong> community catalogs track <strong className="text-aqua">49 marine species</strong> across six rarity tiers. The table now carries two tiers: <strong className="text-white">11 verified entries</strong> (habitat, bait, and weather cross-checked through playthroughs) and <strong className="text-white">30 community-documented entries</strong> marked with a ~ symbol — names, habitats, and baits attributed to the G2A island guide, with sell values and weather windows pending in-game verification. The remaining gap to 49 is bosses (tracked in the <a href="/bosses/" className="text-aqua hover:underline">boss hub</a>) and variants still being reconciled across sources.
         </p>
         <p>
           Every species has its own sell value, preferred bait, habitat, and weather window, so planning catches around those four columns is how money-making runs get efficient. Filter by rarity to prioritize expensive catches, or search by name to check where something spawns before wasting a trip. Drip variants behave differently from everything else — see the sections below this table.
@@ -117,6 +116,7 @@ export default function FishPage() {
           { label: 'Steam Discussion: “fish literally wont bite no matter what”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582805931178592456/', note: 'reeling technique and rod-type behavior reported by players' },
           { label: 'Steam Discussion: “I’m getting zero drip fish”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606702906/', note: 'basis for treating exact Drip odds as unpublished' },
           { label: 'Steam Discussion: rainbow fish crash reports', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806523877546439/', note: 'launch-week issue referenced above' },
+          { label: 'G2A News: How to Fish — all fish, bosses, rods and bait by island', href: 'https://www.g2a.com/news/features/guide/how-to-fish-all-fish-bosses-rods-and-bait-by-island/', note: 'source attributed to all ~-marked community entries' },
           { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 're-verification baseline for patch changes' },
         ]}
       />

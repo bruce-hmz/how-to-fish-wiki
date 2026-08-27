@@ -8,7 +8,8 @@ const RARITY_RANK: Record<FishItem['rarity'], number> = {
   Rare: 3,
   Epic: 4,
   Legendary: 5,
-  Drip: 6,
+  Drip: 6,
+  Uncatalogued: 7,
 };
 
 type SortKey = 'default' | 'name' | 'value' | 'rarity';
@@ -62,7 +63,8 @@ export default function FishTable() {
       case 'Rare': return 'bg-blue-950 text-blue-300 border-blue-700';
       case 'Epic': return 'bg-purple-950 text-purple-300 border-purple-700';
       case 'Legendary': return 'bg-amber-950 text-amber-300 border-amber-700';
-      case 'Drip': return 'bg-cyan-950 text-cyan-300 border-cyan-500 animate-pulse';
+      case 'Drip': return 'bg-cyan-950 text-cyan-300 border-cyan-500 animate-pulse';
+      case 'Uncatalogued': return 'bg-ocean-950 text-gray-300 border-dashed border-ocean-600';
     }
   };
   return (
@@ -76,7 +78,7 @@ export default function FishTable() {
           className="w-full sm:w-80 bg-ocean-950 border border-ocean-700 text-white rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-aqua"
         />
         <div className="flex items-center space-x-2 w-full sm:w-auto overflow-x-auto pb-2 sm:pb-0">
-          {['All', 'Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Drip'].map((r) => (
+          {['All', 'Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Drip', 'Uncatalogued'].map((r) => (
             <button key={r} onClick={() => setRarityFilter(r)} className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${rarityFilter === r ? 'bg-aqua text-ocean-950' : 'bg-ocean-950 text-gray-400 hover:text-white border border-ocean-800'}`}>
               {r}
             </button>
@@ -112,7 +114,7 @@ export default function FishTable() {
               <tr key={fish.id} className="hover:bg-ocean-850/60 transition-colors">
                 <td className="px-4 py-3.5 font-bold text-white flex items-center space-x-2"><span>🐟</span><span>{fish.name}</span></td>
                 <td className="px-4 py-3.5"><span className={`px-2 py-0.5 rounded text-xs border font-medium ${getRarityBadge(fish.rarity)}`}>{fish.rarity}</span></td>
-                <td className="px-4 py-3.5 font-semibold text-gold">${fish.value}</td>
+                <td className="px-4 py-3.5 font-semibold text-gold">{fish.value > 0 ? <>${fish.value}</> : <span className="text-gray-500">—</span>}{fish.status === 'community' && <span className="ml-1 text-[10px] text-gray-500" title="Community-sourced, pending in-game verification">~</span>}</td>
                 <td className="px-4 py-3.5 text-gray-300">{fish.habitat}</td>
                 <td className="px-4 py-3.5 text-gray-300">{fish.bait}</td>
                 <td className="px-4 py-3.5 text-gray-400 text-xs">{fish.weather}</td>

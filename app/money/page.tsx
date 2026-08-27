@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb';
+import PriceCalculator from '@/components/PriceCalculator';
 import Link from 'next/link';
 import { FaqJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
@@ -148,6 +149,10 @@ export default function MoneyPage() {
         </div>
       </section>
 
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-white">Sale Price Calculator</h2>
+        <PriceCalculator />
+      </section>
       <Sources
         items={[
           { label: 'Steam Discussion: “Beating the game in 1 hour Solo, any tips?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606645268/', note: 'source of the shell-sale speedrun opener' },

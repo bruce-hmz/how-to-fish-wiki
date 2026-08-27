@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LoadoutRecommender from '@/components/LoadoutRecommender';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
@@ -74,11 +75,15 @@ export default function LuresPage() {
           <li><strong>Coral Maze Lagoon</strong>: Rainbow Lure is the universal best option here. Attracts all tropical species including the high-value Parrot Wrasse ($45).</li>
           <li><strong>Casino Island Reef</strong>: Lantern Bait at night for Drip variants. Shrimp Cocktail during the day for King Crabs ($65 each).</li>
           <li><strong>Deep Open Ocean</strong>: Squid Tentacle for Swordfish and Marlin. Golden Minnow if you are specifically hunting legendary species.</li>
-          <li><strong>Volcanic Trench</strong>: Fireproof Lure is mandatory — regular bait burns up instantly in the heated water. Targets Magma Eels and
-
-        <p className="text-xs text-gray-400 border-l-2 border-aqua/40 pl-3">Pair baits with targets via the <Link href="/fish/" className="text-aqua hover:underline">fish list</Link>, then turn catches into cash with the <Link href="/money/" className="text-aqua hover:underline">money guide</Link>.</p> Lava Carp.</li>
+          <li><strong>Volcanic Trench</strong>: Fireproof Lure is mandatory — regular bait burns up instantly in the heated water. Targets Magma Eels and Lava Carp.</li>
         </ul>
       </div>
+
+        <section className="space-y-3">
+          <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Zone Loadout Recommender</h2>
+          <LoadoutRecommender />
+        </section>
+        <p className="text-xs text-gray-400 border-l-2 border-aqua/40 pl-3">Pair baits with targets via the <Link href="/fish/" className="text-aqua hover:underline">fish list</Link>, then turn catches into cash with the <Link href="/money/" className="text-aqua hover:underline">money guide</Link>.</p>
     </div>
   );
 }
