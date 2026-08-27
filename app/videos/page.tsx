@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Official Trailers & Gameplay Videos',
   description:
-    'Watch How to Fish videos: the official release date trailer from Dazed Games, the Steam gameplay trailer, and a full-game community walkthrough.',
+    'Watch How to Fish videos: official trailers from Dazed Games, a full-game community walkthrough, plus speedruns and boss tech from the community scene.',
   alternates: { canonical: 'https://howtofish101.com/videos/' },
 };
 
@@ -35,8 +35,9 @@ export default function VideosPage() {
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-8 text-sm text-gray-300">
         <p>
           All the How to Fish video content worth watching in one place: the official release date trailer from
-          Dazed Games, the official gameplay trailer hosted on Steam, and a community-recorded full-game
-          walkthrough if you would rather preview the entire experience before buying.
+          Dazed Games, the official gameplay trailer hosted on Steam, a community-recorded full-game
+          walkthrough, and — since launch week proved this game has a speed scene — the speedrun and boss-tech
+          clips players keep passing around.
         </p>
 
         <section className="space-y-3">
@@ -119,6 +120,46 @@ export default function VideosPage() {
           />
         </section>
 
+        <section className="space-y-3">
+          <h2 className="text-xl font-bold text-white">Speedruns &amp; Boss Tech (Community)</h2>
+          <p className="text-xs text-gray-400">
+            Launch week already has a speed scene. View counts below were observed on August 27, 2026;
+            upload dates stay approximate because this wiki verifies before it asserts.
+          </p>
+          <div className="aspect-video rounded-lg overflow-hidden border border-ocean-800">
+            <iframe
+              src="https://www.youtube.com/embed/6hrB_A5wmuw"
+              title="How To Fish ALL MAIN BOSSES speedrun in 19:04 (MrMachineGuy)"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+              className="w-full h-full"
+            />
+          </div>
+          <p className="text-xs text-gray-400">
+            <strong className="text-white">All main bosses in 19:04 — former world record</strong> by MrMachineGuy
+            (~3.6K views in its first day). It pairs naturally with the clock-focused
+            <Link href="/achievements/bean/" className="text-aqua hover:underline"> Bean achievement route</Link> and the
+            <Link href="/bosses/" className="text-aqua hover:underline"> fight-by-fight boss guides</Link>.
+          </p>
+          <div className="aspect-video rounded-lg overflow-hidden border border-ocean-800">
+            <iframe
+              src="https://www.youtube.com/embed/nC0lUGV_4rE"
+              title="全BOSS逃課攻略！3秒鐘秒殺BOSS (千島)"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+              className="w-full h-full"
+            />
+          </div>
+          <p className="text-xs text-gray-400">
+            <strong className="text-white">3-second boss kill tech</strong> from the Chinese-language scene (千島,
+            ~1.7K views in under a day) — proof the cheese routes cross languages. The
+            <Link href="/trick-shots/" className="text-aqua hover:underline"> trick shots page</Link> covers the
+            scoring side of stylish kills.
+          </p>
+        </section>
+
         <Sources
           items={[
             {
@@ -130,6 +171,15 @@ export default function VideosPage() {
               label: 'How to Fish on Steam',
               href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
               note: 'Official gameplay trailer media',
+            },
+            {
+              label: 'MrMachineGuy — 19:04 all-bosses speedrun',
+              href: 'https://www.youtube.com/watch?v=6hrB_A5wmuw',
+            },
+            {
+              label: '千島 — 3-second boss tech',
+              href: 'https://www.youtube.com/watch?v=nC0lUGV_4rE',
+              note: 'boss-tech embed source',
             },
             {
               label: 'skull Game 7K — full game walkthrough',

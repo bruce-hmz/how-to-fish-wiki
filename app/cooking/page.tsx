@@ -27,6 +27,11 @@ export default function CookingPage() {
           <li>Press <kbd className="bg-ocean-950 px-2 py-0.5 rounded text-aqua font-mono border border-ocean-700">E</kbd> to cook.</li>
           <li>A valid combination produces the crafted item; a failed recipe produces <strong>Burnt Bait</strong> — worthless, but nothing is lost.</li>
           <li>Stations exist on the starter island dock, in the Coral Maze (after the Spider Crab), and at the Mount Inferno forge.</li>
+          <li>The grill judges nothing: leave a <em>weapon</em> on or beside it and the game will char the gun or rod itself, which locks its skins. If it already happened, our{' '}
+            <Link href="/troubleshooting/cooked-weapons/" className="text-aqua hover:underline">
+              cooked weapon rescue guide
+            </Link>{' '}
+            walks through undoing the burn.</li>
         </ul>
 
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">All Known Recipes</h2>

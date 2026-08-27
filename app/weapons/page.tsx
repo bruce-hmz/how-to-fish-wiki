@@ -183,7 +183,11 @@ export default function WeaponsPage() {
           For the bait side of the loadout equation, see the{' '}
           <Link href="/lures/" className="text-aqua hover:underline">lures &amp; baits guide</Link>, and for
           crew-based weapon role assignments check the{' '}
-          <Link href="/multiplayer/" className="text-aqua hover:underline">4-player co-op guide</Link>.
+          <Link href="/multiplayer/" className="text-aqua hover:underline">4-player co-op guide</Link>. One hazard loadouts skip too often: gear parked on a grill — or hauled through volcano heat — comes back <em>cooked</em>, which blocks skins until you clear the burn state (see the{' '}
+          <Link href="/troubleshooting/cooked-weapons/" className="text-aqua hover:underline">
+            cooked weapon rescue guide
+          </Link>
+          ).
         </p>
 
         <Sources

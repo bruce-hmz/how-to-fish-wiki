@@ -57,7 +57,9 @@ export default function CasinoPage() {
         <p className="text-xs leading-relaxed">
           Steady income in How to Fish comes from the catch-sell-upgrade loop and boss trophies — see the
           <Link href="/guide/" className="text-aqua hover:underline"> beginner walkthrough</Link> for the
-          reliable route. Casino expected value sits below honest fishing, which makes it a cosmetics
+          reliable route — and see the{' '}
+          <Link href="/money/" className="text-aqua hover:underline">money guide with real numbers</Link>{' '}
+          for what honest fishing actually pays. Casino expected value sits below that baseline, which makes it a cosmetics
           shortcut rather than a strategy. Set a session budget before you walk in, and stop when it is
           gone: the house edge compounds exactly like real gambling.
         </p>
