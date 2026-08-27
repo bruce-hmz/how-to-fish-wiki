@@ -53,6 +53,8 @@ export default function MultiplayerPage() {
               <tr><td className="p-3 font-bold text-white">Spider Crab</td><td className="p-3">800</td><td className="p-3">1,200</td><td className="p-3">1,600</td><td className="p-3">2,000</td></tr>
               <tr><td className="p-3 font-bold text-white">Pufferfish</td><td className="p-3">1,500</td><td className="p-3">2,250</td><td className="p-3">3,000</td><td className="p-3">3,750</td></tr>
               <tr><td className="p-3 font-bold text-white">Magma Whale</td><td className="p-3">3,000</td><td className="p-3">4,500</td><td className="p-3">6,000</td><td className="p-3">7,500</td></tr>
+<tr><td className="p-3 font-bold text-white">Giant Piranha</td><td className="p-3">1,200</td><td className="p-3">1,800</td><td className="p-3">2,400</td><td className="p-3">3,000</td></tr>
+<tr><td className="p-3 font-bold text-white">Albatross</td><td className="p-3">2,200</td><td className="p-3">3,300</td><td className="p-3">4,400</td><td className="p-3">5,500</td></tr>
             </tbody>
           </table>
         </div>
@@ -72,6 +74,12 @@ export default function MultiplayerPage() {
           <li><strong>Full Crew Exploration</strong>: With 4 players, assign one as a dedicated Explorer who dives into underwater caves and secret locations while the rest fish from the boat. The Explorer can discover hidden merchants and treasure chests that surface players miss.</li>
           <li><strong>Split Island Farming</strong>: In a 3–4 player crew, split across different islands to farm simultaneously. Fish and items can be traded between players by dropping items on shared boats at docks.</li>
         </ul>
+
+        <p className="text-xs text-gray-400 leading-relaxed border-l-2 border-aqua/40 pl-3">
+          Connection-side trouble — invites that never load, black screens on join, session privacy, or the
+          1.0.9 relay readout showing red — lives in our 
+          <Link href="/troubleshooting/join-friends/" className="text-aqua hover:underline">cannot-join-friends fix list</Link>.
+        </p>
       </div>
     </div>
   );

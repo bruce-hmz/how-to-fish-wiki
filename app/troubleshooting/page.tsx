@@ -17,8 +17,8 @@ const issues = [
   {
     href: '/troubleshooting/save-file/',
     icon: '💾',
-    title: 'Save File Bug & Autosave Problems',
-    desc: 'Patch 1.0.9 attempted a corruption fix, but old saves are not auto-repaired. How the Patch 1.0.6 save rules work and what to preserve before trying workarounds.',
+    title: 'Save Files: Location, Backups & Recovery',
+    desc: 'Exact save folder paths for Windows and Steam Deck, a timestamped backup script, rollback steps, and what Patches 1.0.4–1.0.9 actually changed about saving.',
   },
   {
     href: '/troubleshooting/items-disappeared/',
@@ -27,10 +27,16 @@ const issues = [
     desc: 'Weapons, boat, radar, or quest drops gone after a crash, death, or disconnect. The safe recovery order — and why you should stop saving immediately.',
   },
   {
+    href: '/troubleshooting/cooked-weapons/',
+    icon: '🔥',
+    title: 'Burned (Cooked) Weapons & Gear',
+    desc: 'Guns and rods char like fish near grills and lava, and skins stop applying. No official un-cook button as of Patch 1.0.9 — the community Cookness save fix, step by step.',
+  },
+  {
     href: '/troubleshooting/join-friends/',
     icon: '👥',
     title: 'Cannot Join Friends / Black Screen',
-    desc: 'Lobby black screens, version mismatch, and private lobby settings fixed. Patch 1.0.4 and 1.0.5 changed how sessions work.',
+    desc: 'The ordered fix list that clears most join failures, plus session types since 1.0.5 and the new 1.0.9 relay readout.',
   },
   {
     href: '/troubleshooting/what-to-do-next/',
