@@ -28,7 +28,7 @@ export const GAME_INFO = {
   steamAppId: "4001890",
   steamUrl: "https://store.steampowered.com/app/4001890/How_to_Fish/",
   genre: "1-4 Player Physics Fishing Simulator",
-  peakPlayers: "268,000+ Concurrent Players",
+  peakPlayers: "373,971 Peak Concurrent Players (Aug 26, SteamDB)",
   description: "A 1-4 player physics-based fishing simulator. After a boat crash on a mysterious archipelago, survive, master casting, battle gigantic marine bosses, and find your way home."
 };
 
@@ -52,9 +52,9 @@ export const BOSSES_DATABASE: BossInfo[] = [
     name: "Giant Spider Crab",
     location: "Starter Lighthouse Reef",
     summonBait: "Empty Beer Can (Rage Bait)",
-    hp: "500 HP",
-    weakness: "Eye stalks & underside during charge stun",
-    keyRewards: ["Spider Crab Trophy", "Boat Repair Key Part #1", "Crab Armor Skin"],
+    hp: "800 HP",
+    weakness: "Soft Belly (when flipped)",
+    keyRewards: ["Boat Key Part #1", "200 Gold", "Spider Crab Shell Shield (10% drop)"],
     strategy: [
       "Buy beer from the tavern NPC and give it to the beach drunk to get an Empty Beer Can.",
       "Cast the empty beer can into the bubbling tidepool near the lighthouse to anger the Spider Crab.",
@@ -68,8 +68,8 @@ export const BOSSES_DATABASE: BossInfo[] = [
     location: "Coral Maze Lagoon",
     summonBait: "Hot Dog Feast Lure",
     hp: "1,500 HP",
-    weakness: "Mouth opening right before spike discharge",
-    keyRewards: ["Puffer Spike Launcher", "Deep Sea Sonar Radar", "5,000 Cash"],
+    weakness: "Mouth & Dorsal Fin",
+    keyRewards: ["Boat Key Part #2", "500 Gold", "Pufferfish Trophy (25% drop)"],
     strategy: [
       "Position your boat near the coral arches to block its rolling charge attack.",
       "When the boss inflates, take cover behind terrain to avoid the 360-degree spike barrage.",
@@ -82,9 +82,9 @@ export const BOSSES_DATABASE: BossInfo[] = [
     name: "Volcanic Magma Whale (Final Boss)",
     location: "Mount Inferno Crater Lake",
     summonBait: "Volcano Core Baited Hook",
-    hp: "4,000 HP",
-    weakness: "Cooling lava vents on head during dive-bomb recovery",
-    keyRewards: ["Golden Fishing Rod", "Home Island Coordinates", "Story Completion Trophy"],
+    hp: "3,000 HP",
+    weakness: "Blowhole (during surface)",
+    keyRewards: ["Boat Key Part #3", "Legendary Volcanic Rod", "1,500 Gold"],
     strategy: [
       "Navigate boat up the lava river canal to the crater summit.",
       "Avoid lava projectiles by constantly moving; do not stay stationary in the boat.",
@@ -98,7 +98,7 @@ export const BOSSES_DATABASE: BossInfo[] = [
     location: "Island 2 Lake",
     summonBait: "Modified Leech (Quest Item)",
     hp: "1,200 HP",
-    weakness: "Open mouth during jump recovery",
+    weakness: "Mouth (jump recovery)",
     keyRewards: ["Giant Piranha Skeleton", "Island 3 Coordinates", "1,500 Cash"],
     strategy: [
       "Collect three ground-spawned Leeches on Island 2 and hand them to the lady by the lake for the Modified Leech.",
@@ -113,7 +113,7 @@ export const BOSSES_DATABASE: BossInfo[] = [
     location: "Island 4 Skies",
     summonBait: "Fresh Tuna Carcass",
     hp: "2,200 HP",
-    weakness: "Breast & wing joints after a committed dive pass",
+    weakness: "Wing joints (post-dive)",
     keyRewards: ["Albatross Head", "Terrorizing Bird Achievement", "Sky Compass"],
     strategy: [
       "Finish the Pufferfish hand-in first, then reach Island 4 and buy the Professional Boss Lure.",

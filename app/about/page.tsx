@@ -37,10 +37,10 @@ export default function AboutPage() {
       <section className="space-y-3 bg-ocean-900/80 border border-ocean-800 rounded-xl p-6">
         <h2 className="text-xl font-bold text-white">What We Cover</h2>
         <ul className="list-disc list-inside space-y-1">
-          <li>A full database of all 49 fish species with locations, bait preferences, and rarity tiers</li>
+          <li>A growing fish database with verified locations, bait preferences, and rarity tiers</li>
           <li>Boss encounter strategies with phase breakdowns and recommended loadouts</li>
           <li>Comprehensive lure guides covering crafting, upgrades, and effectiveness charts</li>
-          <li>Interactive map exploration tips for every biome and secret area</li>
+          <li>Map &amp; hotspot guides with navigation tips for every biome and secret area</li>
           <li>Co-op and multiplayer tactics for tackling endgame content with friends</li>
           <li>Settings optimization and troubleshooting for common technical issues</li>
         </ul>

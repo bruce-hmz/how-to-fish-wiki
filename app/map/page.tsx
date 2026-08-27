@@ -1,73 +1,81 @@
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'Archipelago Interactive Map & Hotspots',
-  description: 'Complete map of How to Fish archipelago. Coordinates for all islands, merchant docks, boat repair bays, and secret deep trenches.',
-  alternates: { canonical: 'https://howtofish101.com/map/' },
+  title: 'Archipelago Zones, Hotspots & Navigation',
+  description: 'The How to Fish archipelago in canonical stage order: what each zone contains, navigation tools worth buying, and which circulating map rumors survived fact-checking.'
 };
 
 export default function MapPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Archipelago Map', href: '/map/' }]} />
-      <h1 className="text-3xl font-extrabold text-white">Archipelago Island Map & Hotspots</h1>
-      <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
-        <p>The game takes place across 5 main islands and outer reef zones. Use your boat's Sonar Radar to avoid shallow sandbars.</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h2 className="font-bold text-white text-base mb-1">1. Starter Island (Lighthouse)</h2>
-            <p className="text-xs text-gray-400">Safe harbor with shopkeeper NPC, clam beaches, and the Spider Crab tidepool.</p>
-          </div>
-          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h2 className="font-bold text-white text-base mb-1">2. Coral Maze Lagoon</h2>
-            <p className="text-xs text-gray-400">Home of the Colossal Pufferfish and high-tier tropical species.</p>
-          </div>
-          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h2 className="font-bold text-white text-base mb-1">3. Casino & Gachapon Atoll</h2>
-            <p className="text-xs text-gray-400">Trade rare Drip creatures for cosmetic weapon wraps and boat customizations.</p>
-          </div>
-          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h2 className="font-bold text-white text-base mb-1">4. Mount Inferno Caldera</h2>
-            <p className="text-xs text-gray-400">Volcanic crater lake housing the final Magma Whale titan.</p>
-          </div>
-          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h2 className="font-bold text-white text-base mb-1">5. Coral Reef Atoll</h2>
-            <p className="text-xs text-gray-400">A ring-shaped reef surrounding a shallow turquoise lagoon. Home to tropical species like Parrot Wrasse, Clownfish, and the rare Golden Seahorse. The atoll has an underwater cave system accessible by diving — inside you will find the Coral Merchant who sells the Rainbow Lure and unique cosmetic shell accessories.</p>
-          </div>
-          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h2 className="font-bold text-white text-base mb-1">6. Volcanic Trench</h2>
-            <p className="text-xs text-gray-400">A deep oceanic rift south of Mount Inferno where superheated water glows orange. Requires Heat-Shielded Hull to survive. Contains Magma Eels, Lava Carp, and the Obsidian Shards needed for the Volcano Core boss bait. Depth reaches 800 meters — the deepest point in the game.</p>
-          </div>
-          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h2 className="font-bold text-white text-base mb-1">7. Mangrove Swamp</h2>
-            <p className="text-xs text-gray-400">A dense tidal wetland east of Casino Island with tangled root systems and murky water. Visibility is low, making navigation tricky. Unique catches include Mudskipper, Swamp Eel, and the elusive Ghost Catfish. The swamp also hides a secret NPC vendor who sells Lantern Bait at a 50% discount.</p>
-          </div>
-        </div>
+      <h1 className="text-3xl font-extrabold text-white">Archipelago Zones, Hotspots &amp; Navigation</h1>
+      <p className="text-xs text-gray-500 -mt-4">Last verified August 27, 2026 · Game version 1.0.9</p>
 
-        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Navigation Tips</h2>
-        <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
-          <li><strong>Sonar Radar</strong>: Purchased as a Tier 2 boat upgrade ($750). Reveals underwater fish swarm shadows, depth contours, and sandbar locations on your minimap. Essential for finding deep-water fishing hotspots and avoiding hull damage from shallow obstacles.</li>
-          <li><strong>Compass HUD</strong>: Always enabled in the top-center of your screen. Islands are marked with icons once discovered. Use compass bearings when navigating in fog or storms when visibility drops to near zero.</li>
-          <li><strong>Avoiding Sandbars</strong>: Shallow sandbars are invisible without Sonar and will ground your boat for 10 seconds if you hit one. During this time, aggressive fish can attack freely. Stick to marked channels between islands or use the Sonar overlay to spot them.</li>
-          <li><strong>Current Channels</strong>: Certain water lanes between islands have strong currents that boost or slow your boat speed. Ride favorable currents (shown as blue arrows on the Sonar map) to save fuel on long journeys.</li>
-        </ul>
-
-        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Secret Locations & Hidden Caves</h2>
+      <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p>
-          The archipelago is full of hidden caves and secret areas that do not appear on any map. Finding them rewards rare items, unique fish, and NPC encounters:
+          This guide follows the game's own stage naming — the same five-step chain our progression records track — instead of fan-invented coordinates drifting through comment sections. Every hotspot cross-references the guide that documents it.
         </p>
-        <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
-          <li><strong>Lighthouse Basement</strong>: Dive beneath the starter island lighthouse to find a flooded basement with a treasure chest containing the Brass Knuckle upgrade (doubles punch damage).</li>
-          <li><strong>Coral Cave Network</strong>: Enter through a narrow gap on the east wall of the Coral Maze Lagoon. Inside is a luminescent cavern with exclusive Glowfin Tuna and a Pearl Merchant who buys fish at 2x normal price.</li>
-          <li><strong>Sunken Ship Graveyard</strong>: Located at coordinates (X: 650, Y: -300) in the open ocean between Casino Island and Mount Inferno. Dive down to find 3 wrecked ships, each containing a treasure chest with random loot including rare weapon skins and Drip Fish eggs.</li>
-          <li><strong>Hermit Island</strong>: A tiny unmarked island at the map edge (X: 999, Y: 100). A single NPC hermit lives here and sells the Golden Minnow bait — the only bait that guarantees legendary fish catches.</li>
-        </ul>
-
-        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Weather-Dependent Accessibility</h2>
-        <p>
-          Some areas are only accessible during certain weather conditions. The <strong>Mangrove Swamp</strong> floods during rain, opening deeper channels that let you reach the inner swamp where Ghost Catfish spawn. During storms, the <strong>Volcanic Trench</strong> erupts with new lava vents that reveal hidden Obsidian Shard deposits. The <strong>Sunken Ship Graveyard</strong> only becomes visible during low tide events (occur every 3rd in-game day), when the water level drops enough to expose the ship masts above the surface. Plan your exploration around the weather cycle for maximum discovery.
+        <p className="text-xs leading-relaxed">
+          On floating rumors: posts cite exact treasure coordinates, secret merchants selling guaranteed legendary bait, hidden basements. We could not reproduce any of them reliably, so they stay off these pages until reproducible — extend that suspicion to every X/Y list you meet elsewhere.
         </p>
       </div>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-white">The Five Stages, In Order</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
+            <h3 className="font-bold text-white text-base mb-1">Stage 1 · Starter Island (Lighthouse)</h3>
+            <p className="text-xs text-gray-400 mb-2">Clam beaches, your first rod, the tavern beer run, and the Spider Crab tidepool that gates everything.</p>
+            <Link href="/bosses/spider-crab/" className="text-xs text-aqua hover:underline">Spider Crab guide →</Link>
+          </div>
+          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
+            <h3 className="font-bold text-white text-base mb-1">Stage 2 · Island 2 (Lake)</h3>
+            <p className="text-xs text-gray-400 mb-2">Freshwater boss arena unlocked by the three-leech favor. Mind the Piranha escape bar once circling starts.</p>
+            <Link href="/bosses/giant-piranha/" className="text-xs text-aqua hover:underline">Giant Piranha guide →</Link>
+          </div>
+          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
+            <h3 className="font-bold text-white text-base mb-1">Stage 3 · Coral Maze Lagoon</h3>
+            <p className="text-xs text-gray-400 mb-2">Pufferfish territory. Pre-position the boat at the coral arches before summoning, not after.</p>
+            <Link href="/bosses/pufferfish/" className="text-xs text-aqua hover:underline">Pufferfish guide →</Link>
+          </div>
+          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
+            <h3 className="font-bold text-white text-base mb-1">Side Locale · Casino Island</h3>
+            <p className="text-xs text-gray-400 mb-2">Hand-in stop on the Stage 3 exit path; the gachapon machine trades Drip catches for cosmetics.</p>
+            <Link href="/casino/" className="text-xs text-aqua hover:underline">Casino &amp; gachapon →</Link>
+          </div>
+          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
+            <h3 className="font-bold text-white text-base mb-1">Stage 4 · Island 4 (Skies)</h3>
+            <p className="text-xs text-gray-400 mb-2">Albatross airspace: catch a tuna locally, plant the carcass, keep open sightlines between dive passes.</p>
+            <Link href="/bosses/albatross/" className="text-xs text-aqua hover:underline">Albatross guide →</Link>
+          </div>
+          <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
+            <h3 className="font-bold text-white text-base mb-1">Stage 5 · Mount Inferno &amp; Deep Trench</h3>
+            <p className="text-xs text-gray-400 mb-2">Lava river canal to the crater lake; keep moving through magma volleys. Deepest open water sits past this gate.</p>
+            <Link href="/bosses/magma-whale/" className="text-xs text-aqua hover:underline">Magma Whale guide →</Link>
+          </div>
+        </div>
+        <p className="text-xs text-gray-500">Gate-by-gate unlock requirements live on the <Link href="/islands/" className="text-aqua hover:underline">island progression page</Link>.</p>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-white">Navigation That Actually Helps</h2>
+        <ul className="list-disc pl-5 space-y-2 bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 text-sm text-gray-300">
+          <li><strong className="text-white">Buy the radar early.</strong> It anchors half of all navigation pain stories — players describe eyeballing headings, sailing blind, and burning fuel needed later.</li>
+          <li><strong className="text-white">Fuel arithmetic beats optimism:</strong> $2 per unit on a base 50-unit tank; higher engine tiers trade upfront cost for efficiency. Numbers sit in the <Link href="/boat/" className="text-aqua hover:underline">boat upgrades guide</Link>.</li>
+          <li><strong className="text-white">Watch the sky:</strong> several catch windows key off weather and night cycles — rain-fed tidepool Drips, thunderstorm vent fishing. Check conditions before long hauls (<Link href="/fish/" className="text-aqua hover:underline">fish list</Link>).</li>
+          <li><strong className="text-white">Lost-at-sea protocol:</strong> stop zig-zagging, open the map for discovered landmarks, and steer for the last island you unlocked instead of guessing toward undiscovered ones.</li>
+        </ul>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-white">Map Rumors We Left Out (And Why)</h2>
+        <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2 text-xs">
+          <p>Coordinate lists for “sunken shipyards” and “hermit bait vendors”, basement-treasure walkthroughs, pearl merchants paying doubled prices — none survived a sources-first review: no screenshots, no patch-note mention, no consistent retelling between playthroughs.</p>
+          <p>If one pans out, it earns its own entry with evidence credits. Until then, the pages linked above stay deliberately rumor-free — that is the editorial standard this wiki runs on.</p>
+        </div>
+      </section>
     </div>
   );
 }

@@ -18,11 +18,12 @@ export default function Footer() {
             <div className="font-bold text-white mb-3 text-xs tracking-wider uppercase">Guides & Bosses</div>
             <ul className="space-y-2 text-xs">
               <li><Link href="/guide/" className="hover:text-aqua transition-colors">Beginner Walkthrough</Link></li>
-              <li><Link href="/fish/" className="hover:text-aqua transition-colors">All 49 Fish Database</Link></li>
+              <li><Link href="/fish/" className="hover:text-aqua transition-colors">Fish Database</Link></li>
               <li><Link href="/fish/drip-fish/" className="hover:text-aqua transition-colors">Rare Drip Fish & Casino</Link></li>
               <li><Link href="/bosses/pufferfish/" className="hover:text-aqua transition-colors">Pufferfish Boss Fight</Link></li>
               <li><Link href="/achievements/" className="hover:text-aqua transition-colors">All 28 Achievements</Link></li>
               <li><Link href="/weapons/" className="hover:text-aqua transition-colors">Weapons & Attachments</Link></li>
+              <li><Link href="/money/" className="hover:text-aqua transition-colors">How to Make Money Fast</Link></li>
               <li><Link href="/game/system-requirements/" className="hover:text-aqua transition-colors">System Requirements</Link></li>
               <li><Link href="/updates/" className="hover:text-aqua transition-colors">Patch Notes 1.0.4–1.0.9</Link></li>
               <li><Link href="/difficulty/" className="hover:text-aqua transition-colors">Difficulty Modes Guide</Link></li>
@@ -33,7 +34,7 @@ export default function Footer() {
           <div>
             <div className="font-bold text-white mb-3 text-xs tracking-wider uppercase">Exploration</div>
             <ul className="space-y-2 text-xs">
-              <li><Link href="/map/" className="hover:text-aqua transition-colors">Archipelago Interactive Map</Link></li>
+              <li><Link href="/map/" className="hover:text-aqua transition-colors">Archipelago Zones & Hotspots</Link></li>
               <li><Link href="/boat/" className="hover:text-aqua transition-colors">Boat Keys & Motor Upgrades</Link></li>
               <li><Link href="/islands/" className="hover:text-aqua transition-colors">Island Unlock Order</Link></li>
               <li><Link href="/game/launch/" className="hover:text-aqua transition-colors">Launch Report & Milestones</Link></li>

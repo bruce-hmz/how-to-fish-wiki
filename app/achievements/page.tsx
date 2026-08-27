@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb';
+import Link from 'next/link';
 import AchievementChecklist from '@/components/AchievementChecklist';
 import { ItemListJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
@@ -16,7 +17,7 @@ export default function AchievementsPage() {
       <Breadcrumb items={[{ name: 'Achievements', href: '/achievements/' }]} />
       <ItemListJsonLd
         name="How to Fish achievements"
-        items={ACHIEVEMENTS.map((a) => ({ name: a.name, url: 'https://howtofish101.com/achievements/' }))}
+        items={ACHIEVEMENTS.map((a) => ({ name: a.name, url: `https://howtofish101.com/achievements/#${a.slug}` }))}
       />
       <div>
         <h1 className="text-3xl font-extrabold text-white tracking-tight">All 28 Achievements & Completion Checklist</h1>
@@ -51,7 +52,14 @@ export default function AchievementsPage() {
           and <strong>Drip</strong> (96.4%) unlock for almost everyone, while the true grind sits at the bottom of the
           table: <strong>Bean</strong> (1.0% — finish the whole game in under one hour), <strong>Fishipedia</strong>
           (1.4% — kill every drip creature), <strong>Handyman</strong> (1.7% — beat the final boss bare-handed), and
-          <strong>Everyone&apos;s dream</strong> (4.1% — kill a seagull with dynamite).
+          <strong>Everyone&apos;s dream</strong> (4.1% — kill a seagull with dynamite). Chasing that 1% Bean yourself?
+          <Link href="/achievements/bean/" className="text-aqua hover:underline">our dedicated Bean route guide</Link>
+          covers the clock-safe path as of Patch 1.0.9. Chasing the rest of the rare wall? Deeper coverage:
+          <Link href="/fish/drip-fish/" className="text-aqua hover:underline">Fishipedia drip hunting</Link>
+          · <Link href="/bosses/magma-whale/" className="text-aqua hover:underline">Handyman bare-fist finale</Link>
+          · <Link href="/money/" className="text-aqua hover:underline">Rich Millionaire income planning</Link>
+          · <Link href="/difficulty/" className="text-aqua hover:underline">Easy-mode fast boss takedowns for Easy (10 seconds)</Link>
+          · <Link href="/trick-shots/" className="text-aqua hover:underline">the dynamite seagull setup behind Everyone's dream</Link>.
         </p>
         <p>
           Completionist runs land in the middle: <strong>Collector</strong> (10.8%) needs every creature in the logbook,

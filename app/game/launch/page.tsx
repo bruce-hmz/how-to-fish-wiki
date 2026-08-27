@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Launch Report: 1M Players in 2 Days',
   description:
-    'How to Fish launched August 20, 2026 on Steam at $7.99. The full launch story: 1M players in 2 days, 268K concurrent anglers, and six patches in five days.',
+    'How to Fish launched August 20, 2026 on Steam at $7.99. The full launch story: 1M players in 2 days, 268K day-one concurrent anglers — a peak that kept climbing to 373,971 by Aug 26, and six patches in five days.',
   alternates: { canonical: 'https://howtofish101.com/game/launch/' },
 };
 
@@ -27,7 +27,7 @@ export default function LaunchPage() {
           How to Fish launched on Steam on August 20, 2026 and passed{' '}
           <strong className="text-white">1 million players within 48 hours</strong> — a milestone Dazed Games
           announced on August 23. The game also peaked above{' '}
-          <strong className="text-white">268,000 concurrent players</strong>, an extraordinary number for a
+          <strong className="text-white">373,971 concurrent players</strong>, an extraordinary number for a
           budget-priced indie physics fishing game, and one of the biggest launches of its genre on Steam this
           year.
         </p>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: 'How to Fish Wiki: Walkthrough, Boss Guide & Fish List',
     template: '%s | How to Fish Wiki'
   },
-  description: 'Complete How to Fish wiki: 49 fish locations, Pufferfish & Magma Whale boss guides, boat keys, Drip Fish secrets, and beginner co-op tips.',
+  description: 'Complete How to Fish wiki: fish list & rarity database, Pufferfish & Magma Whale boss guides, boat keys, Drip Fish secrets, and beginner co-op tips.',
   keywords: [
     'how to fish',
     'how to fish game',

@@ -1,5 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
+import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Beginner Walkthrough & Early Game Guide',
@@ -24,6 +25,7 @@ export default function GuidePage() {
           <Link href="/videos/" className="text-aqua hover:underline">trailers &amp; gameplay videos page</Link>{' '}
           has the official trailers and a full-game community walkthrough.
         </p>
+        <p className="text-xs text-gray-500">Last verified August 27, 2026 · Game version 1.0.9</p>
       </div>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
@@ -45,14 +47,14 @@ export default function GuidePage() {
 
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">4. Early Game Cash Optimization</h2>
         <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
-          <li><strong>Hot Dogs ($5 bait)</strong>: Attracts Striped Bass and Snappers worth $18 $25 each.</li>
+          <li><strong>Hot Dogs ($5 bait)</strong>: Attracts Striped Bass and Snappers worth $18–$25 each.</li>
           <li><strong>Inspect Items (Key F)</strong>: Check creature market values before selling.</li>
           <li><strong>Drip Creatures</strong>: NEVER sell blue glowing Drip Crabs to the shop; save them for the Casino Gachapon machine.</li>
         </ul>
 
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">5. Upgrading to the Deep-Sea Rod</h2>
         <p>
-          Once you have around $150 saved up, visit the Pier Merchant on the south dock of the starter island and purchase the <strong>Deep-Sea Rod</strong>. This is a significant upgrade over the starter Crab Fishing Rod — it doubles your casting range, lets you fish in deeper water beyond the shallows, and unlocks access to medium-depth species like Tuna, Swordfish, and Barracuda. These deep-water fish sell for $40–$80 each, dramatically accelerating your income compared to early-game crabs and snappers.
+          Once you have around $150 saved up, visit the Pier Merchant on the south dock of the starter island and purchase the <strong>Deep-Sea Rod</strong>. This is a significant upgrade over the starter Crab Fishing Rod — it doubles your casting range, lets you fish in deeper water beyond the shallows, and pushes you past the shore roster into deeper species — sell values step up accordingly, and every verified price is documented on the fish list.
         </p>
         <p>
           The Deep-Sea Rod also increases your line tension threshold, meaning you can reel in larger catches without your line snapping. Pair it with Hot Dog bait for best results — you will start hooking Red Snappers and Striped Bass consistently. The rod is essential before attempting your first boss fight, as the Spider Crab requires sustained reeling during its stagger window.
@@ -60,23 +62,23 @@ export default function GuidePage() {
 
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">6. Weather & Time System</h2>
         <p>
-          How to Fish uses a dynamic day-night cycle with a full weather system that directly affects spawns and gameplay. Each in-game day lasts roughly 20 real-time minutes, cycling through Dawn, Day, Dusk, and Night phases. Different fish appear during different phases: Dawn and Dusk are prime windows for mid-tier species like Golden Perch and Sunset Grouper, while nighttime unlocks rare nocturnal predators and glowing Drip variants.
+          How to Fish uses a dynamic day-night cycle with a full weather system that directly affects spawns and gameplay. Each in-game day lasts roughly 20 real-time minutes, cycling through Dawn, Day, Dusk, and Night phases. Different fish appear during different phases: Different phases favor different catches — the fish list tags each entry — and nighttime is when aggressive biters and the glowing Drip layer come out.
         </p>
         <p>
-          <strong>Rain</strong> is your best friend as a beginner. Rainy weather increases rare fish spawn rates by approximately 30% and is the only time Drip creatures appear in shallow waters. <strong>Thunderstorms</strong> push the bonus even higher but also make the ocean rougher, requiring better boat handling. The rarest weather event is the <strong>Blood Moon Storm</strong>, which occurs randomly and guarantees at least one legendary-tier fish spawn in every biome for its duration. Keep an eye on the weather vane icon in the top-right corner of your HUD — when it turns red, a storm is incoming.
+          <strong>Rain</strong> is your best friend as a beginner. Rain gates shallow-water Drip encounters outright — the tidepool Drip Rock Crab only shows in it — and players consistently report rarer bites during wet weather, though exact percentages have never been published. <strong>Thunderstorms</strong> push the bonus even higher but also make the ocean rougher, requiring better boat handling. Ignore “special storm” rumors that guarantee legendary spawns — no such event appears in any patch note or reproducible playthrough. Watch the sky, fish what the weather gives, and let the odds work.
         </p>
 
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">7. Surviving Night Predators</h2>
         <p>
-          Nighttime in How to Fish is not just a visual change — it introduces aggressive nocturnal fish that actively attack your boat and character. Anglerfish, Moray Eels, and Shadow Barracuda will ram your hull or leap onto the deck. If your hunger meter is low, a single hit from a Shadow Barracuda can knock you out and force a respawn back at the starter island dock.
+          Nighttime in How to Fish is not just a visual change — it introduces aggressive nocturnal fish that actively attack your boat and character. Anglerfish and other aggressive nocturnals will ram your hull or leap onto the deck. If your hunger meter is running low, a single solid hit can knock you out and force a respawn back at the starter island dock.
         </p>
         <p>
-          Always keep a <strong>Knife</strong> equipped when fishing at night. The Knife dispatches aggressive boarders in 2–3 hits compared to 6–8 with bare fists, and prevents the damage-over-time bleed effect that Moray Eels inflict. For additional safety, equip <strong>Lantern Bait</strong> on a secondary rod — it creates a glowing perimeter around your boat that repels most nocturnal predators for 90 seconds per cast. Lantern Bait costs $15 from the Night Market vendor who appears on Casino Island after 9 PM in-game time.
+          Always keep a <strong>Knife</strong> equipped when fishing at night. The Knife dispatches aggressive boarders in a handful of hits compared to a full fist-fight. For additional safety, equip <strong>Lantern Bait</strong> ($15, shop-bought — see the lures & baits guide) on a secondary cast: its glowing field is the community pick for calmer nights. Exact repel timing is feel, not documented fact.
         </p>
 
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">8. Unlocking New Islands</h2>
         <p>
-          The starter island is only the beginning. To explore the wider archipelago, you need to repair your wrecked boat by collecting <strong>Boat Key Parts</strong> dropped by each of the three major bosses. The progression works as follows:
+          The starter island is only the beginning. To explore the wider archipelago, you need to repair your wrecked boat by collecting the three <strong>Boat Key Parts</strong> guarded along a five-boss chain — the other two bosses pay out coordinates and quest items instead. The key line looks like this:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
           <li><strong>Key Part #1 (Spider Crab)</strong>: Unlocks basic engine ignition so you can leave the starter island and reach the Coral Maze Lagoon.</li>
@@ -96,7 +98,7 @@ export default function GuidePage() {
             <strong>Ignoring the hunger meter</strong>: Your character hunger depletes steadily, and at zero hunger you lose health rapidly. Always carry 5–10 raw Clams or cooked fish as emergency food. Starvation during a boss fight is the most common cause of early-game wipes.
           </li>
           <li>
-            <strong>Selling fish without checking value first</strong>: Press <kbd className="bg-ocean-950 px-2 py-0.5 rounded text-aqua font-mono border border-ocean-700">F</kbd> to inspect any item before selling. Some common-looking fish have hidden high value — the plain-looking Moonfish sells for $60 while the flashy Parrotfish is only worth $8. Always check first.
+            <strong>Selling fish without checking value first</strong>: Press <kbd className="bg-ocean-950 px-2 py-0.5 rounded text-aqua font-mono border border-ocean-700">F</kbd> to inspect any item before selling. Value rarely matches looks, and our fish database documents the verified ones — make the inspect key a reflex before every sale.
           </li>
           <li>
             <strong>Skipping the Knife purchase</strong>: The $45 Knife is the single most important early buy after the Crab Rod. Without it, you take unavoidable damage subduing aggressive catches, waste food healing, and cannot survive night predators. Buy it before upgrading anything else.
@@ -106,6 +108,22 @@ export default function GuidePage() {
           </li>
         </ul>
       </div>
+      <div className="flex flex-wrap gap-3 text-xs text-gray-400">
+        <Link href="/islands/" className="hover:text-aqua underline underline-offset-2">Island gates</Link>
+        <span>·</span>
+        <Link href="/money/" className="hover:text-aqua underline underline-offset-2">Money guide</Link>
+        <span>·</span>
+        <Link href="/lures/" className="hover:text-aqua underline underline-offset-2">Lures &amp; baits</Link>
+        <span>·</span>
+        <Link href="/troubleshooting/what-to-do-next/" className="hover:text-aqua underline underline-offset-2">Stuck? What to do next</Link>
+      </div>
+
+      <Sources
+        items={[
+          { label: 'How to Fish on Steam (store page)', href: 'https://store.steampowered.com/app/4001890/How_to_Fish/', note: 'starter-loop and progression basics' },
+          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'difficulty modes and save-rule context' },
+        ]}
+      />
     </div>
   );
 }

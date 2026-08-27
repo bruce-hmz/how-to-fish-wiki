@@ -9,7 +9,7 @@ const homeFaqs = [
   },
   {
     q: 'How many fish are in How to Fish?',
-    a: 'The logbook tracks 49 unique species across six rarity tiers: Common, Uncommon, Rare, Epic, Legendary, and Drip. Each species has its own preferred bait, habitat, weather window, and sell value.',
+    a: 'Community catalogs track 49 unique species across six rarity tiers: Common, Uncommon, Rare, Epic, Legendary, and Drip. Each species has its own preferred bait, habitat, weather window, and sell value — our fish database publishes entries as their spawn conditions are verified.',
   },
   {
     q: 'How do you beat the Pufferfish boss?',
@@ -25,7 +25,7 @@ const homeFaqs = [
   },
   {
     q: 'How long does it take to beat How to Fish?',
-    a: 'A focused solo run takes roughly 6-8 hours: collect the three boat keys, defeat all three bosses, and repair your escape vessel. Completionists chasing the full 49-species logbook, every Drip creature, and all rod upgrades should plan for 15-20 hours.',
+    a: 'Community reports vary: first clears land around 4–8 hours through the five-boss gauntlet and boat restoration. Completionists chasing every achievement and the full logbook should plan days, not hours — no official figure exists. Our FAQ breaks down where those numbers come from.',
   },
 ];
 
@@ -58,7 +58,7 @@ export default function HomePage() {
               Beginner Walkthrough
             </Link>
             <Link href="/fish/" className="bg-ocean-800 hover:bg-ocean-700 text-white font-bold px-5 py-2.5 rounded-lg text-sm border border-ocean-600 transition-all hover:scale-105">
-              All 49 Fish Database
+              Fish Database & Rarity Guide
             </Link>
             <Link href="/bosses/pufferfish/" className="bg-coral/20 hover:bg-coral/30 text-coral-light font-bold px-5 py-2.5 rounded-lg text-sm border border-coral/40 transition-all">
               Pufferfish Boss Strategy
@@ -183,7 +183,7 @@ export default function HomePage() {
         <div className="flex justify-between items-end">
           <div>
             <h2 className="text-2xl font-bold text-white">Interactive Marine Species Database</h2>
-            <p className="text-xs text-gray-400">Search value, preferred bait, weather requirements, and rarity tiers across all 49 species.</p>
+            <p className="text-xs text-gray-400">Search value, preferred bait, weather requirements, and rarity tiers for every documented species.</p>
           </div>
           <Link href="/fish/" className="text-xs text-aqua font-semibold hover:underline">View full database →</Link>
         </div>
