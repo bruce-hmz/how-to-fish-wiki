@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Volcanic Magma Whale Final Boss Strategy',
-  description: 'Beat the final Magma Whale boss in Mount Inferno crater. Bare hand achievement strategy and golden rod reward in How to Fish.',
+  description: 'Beat the final Magma Whale boss in Mount Inferno crater. Bare hand achievement strategy and the Legendary Volcanic Rod reward in How to Fish.',
   alternates: { canonical: 'https://howtofish101.com/bosses/magma-whale/' },
 };
 

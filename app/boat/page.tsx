@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
@@ -64,7 +65,9 @@ export default function BoatPage() {
 
         <h2 className="text-xl font-bold text-white">Boat Skins from Casino Gachapon</h2>
         <p>
-          The Casino Island Gachapon machine accepts Drip Fish and Drip Crabs in exchange for random cosmetic rewards, including exclusive boat skins. There are 8 boat skins available from the machine, ranging from common recolors to ultra-rare animated skins. Notable skins include the <strong>Neon Racer</strong> (glowing teal hull lines), <strong>Pirate Ghost Ship</strong> (translucent hull with spectral sails), and the coveted <strong>Golden Kraken</strong> skin (animated gold tentacles wrapping the hull). Boat skins are purely cosmetic and do not affect stats. You can preview and swap skins at any dock station.
+          The Casino Island Gachapon machine accepts Drip Fish and Drip Crabs in exchange for random cosmetic rewards, including exclusive boat skins. There are 8 boat skins available from the machine, ranging from common recolors to ultra-rare animated skins. Notable skins include the <strong>Neon Racer</strong> (glowing teal hull lines), <strong>Pirate Ghost Ship</strong> (translucent hull with spectral sails), and the coveted <strong>Golden Kraken</strong> skin (animated gold tentacles wrapping the hull). Boat skins are purely cosmetic and do not affect stats. You can preview and swap skins at 
+
+        <p className="text-xs text-gray-400 border-l-2 border-aqua/40 pl-3">Key drops behind each hull upgrade come from the bosses in our <Link href="/bosses/" className="text-aqua hover:underline">boss hub</Link>; fuel budgeting math sits inside the <Link href="/money/" className="text-aqua hover:underline">money guide</Link>.</p>any dock station.
         </p>
       </div>
     </div>
