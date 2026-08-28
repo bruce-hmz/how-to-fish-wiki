@@ -45,6 +45,12 @@ const issues = [
     desc: 'The regular rod only catches while you reel in slowly — the number-one cause behind “bait stopped working” reports, plus bait-tier checks.',
   },
   {
+    href: '/troubleshooting/audio-duplication/',
+    icon: '🔊',
+    title: 'Sound Duplicated or Robotic?',
+    desc: 'Audio stacking, slowing and crunching into a robotic drone mid-session. The clean restart sequence and the one-hour Windows audio service reset.',
+  },
+  {
     href: '/troubleshooting/performance-stutter/',
     icon: '📈',
     title: 'Stuttering & 100% GPU?',
