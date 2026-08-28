@@ -1,6 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
-import { FaqJsonLd } from '@/components/JsonLd';
+import { ArticleJsonLd, FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
   title: 'What to Do Next: Progression Help',
@@ -19,7 +19,15 @@ export default function WhatToDoNextPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-sm text-gray-300">
       <FaqJsonLd faqs={faqs} />
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'What to Do Next', href: '/troubleshooting/what-to-do-next/' }]} />
+      <ArticleJsonLd
+        headline="What Should I Do Next? (Progression Troubleshooter)"
+        description="Match your How to Fish game state — Island 1, missing coordinates, or a boss kill that changed nothing — and get the exact next step."
+        url="https://howtofish101.com/troubleshooting/what-to-do-next/"
+        datePublished="2026-08-27"
+        dateModified="2026-08-27"
+      />
       <h1 className="text-3xl font-extrabold text-white">What Should I Do Next? (Progression Troubleshooter)</h1>
+      <p className="text-xs text-gray-500 -mt-2">Last verified August 27, 2026</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6">
         <h2 className="text-xl font-bold text-white">The Universal Fix</h2>

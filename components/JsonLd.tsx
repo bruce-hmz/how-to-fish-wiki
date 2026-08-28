@@ -97,3 +97,41 @@ export function ItemListJsonLd({ name, items }: { name: string; items: { name: s
     />
   );
 }
+
+export function ArticleJsonLd({
+  headline,
+  description,
+  url,
+  datePublished,
+  dateModified,
+}: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+}) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    url,
+    datePublished,
+    dateModified,
+    inLanguage: 'en',
+    author: { '@type': 'Organization', name: 'How to Fish Community Anglers' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'How to Fish Community Anglers',
+      url: 'https://howtofish101.com',
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}

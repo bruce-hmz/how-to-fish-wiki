@@ -1,11 +1,11 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
-import { FaqJsonLd } from '@/components/JsonLd';
+import { ArticleJsonLd, FaqJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Save File Location, Backups & Lost Progress Recovery',
-  description: 'Exactly where How to Fish stores its save files on Windows and Steam Deck, a backup routine that takes 30 seconds, how to roll back an older save, and what Patches 1.0.4–1.0.9 actually changed about saving.',
+  description: 'Exactly where How to Fish stores its save files on Windows and Steam Deck, a backup routine that takes 30 seconds, how to roll back an older save, and what Patches 1.0.4–1.0.10 actually changed about saving.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/save-file/' },
 };
 
@@ -38,8 +38,15 @@ export default function SaveFilePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-sm text-gray-300">
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Save File Bug', href: '/troubleshooting/save-file/' }]} />
+      <ArticleJsonLd
+        headline="How to Fish Saves: Location, Backups & Recovery"
+        description="Where How to Fish stores saves on Windows and Steam Deck, a 30-second backup routine, rollback steps, and what every patch changed about saving."
+        url="https://howtofish101.com/troubleshooting/save-file/"
+        datePublished="2026-08-27"
+        dateModified="2026-08-28"
+      />
       <h1 className="text-3xl font-extrabold text-white">How to Fish Saves: Location, Backups &amp; Recovery</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 27, 2026 · Game version 1.0.9</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified August 28, 2026 · Game version 1.0.10</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
         <p className="font-bold text-white text-sm">If gear is missing right now, three rules first:</p>
@@ -111,6 +118,11 @@ export default function SaveFilePage() {
                 <td className="px-3 py-2 font-bold text-white">1.0.9</td>
                 <td className="px-3 py-2">Another anti-corruption attempt (“hopefully fixed” per the notes).</td>
                 <td className="px-3 py-2">A prevention fix. It does not retroactively repair an already-broken file or resurrect vanished gear — reports still arrive on current builds.</td>
+              </tr>
+              <tr>
+                <td className="px-3 py-2 font-bold text-white">1.0.10</td>
+                <td className="px-3 py-2">Ground-dropped items are now written into the save file — up to 64, prioritizing weapons, tools, quest items and creatures.</td>
+                <td className="px-3 py-2">Saves got bigger and dropped gear now survives session boundaries. The path, backup routine, and rollback steps on this page are unchanged.</td>
               </tr>
             </tbody>
           </table>

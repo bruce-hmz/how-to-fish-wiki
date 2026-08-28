@@ -1,6 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
-import { FaqJsonLd } from '@/components/JsonLd';
+import { ArticleJsonLd, FaqJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
 
 export const metadata = {
@@ -9,12 +9,6 @@ export const metadata = {
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/cooked-weapons/' },
 };
 
-const dateModifiedLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'How to Un-Cook a Weapon in How to Fish',
-  dateModified: '2026-08-28',
-};
 
 const faqs = [
   {
@@ -38,9 +32,12 @@ const faqs = [
 export default function CookedWeaponsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-sm text-gray-300">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(dateModifiedLd) }}
+      <ArticleJsonLd
+        headline="How to Un-Cook a Weapon in How to Fish"
+        description="Dip a cooked gun or rod in water — the official Patch 1.0.10 fix — plus the legacy Cookness save edit and prevention tips."
+        url="https://howtofish101.com/troubleshooting/cooked-weapons/"
+        datePublished="2026-08-27"
+        dateModified="2026-08-28"
       />
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Cooked Weapons', href: '/troubleshooting/cooked-weapons/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Un-Cook a Weapon in How to Fish</h1>

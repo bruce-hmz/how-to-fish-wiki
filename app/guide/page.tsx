@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb';
+import { ArticleJsonLd } from '@/components/JsonLd';
 import Link from 'next/link';
 import Sources from '@/components/Sources';
 
@@ -12,6 +13,13 @@ export default function GuidePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Beginner Guide', href: '/guide/' }]} />
+      <ArticleJsonLd
+        headline="How to Fish: Beginner Walkthrough & Survival Guide"
+        description="From your first cast to the three boat keys: island order, boss basics, money tips, and the mistakes that get new players killed."
+        url="https://howtofish101.com/guide/"
+        datePublished="2026-08-26"
+        dateModified="2026-08-27"
+      />
       
       <div className="space-y-4">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">

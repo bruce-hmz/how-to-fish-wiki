@@ -2,6 +2,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Sources from '@/components/Sources';
 import Link from 'next/link';
 
+import { ArticleJsonLd } from '@/components/JsonLd';
+
 export const metadata = {
   title: 'Patch Notes & Update History (1.0.4–1.0.10)',
   description:
@@ -175,17 +177,14 @@ const patches = [
 ];
 
 export default function UpdatesPage() {
-  const dateModifiedLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'How to Fish Patch Notes & Update History',
-    dateModified: '2026-08-28',
-  };
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(dateModifiedLd) }}
+      <ArticleJsonLd
+        headline="How to Fish Patch Notes & Update History"
+        description="Every official How to Fish patch from 1.0.4 to 1.0.10 — save fixes, difficulty modes, ground-item persistence, and the water-dip un-cook."
+        url="https://howtofish101.com/updates/"
+        datePublished="2026-08-26"
+        dateModified="2026-08-28"
       />
       <Breadcrumb items={[{ name: 'Patch Notes', href: '/updates/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Fish Patch Notes &amp; Update History</h1>

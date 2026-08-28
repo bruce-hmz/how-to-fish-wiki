@@ -1,6 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
-import { FaqJsonLd } from '@/components/JsonLd';
+import { ArticleJsonLd, FaqJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
 
 export const metadata = {
@@ -43,9 +43,17 @@ export default function Error0x11c7Page() {
         { name: 'Troubleshooting', href: '/troubleshooting/' },
         { name: 'Error 0x11C7', href: '/troubleshooting/error-0x11c7/' },
       ]} />
+      <ArticleJsonLd
+        headline="How to Fish Error 0x11C7: Smart App Control Blocks the Game"
+        description="Fix the 0x11C7 launch error by verifying Steam files first, then adjusting Windows Smart App Control — the security-policy block behind the crash."
+        url="https://howtofish101.com/troubleshooting/error-0x11c7/"
+        datePublished="2026-08-26"
+        dateModified="2026-08-27"
+      />
       <FaqJsonLd faqs={faqs} />
       <div>
         <h1 className="text-3xl font-extrabold text-white tracking-tight">How to Fish Error 0x11C7: Smart App Control Blocks the Game</h1>
+        <p className="text-xs text-gray-500 mt-2">Last verified August 27, 2026</p>
         <p className="text-gray-400 text-sm mt-2">
           You click Play, the process flashes, and Windows reports error 0x11C7. This is a security-policy block, not a
           game bug — and the fix order matters if you do not want to lower your whole system&apos;s defenses.

@@ -1,6 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
-import { FaqJsonLd } from '@/components/JsonLd';
+import { ArticleJsonLd, FaqJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
 
 export const metadata = {
@@ -30,6 +30,13 @@ export default function JoinFriendsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-sm text-gray-300">
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Cannot Join Friends', href: '/troubleshooting/join-friends/' }]} />
+      <ArticleJsonLd
+        headline="Cannot Join Friends in How to Fish: Lobby Fixes"
+        description="Ordered co-op fixes for join black screens, version mismatch, and invisible lobbies — plus what Patches 1.0.4, 1.0.5 and 1.0.9 changed."
+        url="https://howtofish101.com/troubleshooting/join-friends/"
+        datePublished="2026-08-27"
+        dateModified="2026-08-27"
+      />
       <h1 className="text-3xl font-extrabold text-white">Cannot Join Friends: Lobby &amp; Black Screen Fixes</h1>
       <p className="text-xs text-gray-500 -mt-4">Last verified August 27, 2026 · Game version 1.0.9</p>
 

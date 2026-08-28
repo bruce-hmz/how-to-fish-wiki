@@ -1,6 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
-import { FaqJsonLd } from '@/components/JsonLd';
+import { ArticleJsonLd, FaqJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
 
 export const metadata = {
@@ -28,19 +28,16 @@ const faqs = [
   },
 ];
 
-const dateModifiedLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: 'Fix: Items & Weapons Disappeared — Triage and Recovery',
-  dateModified: '2026-08-28',
-};
 
 export default function ItemsDisappearedPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-sm text-gray-300">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(dateModifiedLd) }}
+      <ArticleJsonLd
+        headline="Fix: Items & Weapons Disappeared — Triage and Recovery"
+        description="Triage burned vs despawned vs physically flung gear in How to Fish, then follow the recovery ladder and patch-by-patch loss table."
+        url="https://howtofish101.com/troubleshooting/items-disappeared/"
+        datePublished="2026-08-27"
+        dateModified="2026-08-28"
       />
       <FaqJsonLd faqs={faqs} />
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Items Disappeared', href: '/troubleshooting/items-disappeared/' }]} />
