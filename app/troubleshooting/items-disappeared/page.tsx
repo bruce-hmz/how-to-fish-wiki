@@ -28,13 +28,24 @@ const faqs = [
   },
 ];
 
+const dateModifiedLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Fix: Items & Weapons Disappeared — Triage and Recovery',
+  dateModified: '2026-08-28',
+};
+
 export default function ItemsDisappearedPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-sm text-gray-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dateModifiedLd) }}
+      />
       <FaqJsonLd faqs={faqs} />
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Items Disappeared', href: '/troubleshooting/items-disappeared/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Items or Weapons Disappeared After Loading</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 27, 2026 · Game version 1.0.9</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified August 28, 2026 · Game version 1.0.10</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
         <p className="font-bold text-white text-sm">Before anything else:</p>
@@ -58,7 +69,7 @@ export default function ItemsDisappearedPage() {
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-700">
             <strong className="text-white block mb-2">🪨 It flew somewhere physical</strong>
-            <p className="text-gray-400 mb-2">Explosions and even seagulls have sent weapons sailing across the map. World-placed gear often despawns on save/load though — go look before saving again.</p>
+            <p className="text-gray-400 mb-2">Explosions and even seagulls have sent weapons sailing across the map. Since Patch 1.0.10, up to 64 ground items persist in saves — go look before saving again. Older builds despawn them on save/load.</p>
             <span className="text-gray-500">See Step 3 checks below</span>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-aqua/40">
@@ -76,7 +87,7 @@ export default function ItemsDisappearedPage() {
             <thead className="bg-ocean-950/90 text-gray-400 uppercase border-b border-ocean-800">
               <tr>
                 <th className="px-3 py-2">Loss pattern</th>
-                <th className="px-3 py-2">Status as of 1.0.9</th>
+                <th className="px-3 py-2">Status as of 1.0.10</th>
                 <th className="px-3 py-2">Best move</th>
               </tr>
             </thead>
@@ -103,8 +114,8 @@ export default function ItemsDisappearedPage() {
               </tr>
               <tr>
                 <td className="px-3 py-2">Ground-dropped items despawning after save/load cycles</td>
-                <td className="px-3 py-2 text-red-300">Live behavior, widely reported</td>
-                <td className="px-3 py-2">Never leave valued gear on the ground across a session boundary.</td>
+                <td className="px-3 py-2 text-emerald-300">Fixed in 1.0.10</td>
+                <td className="px-3 py-2">Up to 64 ground items now persist, prioritizing weapons, tools, quest items and creatures. The cap is real — tidy big drop piles, since low-priority items still fall off.</td>
               </tr>
               <tr>
                 <td className="px-3 py-2">Death during a boss run costing carried equipment (the Spider Crab knife loop)</td>
@@ -120,7 +131,7 @@ export default function ItemsDisappearedPage() {
         <h2 className="text-2xl font-bold text-white">Step 3 — The Recovery Ladder</h2>
         <ol className="list-decimal pl-5 space-y-3 bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 text-xs leading-relaxed">
           <li><strong className="text-white">Confirm it’s really gone.</strong> Quest hand-ins consume drops by design — read the active objective first. Boats parked off-shore and chests/store inventories are separate from pocket inventory.</li>
-          <li><strong className="text-white">Sweep the world before saving.</strong> If the loss involved physics — explosions, hills, birds making off with rods — search outward from where you last stood. Once the area autosaves empty, whatever lay there stops existing.</li>
+          <li><strong className="text-white">Sweep the world before saving.</strong> If the loss involved physics — explosions, hills, birds making off with rods — search outward from where you last stood. Pre-1.0.10 builds autosaved the area empty and whatever lay there stopped existing; 1.0.10 now saves up to 64 ground items (prioritizing weapons, tools, quest items and creatures), so a sweep has a real chance of paying off.</li>
           <li><strong className="text-white">Restore from your most recent pre-loss backup</strong> using the rollback steps in the{' '}
             <Link href="/troubleshooting/save-file/" className="text-aqua hover:underline">save file guide</Link>. Keep today’s broken folder renamed alongside it; partial relapses happen.
           </li>
@@ -136,7 +147,7 @@ export default function ItemsDisappearedPage() {
           <li><strong className="text-white">Milestone saves:</strong> manual Save → Main Menu after boss kills, purchases, and quest hand-ins.</li>
           <li><strong className="text-white">Two rotating backups</strong>, not one — a silently damaged file copied twice in a row shouldn’t erase both copies.</li>
           <li><strong className="text-white">Co-op:</strong> host owns the world state; guests rejoining have seen inventory roll backwards, so agree who triggers real saves.</li>
-          <li><strong className="text-white">Hot-zone discipline:</strong> nothing valuable left on the ground between sessions, and nothing spare riding through Mount Inferno in your pockets.</li>
+          <li><strong className="text-white">Hot-zone discipline:</strong> Patch 1.0.10 keeps up to 64 ground items in the save (prioritized: weapons, tools, quest items, creatures) — better, but the cap is real, so don’t treat the world as infinite storage, and keep nothing spare riding through Mount Inferno in your pockets.</li>
         </ul>
       </section>
 
@@ -154,6 +165,7 @@ export default function ItemsDisappearedPage() {
 
       <Sources
         items={[
+          { label: 'Official announcement: “FANART & PATCH 1.0.10” (Aug 27, 2026)', href: 'https://steamcommunity.com/games/4001890/announcements/detail/698774255287927073', note: 'source of ground-item persistence (up to 64) in the status column' },
           { label: 'Steam Discussion: “All equipment gone after update”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606623297/', note: 'post-update wipe reports referenced above' },
           { label: 'Steam Discussion: “Saved game and lost everything?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582805931178592050/', note: 'reload-loss pattern' },
           { label: 'Steam Discussion: “Seagull stole my rod?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806523877558441/', note: 'the physical-loss pattern referenced above' },

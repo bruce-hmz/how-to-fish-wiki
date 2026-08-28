@@ -4,36 +4,47 @@ import { FaqJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
 
 export const metadata = {
-  title: 'Cooked Weapon Fix: Un-Cook Guns & Rods',
-  description: 'Accidentally burned your gun, fishing rod, or gear in How to Fish? As of Patch 1.0.9 there is no official un-cook button — here is the community save-file fix (set Cookness back to 0.0), step by step, plus prevention tips.',
+  title: 'Cooked Weapon Fix: Water-Dip Un-Cook (Official)',
+  description: 'Patch 1.0.10 adds the official fix: dip a cooked gun or rod in water to clean the burn state. Includes the pre-1.0.10 save-file method (Cookness 0.0) as a legacy fallback, plus prevention tips.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/cooked-weapons/' },
+};
+
+const dateModifiedLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'How to Un-Cook a Weapon in How to Fish',
+  dateModified: '2026-08-28',
 };
 
 const faqs = [
   {
     q: 'Is there an official way to un-cook weapons?',
-    a: 'Not yet. Through Patch 1.0.9 the developers have not shipped an in-game way to clean a charred gun or rod, and the request threads asking for one — some players suggest a “cooler” station — remain open. The save-file method below mirrors what the community uses today.'
+    a: 'Yes, as of Patch 1.0.10 (August 27, 2026): “Weapons and tools now get cleaned from cooking when dipped in water.” Find any water source — the sea around your boat counts — and dip the charred item to clean the burn state. If a dunk does not clear it fully, repeat the dip. The save-file method lower on this page is now a legacy fallback, mainly useful for old saves or stubborn cases.'
   },
   {
-    q: 'Does the Cookness fix work on fishing rods too?',
-    a: 'Yes. The burn state is stored as a Cookness value on the item itself, so it applies wherever that value appears in your save — guns, rods, anything the game decided to cook. After editing, confirm in-game that the item accepts skins again or looks un-charred before relying on it.'
+    q: 'Does the fix work on fishing rods too?',
+    a: 'The 1.0.10 note explicitly covers “weapons and tools”, and rods are tools in How to Fish terms. The burn state itself is stored as a Cookness value on the item, which is why the legacy save edit applied to guns, rods, and anything else the game decided to cook. After a dip, confirm in-game that the item accepts skins again before relying on it.'
   },
   {
-    q: 'Can this corrupt my save or get me banned?',
-    a: 'Save files are plain text on your own machine, and there are no reports of punishments for touching your local save values. The real risk is human error: a bad search-and-replace can wreck a file faster than the volcano ever did. That is why the steps below insist on a fresh folder backup first, and why you should change only the Cookness numbers — nothing else.'
+    q: 'Do I still need the save-file edit?',
+    a: 'Usually not. Try the water dip first — it is official, instant, and cannot damage anything. The Cookness edit is only worth reaching for if the dip somehow fails, you are on a pre-1.0.10 version, or you are restoring an old save. If you do edit, back the folder up first and change only the Cookness numbers.'
   },
   {
     q: 'My weapon fell into lava and vanished entirely — will this bring it back?',
-    a: 'No. This page fixes items that still exist in your inventory but carry a burned state. Gear that despawned — dropped off a cliff, lost under the map, gone after a crash — is a different problem class, and needs the items disappeared recovery flow instead.'
+    a: 'No. Both fixes cover items that still exist but carry a burned state. Gear that despawned — dropped off a cliff, lost under the map, gone after a crash — is a different problem class. Note that since 1.0.10, ground-dropped items persist in saves (up to 64, prioritized), so a “vanished” item may now be sitting where you dropped it: check the items disappeared recovery flow.'
   },
 ];
 
 export default function CookedWeaponsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-sm text-gray-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dateModifiedLd) }}
+      />
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Cooked Weapons', href: '/troubleshooting/cooked-weapons/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Un-Cook a Weapon in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 27, 2026 · Game version 1.0.9</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified August 28, 2026 · Game version 1.0.10</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3">
         <p>
@@ -53,16 +64,25 @@ export default function CookedWeaponsPage() {
       </div>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-white">Is There an Official Fix?</h2>
+        <h2 className="text-2xl font-bold text-white">The Official Fix (Patch 1.0.10): Dip It in Water</h2>
         <p className="text-gray-300 leading-relaxed">
-          No — through Patch 1.0.9 there is no in-game way to un-cook an item, and buying a replacement means re-buying every upgrade and attachment on top of it. Community threads asking for a proper solution have been running since launch week.
+          Patch 1.0.10 shipped on August 27, 2026 with the line players had been asking for since launch week:{' '}
+          <em className="text-gray-200">“Weapons and tools now get cleaned from cooking when dipped in water.”</em>{' '}
+          No save editing, no mod, no rebuy — the game itself now washes the char off.
         </p>
+        <ol className="list-decimal pl-5 space-y-3 bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 text-xs leading-relaxed">
+          <li><strong className="text-white">Take the cooked item in hand</strong> (or make sure it is the active tool).</li>
+          <li><strong className="text-white">Find water</strong> — the sea next to your boat works, as does any lake or pond on the islands.</li>
+          <li><strong className="text-white">Dip the item in.</strong> The burn state cleans on contact with the water.</li>
+          <li><strong className="text-white">Inspect the result.</strong> If the model still looks charred or skins still will not apply, dip it again — then fall back to the legacy save method below.</li>
+        </ol>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-white">The Community Fix: Reset Cookness to 0.0</h2>
+        <h2 className="text-2xl font-bold text-white">Legacy Fix: Reset Cookness to 0.0 (Pre-1.0.10)</h2>
         <p className="text-gray-300 leading-relaxed">
-          Saves store the burn level on each item as a value called <code className="text-aqua bg-ocean-950 px-1 rounded">Cookness</code>, and saves are plain text — which makes the burn state a two-minute edit. This is the workaround players use while waiting for an official solution:
+          Before 1.0.10 there was no in-game way to un-cook an item, so players edited the save directly. Saves store the burn level on each item as a value called{' '}
+          <code className="text-aqua bg-ocean-950 px-1 rounded">Cookness</code>, and saves are plain text. The water dip makes this obsolete for most players, but it remains useful for old saves, stubborn burns, or anyone playing a pre-1.0.10 build:
         </p>
         <ol className="list-decimal pl-5 space-y-3 bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 text-xs leading-relaxed">
           <li><strong className="text-white">Quit How to Fish, then quit Steam entirely</strong> so nothing rewrites the file mid-edit.</li>
@@ -87,9 +107,8 @@ export default function CookedWeaponsPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-white">Alternatives Worth Knowing</h2>
         <ul className="list-disc pl-5 space-y-2 text-sm text-gray-300">
-          <li><strong className="text-white">Buy a replacement</strong> — the straightforward route, but you inherit the rebuy cost for all upgrades and attachments. Fine early, painful late.</li>
-          <li><strong className="text-white">Wait for an official solution</strong> — the ask has been loud enough since launch week that a dedicated anti-burn feature (community suggestion: a cooler) would not be a surprise addition. This page gets updated when patches change the answer.</li>
-          <li><strong className="text-white">Mods</strong> — a Nexus Mods page called “No More Roasted Guns” disables weapon-cooking altogether. Officially unsupported; the same cautions we list about unofficial mods in the{' '}
+          <li><strong className="text-white">Buy a replacement</strong> — mostly obsolete now that the water dip exists, but still the route if an item is both cooked <em>and</em> lost. You inherit the rebuy cost for all upgrades and attachments.</li>
+          <li><strong className="text-white">Mods</strong> — a Nexus Mods page called “No More Roasted Guns” disables weapon-cooking altogether. It predates 1.0.10, so try the official dip first. Officially unsupported; the same cautions we list about unofficial mods in the{' '}
             <Link href="/faq/" className="text-aqua hover:underline">FAQ</Link> apply.
           </li>
         </ul>
@@ -100,6 +119,7 @@ export default function CookedWeaponsPage() {
         <ul className="list-disc pl-5 space-y-2 text-sm text-gray-300">
           <li>Treat the <strong className="text-white">Mount Inferno climb</strong> as a hands-free section: leave spare guns on the boat and carry what you must.</li>
           <li>Cooking food batches? Park weapons a healthy distance from the station first — the grill can’t tell dinner from defense.</li>
+          <li>Now that water cleans gear, a dunk after a volcano run is cheap insurance — but prevention still beats swimming after your shotgun.</li>
           <li>The same Save → Main Menu → Quit discipline from the{' '}
             <Link href="/troubleshooting/save-file/" className="text-aqua hover:underline">save file guide</Link> protects you here too: if something bad happens with gear, a controlled exit keeps the damage from being auto-committed.
           </li>
@@ -120,10 +140,10 @@ export default function CookedWeaponsPage() {
 
       <Sources
         items={[
-          { label: 'Steam Discussion: “Uncook a weapon” (answer marked by the topic author)', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606593107/', note: 'source of the Cookness = 0.0 method' },
-          { label: 'Steam Discussion: “PLEASE make it so I can un-cook my weapons”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582805931178584225/', note: 'feature-request thread referenced above' },
+          { label: 'Official announcement: “FANART & PATCH 1.0.10” (Aug 27, 2026)', href: 'https://steamcommunity.com/games/4001890/announcements/detail/698774255287927073', note: 'source of the water-dip un-cook note and ground-item persistence' },
+          { label: 'Steam Discussion: “Uncook a weapon” (answer marked by the topic author)', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606593107/', note: 'source of the legacy Cookness = 0.0 method' },
+          { label: 'Steam Discussion: “PLEASE make it so I can un-cook my weapons”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582805931178584225/', note: 'feature-request thread the 1.0.10 note answers' },
           { label: 'Nexus Mods: No More Roasted Guns', href: 'https://www.nexusmods.com/howtofish/mods/49', note: 'community mod alternative' },
-          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'baseline for the Patch 1.0.9 status described here' },
         ]}
       />
       <FaqJsonLd faqs={faqs} />

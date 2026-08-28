@@ -3,7 +3,7 @@ import Sources from '@/components/Sources';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Patch Notes & Update History (1.0.4–1.0.9)',
+  title: 'Patch Notes & Update History (1.0.4–1.0.10)',
   description:
     'Every How to Fish patch 1.0.4–1.0.9 explained: difficulty modes, save fixes, boss nerfs, 8-player lobbies, and controller fixes.',
   alternates: { canonical: 'https://howtofish101.com/updates/' },
@@ -12,6 +12,30 @@ export const metadata = {
 const ANN = 'https://steamcommunity.com/games/4001890/announcements/detail/';
 
 const patches = [
+  {
+    version: 'Patch 1.0.10',
+    date: 'August 27, 2026',
+    url: ANN + '698774255287927073',
+    affects: [
+      { href: '/troubleshooting/cooked-weapons/', label: 'Water-dip uncook added' },
+      { href: '/troubleshooting/items-disappeared/', label: 'Ground items now persist' },
+    ],
+    sections: [
+      {
+        title: 'Changes',
+        items: [
+          "Weapons and tools now get cleaned from cooking when dipped in water.",
+          "Ground-dropped items are now included in the save file — up to 64 total items persist between sessions, prioritizing weapons, tools, quest items and creatures.",
+        ],
+      },
+      {
+        title: 'Community',
+        items: [
+          "A new fanart forum opened in the community Discord.",
+        ],
+      },
+    ],
+  },
   {
     version: 'Patch 1.0.9',
     date: 'August 24, 2026',
@@ -151,16 +175,26 @@ const patches = [
 ];
 
 export default function UpdatesPage() {
+  const dateModifiedLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'How to Fish Patch Notes & Update History',
+    dateModified: '2026-08-28',
+  };
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dateModifiedLd) }}
+      />
       <Breadcrumb items={[{ name: 'Patch Notes', href: '/updates/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Fish Patch Notes &amp; Update History</h1>
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <p>
           How to Fish launched on August 20, 2026 and hit{' '}
           <strong className="text-white">1 million players in its first two days</strong>. Dazed Games has shipped
-          rapid patches ever since — six updates in the first five days, covering boss balance, save-file
-          protection, difficulty modes, and multiplayer fixes. This page summarizes every official patch note with
+          rapid patches ever since — seven updates in the first eight days, covering boss balance, save-file
+          protection, ground-item persistence, an official water-dip uncook, difficulty modes, and multiplayer fixes. This page summarizes every official patch note with
           a link to the original Steam announcement.
         </p>
 
@@ -218,6 +252,12 @@ export default function UpdatesPage() {
 
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">What the Patches Mean for You</h2>
         <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
+          <li>
+            <strong>Burned a weapon or dropped gear on the ground?</strong> Both got fixes in Patch
+            1.0.10 — water now cleans cooked weapons, and up to 64 ground items persist in saves. See the
+            <Link href="/troubleshooting/cooked-weapons/" className="text-aqua hover:underline">un-cook guide</Link> or the
+            <Link href="/troubleshooting/items-disappeared/" className="text-aqua hover:underline">items triage page</Link>.
+          </li>
           <li>
             <strong>Struggling with a boss?</strong> Patch 1.0.9 added an Easy difficulty that cuts creature damage
             by half — no shame in switching, then switching back. Full details in the{' '}
