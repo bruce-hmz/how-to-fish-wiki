@@ -101,6 +101,8 @@ export default function SettingsPage() {
         </p>
         <ul className="list-disc pl-5 space-y-2 bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 text-sm text-gray-300">
           <li><strong className="text-white">Custom keybinds may not persist</strong> between launches for some players (reported since late August).</li>
+          <li><strong className="text-white">The in-game FPS limiter is unreliable</strong> — players who measured it set a 60 FPS cap and still saw 400+ FPS. Cap frames in the NVIDIA/AMD driver panel instead; the full fix is in the
+            <Link href="/troubleshooting/performance-stutter/" className="text-aqua hover:underline">performance guide</Link>.</li>
           <li><strong className="text-white">No aim-down-sights sensitivity option</strong> — sniper users flag this repeatedly because scope sensitivity cannot be tuned separately.</li>
           <li><strong className="text-white">Video and audio menus are thin</strong> — fewer sliders than the physics engine arguably deserves, and no eating-sound toggle despite requests.</li>
           <li><strong className="text-white">Performance complaints exist even on flagship rigs</strong> — screen tearing and stutters are reported on high-end GPUs, so imperfect framers are fighting the game, not their hardware.</li>

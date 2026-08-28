@@ -45,6 +45,12 @@ const issues = [
     desc: 'The regular rod only catches while you reel in slowly — the number-one cause behind “bait stopped working” reports, plus bait-tier checks.',
   },
   {
+    href: '/troubleshooting/performance-stutter/',
+    icon: '📈',
+    title: 'Stuttering & 100% GPU?',
+    desc: 'The in-game FPS limiter is unreliable — cap frames in your GPU driver instead. Tearing fixes, the 4090 stutter reports, and update-era checklists.',
+  },
+  {
     href: '/troubleshooting/what-to-do-next/',
     icon: '🧭',
     title: 'What Should I Do Next?',
