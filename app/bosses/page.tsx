@@ -40,6 +40,9 @@ export default function BossesPage() {
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">How the Boss System Works</h2>
         <p>
+          Just starting the boss chain? The <Link href="/bosses/first-boss/" className="text-aqua hover:underline">first-boss quick guide</Link> covers the Giant Spider Crab from zero — summon, fight plan, and rewards.
+        </p>
+        <p>
           How to Fish features five colossal bosses that guard the Boat Key Parts and island coordinates you need to unlock the full archipelago. Bosses are not random encounters — you must deliberately summon each one through a specific <strong>bait chain</strong>: an NPC trade, a quest item, or a crafted lure tied to their arena. Once the chain completes, the boss emerges after a short cinematic, and the fight ends in victory or defeat.
         </p>
         <p>
