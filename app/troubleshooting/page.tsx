@@ -39,6 +39,12 @@ const issues = [
     desc: 'The ordered fix list that clears most join failures, plus session types since 1.0.5 and the new 1.0.9 relay readout.',
   },
   {
+    href: '/troubleshooting/fish-not-biting/',
+    icon: '🎣',
+    title: 'Fish Not Biting?',
+    desc: 'The regular rod only catches while you reel in slowly — the number-one cause behind “bait stopped working” reports, plus bait-tier checks.',
+  },
+  {
     href: '/troubleshooting/what-to-do-next/',
     icon: '🧭',
     title: 'What Should I Do Next?',
@@ -80,10 +86,10 @@ export default function TroubleshootingPage() {
           <em> Save</em>, <em>Main Menu</em>, <em>Quit</em>, and via an autosave roughly every minute — a crash
           does <strong>not</strong> create a fresh save, but reloading and re-saving repeatedly can overwrite
           the last good state. On Windows the save lives in
-          <code className="bg-ocean-950 px-1.5 py-0.5 rounded text-aqua text-xs ml-1">AppData/LocalLow/DazedGames/HowToFish</code>.
+          <code className="bg-ocean-950 px-1.5 py-0.5 rounded text-aqua text-xs ml-1">%userprofile%\AppData\LocalLow\Dazed Games\How to Fish\Saves</code>.
         </p>
         <p className="text-xs text-gray-400">
-          Patch context: 1.0.6 set the current save rules, 1.0.9 attempted a corruption fix. Player reports
+          Patch context: 1.0.6 set the current save rules, 1.0.9 attempted a corruption fix, and 1.0.10 started writing dropped ground items into the save (up to 64). Player reports
           of missing equipment still appear after reconnects and deaths, so prevention beats recovery.
         </p>
       </div>
