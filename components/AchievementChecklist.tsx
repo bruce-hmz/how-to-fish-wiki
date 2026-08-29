@@ -13,6 +13,7 @@ const ROUTE_LINKS: Record<string, { href: string; label: string }> = {
   handyman: { href: '/bosses/magma-whale/', label: 'Bare-fist finale walkthrough' },
   collector: { href: '/fish/', label: 'Verified fish database' },
   easy: { href: '/difficulty/', label: 'Difficulty tuning explained' },
+  '360-no-scope': { href: '/achievements/360-no-scope/', label: 'Spin-landing guide' },
   'everyone-s-dream': { href: '/trick-shots/', label: 'Stylish-kill setup' },
   'rich-millionaire': { href: '/money/', label: 'Income planning' },
   'terrorizing-bird': { href: '/bosses/albatross/', label: 'Albatross route' },
