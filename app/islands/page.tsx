@@ -100,7 +100,7 @@ export default function IslandsPage() {
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
             <h3 className="text-white font-bold text-sm mb-2">Stage 2 — Island 2: leeches and the Piranha</h3>
             <p className="text-xs text-gray-400">
-              The lake lady wants three leeches, ground pickups around the lake. The hand-in forges the
+              The lake lady wants three leeches — ground pickups in the tall grass inland (see the <Link href="/guides/leeches/" className="text-aqua hover:underline">leech guide</Link>). The hand-in forges the
               Modified Leech bait that summons the{' '}
               <Link href="/bosses/giant-piranha/" className="text-aqua hover:underline">Giant Piranha</Link>.
               Keep the Skeleton — walking it back to the lake lady is the only way to receive the Island 3

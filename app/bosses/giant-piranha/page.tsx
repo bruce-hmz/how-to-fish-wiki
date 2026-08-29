@@ -11,7 +11,7 @@ export const metadata = {
 
 const faqs = [
   { q: 'How do I spawn the Giant Piranha in How to Fish?', a: 'Collect three Leeches from the ground on Island 2, hand all three to the lady by the lake, and she gives you a Modified Leech. Equip it as bait and cast into the lake to start the fight.' },
-  { q: 'Where do Leeches spawn on Island 2?', a: 'Leeches are ground pickups scattered around the Island 2 lake shore and damp forest floor, not fishing catches. Look for dark, wriggling spots near the waterline — you need exactly three for the quest.' },
+  { q: 'Where do Leeches spawn on Island 2?', a: 'Leeches are ground pickups in the tall grass inland on Island 2 — not fishing catches and not at the waterline. Look for dark, wriggling spots away from the shore; you need exactly three for the quest. Our leech guide covers the radar red-dot trick and the fixes when none spawn.' },
   { q: 'What do I get for beating the Giant Piranha?', a: 'The Giant Piranha Skeleton is the key drop. Carry it back to the quest NPC to receive the Island 3 coordinates, plus about 1,500 cash from the hand-in.' },
   { q: 'Why does the Giant Piranha escape my fight?', a: 'The boss has an escape bar that refills while it is ignored. If you spend too long clearing the small piranha adds, the boss breaks away and you must re-cast the Modified Leech. Clear only enough adds to open a firing lane.' },
 ];
@@ -39,12 +39,12 @@ export default function GiantPiranhaPage() {
         <p>
           Unlike the Spider Crab, the Giant Piranha is gated behind a quest chain rather than a shop lure. On
           Island 2, the lady by the lake asks for Leeches. These are <strong>ground pickups</strong>, not catches —
-          search the damp shorelines and forest floor around the lake for dark, wriggling spawns. You need
+          search the tall grass inland — away from the shoreline — for dark, wriggling spawns. You need
           exactly three. Hand them all in and she returns a <strong>Modified Leech</strong>, the only bait that
           triggers the encounter. Cast it into the lake and the water erupts.
         </p>
         <p className="text-xs text-gray-400 border-l-2 border-gold/60 pl-3">
-          Common mistake: following an older guide that says five Leeches. The quest counts 3/3 — extra pickups
+          Common mistake: searching the shoreline. Leeches spawn in the grass inland (the Island 2 radar marks them with red dots). Also ignore older guides that say five Leeches. The quest counts 3/3 — extra pickups
           are just sellable meat.
         </p>
 
