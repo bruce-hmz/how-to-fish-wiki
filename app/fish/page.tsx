@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: 'What are Drip fish?',
-    a: 'Drip is the rarest tier in the logbook: glowing, color-shifted versions of regular species. The Drip Rock Crab and the legendary Drip Fish are the best-known examples. Drip catches feed the Casino Island gachapon machine, where they convert into exclusive cosmetic skins. Our Drip Fish guide covers spawn windows and known variants in detail.'
+    a: 'Drip is the rarest tier in the logbook: glowing, color-shifted versions of regular species. The Drip Rock Crab and the legendary Drip Fish are the best-known examples. Drip catches feed the Casino Island gachapon machine, where they convert into exclusive cosmetic skins. Our Drip Fish guide covers spawn windows and known variants in detail. Hunting the per-species rare variants the store listing asks for is a separate system — see the rare variants guide.'
   },
   {
     q: 'Do weather and time of day really change what you catch?',
