@@ -7,6 +7,7 @@ const baseUrl = 'https://howtofish101.com';
 const UPDATED_2026_08_29 = new Set([
   '/achievements/360-no-scope/',
   '/creatures/rare-variants/',
+  '/fish/',
 ]);
 
 const UPDATED_2026_08_28 = new Set([
