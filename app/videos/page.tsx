@@ -61,7 +61,7 @@ export default function VideosPage() {
             id="YVPYjhBdRbE"
             name="How to Fish | Release Date Trailer"
             description="Official release date trailer for How to Fish by Dazed Games, published August 13, 2026."
-            uploadDate="2026-08-13"
+            uploadDate="2026-08-13T00:00:00+00:00"
           />
         </section>
 
@@ -116,7 +116,7 @@ export default function VideosPage() {
             id="lPfCR0oWqG8"
             name="How To Fish Gameplay Walkthrough Full Game"
             description="Community full-game walkthrough of How to Fish by skull Game 7K, premiered August 23, 2026."
-            uploadDate="2026-08-23"
+            uploadDate="2026-08-23T00:00:00+00:00"
           />
         </section>
 
