@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { WebSiteJsonLd, VideoGameJsonLd } from '@/components/JsonLd';
+import { AdContainerZone, AdBanner300x250 } from '@/components/AdSlot';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://howtofish101.com'),
@@ -66,6 +67,8 @@ export default function RootLayout({
         <main className="flex-grow">
           {children}
         </main>
+        <AdContainerZone />
+        <AdBanner300x250 />
         <Footer />
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-Q28JM2EJQ2" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
