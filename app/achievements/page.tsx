@@ -39,6 +39,16 @@ export default function AchievementsPage() {
               href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
               note: 'Official achievement icons and descriptions',
             },
+            {
+              label: 'Steam Discussion: “bugged fish”',
+              href: 'https://steamcommunity.com/app/4001890/discussions/0/581680664978603492/',
+              note: 'perch log entry staying blacked out despite catching the drip version; special perch named as the last Collector blocker',
+            },
+            {
+              label: 'Reddit r/HowToFish: “Bugged achievement?”',
+              href: 'https://www.reddit.com/r/HowToFish/comments/1w0f91h/bugged_achievement/',
+              note: 'kill-all-creatures checklist fully checked off without the achievement unlocking',
+            },
           ]}
         />
       </div>
@@ -72,6 +82,29 @@ export default function AchievementsPage() {
           the starter island and bring the evidence to the lighthouse keeper. <strong>Let me go</strong> unlocks by
           letting a seagull pick you up — stand still on an open beach and wait. <strong>I&apos;m the bird now</strong>
           asks you to make the boat fly, which ties into the volcano physics: max engine, full speed up the caldera ramp.
+        </p>
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2 pt-2">Checked Everything but the Achievement Won&apos;t Unlock?</h2>
+        <p>
+          Two independent reports describe the same completionist problem. On Steam (August 28), a player hunting
+          <strong> Collector</strong> — find and kill all the creatures (10.8%) — had the logbook&apos;s perch entry stay
+          blacked out even after catching and killing the species, drip version included; the entry later cleared on its
+          own. On Reddit (August 31), a player reports the checklist fully checked off with no achievement popping.
+          Neither report produced an official fix, but both players&apos; logs eventually registered — so before assuming
+          a permanent bug: re-enter the world, re-catch the species you think is done, and only save after the log entry
+          visually fills in. The save-protection order in the{' '}
+          <Link href="/troubleshooting/" className="text-aqua hover:underline">troubleshooting hub</Link> applies before
+          any retry spree.
+        </p>
+        <p>
+          The most-reported blocker is the <strong>special perch</strong>. Players down to their last creature say the
+          perch variant is the one they can&apos;t get — one was fishing Islands 2 and 3 with beginner bait without luck
+          before it eventually appeared. The honest caveat: no reliable, reproducible method for forcing the special
+          perch has been documented anywhere — the players who unblocked it never stated how — so treat any
+          &ldquo;guaranteed farm&rdquo; claims skeptically. The community loop that actually works is in our{' '}
+          <Link href="/creatures/rare-variants/" className="text-aqua hover:underline">rare variants guide</Link> (vary
+          bait and weather, progress islands before grinding), and the{' '}
+          <Link href="/fish/" className="text-aqua hover:underline">fish database</Link> tracks what is confirmed about
+          each species so far.
         </p>
       </div>
     </div>

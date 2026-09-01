@@ -1,11 +1,20 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
+import { FaqJsonLd } from '@/components/JsonLd';
+import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Troubleshooting: Saves, Items & Co-op',
-  description: 'Fixes for common How to Fish problems: corrupted saves, items disappearing after loading, join black screens, and stuck progression after boss kills.',
+  description: 'Fixes for common How to Fish problems: corrupted saves, items disappearing after loading, infinite loading screens, join black screens, and stuck progression after boss kills.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/' },
 };
+
+const faqs = [
+  {
+    q: 'How do I fix the infinite loading screen (the boat animation never ends)?',
+    a: 'The community-confirmed fix: from the main menu choose Host Game and set Session Type to Singleplayer, then start or load your game — the boat screen completes normally. This is the fix that works for players who already tried restarting Steam and verifying game files without success. One extra trap: opening the in-game menu while the loading screen is playing can keep it stuck, so let the load finish first. Official Patch 1.0.10 also increased the time allowed to connect, which targets the related instant-disconnect problem when joining friends — see our join-friends guide. If loading still fails after the session-type fix, protect your save first and follow the save-file recovery guide.'
+  },
+];
 
 const issues = [
   {
@@ -90,6 +99,18 @@ export default function TroubleshootingPage() {
         ))}
       </div>
 
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-white">Stuck on the Loading Screen? Quick Fix</h2>
+        <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl divide-y divide-ocean-800/60 text-sm text-gray-300">
+          {faqs.map((f) => (
+            <div key={f.q} className="p-6 space-y-2">
+              <h3 className="font-bold text-white">{f.q}</h3>
+              <p className="leading-relaxed">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-4 text-sm text-gray-300">
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">The Golden Rule for Every Bug</h2>
         <p>
@@ -105,6 +126,14 @@ export default function TroubleshootingPage() {
           of missing equipment still appear after reconnects and deaths, so prevention beats recovery.
         </p>
       </div>
+
+      <Sources
+        items={[
+          { label: 'Steam Discussion: “Infinite loading on boat - game won\'t start”', href: 'https://steamcommunity.com/app/4001890/discussions/0/581680664978395310/', note: 'source of the Host Game → Session Type → Singleplayer fix, confirmed by multiple players' },
+          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'Patch 1.0.10 “Increased time allowed to connect” — re-verification baseline for patch changes' },
+        ]}
+      />
+      <FaqJsonLd faqs={faqs} />
     </div>
   );
 }

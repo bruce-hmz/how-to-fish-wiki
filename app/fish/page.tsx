@@ -26,6 +26,10 @@ const faqs = [
     q: 'Do weather and time of day really change what you catch?',
     a: 'Yes. Every species keys to specific conditions, and several high-value catches only appear inside strict windows — Striped Bass bite in foggy open water, and the Electric Eel shows up at the sunken shipwreck at night. When bites dry up, checking the weather column below is usually faster than swapping gear.'
   },
+  {
+    q: 'How do I get the Old Pike?',
+    a: 'The Old Pike is not a regular rod catch — player guides (G2A, Game8) document it as a boss-class catch on Island 2, the forest island. The documented route is the Beginner Boss Lure, sold for $40 in item shops: cast it and keep trying, because the Sunfish shares the same lure pool and can bite first. The early-game alternative is to skip fishing entirely and buy the Shotgun for $150 to hunt it down directly. Treat these details as guide-documented rather than in-game verified — the same standard applied to every Uncatalogued row in the table above. Boss-class catches are tracked in the boss hub.'
+  },
 ];
 
 export default function FishPage() {
@@ -116,7 +120,8 @@ export default function FishPage() {
           { label: 'Steam Discussion: “fish literally wont bite no matter what”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582805931178592456/', note: 'reeling technique and rod-type behavior reported by players' },
           { label: 'Steam Discussion: “I’m getting zero drip fish”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606702906/', note: 'basis for treating exact Drip odds as unpublished' },
           { label: 'Steam Discussion: rainbow fish crash reports', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806523877546439/', note: 'launch-week issue referenced above' },
-          { label: 'G2A News: How to Fish — all fish, bosses, rods and bait by island', href: 'https://www.g2a.com/news/features/guide/how-to-fish-all-fish-bosses-rods-and-bait-by-island/', note: 'source attributed to all ~-marked community entries' },
+          { label: 'G2A News: How to Fish — all fish, bosses, rods and bait by island', href: 'https://www.g2a.com/news/features/guide/how-to-fish-all-fish-bosses-rods-and-bait-by-island/', note: 'source attributed to all ~-marked community entries; places the Old Pike boss on Island 2' },
+          { label: 'Game8: The Old Pike Boss Guide', href: 'https://game8.co/games/How-to-Fish/archives/617342', note: 'Beginner Boss Lure ($40), shared Sunfish lure pool, and the $150 Shotgun alternative', },
           { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 're-verification baseline for patch changes' },
         ]}
       />
