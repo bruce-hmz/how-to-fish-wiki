@@ -13,6 +13,22 @@ export default function SpiderCrabPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Boss Battles', href: '/bosses/' }, { name: 'Spider Crab', href: '/bosses/spider-crab/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Giant Spider Crab Boss Guide</h1>
+
+      <div className="bg-coral/10 border border-coral/40 rounded-xl p-6 space-y-3 text-sm text-gray-300">
+        <p className="font-bold text-white text-base">⚠️ Known Bug: the crab floats and can&apos;t be hit (Patch 1.0.11)</p>
+        <p>
+          Since the September 1 Patch 1.0.11, many players report the Spider Crab <strong className="text-white">floating in the air above the tidepool, out of reach</strong> — it cannot be lured down or damaged, and the fight can&apos;t be won that run. Three separate Steam threads appeared within a day of the update (25+ replies combined, including &ldquo;no way to beat him in the air&rdquo;), and the developer has not shipped a fix yet — 1.0.11 is still the newest patch as of September 2, 2026.
+        </p>
+        <p>
+          <strong className="text-white">Community-reported workaround (unverified by our editors):</strong> a player in the largest bug thread says you can bring the crab back down — throw your boss bait behind the cockpit of the broken captain&apos;s boat and reel it in, so the crab follows the bait and gets wedged in the captain&apos;s seat where you can hit it. It may save an otherwise lost run; treat it as unconfirmed until more players verify it.
+        </p>
+        <p className="text-xs text-gray-400">
+          The strategy below is the normal, pre-1.0.11 fight and still applies once the bug is fixed or patched out. Check the{' '}
+          <Link href="/troubleshooting/" className="text-aqua hover:underline">troubleshooting hub</Link> and the{' '}
+          <Link href="/updates/" className="text-aqua hover:underline">patch notes</Link> for fix status — this notice will be removed as soon as an official fix lands.
+        </p>
+      </div>
+
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-ocean-950 p-4 rounded-lg text-xs">
           <div><span className="text-gray-400">Location:</span> <strong className="text-white block">Lighthouse Tidepool</strong></div>
@@ -68,6 +84,11 @@ export default function SpiderCrabPage() {
               label: 'How to Fish on Steam',
               href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
               note: 'Official game info; fight phases verified in-game by our editors',
+            },
+            {
+              label: 'Steam Discussions: "FLOATING CRABS" (bug reports after Patch 1.0.11)',
+              href: 'https://steamcommunity.com/app/4001890/discussions/0/581681246928694953/',
+              note: 'largest of three post-1.0.11 bug threads; source of the community workaround quoted above',
             },
           ]}
         />

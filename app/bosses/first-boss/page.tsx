@@ -24,7 +24,11 @@ const faqs = [
   },
   {
     q: 'Is the first boss hard?',
-    a: 'No — it is the tutorial-grade fight. It has 800 HP, and its charge attack crashes it into rocks and stuns it for about six seconds, giving you free damage windows. Later bosses are faster, do not freeze after attacks, and need real gear upgrades before you attempt them.'
+    a: 'No — it is the tutorial-grade fight. It has 800 HP, and its charge attack crashes it into rocks and stuns it for about six seconds, giving you free damage windows. Later bosses are faster, do not freeze after attacks, and need real gear upgrades before you attempt them. One exception right now: since Patch 1.0.11 some players cannot fight it at all — see the bug question below.'
+  },
+  {
+    q: 'Is the first boss broken after Patch 1.0.11?',
+    a: 'For some players, yes. Since the September 1, 2026 update, multiple Steam threads report the Giant Spider Crab floating in the air above the tidepool, unkillable and out of reach — and 1.0.11 is still the newest patch, so the developer has not fixed it yet. A community-reported workaround: throw your boss bait behind the cockpit of the broken captain\'s boat and reel it in so the crab gets wedged in the captain\'s seat and becomes hittable again (unverified by our editors). The full Spider Crab guide tracks the bug and will drop the notice once a fix ships.'
   },
 ];
 
@@ -36,11 +40,11 @@ export default function FirstBossPage() {
         description="The first boss is the Giant Spider Crab at the starter lighthouse — summon it with the Empty Beer Can, dodge the charge, and win Boat Key Part #1."
         url="https://howtofish101.com/bosses/first-boss/"
         datePublished="2026-08-28"
-        dateModified="2026-08-28"
+        dateModified="2026-09-02"
       />
       <Breadcrumb items={[{ name: 'Boss Battles', href: '/bosses/' }, { name: 'First Boss', href: '/bosses/first-boss/' }]} />
       <h1 className="text-3xl font-extrabold text-white">The First Boss in How to Fish: Giant Spider Crab</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 28, 2026 · Game version 1.0.10</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 2, 2026 · Game version 1.0.11 (known bug — see notice below)</p>
 
       <div className="bg-gold/10 border border-gold/40 rounded-xl p-6 space-y-3">
         <p className="font-bold text-white text-sm">The short answer:</p>
@@ -54,6 +58,15 @@ export default function FirstBossPage() {
         <p className="text-xs text-gray-400">
           Full loadout details, phase breakdown, and the reward table live in the{' '}
           <Link href="/bosses/spider-crab/" className="text-aqua hover:underline">complete Spider Crab guide</Link>. This page is the quick version for &ldquo;what is this boss and how do I start it.&rdquo;
+        </p>
+      </div>
+
+      <div className="bg-coral/10 border border-coral/40 rounded-xl p-6 space-y-3 text-sm text-gray-300">
+        <p className="font-bold text-white text-sm">⚠️ Patch 1.0.11 bug: the crab may float out of reach</p>
+        <p>
+          Since the September 1 update, players on Steam report the Spider Crab hovering in the air above the tidepool — unkillable and unbeatable that run. The developer has not shipped a fix yet (1.0.11 remains the newest patch as of September 2, 2026). A community-reported workaround: throw your boss bait behind the cockpit of the broken captain&apos;s boat and reel it in so the crab gets stuck in the captain&apos;s seat, where you can hit it — unverified by our editors, but it may save the run. The{' '}
+          <Link href="/bosses/spider-crab/" className="text-aqua hover:underline">full Spider Crab guide</Link> tracks fix status, and the{' '}
+          <Link href="/troubleshooting/" className="text-aqua hover:underline">troubleshooting hub</Link> covers related save and bug safety.
         </p>
       </div>
 
@@ -115,6 +128,7 @@ export default function FirstBossPage() {
           { label: 'IGN Wiki: How to Get the Boat Keys — How to Fish', href: 'https://www.ign.com/wikis/how-to-fish/How_to_Get_the_Boat_Keys', note: 'first-boss-to-boat-key progression' },
           { label: 'NerdStalk: Spider Crab Fight — Requirements, Tips, and Boat Keys', href: 'https://nerdschalk.com/how-to-fish-spider-crab-boss/', note: 'the freeze-after-attack behavior unique to this boss' },
           { label: 'Destructoid: Complete How to Fish Walkthrough', href: 'https://www.destructoid.com/complete-how-to-fish-game-walkthrough-100-completion/', note: 'first-boss difficulty placement in full progression' },
+          { label: 'Steam Discussions: "FLOATING CRABS" (Patch 1.0.11 bug reports)', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681246928694953/', note: 'source of the post-1.0.11 floating-crab reports and the community workaround' },
         ]}
       />
       <FaqJsonLd faqs={faqs} />
