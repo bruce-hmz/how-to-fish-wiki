@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: 'Can you PvP against other players?',
-    a: 'No. How to Fish is co-op only — there is no PvP mode anywhere in the game. The closest thing to player conflict is sharing a wallet, which crews famously have feelings about.'
+    a: 'No. How to Fish is co-op only — there is no PvP mode anywhere in the game. What co-op does have is an optional friendly-fire toggle, explosives that do not check whose feet are in the blast, and a slap-to-revive system for when that goes wrong — see our friendly fire guide for the toggle and its reported bugs. The closest thing to actual player conflict is sharing a wallet, which crews famously have feelings about.'
   },
   {
     q: 'Is modding supported?',

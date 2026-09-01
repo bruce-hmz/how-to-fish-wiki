@@ -11,6 +11,19 @@ const UPDATED_2026_08_29 = new Set([
   '/guides/leeches/',
 ]);
 
+// Fun-angle long-tail pages published September 1, 2026
+// (dynamite fishing, Everyone's dream, friendly fire, death mechanics).
+const UPDATED_2026_09_01 = new Set([
+  '/guides/dynamite/',
+  '/guides/death/',
+  '/achievements/everyones-dream/',
+  '/multiplayer/friendly-fire/',
+  '/weapons/',
+  '/achievements/',
+  '/faq/',
+  '/trick-shots/',
+]);
+
 const UPDATED_2026_08_28 = new Set([
   '/updates/',
   '/troubleshooting/cooked-weapons/',
@@ -40,16 +53,18 @@ const UPDATED_2026_08_27 = new Set([
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['', '/guide/', '/fish/', '/fish/drip-fish/', '/bosses/', '/bosses/pufferfish/', '/bosses/spider-crab/', '/bosses/magma-whale/', '/bosses/giant-piranha/', '/bosses/first-boss/', '/bosses/albatross/', '/lures/', '/weapons/', '/money/', '/map/', '/boat/', '/islands/', '/guides/leeches/', '/cooking/', '/multiplayer/', '/settings/', '/difficulty/', '/casino/', '/trick-shots/', '/achievements/', '/achievements/bean/', '/achievements/360-no-scope/', '/creatures/rare-variants/', '/game/system-requirements/', '/game/launch/', '/updates/', '/videos/', '/troubleshooting/', '/troubleshooting/save-file/', '/troubleshooting/items-disappeared/', '/troubleshooting/cooked-weapons/', '/troubleshooting/join-friends/', '/troubleshooting/fish-not-biting/', '/troubleshooting/performance-stutter/', '/troubleshooting/audio-duplication/', '/troubleshooting/error-0x11c7/', '/troubleshooting/what-to-do-next/', '/about/', '/editorial-policy/', '/privacy/', '/terms/', '/faq/'];
+  const routes = ['', '/guide/', '/fish/', '/fish/drip-fish/', '/bosses/', '/bosses/pufferfish/', '/bosses/spider-crab/', '/bosses/magma-whale/', '/bosses/giant-piranha/', '/bosses/first-boss/', '/bosses/albatross/', '/lures/', '/weapons/', '/money/', '/map/', '/boat/', '/islands/', '/guides/leeches/', '/guides/dynamite/', '/guides/death/', '/cooking/', '/multiplayer/', '/multiplayer/friendly-fire/', '/settings/', '/difficulty/', '/casino/', '/trick-shots/', '/achievements/', '/achievements/bean/', '/achievements/360-no-scope/', '/achievements/everyones-dream/', '/creatures/rare-variants/', '/game/system-requirements/', '/game/launch/', '/updates/', '/videos/', '/troubleshooting/', '/troubleshooting/save-file/', '/troubleshooting/items-disappeared/', '/troubleshooting/cooked-weapons/', '/troubleshooting/join-friends/', '/troubleshooting/fish-not-biting/', '/troubleshooting/performance-stutter/', '/troubleshooting/audio-duplication/', '/troubleshooting/error-0x11c7/', '/troubleshooting/what-to-do-next/', '/about/', '/editorial-policy/', '/privacy/', '/terms/', '/faq/'];
   return routes.map((route) => ({
     url: `${baseUrl}${route || '/'}`,
-    lastModified: UPDATED_2026_08_29.has(route || '/')
+    lastModified: UPDATED_2026_09_01.has(route || '/')
+      ? '2026-09-01'
+      : UPDATED_2026_08_29.has(route || '/')
       ? '2026-08-29'
       : UPDATED_2026_08_28.has(route || '/')
-      ? '2026-08-28'
-      : UPDATED_2026_08_27.has(route || '/')
-        ? '2026-08-27'
-        : '2026-08-26',
+        ? '2026-08-28'
+        : UPDATED_2026_08_27.has(route || '/')
+          ? '2026-08-27'
+          : '2026-08-26',
     changeFrequency: route === '' || route === '/updates/' ? 'daily' : 'weekly',
     priority: route === '' ? 1.0 : (route.includes('fish') || route.includes('bosses') ? 0.9 : 0.8),
   }));

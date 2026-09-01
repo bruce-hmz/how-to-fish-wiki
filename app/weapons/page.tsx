@@ -48,8 +48,8 @@ const weapons = [
   {
     name: 'Dynamite',
     type: 'Explosive (consumable)',
-    unlock: 'Crafted at cooking/crafting stations',
-    damage: 'Area of effect, one-time use',
+    unlock: 'Sold at the Island 2 (Forest) item shop, ~$25 per stick',
+    damage: 'Area of effect, one-time use — the blast hits the thrower too',
     use: "Clearing fish swarms and the Everyone's dream seagull achievement",
   },
 ];

@@ -69,7 +69,7 @@ export default function AchievementsPage() {
           · <Link href="/bosses/magma-whale/" className="text-aqua hover:underline">Handyman bare-fist finale</Link>
           · <Link href="/money/" className="text-aqua hover:underline">Rich Millionaire income planning</Link>
           · <Link href="/difficulty/" className="text-aqua hover:underline">Easy-mode fast boss takedowns for Easy (10 seconds)</Link>
-          · <Link href="/trick-shots/" className="text-aqua hover:underline">the dynamite seagull setup behind Everyone's dream</Link>.
+          · <Link href="/achievements/everyones-dream/" className="text-aqua hover:underline">the dynamite seagull setup behind Everyone's dream</Link>.
         </p>
         <p>
           Completionist runs land in the middle: <strong>Collector</strong> (10.8%) needs every creature in the logbook,

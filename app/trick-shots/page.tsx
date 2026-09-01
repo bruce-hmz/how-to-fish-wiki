@@ -90,7 +90,7 @@ export default function TrickShotsPage() {
           <li>Fire mid-spin if you dare — 360 stacks on top and pushes marginal attempts over the line.</li>
         </ol>
         <p className="text-xs leading-relaxed">
-          Need the opposite — a completely flat kill for <em>Noob</em>? Pick a motionless ground creature and empty your magazine from plain range: no spins, no headshots, no last-bullet drama. Flatness is the achievement.
+          Need the opposite — a completely flat kill for <em>Noob</em>? Pick a motionless ground creature and empty your magazine from plain range: no spins, no headshots, no last-bullet drama. Flatness is the achievement. And if your seagull ambitions are explosive rather than stylish, the <Link href="/achievements/everyones-dream/" className="text-aqua hover:underline">Everyone’s dream achievement guide</Link> swaps the sniper for a stick of dynamite (see the <Link href="/guides/dynamite/" className="text-aqua hover:underline">dynamite guide</Link> for the blast rules).
         </p>
 
         <h2 className="text-xl font-bold text-white">Where to Practice</h2>
