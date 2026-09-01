@@ -8,3 +8,7 @@ tsconfig.tsbuildinfo
 favicon_io/
 favicon_io.zip
 .env
+
+# local research state (do not commit)
+.research/
+automation/
