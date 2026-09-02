@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { ArticleJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
-  title: 'Patch Notes & Update History (1.0.4–1.0.10)',
+  title: 'Patch Notes & Update History (1.0.4–1.0.11)',
   description:
-    'Every How to Fish patch 1.0.4–1.0.9 explained: difficulty modes, save fixes, boss nerfs, 8-player lobbies, and controller fixes.',
+    'Every How to Fish patch 1.0.4–1.0.11 explained: Steam Deck Verified and GeForce NOW support, save corruption checks and backups, the own-explosives rule, difficulty modes, boss nerfs, and 8-player lobbies.',
   alternates: { canonical: 'https://howtofish101.com/updates/' },
 };
 
@@ -15,9 +15,56 @@ const ANN = 'https://steamcommunity.com/games/4001890/announcements/detail/';
 
 const patches = [
   {
+    version: 'Patch 1.0.11',
+    date: 'September 1, 2026',
+    url: 'https://store.steampowered.com/news/app/4001890/view/698774255287927884',
+    affects: [
+      { href: '/game/system-requirements/', label: 'Steam Deck & GeForce NOW' },
+      { href: '/settings/', label: 'Toggle & hold options' },
+      { href: '/troubleshooting/save-file/', label: 'Save corruption check & backups' },
+      { href: '/multiplayer/friendly-fire/', label: 'Own-explosives rule' },
+      { href: '/fish/drip-fish/', label: 'Drip parrotfish cooking fix' },
+      { href: '/bosses/first-boss/', label: 'First boss bug (reported after this patch)' },
+    ],
+    sections: [
+      {
+        title: 'New',
+        items: [
+          'How to Fish is now playable through GeForce NOW.',
+          'How to Fish is now fully Steam Deck Verified.',
+          'Added an option to use toggle for aiming.',
+          'Added an option to use toggle for sprinting.',
+          'Added an option to hold to attack.',
+          'Added an option to toggle nametags.',
+        ],
+      },
+      {
+        title: 'Changes',
+        items: [
+          "Save files are now always checked that they're not corrupt before loading.",
+          'Save files now have backups in case of becoming corrupt.',
+          'The roulette table on island 6 moved slightly — its old position was annoying to bet from.',
+          'Item dots changed color to make dropped weapons easier to find: weapons are now orange, dead players are turquoise.',
+          'You will now die from your own explosives even with friendly fire disabled.',
+          'Iron sight removed as a purchasable — players only ever bought it by mistake, which also removed their expensive attachments.',
+          'You can no longer downgrade from suppressor to compensator.',
+        ],
+      },
+      {
+        title: 'Fixes',
+        items: [
+          'Hopefully fixed the inventory bug on join that made players invisible.',
+          'Items now need to have been held once before they can be sold.',
+          'Fixed drip parrotfish not being cookable.',
+          'Fixed hands sometimes teleporting instead of moving smoothly to a picked-up item.',
+        ],
+      },
+    ],
+  },
+  {
     version: 'Patch 1.0.10',
     date: 'August 27, 2026',
-    url: ANN + '698774255287927073',
+    url: 'https://store.steampowered.com/news/app/4001890/view/698774255287927072',
     affects: [
       { href: '/troubleshooting/cooked-weapons/', label: 'Water-dip uncook added' },
       { href: '/troubleshooting/items-disappeared/', label: 'Ground items now persist' },
@@ -28,6 +75,18 @@ const patches = [
         items: [
           "Weapons and tools now get cleaned from cooking when dipped in water.",
           "Ground-dropped items are now included in the save file — up to 64 total items persist between sessions, prioritizing weapons, tools, quest items and creatures.",
+          "Nerfed the anglerfish slightly — it was too annoying with a lot of health.",
+        ],
+      },
+      {
+        title: 'Fixes',
+        items: [
+          'No more rich text in chat — griefers were exploiting it.',
+          'Explosion velocity is capped so items no longer fly so far they disappear.',
+          'Roulette table: fixed infinite ticking at high values, the ball should no longer clip through the wheel, and leaving mid-game no longer breaks roulette for the next session.',
+          'Increased the time allowed to connect, hopefully lowering the risk of being disconnected instantly.',
+          'Removed the X marker on the radar — it marked where you last died and was just confusing.',
+          'Hopefully fixed items falling through the level when loading a game or joining a lobby.',
         ],
       },
       {
@@ -181,10 +240,10 @@ export default function UpdatesPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <ArticleJsonLd
         headline="How to Fish Patch Notes & Update History"
-        description="Every official How to Fish patch from 1.0.4 to 1.0.10 — save fixes, difficulty modes, ground-item persistence, and the water-dip un-cook."
+        description="Every official How to Fish patch from 1.0.4 to 1.0.11 — Steam Deck Verified, save backups, difficulty modes, ground-item persistence, and the water-dip un-cook."
         url="https://howtofish101.com/updates/"
         datePublished="2026-08-26"
-        dateModified="2026-08-28"
+        dateModified="2026-09-03"
       />
       <Breadcrumb items={[{ name: 'Patch Notes', href: '/updates/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Fish Patch Notes &amp; Update History</h1>
@@ -263,9 +322,19 @@ export default function UpdatesPage() {
             <Link href="/difficulty/" className="text-aqua hover:underline">difficulty modes guide</Link>.
           </li>
           <li>
-            <strong>Lost progress or weapons?</strong> The save rules changed in 1.0.6 and corruption was addressed
-            in 1.0.9 — see the{' '}
+            <strong>Lost progress or weapons?</strong> The save rules changed in 1.0.6, corruption was addressed in
+            1.0.9, and Patch 1.0.11 added a corruption check on every load plus automatic backups — see the{' '}
             <Link href="/troubleshooting/save-file/" className="text-aqua hover:underline">save bug recovery guide</Link>.
+          </li>
+          <li>
+            <strong>First boss floating and unkillable since 1.0.11?</strong> That is a live bug being reported by many
+            players, not your setup — status and a community workaround are in our{' '}
+            <Link href="/bosses/first-boss/" className="text-aqua hover:underline">first boss guide</Link>.
+          </li>
+          <li>
+            <strong>On Steam Deck or GeForce NOW?</strong> Both are officially supported since Patch 1.0.11 — details in
+            our{' '}
+            <Link href="/game/system-requirements/" className="text-aqua hover:underline">system requirements &amp; platforms page</Link>.
           </li>
           <li>
             <strong>Playing with a big group?</strong> Patch 1.0.4 raised lobby capacity to 8 players — our{' '}
@@ -283,7 +352,12 @@ export default function UpdatesPage() {
             {
               label: 'How to Fish — Steam community announcements',
               href: 'https://steamcommunity.com/app/4001890',
-              note: 'All patch notes 1.0.4–1.0.9, quoted from the official announcements',
+              note: 'All patch notes 1.0.4–1.0.11, quoted from the official announcements',
+            },
+            {
+              label: 'Official patch notes RSS feed (app 4001890)',
+              href: 'https://store.steampowered.com/feeds/news/app/4001890/',
+              note: 'Verbatim source for Patches 1.0.10 and 1.0.11',
             },
           ]}
         />

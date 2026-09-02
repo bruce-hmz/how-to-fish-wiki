@@ -25,6 +25,10 @@ const faqs = [
       .replace("%", ""),
     a: 'Nothing like that has ever been confirmed. No drop-rate table, no bad-luck protection, no double-reward windows appear anywhere in official notes. Guides repeating exact spawn percentages are dressing guesses up as data.'
   },
+  {
+    q: 'I collected every Drip fish but the achievement didn’t unlock — why?',
+    a: 'A player reported exactly this in early September 2026 with no fix posted in the thread. Before assuming a bug: Patch 1.0.5 already fixed one version of this achievement (it secretly required all Drips plus one extra), so first make sure your game is fully updated. Second, remember the Fishipedia tracks regular and Drip entries separately — a “complete-feeling” list can hide a gap like the Drip Goby, which has no well-documented catch yet. If the log truly shows every entry, restart the game and give it a day; this game’s achievement families have historically unlocked late. More checks live in our achievements troubleshooting guide.'
+  },
 ];
 
 export default function DripFishPage() {
@@ -32,7 +36,7 @@ export default function DripFishPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Fish Database', href: '/fish/' }, { name: 'Drip Fish Guide', href: '/fish/drip-fish/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Drip Fish: Confirmed Catches, Odds Talk &amp; Gachapon</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 27, 2026 · Game version 1.0.9</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 3, 2026 · Game version 1.0.11</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <div className="bg-cyan-950/60 border border-cyan-500/40 rounded-lg p-4">
@@ -76,10 +80,61 @@ export default function DripFishPage() {
           Collectors hunting the full set keep surfacing additional named Drips. These lack entry-level documentation, so treat the locations as leads to test, not guarantees:
         </p>
         <ul className="list-disc pl-5 space-y-2 bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 text-sm text-gray-300">
-          <li><strong className="text-white">Drip Goldfish</strong> — reported caught around islands 2–3.</li>
-          <li><strong className="text-white">Drip Voxelfish</strong> — the wall many 100%-chasers hit: an angler grinding <em>Island 4 with the Professional Lure</em> logged roughly five hours chasing the last one while salmon and tuna kept biting instead.</li>
+          <li><strong className="text-white">Drip Goldfish</strong> — reported around islands 2–3, with the “Catching every drip fish” thread placing them behind the drip slot machine.</li>
+          <li><strong className="text-white">Drip Voxelfish</strong> — the wall many 100%-chasers hit (full rundown below).</li>
+          <li><strong className="text-white">Drip Goby</strong> — named by collectors as part of the set, but no reliable public location report exists yet.</li>
           <li><strong className="text-white">First-island density quirk</strong> — the same players logging “ten Drips on island one, five across the rest” suggest your early hours are disproportionately generous. Do not over-index on late-game sessions feeling broken.</li>
         </ul>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-white">The Drip Voxelfish Wall: Real, Rare, Not Bugged</h2>
+        <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
+          <p className="text-xs leading-relaxed">
+            <strong className="text-white">Yes, the Drip Voxelfish exists and is catchable</strong> — when a player asked
+            point-blank on Steam whether it was bugged, the reply that settled it was simple: <em>“yes, we fished it today.”</em>{' '}
+            Two separate threads (16+ replies, still active through early September) are dedicated to this one catch, with
+            hunters reporting five-hour grinds on end. Community consensus: <strong className="text-white">it is RNG, not a bug</strong> —
+            the meanest roll in the Drip pool.
+          </p>
+          <p className="text-xs leading-relaxed">
+            How to hunt it: Drip variants use <strong className="text-white">the same lure, rod, or trigger as their normal
+            version</strong> — there is no separate Drip lure. The normal Voxelfish is a Professional Lure catch, which is why
+            the documented hunts all look the same: <strong className="text-white">Island 4, Professional Lure, and patience</strong>.
+            No odds have ever been published, so nobody can tell you it takes 40 casts or 400 — only that it has repeatedly
+            taken hours.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-xs bg-ocean-950/70 rounded-lg overflow-hidden border-collapse">
+              <thead className="bg-ocean-950/90 text-gray-400 uppercase border-b border-ocean-800">
+                <tr><th className="px-3 py-2">Drip variant</th><th className="px-3 py-2">Where players report it</th><th className="px-3 py-2">Status</th></tr>
+              </thead>
+              <tbody className="divide-y divide-ocean-800/60 align-top">
+                <tr>
+                  <td className="px-3 py-2 font-bold text-cyan-300">Drip Goldfish</td>
+                  <td className="px-3 py-2">Islands 2–3, behind the drip slot machine</td>
+                  <td className="px-3 py-2">Multiple players confirm</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-bold text-cyan-300">Drip Voxelfish</td>
+                  <td className="px-3 py-2">Island 4 with the Professional Lure (same lure as the normal Voxelfish)</td>
+                  <td className="px-3 py-2">Confirmed catchable; heavy RNG</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-bold text-cyan-300">Drip Goby</td>
+                  <td className="px-3 py-2">—</td>
+                  <td className="px-3 py-2">No reliable public report yet</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs leading-relaxed">
+            One trap for 100%-chasers: the Fishipedia tracks <strong className="text-white">all 49 regular and 49 Drip creatures
+            separately</strong> — catching the Drip Voxelfish does not fill the normal Voxelfish entry, and vice versa. You need
+            both. And if you thought fish were the end of it: at least one hunter reports Drip boss variants exist too (500+
+            regular crabs, still no Drip Crab Boss).
+          </p>
+        </div>
       </section>
 
       <section className="space-y-4">
@@ -114,11 +169,19 @@ export default function DripFishPage() {
             </div>
           ))}
         </div>
+        <p className="text-xs text-gray-400">
+          Achievement still locked after all that? Our{' '}
+          <Link href="/achievements/" className="text-aqua hover:underline">achievements &amp; collector bugs guide</Link> covers
+          the full kill-all-creatures blocker list.
+        </p>
       </section>
 
       <Sources
         items={[
-          { label: 'Steam Discussion: “Catching every drip fish”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606641006/', note: 'Voxelfish hunt and Island 4 Professional Lure report' },
+          { label: 'Steam Discussion: “Catching every drip fish”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606641006/', note: 'Voxelfish hunt, Island 4 Professional Lure report, goldfish slot-machine location' },
+          { label: 'Steam Discussion: “Does the drippy Voxelfish exist?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606534846/', note: 'confirmed catchable (“we fished it today”) and drip boss-variant mention' },
+          { label: 'Steam Discussion: “I did collect all the drip fish but i didnt get the achivment”', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681246928692020/', note: 'achievement-not-unlocking report behind the FAQ' },
+          { label: 'Mobalytics: How to Fish — All 49 Fish, Creatures and Lures', href: 'https://mobalytics.gg/gamebase/guides/how-to-fish-all-fish-creatures-lures', note: 'Fishipedia tracks 49 regular + 49 Drip entries separately; Drip uses the same lure as the normal version' },
           { label: 'Steam Discussion: “I’m getting zero drip fish”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606702906/', note: 'first-island abundance pattern and unpublished-odds confirmation' },
           { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'no Drip odds have ever appeared here — checked each patch' },
         ]}

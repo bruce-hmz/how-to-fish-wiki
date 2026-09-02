@@ -5,7 +5,7 @@ import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Save File Location, Backups & Lost Progress Recovery',
-  description: 'Exactly where How to Fish stores its save files on Windows and Steam Deck, a backup routine that takes 30 seconds, how to roll back an older save, and what Patches 1.0.4–1.0.10 actually changed about saving.',
+  description: 'Exactly where How to Fish stores its save files on Windows and Steam Deck, a backup routine that takes 30 seconds, how to roll back an older save, and what Patches 1.0.4–1.0.11 actually changed about saving.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/save-file/' },
 };
 
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: 'Can I go back to an older save?',
-    a: 'Only if you made a copy yourself. There is no built-in version history: the game keeps its current state (with an autosave roughly every minute since Patch 1.0.6) and every new save overwrites it. Rollback therefore means closing the game and Steam, copying an older backup over the live folder, and launching again — which is why the backup habit matters so much in this game.'
+    a: 'Only if you made a copy yourself. Patch 1.0.11 added automatic backups in case a save becomes corrupt, but the developers have not documented where those backups are stored or how to restore one, so there is still no browsable version history: the game keeps its current state (with an autosave roughly every minute since Patch 1.0.6) and every new save overwrites it. Rollback therefore means closing the game and Steam, copying an older backup over the live folder, and launching again — which is why the backup habit matters so much in this game.'
   },
   {
     q: 'Does How to Fish have Steam Cloud backups?',
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: 'My save will not load at all — what now?',
-    a: 'Run the recovery order on this page: stop loading attempts, close the game normally, copy the entire folder, then verify game files in Steam and try once more. Patch 1.0.6 added a validation step before loading, which means badly damaged data is more likely to be refused than half-loaded, but it cannot repair the file. If the save still fails, report it to the developers and wait rather than deleting anything.'
+    a: 'Run the recovery order on this page: stop loading attempts, close the game normally, copy the entire folder, then verify game files in Steam and try once more. Patch 1.0.6 added a validation step before loading, and Patch 1.0.11 made that check permanent on every load (with backups kept when a file does turn out corrupt), which means badly damaged data is more likely to be refused than half-loaded — but it cannot repair the file. If the save still fails, report it to the developers and wait rather than deleting anything.'
   },
 ];
 
@@ -43,10 +43,10 @@ export default function SaveFilePage() {
         description="Where How to Fish stores saves on Windows and Steam Deck, a 30-second backup routine, rollback steps, and what every patch changed about saving."
         url="https://howtofish101.com/troubleshooting/save-file/"
         datePublished="2026-08-27"
-        dateModified="2026-08-28"
+        dateModified="2026-09-03"
       />
       <h1 className="text-3xl font-extrabold text-white">How to Fish Saves: Location, Backups &amp; Recovery</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 28, 2026 · Game version 1.0.10</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 3, 2026 · Game version 1.0.11</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
         <p className="font-bold text-white text-sm">If gear is missing right now, three rules first:</p>
@@ -55,6 +55,17 @@ export default function SaveFilePage() {
           <li><strong className="text-white">Close the game normally</strong> (Main Menu → Quit) instead of alt-F4.</li>
           <li><strong className="text-white">Copy the entire save folder</strong> somewhere safe before trying anything below.</li>
         </ol>
+      </div>
+
+      <div className="bg-cyan-950/60 border border-cyan-500/40 rounded-xl p-5 space-y-2">
+        <p className="font-bold text-cyan-300 text-sm">Patch 1.0.11 (September 1, 2026) built the safety net players asked for:</p>
+        <p className="text-xs leading-relaxed">
+          Save files are now <strong className="text-white">always checked for corruption before loading</strong>, and the game
+          now <strong className="text-white">keeps its own backups in case a save becomes corrupt</strong> — both verbatim from the
+          official patch notes. Two honest limits before you rely on it: Dazed Games has not documented where those automatic
+          backups are stored or how to browse and restore one, and a file that is already broken on an older build is not
+          retroactively repaired by updating. The manual backup habit below remains the only recovery path you fully control.
+        </p>
       </div>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6">
@@ -124,6 +135,11 @@ export default function SaveFilePage() {
                 <td className="px-3 py-2">Ground-dropped items are now written into the save file — up to 64, prioritizing weapons, tools, quest items and creatures.</td>
                 <td className="px-3 py-2">Saves got bigger and dropped gear now survives session boundaries. The path, backup routine, and rollback steps on this page are unchanged.</td>
               </tr>
+              <tr>
+                <td className="px-3 py-2 font-bold text-white">1.0.11</td>
+                <td className="px-3 py-2">Saves are checked for corruption before every load, and the game keeps its own backups in case a save becomes corrupt.</td>
+                <td className="px-3 py-2">Built-in protection finally exists — but with no documented way to browse or restore the automatic backups, the manual copies on this page are still your real safety net.</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -164,7 +180,8 @@ export default function SaveFilePage() {
         items={[
           { label: 'Steam Discussion: FIXED “Equipping weapons boots you to homescreen and loses progress”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606635788/', note: 'source for the AppData\\LocalLow\\Dazed Games\\How to Fish\\Saves path' },
           { label: 'Steam Discussion: “Saved game and lost everything?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582805931178592050/', note: 'typical loss pattern described by affected players' },
-          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'basis of the 1.0.4 / 1.0.6 / 1.0.9 timeline above' },
+          { label: 'Steam Discussion: “Save issue” — game saves deleted themselves', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681246928691506/', note: 'recent loss report that motivated the Patch 1.0.11 section' },
+          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'basis of the patch timeline above, including 1.0.11’s corruption check and automatic backups' },
         ]}
       />
       <FaqJsonLd faqs={faqs} />
