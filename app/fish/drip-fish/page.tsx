@@ -7,6 +7,7 @@ export const metadata = {
   title: 'Drip Fish Guide: Every Confirmed Catch & Gachapon Use',
   description: 'How to Fish Drip creatures explained: confirmed variants like the Voxelfish hunt, why Island 1 feels more generous, real RNG talk without made-up percentages, and how the Casino gachapon pays out.'
       .replace('|', ''),
+  alternates: { canonical: 'https://howtofish101.com/fish/drip-fish/' },
 };
 
 const faqs = [
