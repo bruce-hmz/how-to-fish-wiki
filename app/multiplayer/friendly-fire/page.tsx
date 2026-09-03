@@ -13,7 +13,7 @@ export const metadata = {
 const faqs = [
   {
     q: 'Can you turn off friendly fire in How to Fish?',
-    a: 'There is a friendly-fire selection box in the settings, and multiple players have reported two separate problems with it: the box can be impossible to press with certain controllers (one crew had to swap to mouse and keyboard), and turning it off has not reliably stopped team damage for everyone. Treat the toggle as best-effort until a patch note says otherwise.',
+    a: 'There is a friendly-fire selection box in the settings, and multiple players have reported two separate problems with it: the box can be impossible to press with certain controllers (one crew had to swap to mouse and keyboard), and turning it off has not reliably stopped team damage for everyone. One limit is now official: since Patch 1.0.11 you die from your own explosives even with friendly fire disabled — that part is intentional, not a bug.',
   },
   {
     q: 'How do you revive a downed teammate?',
@@ -34,7 +34,7 @@ export default function FriendlyFirePage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Multiplayer', href: '/multiplayer/' }, { name: 'Friendly Fire', href: '/multiplayer/friendly-fire/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Friendly Fire &amp; Slap Revives in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 1, 2026 · Game version 1.0.10</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 4, 2026 · Game version 1.0.11</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p>
@@ -57,8 +57,12 @@ export default function FriendlyFirePage() {
             <li><strong className="text-white">Controller input:</strong> one host with a Steam controller could not press the selection box at all — the crew only reached the setting after swapping to mouse and keyboard. It fits a broader pattern reviewers noted about option menus that make it hard to tell what you are selecting.</li>
             <li><strong className="text-white">Off is not always off:</strong> the same thread reports turning friendly fire off without team damage actually stopping, confirmed by additional players replying to the thread. Treat team-damage immunity as unreliable on current builds and keep blast radius discipline as your real protection.</li>
           </ul>
-          <p className="text-xs text-gray-500">
-            Neither behavior appears in any patch note we can point to as intentionally fixed — we will update this page when 1.0.10+ notes address the toggle.
+          <p>
+            <strong className="text-white">Patch 1.0.11 settled the explosives half of this.</strong> The official
+            notes state: &ldquo;You will now die from your own explosives even with friendly fire disabled.&rdquo; In
+            other words, the toggle was never meant to shield you from your own dynamite — that is deliberate design,
+            so keep blast-radius discipline even in a no-friendly-fire lobby. The separate report that the toggle
+            fails to stop team damage <em>between players</em> remains unaddressed in any patch note.
           </p>
         </div>
       </section>
@@ -111,7 +115,7 @@ export default function FriendlyFirePage() {
         items={[
           { label: 'Steam Discussion: “Friendly fire won’t turn off?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606627189/', note: 'toggle location, controller-input failure, off-toggle not stopping team damage' },
           { label: 'GamingOnLinux — “How to Fish is another brilliantly funny online co-op game”', href: 'https://www.gamingonlinux.com/2026/08/how-to-fish-is-another-brilliantly-funny-online-co-op-game/', note: 'slap-to-revive description, seagull body-snatching, option-menu usability' },
-          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: '1.0.4 private lobbies, 1.0.6 griefer fix, 1.0.10 chat-exploit removal' },
+          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: '1.0.4 private lobbies, 1.0.6 griefer fix, 1.0.10 chat-exploit removal, 1.0.11 own-explosives rule' },
         ]}
       />
       <FaqJsonLd faqs={faqs} />

@@ -92,8 +92,8 @@ export default function FirstBossPage() {
         </p>
         <div className="bg-ocean-900/60 border border-ocean-800 rounded-xl p-5 text-xs space-y-2">
           <p className="font-bold text-white">Rewards</p>
-          <p>Boat Key Part #1 · 200 gold · Spider Crab Shell Shield (10% drop chance). The key part starts your escape route — the other four bosses guard the remaining parts and coordinates, covered in the{' '}
-            <Link href="/bosses/" className="text-aqua hover:underline">all-bosses hub</Link>.
+          <p>Boat Key Part #1 · 200 gold · Spider Crab Shell Shield (10% drop chance). The key part starts your escape route — the other four bosses guard the remaining parts and coordinates, and the{' '}
+            <Link href="/bosses/" className="text-aqua hover:underline">all-bosses hub</Link> also tracks the mini-boss tier (Old Pike, Blue Shark).
           </p>
         </div>
       </section>

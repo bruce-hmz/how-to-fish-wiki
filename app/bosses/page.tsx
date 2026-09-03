@@ -4,7 +4,7 @@ import { BOSSES_DATABASE } from '@/lib/data';
 
 export const metadata = {
   title: 'All Bosses: Summon Baits & Strategies',
-  description: 'Summon and defeat all five How to Fish bosses — Spider Crab, Giant Piranha, Pufferfish, Albatross, and Magma Whale — with bait chains and phase tactics.',
+  description: 'Summon and defeat all five How to Fish bosses — Spider Crab, Giant Piranha, Pufferfish, Albatross, and Magma Whale — plus the Old Pike and Blue Shark mini-bosses, with bait chains and phase tactics.',
   alternates: { canonical: 'https://howtofish101.com/bosses/' },
 };
 
@@ -47,6 +47,28 @@ export default function BossesPage() {
         </p>
         <p>
           Each boss has multiple combat phases with escalating attack patterns. Depleting a boss HP to certain thresholds triggers phase transitions with new mechanics, faster attacks, and environmental hazards. Understanding these phase breaks is the key to consistent wins.
+        </p>
+
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Mini-Bosses: Old Pike &amp; Blue Shark</h2>
+        <p>
+          Between regular fish and the five colossal bosses above sits a third tier the game itself acknowledges — the
+          &ldquo;Competitive eating&rdquo; achievement asks you to <strong>eat a mini-boss</strong>. Two are currently
+          documented by player guides:
+        </p>
+        <ul className="list-disc pl-5 space-y-2">
+          <li>
+            <strong className="text-white">Old Pike — Island 2 (Forest).</strong> A boss-class <em>fish</em>: the documented route is the{' '}
+            <Link href="/lures/" className="text-aqua hover:underline">Beginner Boss Lure</Link> ($40 in island item shops; the Sunfish shares the same lure pool and can bite first), or skip fishing and hunt it down with a $150 Shotgun. The full answer lives in the{' '}
+            <Link href="/fish/" className="text-aqua hover:underline">fish database FAQ</Link>.
+          </li>
+          <li>
+            <strong className="text-white">Blue Shark — Island 3 (Desert).</strong> Summoned by casting the{' '}
+            <strong>Standard Boss Lure</strong> from the desert island shore; guides describe easy-to-dodge spiral attacks. Beating it is a progression step, not just a trophy — bring the catch back to the Grillmaster NPC to unlock the island&apos;s Grill (the same island later hosts the{' '}
+            <Link href="/bosses/pufferfish/" className="text-aqua hover:underline">Colossal Pufferfish</Link> story boss, summoned with a carrot).
+          </li>
+        </ul>
+        <p className="text-xs text-gray-500">
+          Mini-boss facts are guide-documented (Game8 and G2A for the Old Pike; Pro Game Guides, Sportskeeda, and KeenGamer for the Blue Shark), not yet in-game verified — the same provenance standard as the Uncatalogued fish rows.
         </p>
 
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Boss Difficulty Ranking & Recommended Gear</h2>

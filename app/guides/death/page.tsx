@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'Can your own dynamite kill you?',
-    a: 'Yes — the blast does not spare the thrower. Guide write-ups are blunt about misjudged radius kills, which is also why dynamite is the leading cause of friendly-fire incidents in co-op crews.',
+    a: 'Yes — the blast does not spare the thrower, and since Patch 1.0.11 that applies even with friendly fire turned off: the patch notes make dying to your own explosives explicit and intentional. Guide write-ups are blunt about misjudged radius kills, which is also why dynamite is the leading cause of friendly-fire incidents in co-op crews.',
   },
 ];
 
@@ -34,7 +34,7 @@ export default function DeathGuidePage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Guide', href: '/guide/' }, { name: 'Death', href: '/guides/death/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Can You Die in How to Fish?</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 1, 2026 · Game version 1.0.10</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 4, 2026 · Game version 1.0.11</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p>
@@ -53,7 +53,7 @@ export default function DeathGuidePage() {
             <li><strong className="text-white">Fish that fight back.</strong> Bigger fish do not wait at the end of a rod politely — reviewers single out boss fights where the fish hunts you, like the <Link href="/bosses/giant-piranha/" className="text-aqua hover:underline">Giant Piranha</Link> flopping across the shallows spewing smaller piranhas at the crew.</li>
             <li><strong className="text-white">Night raids.</strong> Nighttime is not cosmetic: aggressive nocturnal fish ram your hull and leap onto the deck, and a single solid hit on an already-drained health bar can knock you out and send you back to a dock.</li>
             <li><strong className="text-white">Bosses.</strong> Every boss from the <Link href="/bosses/" className="text-aqua hover:underline">Spider Crab to the Magma Whale</Link> can end you; HP scaling in co-op makes careless crews feed revives to the slap economy.</li>
-            <li><strong className="text-white">Your own dynamite.</strong> The blast radius does not check whose feet are in it — misjudged sticks are a documented self-kill and the opening move of most <Link href="/multiplayer/friendly-fire/" className="text-aqua hover:underline">friendly-fire highlight reels</Link>.</li>
+            <li><strong className="text-white">Your own dynamite.</strong> The blast radius does not check whose feet are in it — misjudged sticks are a documented self-kill and the opening move of most <Link href="/multiplayer/friendly-fire/" className="text-aqua hover:underline">friendly-fire highlight reels</Link>. Since Patch 1.0.11 this is enforced even with friendly fire disabled: &ldquo;You will now die from your own explosives even with friendly fire disabled&rdquo; (official patch notes).</li>
             <li><strong className="text-white">Your friends.</strong> There is a friendly-fire toggle, and explosives, shotguns, and physics do the rest. Griefing by strangers has been getting patched out; griefing by friends is a feature.</li>
           </ul>
         </div>
@@ -106,7 +106,7 @@ export default function DeathGuidePage() {
           { label: 'GamingOnLinux — “How to Fish is another brilliantly funny online co-op game”', href: 'https://www.gamingonlinux.com/2026/08/how-to-fish-is-another-brilliantly-funny-online-co-op-game/', note: 'fish that fight back, slap-to-revive, seagull body-snatching, death frequency' },
           { label: 'Game8 — How to Fish Beginner’s Guide', href: 'https://game8.co/games/How-to-Fish/archives/616926', note: 'hunger and health management' },
           { label: 'NerdsChalk — Everyone’s Dream dynamite guide', href: 'https://nerdschalk.com/kill-seagull-with-dynamite-how-to-fish/', note: 'blast radius self-damage' },
-          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: '1.0.10 ground-item persistence (64 items, weapon/tool/quest priority)' },
+          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: '1.0.10 ground-item persistence (64 items, weapon/tool/quest priority); 1.0.11 own-explosives rule with friendly fire off' },
         ]}
       />
       <FaqJsonLd faqs={faqs} />

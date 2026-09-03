@@ -5,7 +5,7 @@ import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Cannot Join Friends: Lobby Fixes',
-  description: 'How to Fish co-op fixes in order: join black screens, version mismatch, invisible lobbies, and session types — plus what Patches 1.0.4, 1.0.5 and 1.0.9 changed about connecting.' ,
+  description: 'How to Fish co-op fixes in order: join black screens, version mismatch, invisible lobbies, and session types — plus what Patches 1.0.4 through 1.0.11 changed about connecting.' ,
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/join-friends/' },
 };
 
@@ -24,6 +24,10 @@ const faqs = [
       .replace("@", ""),
     a: 'Boss health locks the moment the Rage Bait is cast based on who was present. Late arrivals do not inflate it — but they also do not shrink a fight that spawned understaffed, so a duo summoning before the third friend arrives will carry the 2x pool into the whole encounter.'
   },
+  {
+    q: 'Version mismatch that will not go away — anything left to try?',
+    a: 'One player in the Steam version-mismatch thread reports that reinstalling the Steam client itself cleared a stubborn "Disconnected: version mismatch" that survived restarts and file verification. That is a nuclear last resort — keep your steamapps folder or game installs may need re-downloading — and it is community-reported, not an official fix. Exhaust every step in the checklist above before reaching for it.'
+  },
 ];
 
 export default function JoinFriendsPage() {
@@ -32,13 +36,13 @@ export default function JoinFriendsPage() {
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Cannot Join Friends', href: '/troubleshooting/join-friends/' }]} />
       <ArticleJsonLd
         headline="Cannot Join Friends in How to Fish: Lobby Fixes"
-        description="Ordered co-op fixes for join black screens, version mismatch, and invisible lobbies — plus what Patches 1.0.4, 1.0.5 and 1.0.9 changed."
+        description="Ordered co-op fixes for join black screens, version mismatch, and invisible lobbies — plus what Patches 1.0.4 through 1.0.11 changed."
         url="https://howtofish101.com/troubleshooting/join-friends/"
         datePublished="2026-08-27"
-        dateModified="2026-08-27"
+        dateModified="2026-09-04"
       />
       <h1 className="text-3xl font-extrabold text-white">Cannot Join Friends: Lobby &amp; Black Screen Fixes</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 27, 2026 · Game version 1.0.9</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 4, 2026 · Game version 1.0.11</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
         <p className="font-bold text-white text-sm">The three fixes that clear most cases:</p>
@@ -72,6 +76,16 @@ export default function JoinFriendsPage() {
                 <td className="px-3 py-2">Main menu gained a Steam connection / relay debug readout.</td>
                 <td className="px-3 py-2">Before blaming your router, open the game: a red relay indicator pinpoints network trouble upstream of every setting below.</td>
               </tr>
+              <tr>
+                <td className="px-3 py-2 font-bold text-white">1.0.10</td>
+                <td className="px-3 py-2">&ldquo;Increased time allowed to connect&rdquo;; removed chat rich text that griefers were exploiting.</td>
+                <td className="px-3 py-2">The classic instant-kick-back-to-menu on join got a wider connection window — if you are still on an older build, updating alone may fix it.</td>
+              </tr>
+              <tr>
+                <td className="px-3 py-2 font-bold text-white">1.0.11</td>
+                <td className="px-3 py-2">&ldquo;Hopefully fixed inventory bug on join, making players invisible.&rdquo;</td>
+                <td className="px-3 py-2">Joiners spawning without visible gear is a known bug with an official fix — both players should be on 1.0.11 or newer.</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -97,6 +111,11 @@ export default function JoinFriendsPage() {
                 <td className="px-3 py-2">Friend’s lobby not visible anywhere</td>
                 <td className="px-3 py-2">Privacy set to invite-only (added 1.0.5)</td>
                 <td className="px-3 py-2">Host flips session type or sends a direct invite — invisible-to-search is by design now.</td>
+              </tr>
+              <tr>
+                <td className="px-3 py-2">Joined the lobby, but your weapons/inventory are invisible</td>
+                <td className="px-3 py-2">Join-invisibility bug (officially fixed in 1.0.11)</td>
+                <td className="px-3 py-2">Update both clients to 1.0.11+, then rejoin once. If it recurs on current builds, treat it as a fresh bug report.</td>
               </tr>
               <tr>
                 <td className="px-3 py-2">Random disconnects, gear state rolls back</td>
@@ -140,8 +159,9 @@ export default function JoinFriendsPage() {
 
       <Sources
         items={[
-          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'basis of the 1.0.4 / 1.0.5 / 1.0.9 session changes above' },
+          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'basis of the 1.0.4 / 1.0.5 / 1.0.9 / 1.0.10 / 1.0.11 session changes above' },
           { label: 'Steam Discussion: “Black screen when joining friends”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582805931178508963/', note: 'launch-week severity and the community workaround order' },
+          { label: 'Steam Discussion: “Version Mismatch”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582805931178540460/', note: 'source of the community reinstall-Steam last resort' },
           { label: 'PATCH 1.0.5 announcement', href: 'https://store.steampowered.com/news/app/4001890/view/711158520539513992', note: 'private lobbies and session-type switching details' },
         ]}
       />
