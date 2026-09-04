@@ -35,6 +35,18 @@ export default function GiantPiranhaPage() {
           for balance changes.
         </p>
 
+        <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
+          <p className="font-bold text-white text-sm">⚠️ Patch 1.0.12 rebalanced this fight (September 4, 2026)</p>
+          <p className="text-xs leading-relaxed">
+            The official 1.0.12 notes list a plain <strong className="text-white">&ldquo;Rebalanced piranha&rdquo;</strong>, and a
+            post-patch Steam thread reports the fight got harder, not easier: <em>&ldquo;after todays balancing patch, we cant beat
+            him. Up to 4 friends, we run out of time, every time.&rdquo;</em> What worked for that crew, straight from the same thread:
+            max out the shotgun first, <strong className="text-white">eat the small piranhas</strong> to keep food and health up
+            mid-fight, and spend dynamite on the swarm adds so your shots stay on the boss. The strategy below still describes the
+            fight&rsquo;s mechanics — treat the HP figures as pre-patch numbers until more post-1.0.12 reports come in.
+          </p>
+        </div>
+
         <h2 className="text-xl font-bold text-white">How to Spawn It: The 3-Leech Quest</h2>
         <p>
           Unlike the Spider Crab, the Giant Piranha is gated behind a quest chain rather than a shop lure. On
@@ -116,6 +128,16 @@ export default function GiantPiranhaPage() {
             label: 'How to Fish on Steam',
             href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
             note: 'Official game info; fight phases verified in-game by our editors',
+          },
+          {
+            label: 'Patch 1.0.12 official notes (Steam News, September 4, 2026)',
+            href: 'https://store.steampowered.com/news/app/4001890/view/698774889153168485',
+            note: 'source of the verbatim "Rebalanced piranha" change',
+          },
+          {
+            label: 'Steam Discussion: post-1.0.12 piranha difficulty reports',
+            href: 'https://steamcommunity.com/app/4001890/discussions/0/581681298840706905/',
+            note: 'source of the post-patch difficulty quote and the shotgun/small-piranha/dynamite tactics',
           },
         ]}
       />

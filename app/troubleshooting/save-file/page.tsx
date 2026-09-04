@@ -5,7 +5,7 @@ import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Save File Location, Backups & Lost Progress Recovery',
-  description: 'Exactly where How to Fish stores its save files on Windows and Steam Deck, a backup routine that takes 30 seconds, how to roll back an older save, and what Patches 1.0.4–1.0.11 actually changed about saving.',
+  description: 'Exactly where How to Fish stores its save files on Windows and Steam Deck, a backup routine that takes 30 seconds, how to roll back an older save, and what Patches 1.0.4–1.0.12 actually changed about saving.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/save-file/' },
 };
 
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'Does How to Fish have Steam Cloud backups?',
-    a: 'Treat any cloud copy as a bonus, never as your backup. During launch month, cloud sync did not protect several players from losing gear, and if Steam ever shows a sync-conflict prompt between a local and cloud copy, compare timestamps carefully and preserve both versions before choosing one. A manual copy in a separate folder is always safer.'
+    a: 'Yes — as of Patch 1.0.12 (September 4, 2026) save files are stored through Steam Cloud. Per the official notes, you play and exit the game once on the PC that has your saves to upload them. Treat the cloud as a safety net for PC failures and reinstalls, not as a version history: there is still nothing to browse or roll back to, which is what the manual backup routine is for. And if Steam ever shows a sync-conflict prompt between a local and cloud copy, compare timestamps carefully and preserve both versions before choosing one.'
   },
   {
     q: 'My save will not load at all — what now?',
@@ -43,10 +43,10 @@ export default function SaveFilePage() {
         description="Where How to Fish stores saves on Windows and Steam Deck, a 30-second backup routine, rollback steps, and what every patch changed about saving."
         url="https://howtofish101.com/troubleshooting/save-file/"
         datePublished="2026-08-27"
-        dateModified="2026-09-03"
+        dateModified="2026-09-05"
       />
       <h1 className="text-3xl font-extrabold text-white">How to Fish Saves: Location, Backups &amp; Recovery</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 3, 2026 · Game version 1.0.11</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 5, 2026 · Game version 1.0.12</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
         <p className="font-bold text-white text-sm">If gear is missing right now, three rules first:</p>
@@ -65,6 +65,19 @@ export default function SaveFilePage() {
           official patch notes. Two honest limits before you rely on it: Dazed Games has not documented where those automatic
           backups are stored or how to browse and restore one, and a file that is already broken on an older build is not
           retroactively repaired by updating. The manual backup habit below remains the only recovery path you fully control.
+        </p>
+      </div>
+
+      <div className="bg-cyan-950/60 border border-cyan-500/40 rounded-xl p-5 space-y-2">
+        <p className="font-bold text-cyan-300 text-sm">Patch 1.0.12 (September 4, 2026) moved saves into Steam Cloud:</p>
+        <p className="text-xs leading-relaxed">
+          Verbatim from the official notes: <strong className="text-white">&ldquo;Save files are now stored through Steam Cloud.
+          Play and exit How to Fish on the pc you&apos;ve saved them on once to upload them to the cloud.&rdquo;</strong> In practice:
+          after updating, run the game and quit normally once, and your local saves upload to your Steam account — from then on
+          they follow the account instead of living only in that one LocalLow folder. Two limits keep this from replacing the
+          manual routine: the cloud holds your <em>current</em> saves, not a version history you can roll back through, and builds
+          older than 1.0.12 have no cloud storage at all — so if you ever play an older version, your own backup copies are still
+          the only safety net. Keep doing both.
         </p>
       </div>
 
@@ -140,6 +153,11 @@ export default function SaveFilePage() {
                 <td className="px-3 py-2">Saves are checked for corruption before every load, and the game keeps its own backups in case a save becomes corrupt.</td>
                 <td className="px-3 py-2">Built-in protection finally exists — but with no documented way to browse or restore the automatic backups, the manual copies on this page are still your real safety net.</td>
               </tr>
+              <tr>
+                <td className="px-3 py-2 font-bold text-white">1.0.12</td>
+                <td className="px-3 py-2">Saves are now stored through Steam Cloud — play and exit the game once on the PC that has your saves to upload them.</td>
+                <td className="px-3 py-2">Your progress now follows your Steam account instead of one machine. The cloud is not a rollback history, and pre-1.0.12 builds don&apos;t use it — the backup habit on this page still covers what the cloud can&apos;t.</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -181,7 +199,7 @@ export default function SaveFilePage() {
           { label: 'Steam Discussion: FIXED “Equipping weapons boots you to homescreen and loses progress”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606635788/', note: 'source for the AppData\\LocalLow\\Dazed Games\\How to Fish\\Saves path' },
           { label: 'Steam Discussion: “Saved game and lost everything?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582805931178592050/', note: 'typical loss pattern described by affected players' },
           { label: 'Steam Discussion: “Save issue” — game saves deleted themselves', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681246928691506/', note: 'recent loss report that motivated the Patch 1.0.11 section' },
-          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'basis of the patch timeline above, including 1.0.11’s corruption check and automatic backups' },
+          { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'basis of the patch timeline above, including 1.0.11’s corruption check and automatic backups and 1.0.12’s Steam Cloud storage' },
         ]}
       />
       <FaqJsonLd faqs={faqs} />

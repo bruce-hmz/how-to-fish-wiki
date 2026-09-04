@@ -5,15 +5,59 @@ import Link from 'next/link';
 import { ArticleJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
-  title: 'Patch Notes & Update History (1.0.4–1.0.11)',
+  title: 'Patch Notes & Update History (1.0.4–1.0.12)',
   description:
-    'Every How to Fish patch 1.0.4–1.0.11 explained: Steam Deck Verified and GeForce NOW support, save corruption checks and backups, the own-explosives rule, difficulty modes, boss nerfs, and 8-player lobbies.',
+    'Every How to Fish patch 1.0.4–1.0.12 explained: Steam Cloud saves, the piranha rebalance, Steam Deck Verified and GeForce NOW support, save corruption checks and backups, the own-explosives rule, difficulty modes, and 8-player lobbies.',
   alternates: { canonical: 'https://howtofish101.com/updates/' },
 };
 
 const ANN = 'https://steamcommunity.com/games/4001890/announcements/detail/';
 
 const patches = [
+  {
+    version: 'Patch 1.0.12',
+    date: 'September 4, 2026',
+    url: 'https://store.steampowered.com/news/app/4001890/view/698774889153168485',
+    affects: [
+      { href: '/troubleshooting/save-file/', label: 'Steam Cloud saves' },
+      { href: '/bosses/giant-piranha/', label: 'Rebalanced piranha' },
+      { href: '/troubleshooting/items-disappeared/', label: 'Item velocity limit' },
+      { href: '/multiplayer/', label: 'MetaVoice voice-chat update' },
+      { href: '/settings/', label: 'FPS no longer capped on lobby join' },
+      { href: '/bosses/magma-whale/', label: 'Final-boss explosive fix' },
+    ],
+    sections: [
+      {
+        title: 'Roadmap',
+        items: [
+          'The devs call this "probably the last bugfix patch before starting to work on content updates" — and they "started talking about content updates, which we will start working on next week."',
+        ],
+      },
+      {
+        title: 'New',
+        items: [
+          'Save files are now stored through Steam Cloud. Play and exit How to Fish on the PC you saved them on once to upload them to the cloud.',
+        ],
+      },
+      {
+        title: 'Changes',
+        items: [
+          'Rebalanced the piranha.',
+          'Nerfed the tuna slightly.',
+          'Limited velocity on items, hopefully making items harder to lose.',
+          'Updated MetaVoice to 4.3, hopefully fixing some bugs in voice chat.',
+        ],
+      },
+      {
+        title: 'Fixes',
+        items: [
+          'FishNet no longer overrides your max FPS when joining a lobby.',
+          'Music now preloads, so it no longer lagspikes when buying the first radio.',
+          'The final boss should now take damage from explosives even when landing on its tail.',
+        ],
+      },
+    ],
+  },
   {
     version: 'Patch 1.0.11',
     date: 'September 1, 2026',
@@ -240,10 +284,10 @@ export default function UpdatesPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <ArticleJsonLd
         headline="How to Fish Patch Notes & Update History"
-        description="Every official How to Fish patch from 1.0.4 to 1.0.11 — Steam Deck Verified, save backups, difficulty modes, ground-item persistence, and the water-dip un-cook."
+        description="Every official How to Fish patch from 1.0.4 to 1.0.12 — Steam Cloud saves, the piranha rebalance, Steam Deck Verified, save backups, difficulty modes, ground-item persistence, and the water-dip un-cook."
         url="https://howtofish101.com/updates/"
         datePublished="2026-08-26"
-        dateModified="2026-09-03"
+        dateModified="2026-09-05"
       />
       <Breadcrumb items={[{ name: 'Patch Notes', href: '/updates/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Fish Patch Notes &amp; Update History</h1>
@@ -252,7 +296,8 @@ export default function UpdatesPage() {
           How to Fish launched on August 20, 2026 and hit{' '}
           <strong className="text-white">1 million players in its first two days</strong>. Dazed Games has shipped
           rapid patches ever since — seven updates in the first eight days, covering boss balance, save-file
-          protection, ground-item persistence, an official water-dip uncook, difficulty modes, and multiplayer fixes. This page summarizes every official patch note with
+          protection, ground-item persistence, an official water-dip uncook, difficulty modes, multiplayer fixes, and
+          Steam Cloud saves. This page summarizes every official patch note with
           a link to the original Steam announcement.
         </p>
 
@@ -323,7 +368,8 @@ export default function UpdatesPage() {
           </li>
           <li>
             <strong>Lost progress or weapons?</strong> The save rules changed in 1.0.6, corruption was addressed in
-            1.0.9, and Patch 1.0.11 added a corruption check on every load plus automatic backups — see the{' '}
+            1.0.9, Patch 1.0.11 added a corruption check on every load plus automatic backups, and Patch 1.0.12 moved
+            saves into Steam Cloud — see the{' '}
             <Link href="/troubleshooting/save-file/" className="text-aqua hover:underline">save bug recovery guide</Link>.
           </li>
           <li>
@@ -352,12 +398,12 @@ export default function UpdatesPage() {
             {
               label: 'How to Fish — Steam community announcements',
               href: 'https://steamcommunity.com/app/4001890',
-              note: 'All patch notes 1.0.4–1.0.11, quoted from the official announcements',
+              note: 'All patch notes 1.0.4–1.0.12, quoted from the official announcements',
             },
             {
               label: 'Official patch notes RSS feed (app 4001890)',
               href: 'https://store.steampowered.com/feeds/news/app/4001890/',
-              note: 'Verbatim source for Patches 1.0.10 and 1.0.11',
+              note: 'Verbatim source for Patches 1.0.10, 1.0.11 and 1.0.12',
             },
           ]}
         />
