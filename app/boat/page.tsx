@@ -87,7 +87,8 @@ export default function BoatPage() {
         </p>
         <p>
           Things to try, in order (community workarounds, not editor-verified for this specific bug): quit to the main
-          menu and reload your save first — the simplest reported recovery; if the boat is still gone, try the trick
+          menu and reload your save first — a reply in the thread reports that after reloading, the boat
+          &ldquo;should respawn&rdquo;; if the boat is still gone, try the trick
           that fixes the related loading-screen bug — from the main menu choose <strong>Host Game → Session Type →
           Singleplayer</strong>, then load in. If neither works, back up your save before further attempts (see the{' '}
           <Link href="/troubleshooting/save-file/" className="text-aqua hover:underline">save-file recovery guide</Link>),
@@ -116,7 +117,7 @@ export default function BoatPage() {
       </div>
       <FaqJsonLd faqs={[{
         q: 'Why is my boat missing after a How to Fish update?',
-        a: 'It is a known recurring bug reported by several players after the August 27 update batch and again after Patch 1.0.12 (September 4, 2026) — including one player who loaded in with boat keys but no boat on the volcano island. Your key unlocks are retained, and no verified fix exists yet. Quit to the main menu and reload your save first; if that fails, try Host Game → Session Type → Singleplayer from the main menu, then load in. Back up your save before further attempts and report the bug in the Steam forums.',
+        a: 'It is a known recurring bug reported by several players after the August 27 update batch and again after Patch 1.0.12 (September 4, 2026) — including one player who loaded in with boat keys but no boat on the volcano island. Your key unlocks are retained, and no verified fix exists yet. Quit to the main menu and reload your save first — a community reply reports the boat respawns after a reload; if that fails, try Host Game → Session Type → Singleplayer from the main menu, then load in. Back up your save before further attempts and report the bug in the Steam forums.',
       }]} />
     </div>
   );
