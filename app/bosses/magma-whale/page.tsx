@@ -25,6 +25,19 @@ export default function MagmaWhalePage() {
           HP and damage figures are community-tested and can shift between patches — the Magma Whale was explicitly
           nerfed in <Link href="/updates/" className="text-gray-400 hover:text-aqua underline underline-offset-2">Patch 1.0.4</Link>.
         </p>
+
+        <div className="bg-aqua/10 border border-aqua/40 rounded-xl p-5 space-y-2">
+          <p className="font-bold text-white text-sm">✅ Patch 1.0.12 made explosives reliable in every phase (September 4, 2026)</p>
+          <p className="text-xs leading-relaxed">
+            Before this patch, players found that dynamite stopped working in the later phases: <em>&ldquo;phase 1 dynamite works,
+            phase 2 takes no damage — is this intentional or a bug?&rdquo;</em> It was a bug. The official 1.0.12 notes fix exactly
+            that: <strong className="text-white">&ldquo;Final boss should now take damage from explosives even when landing on its
+            tail.&rdquo;</strong> In practice, the whale&rsquo;s body used to sit on your planted dynamite without triggering it — so if
+            you saw &ldquo;explosive immunity&rdquo; in older clips or guides, that was the bug, not a mechanic. Stacked dynamite is now a
+            dependable damage source throughout all three phases. Full notes in our{' '}
+            <Link href="/updates/" className="text-aqua hover:underline">patch history</Link>.
+          </p>
+        </div>
       </div>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
@@ -84,6 +97,16 @@ export default function MagmaWhalePage() {
               label: 'How to Fish on Steam',
               href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
               note: 'Official game description and release info',
+            },
+            {
+              label: 'Patch 1.0.12 official notes (Steam News, September 4, 2026)',
+              href: 'https://store.steampowered.com/news/app/4001890/view/698774889153168485',
+              note: 'source of the verbatim final-boss explosive-on-tail fix',
+            },
+            {
+              label: 'Steam Discussion: Whale Boss 2nd Phase Immune to Explosive Damage?',
+              href: 'https://steamcommunity.com/app/4001890/discussions/0/581681298840556965/',
+              note: 'the pre-1.0.12 phase-2 dynamite report the patch note answers',
             },
           ]}
         />

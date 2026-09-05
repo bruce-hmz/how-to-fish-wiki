@@ -17,7 +17,7 @@ const homeFaqs = [
   },
   {
     q: 'Is How to Fish multiplayer?',
-    a: 'Yes, the game supports drop-in 1-4 player online co-op through Steam invites. Boss HP scales with crew size (up to 2.5x at four players), and loot is shared equally among all anglers.',
+    a: 'Yes, the game supports drop-in online co-op through Steam invites. Classic crews are 1-4 players — boss HP scales with crew size (up to 2.5x at four) — and since Patch 1.0.4 lobbies can hold up to 8 players. Loot is shared equally among all anglers.',
   },
   {
     q: 'What platforms is How to Fish on?',
@@ -240,7 +240,7 @@ export default function HomePage() {
           </Link>
           <Link href="/updates/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Patch Notes &amp; Updates</h3>
-            <p className="text-xs text-gray-400">Every official patch 1.0.4–1.0.9: boss nerfs, difficulty modes, save fixes, 8-player lobbies.</p>
+            <p className="text-xs text-gray-400">Every official patch 1.0.4–1.0.12: boss nerfs, difficulty modes, Steam Cloud saves, 8-player lobbies.</p>
           </Link>
           <Link href="/difficulty/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-coral/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Difficulty Modes Guide</h3>

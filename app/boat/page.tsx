@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FaqJsonLd } from '@/components/JsonLd';
+import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Boat Keys Location & Engine Upgrades',
-  description: 'Where to find lost boat keys in How to Fish. Complete upgrade tree for engine horsepower, fuel tank capacity, and hull armor.',
+  description: 'Where to find lost boat keys in How to Fish, the full engine and hull upgrade tree — and what to do if your boat goes missing after an update.',
   alternates: { canonical: 'https://howtofish101.com/boat/' },
 };
 
@@ -66,10 +68,56 @@ export default function BoatPage() {
         <h2 className="text-xl font-bold text-white">Boat Skins from Casino Gachapon</h2>
         <p>
           The Casino Island Gachapon machine accepts Drip Fish and Drip Crabs in exchange for random cosmetic rewards, including exclusive boat skins. There are 8 boat skins available from the machine, ranging from common recolors to ultra-rare animated skins. Notable skins include the <strong>Neon Racer</strong> (glowing teal hull lines), <strong>Pirate Ghost Ship</strong> (translucent hull with spectral sails), and the coveted <strong>Golden Kraken</strong> skin (animated gold tentacles wrapping the hull). Boat skins are purely cosmetic and do not affect stats. You can preview and swap skins at any dock station.
+        </p>
+
+        <h2 className="text-xl font-bold text-white">FAQ: Boat Missing After an Update?</h2>
+        <p>
+          If your boat vanished the moment you loaded in after a patch — you are not alone, and it is not something
+          you did wrong. Four players in one{' '}
+          <a href="https://steamcommunity.com/app/4001890/discussions/0/581680664978545225/" className="text-aqua hover:underline" target="_blank" rel="noopener noreferrer">Steam thread</a>{' '}
+          reported the same bug across two update cycles: it first appeared with the August 27 update batch and again
+          after <strong>Patch 1.0.12</strong> (September 4, 2026), where a player on the volcano island loaded in with
+          &ldquo;got the keys, but no boat for that.&rdquo;
+        </p>
+        <p>
+          What the reports have in common: the boat disappears right after loading in post-update, your progression
+          unlocks (boat key parts) are <strong>retained</strong> — the volcano reporter still had his keys — and there
+          is <strong>no verified fix yet</strong>. Patch 1.0.12&apos;s notes do not mention the bug, so treat any
+          &ldquo;guaranteed fix&rdquo; claims with suspicion.
+        </p>
+        <p>
+          Things to try, in order (community workarounds, not editor-verified for this specific bug): quit to the main
+          menu and reload your save first — the simplest reported recovery; if the boat is still gone, try the trick
+          that fixes the related loading-screen bug — from the main menu choose <strong>Host Game → Session Type →
+          Singleplayer</strong>, then load in. If neither works, back up your save before further attempts (see the{' '}
+          <Link href="/troubleshooting/save-file/" className="text-aqua hover:underline">save-file recovery guide</Link>),
+          post in the Steam thread above so the devs can see the report count, and check{' '}
+          <Link href="/updates/" className="text-aqua hover:underline">the patch history</Link> — a future fix will be
+          listed there. General bug-handling rules live in our{' '}
+          <Link href="/troubleshooting/" className="text-aqua hover:underline">troubleshooting hub</Link>.
+        </p>
 
         <p className="text-xs text-gray-400 border-l-2 border-aqua/40 pl-3">Key drops behind each hull upgrade come from the bosses in our <Link href="/bosses/" className="text-aqua hover:underline">boss hub</Link>; fuel budgeting math sits inside the <Link href="/money/" className="text-aqua hover:underline">money guide</Link>.</p>
-        </p>
+
+        <Sources
+          items={[
+            {
+              label: 'Steam Discussion: "just loaded in after the update and my boat is missing"',
+              href: 'https://steamcommunity.com/app/4001890/discussions/0/581680664978545225/',
+              note: '4 independent reports across the Aug 27 and Sep 4 updates; source of the volcano-island "keys, but no boat" case',
+            },
+            {
+              label: 'Official patch notes feed (app 4001890)',
+              href: 'https://store.steampowered.com/feeds/news/app/4001890/',
+              note: 're-verified September 6: Patch 1.0.12 (Sep 4) is still the newest update and does not mention the missing-boat bug',
+            },
+          ]}
+        />
       </div>
+      <FaqJsonLd faqs={[{
+        q: 'Why is my boat missing after a How to Fish update?',
+        a: 'It is a known recurring bug reported by several players after the August 27 update batch and again after Patch 1.0.12 (September 4, 2026) — including one player who loaded in with boat keys but no boat on the volcano island. Your key unlocks are retained, and no verified fix exists yet. Quit to the main menu and reload your save first; if that fails, try Host Game → Session Type → Singleplayer from the main menu, then load in. Back up your save before further attempts and report the bug in the Steam forums.',
+      }]} />
     </div>
   );
 }

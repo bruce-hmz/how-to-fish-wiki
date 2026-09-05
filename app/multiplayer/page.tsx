@@ -2,8 +2,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 import Link from 'next/link';
 
 export const metadata = {
-  title: '1-4 Player Co-op & Multiplayer Guide',
-  description: 'How to host and play 1-4 player co-op in How to Fish. Crew roles, boat controls, and boss scaling mechanics.',
+  title: 'Co-op & Multiplayer Guide (Up to 8 Players)',
+  description: 'How to host and play online co-op in How to Fish — lobbies hold up to 8 players since Patch 1.0.4. Crew roles, boat controls, and boss scaling mechanics.',
   alternates: { canonical: 'https://howtofish101.com/multiplayer/' },
 };
 
@@ -11,13 +11,13 @@ export default function MultiplayerPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Co-op Guide', href: '/multiplayer/' }]} />
-      <h1 className="text-3xl font-extrabold text-white">1-4 Player Co-op & Multiplayer Guide</h1>
+      <h1 className="text-3xl font-extrabold text-white">Co-op &amp; Multiplayer Guide (Up to 8 Players)</h1>
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
-        <p>How to Fish shines in online co-op. Form a crew of up to 4 anglers to manage boat navigation, fish simultaneously, and defeat colossal bosses together.</p>
+        <p>How to Fish shines in online co-op. Form a crew of up to 8 anglers (the lobby cap was raised from 4 to 8 in Patch 1.0.4) to manage boat navigation, fish simultaneously, and defeat colossal bosses together.</p>
 
-        <h2 className="text-xl font-bold text-white">Hosting & Joining Games</h2>
+        <h2 className="text-xl font-bold text-white">Hosting &amp; Joining Games</h2>
         <p>
-          To host a co-op session, open the pause menu and select <strong>Host Game</strong>. You can invite friends directly through Steam friend invites, or generate a 6-digit lobby code that anyone can use to join via the <strong>Join Game</strong> menu. The host player world save is used for the session — guest progress (inventory, unlocks) is synced to their own save file, but world state changes (boss kills, NPC interactions) only persist on the host save. Sessions support 2–4 players with the host always present.
+          To host a co-op session, open the pause menu and select <strong>Host Game</strong>. You can invite friends directly through Steam friend invites, or generate a 6-digit lobby code that anyone can use to join via the <strong>Join Game</strong> menu. The host player world save is used for the session — guest progress (inventory, unlocks) is synced to their own save file, but world state changes (boss kills, NPC interactions) only persist on the host save. Sessions support 2–8 players with the host always present.
         </p>
         <p className="text-xs text-gray-400">
           Note: Patch 1.0.4 raised the lobby cap from 4 to{' '}

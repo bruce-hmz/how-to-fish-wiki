@@ -14,6 +14,10 @@ const faqs = [
     q: 'How do I fix the infinite loading screen (the boat animation never ends)?',
     a: 'The community-confirmed fix: from the main menu choose Host Game and set Session Type to Singleplayer, then start or load your game — the boat screen completes normally. This is the fix that works for players who already tried restarting Steam and verifying game files without success. One extra trap: opening the in-game menu while the loading screen is playing can keep it stuck, so let the load finish first. Official Patch 1.0.10 also increased the time allowed to connect, which targets the related instant-disconnect problem when joining friends — see our join-friends guide. If loading still fails after the session-type fix, protect your save first and follow the save-file recovery guide.'
   },
+  {
+    q: 'My boat disappeared after an update — is that a known bug?',
+    a: 'Yes — several players have reported the boat missing right after loading in post-update, first with the August 27 patch batch and again after Patch 1.0.12 (September 4, 2026), including one player who still had his boat keys but no boat on the volcano island. Key unlocks are retained and there is no verified fix yet. Quit to the main menu and reload your save first; the full list of things to try is in our boat keys guide, which tracks the bug.'
+  },
 ];
 
 const issues = [
@@ -100,7 +104,7 @@ export default function TroubleshootingPage() {
       </div>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-white">Stuck on the Loading Screen? Quick Fix</h2>
+        <h2 className="text-2xl font-bold text-white">Quick Fixes: Loading Screen &amp; Missing Boat</h2>
         <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl divide-y divide-ocean-800/60 text-sm text-gray-300">
           {faqs.map((f) => (
             <div key={f.q} className="p-6 space-y-2">
