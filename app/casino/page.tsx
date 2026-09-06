@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
-  title: 'Casino Guide: Reel of Fortune & Gachapon',
-  description: 'How to Fish Casino Island explained: Reel of Fortune spins, the Drip Rock Crab gachapon route, slot skins, and why gambling is a money sink.',
+  title: 'Casino Guide: Roulette, Reel of Fortune & Gachapon',
+  description: 'How to Fish Casino Island explained: the roulette table and whether it is rigged, Reel of Fortune spins, the Drip Rock Crab gachapon route, slot skins, and why gambling is a money sink.',
   alternates: { canonical: 'https://howtofish101.com/casino/' },
 };
 
@@ -12,6 +12,7 @@ const faqs = [
   { q: 'Is the Casino worth it in How to Fish?', a: 'As an income strategy, no — the expected value of spins is below steady fishing and boss kills. As a skin and cosmetics shortcut, yes. Treat it as entertainment spending, not a money route.' },
   { q: 'How does the gachapon machine work?', a: 'Bring a Drip Rock Crab — the glowing variant from secret tidepools — and insert it into the Casino Gachapon machine for a spin at exclusive skins. The machine consumes the crab either way.' },
   { q: 'Why is my slot machine skin invisible?', a: 'A 4K rendering bug made some slot-machine skins invisible. Patch 1.0.5 addressed it — if you still see it on the current build, verify game files and capture the result before re-spinning.' },
+  { q: 'Is the roulette table rigged?', a: 'It was genuinely bugged, not just unlucky: patch 1.0.10 fixed roulette physics that let the ball clip through the wheel at high bet values. Landing green is clearly attainable — roughly 28% of players own the "All in" achievement for betting green and winning — but the developers have never published real odds, so treat long losing streaks as normal table variance.' },
 ];
 
 export default function CasinoPage() {
@@ -24,17 +25,30 @@ export default function CasinoPage() {
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-ocean-950 p-4 rounded-lg text-xs">
           <div><span className="text-gray-400">Location:</span> <strong className="text-white block">Casino Island</strong></div>
-          <div><span className="text-gray-400">Games:</span> <strong className="text-white block">Reel of Fortune, Slots, Gachapon</strong></div>
+          <div><span className="text-gray-400">Games:</span> <strong className="text-white block">Roulette, Reel of Fortune, Slots, Gachapon</strong></div>
           <div><span className="text-gray-400">Currency:</span> <strong className="text-gold block">Cash (fish sales)</strong></div>
           <div><span className="text-gray-400">Best For:</span> <strong className="text-aqua block">Skins &amp; cosmetics</strong></div>
         </div>
 
         <h2 className="text-xl font-bold text-white">How Casino Island Works</h2>
         <p>
-          Casino Island hosts the game's three gambling attractions: the <strong>Reel of Fortune</strong>
-          prize wheel, <strong>slot machines</strong>, and the <strong>Gachapon machine</strong>. Everything
-          runs on cash earned from selling catches — there is no separate casino currency. The island is
-          purely optional: no story quest requires a win, and no boss gate checks your luck.
+          Casino Island hosts the game's four gambling attractions: the cash <strong>roulette table</strong>,
+          the <strong>Reel of Fortune</strong> prize wheel, <strong>slot machines</strong>, and the{' '}
+          <strong>Gachapon machine</strong>. Everything runs on cash earned from selling catches — there is
+          no separate casino currency. The island is purely optional: no story quest requires a win, and no
+          boss gate checks your luck.
+        </p>
+
+        <h2 className="text-xl font-bold text-white">The Roulette Table</h2>
+        <p>
+          The roulette table is the island's cash game — bet on a number or color, including green. Don't
+          confuse it with the Reel of Fortune prize wheel below: the roulette table pays cash, while the
+          Reel of Fortune deals out <Link href="/creatures/rare-variants/" className="text-aqua hover:underline">weapon-skin spins</Link>.
+          It is also the most patched attraction in the game. Patch 1.0.10 fixed three real roulette bugs —
+          infinite ticking at high bet values, the ball clipping through the wheel, and leaving mid-game
+          breaking the table for your next session. Patch 1.0.11 then moved the island-6 table slightly,
+          because the devs acknowledged its old position was &ldquo;annoying to bet from&rdquo;. If your only
+          roulette experience is from before those fixes, the table you remember was literally broken.
         </p>
 
         <h2 className="text-xl font-bold text-white">The Gachapon Route (Drip Rock Crab)</h2>

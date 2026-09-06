@@ -160,6 +160,16 @@ export default function IslandsPage() {
             and fuel requirements of volcanic waters.</li>
         </ul>
 
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Will There Be More Islands?</h2>
+        <p>
+          Players who finish the five stages keep asking when a new island arrives. The developers addressed
+          it directly in the patch 1.0.12 notes, calling it &ldquo;probably the last bugfix patch before
+          starting to work on content updates&rdquo; and saying they had started talking about content
+          updates, &ldquo;which we will start working on next week.&rdquo; No new island has been announced
+          yet — the <Link href="/updates/" className="text-aqua hover:underline">patch notes history</Link>{' '}
+          is where any announcement will land first.
+        </p>
+
         <p className="text-xs text-gray-400">
           The unlock chain is community-tested in-game and cross-checked against each boss guide on this
           site. When a patch changes progression, this table is updated — see the{' '}

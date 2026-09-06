@@ -14,6 +14,7 @@ const faqs = [
   { q: 'Why is the Albatross not spawning for me?', a: 'The chain requires finishing the Pufferfish hand-in first. If the bird never comes, confirm your active quest log shows the Island 4 objective, use a fresh Tuna (not a stored one), and place the carcass in an open area away from buildings and trees.' },
   { q: 'What is the terrorizing bird in How to Fish?', a: 'The terrorizing bird is the community nickname for the Albatross, the giant bird boss of Island 4. Defeating it grants the Terrorizing Bird achievement and the Albatross Head quest item.' },
   { q: 'What do I do with the Albatross Head?', a: 'Keep it — it is a quest hand-in item, not a trophy. Delivering it to the next NPC advances the story route and rewards the Sky Compass, which marks the remaining flight-path secrets on your map.' },
+  { q: 'The Albatross soft-locked my game — how do I recover?', a: 'One player reported the fight soft-locking their save; the community fix circulating on Reddit is to open Saves/local.txt, Ctrl+F the albatross quest item, and remove or repair that entry. Treat this as a last resort — hand-editing save files risks corruption — and note that patches since 1.0.11 keep automatic save backups (see our save file guide) to fall back on. If the Head vanished rather than soft-locking, the items disappeared guide covers that case.' },
 ];
 
 export default function AlbatrossPage() {
@@ -80,6 +81,25 @@ export default function AlbatrossPage() {
           with crew size (up to 2.5x at four anglers), but the exposed recovery windows stay the same length,
           so overlapping fire trivializes the DPS check.
         </p>
+
+        <h2 className="text-xl font-bold text-white">Community Tactics: Surviving the Dive</h2>
+        <p>
+          The most common complaint about this fight is timing out — even fully-upgraded squads report
+          running out of time before the kill, so burst damage into every recovery window beats sustained
+          plinking. These are the tactics players are actually beating the bird with, straight from the
+          community (September 2026):
+        </p>
+        <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
+          <li><strong>Interrupt the dive with buildings</strong>: fight around the pier where you sell fish —
+            running inside the building as the dive starts interrupts the attack, and positioning under the
+            bridge works the same way.</li>
+          <li><strong>Casino hide-and-snipe</strong>: hide inside the casino, then step out to take sniper
+            potshots while the bird recovers, and repeat.</li>
+          <li><strong>Shotgun solo with cooked-fish bait</strong>: scatter a couple of dynamites&rsquo; worth
+            of cooked fish across the grassy center — the gulls that harass you each grab one and stop
+            grabbing more. Stand in the middle, side-step the dropping attack, wait for the lunge, and blast
+            point-blank. This is the solo kill that a player video on Reddit demonstrates.</li>
+        </ul>
 
         <h2 className="text-xl font-bold text-white">After the Fight: Keep the Head</h2>
         <p>
