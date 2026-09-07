@@ -76,8 +76,14 @@ export default function MultiplayerPage() {
         </ul>
 
         <p className="text-xs text-gray-400 leading-relaxed border-l-2 border-aqua/40 pl-3">
+          Playing completely alone instead? Our{' '}
+          <Link href="/difficulty/" className="text-aqua hover:underline">difficulty guide</Link> has a straight
+          answer on whether How to Fish is good solo — beatable, but every crew role falls on one player.
+        </p>
+
+        <p className="text-xs text-gray-400 leading-relaxed border-l-2 border-aqua/40 pl-3">
           Connection-side trouble — invites that never load, black screens on join, session privacy, or the
-          1.0.9 relay readout showing red — lives in our 
+          1.0.9 relay readout showing red — lives in our
           <Link href="/troubleshooting/join-friends/" className="text-aqua hover:underline">cannot-join-friends fix list</Link>.
         </p>
       </div>

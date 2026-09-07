@@ -1,17 +1,26 @@
 import Breadcrumb from '@/components/Breadcrumb';
 import Sources from '@/components/Sources';
 import Link from 'next/link';
+import { FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
   title: 'Difficulty Guide: Easy vs Normal vs Hard',
   description:
-    'How to Fish difficulty modes from Patch 1.0.9: exact Easy, Normal, and Hard modifiers, how to switch mid-game, and which mode to pick.',
+    'How to Fish difficulty modes from Patch 1.0.9: exact Easy, Normal, and Hard modifiers, how to switch mid-game, which mode to pick, and whether the game is good solo.',
   alternates: { canonical: 'https://howtofish101.com/difficulty/' },
 };
+
+const faqs = [
+  {
+    q: 'Is How to Fish good solo?',
+    a: 'Yes — it is fully beatable solo, several players have finished the game alone, and one player who only ever played solo still calls it "100% worth." The catch: every crew job falls on you. Co-op splits steering, reeling, shooting, and hull repairs across four informal roles; solo, one player does all of it, which is why solo runs simply take more time. Bosses are where solo players feel it most — a solo island-4 player reports "having some difficulties with bosses." If a boss stalls your solo run, that is exactly what Easy mode is for: −50% incoming damage widens every mistake window. Purchase verdict from the community is split between "meant to be played with 2-4 players" and "played everything solo… possible to beat the game solo" — the slapstick chaos lands best with a crew, but solo is a supported way to play, and 8-player lobbies mean you can crew up with randoms any time.',
+  },
+];
 
 export default function DifficultyPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+      <FaqJsonLd faqs={faqs} />
       <Breadcrumb items={[{ name: 'Difficulty Modes', href: '/difficulty/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Difficulty Modes: Easy, Normal &amp; Hard Explained</h1>
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
@@ -134,12 +143,47 @@ export default function DifficultyPage() {
           </li>
         </ul>
 
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Playing Solo</h2>
+        <div>
+          <h3 className="text-white font-semibold mb-2 text-sm">Is How to Fish good solo?</h3>
+          <p className="text-xs text-gray-400 leading-relaxed">
+            Yes — it is fully beatable solo, several players have finished the game alone, and one player who
+            only ever played solo still calls it <em>&ldquo;still 100% worth&rdquo;</em>. The catch: every crew job
+            falls on you. Co-op splits steering, reeling, shooting, and hull repairs across the{' '}
+            <Link href="/multiplayer/" className="text-aqua hover:underline">four informal crew roles</Link>; solo,
+            one player does all of it, which is why solo runs simply take more time — the solo finishers&apos;
+            summary is <em>&ldquo;takes more time but it&apos;s possible to beat the game solo.&rdquo;</em>
+          </p>
+          <p className="text-xs text-gray-400 leading-relaxed mt-2">
+            Bosses are where solo players feel it most — a solo island-4 player reports{' '}
+            <em>&ldquo;having some difficulties with bosses&rdquo;</em> even while recommending the run. When a boss
+            walls your solo attempt, that is precisely what{' '}
+            <Link href="/bosses/" className="text-aqua hover:underline">Easy mode and the boss guides</Link> are
+            for: −50% incoming damage buys back the mistake windows a crew would normally cover for each other.
+            The purchase verdict splits between <em>&ldquo;meant to be played with 2-4 players&rdquo;</em> and the
+            solo-only crowd — the slapstick chaos lands best with a crew, but solo is a supported, completable
+            way to play, and with 8-player lobbies you can pick up crew members as you go ({' '}
+            <Link href="/troubleshooting/what-to-do-next/" className="text-aqua hover:underline">what to do next</Link>{' '}
+            covers the progression order).
+          </p>
+        </div>
+
         <Sources
           items={[
             {
               label: 'PATCH 1.0.9 — official Steam announcement',
               href: 'https://steamcommunity.com/games/4001890/announcements/detail/711158520539514352',
               note: 'Difficulty mode modifiers and where to change them, quoted from the patch notes',
+            },
+            {
+              label: 'Steam Discussion: “Is it worth to buy if I only play it alone?”',
+              href: 'https://steamcommunity.com/app/4001890/discussions/0/581680955259086098/',
+              note: 'solo-viability replies behind the Playing Solo section (playable, takes more time; bosses hardest)',
+            },
+            {
+              label: 'Steam Discussion: “Is it worth buying this game to play solo?”',
+              href: 'https://steamcommunity.com/app/4001890/discussions/0/581680664978634207/',
+              note: 'purchase-intent thread; “still 100% worth” solo verdict',
             },
           ]}
         />

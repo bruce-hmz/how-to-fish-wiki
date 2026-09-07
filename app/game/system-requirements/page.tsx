@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Sources from '@/components/Sources';
 
 export const metadata = {
-  title: 'System Requirements & Platform Guide',
-  description: 'Official How to Fish PC requirements: Windows 10+, GTX 1050, 8 GB RAM, 1 GB storage. Plus Steam Deck, controller, language, and console availability.',
+  title: 'System Requirements & Platform Guide (Steam Deck Verified)',
+  description: 'Official How to Fish PC requirements: Windows 10+, GTX 1050, 8 GB RAM, 1 GB storage. Steam Deck Verified and GeForce NOW supported since Patch 1.0.11 — plus controllers, languages, and console availability.',
   alternates: { canonical: 'https://howtofish101.com/game/system-requirements/' },
 };
 
@@ -22,7 +22,8 @@ export default function SystemRequirementsPage() {
         <h1 className="text-3xl font-extrabold text-white tracking-tight">How to Fish System Requirements & Platforms</h1>
         <p className="text-gray-400 text-sm mt-2">
           Everything below comes from the official Steam store page for How to Fish (Dazed Games, released August 20, 2026).
-          The game is Windows-only at launch — here is exactly what you need to run it and what platforms it does and does not support.
+          Windows is the only native platform — but since Patch 1.0.11 the game is officially <strong>Steam Deck Verified</strong> and
+          playable through GeForce NOW. Here is exactly what you need to run it and what platforms it does and does not support.
         </p>
 
         <Sources
@@ -31,6 +32,11 @@ export default function SystemRequirementsPage() {
               label: 'How to Fish on Steam',
               href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
               note: 'Official minimum and recommended specs, language list, and platform availability',
+            },
+            {
+              label: 'Official announcement: “STEAM DECK VERIFIED, GEFORCE NOW & PATCH 1.0.11” (Sep 1, 2026)',
+              href: 'https://store.steampowered.com/news/app/4001890/view/698774255287927884',
+              note: 'source of the Steam Deck Verified rating and GeForce NOW support',
             },
           ]}
         />
@@ -60,7 +66,26 @@ export default function SystemRequirementsPage() {
       </div>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-5 text-sm text-gray-300">
-        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Platform Availability</h2>
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Steam Deck &amp; GeForce NOW Support</h2>
+        <p>
+          Patch 1.0.11 (September 1, 2026) was announced under the headline{' '}
+          <em>&ldquo;Steam Deck Verified, GeForce NOW &amp; Patch 1.0.11&rdquo;</em> — the game carries the{' '}
+          <strong className="text-white">Steam Deck Verified</strong> badge, the highest of Steam&apos;s three
+          compatibility ratings, and runs on <strong className="text-white">GeForce NOW</strong> cloud streaming.
+          In practice: pick it up on Steam and it plays on your Deck with no Proton tinkering, and a
+          laptop that fails the GTX 1050 minimum spec can stream it instead. For Deck-specific graphics
+          settings and the launch black-screen fix, see the{' '}
+          <Link href="/settings/" className="text-aqua hover:underline">best settings guide</Link>.
+        </p>
+        <p className="text-xs">
+          A caveat for desktop Linux: the Verified badge covers SteamOS on the Deck, not every distro. A
+          couple of Arch Linux users have reported the game instantly crashing on boot (
+          <Link href="/troubleshooting/" className="text-aqua hover:underline">troubleshooting hub</Link>), and
+          the developers have not published a native Linux build or distro-specific guidance. Windows and the
+          Deck remain the reliably supported ways to play.
+        </p>
+
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2 pt-2">Platform Availability</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead className="bg-ocean-950 text-gray-400 border-b border-ocean-800">
@@ -73,14 +98,24 @@ export default function SystemRequirementsPage() {
                 <td className="p-3">Primary platform. Single-player, online co-op for 1-4 players, Steam Achievements, Family Sharing.</td>
               </tr>
               <tr>
-                <td className="p-3 font-bold text-white">macOS / Linux</td>
-                <td className="p-3 text-red-400">Not available</td>
-                <td className="p-3">No native builds. No Steam Play/Proton endorsement listed on the store page.</td>
+                <td className="p-3 font-bold text-white">Steam Deck</td>
+                <td className="p-3 text-green-400">Verified</td>
+                <td className="p-3">Official Steam Deck Verified rating since Patch 1.0.11 (Sep 1, 2026) — highest compatibility tier, no manual Proton setup needed.</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-bold text-white">GeForce NOW</td>
+                <td className="p-3 text-green-400">Supported</td>
+                <td className="p-3">Cloud streaming support added with Patch 1.0.11 — an option for below-minimum-spec laptops.</td>
+              </tr>
+              <tr>
+                <td className="p-3 font-bold text-white">macOS / desktop Linux</td>
+                <td className="p-3 text-red-400">No native build</td>
+                <td className="p-3">No macOS version. Desktop Linux is not officially supported — isolated boot-crash reports from Arch users; the Verified rating covers SteamOS on the Deck only.</td>
               </tr>
               <tr>
                 <td className="p-3 font-bold text-white">PS5 / Xbox / Switch</td>
                 <td className="p-3 text-red-400">Not announced</td>
-                <td className="p-3">No console versions have been announced by Dazed Games.</td>
+                <td className="p-3">No console versions have been announced by Dazed Games, and there is no Game Pass version — the game is sold on Steam only.</td>
               </tr>
               <tr>
                 <td className="p-3 font-bold text-white">Controllers</td>

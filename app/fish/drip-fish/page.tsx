@@ -155,7 +155,10 @@ export default function DripFishPage() {
         <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
           <p className="text-xs leading-relaxed">
             Drip catches trade into the Casino Island capsule machine for exclusive cosmetics — knuckle skins, weapon wraps, boat trims — the kind of flair nobody can buy with raw cash. One known bug family here: some players see <strong className="text-white">blank squares where prize previews should render</strong> on the machine interface. The community workaround is cycling your held item until icons repaint; permanent fixes have been landing patch by patch (
-            <Link href="/updates/" className="text-aqua hover:underline">update history</Link>).
+            <Link href="/updates/" className="text-aqua hover:underline">update history</Link>). And if a spin eats your
+            cash or crab but no prize ever appears, the{' '}
+            <Link href="/casino/" className="text-aqua hover:underline">Casino FAQ</Link> covers the ground-item persistence
+            check and when to treat it as a bug.
           </p>
         </div>
       </section>
