@@ -7,6 +7,7 @@ export const metadata = {
   title: 'Bean Achievement Guide: Finish in Under 1 Hour (Post-Patch)' ,
   description: 'How to unlock the rarest How to Fish achievement — finishing the game within one hour. A community-tested route that works on Patch 1.0.9, why Easy mode does not block it, and the pitfalls that eat your timer.'
       .replace('|', ''),
+  alternates: { canonical: 'https://howtofish101.com/achievements/bean/' },
 };
 
 const faqs = [

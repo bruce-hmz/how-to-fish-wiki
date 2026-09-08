@@ -6,6 +6,7 @@ import Sources from '@/components/Sources';
 export const metadata = {
   title: 'Killscore Multipliers: Full Table & 5x Recipe',
   description: 'Every How to Fish Killscore modifier with values: 360 spins, headshots, last bullet, no scope, point blank, plus the stacking bonuses, how multiplication works past 5x, and the seagull recipe.' ,
+  alternates: { canonical: 'https://howtofish101.com/trick-shots/' },
 };
 
 const modifiers = [

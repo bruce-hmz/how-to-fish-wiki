@@ -95,7 +95,7 @@ export default function SystemRequirementsPage() {
               <tr>
                 <td className="p-3 font-bold text-white">Windows (Steam)</td>
                 <td className="p-3 text-green-400">Available</td>
-                <td className="p-3">Primary platform. Single-player, online co-op for 1-4 players, Steam Achievements, Family Sharing.</td>
+                <td className="p-3">Primary platform. Single-player, online co-op — classic 1-4 player crews, with lobbies supporting up to 8 players since Patch 1.0.4 (<Link href="/multiplayer/" className="text-aqua hover:underline">co-op guide</Link>). Steam Achievements, Family Sharing.</td>
               </tr>
               <tr>
                 <td className="p-3 font-bold text-white">Steam Deck</td>
