@@ -17,10 +17,10 @@ export default function SpiderCrabPage() {
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p className="font-bold text-white text-base">⚠️ Known Bug: the crab floats and can&apos;t be hit (Patch 1.0.11)</p>
         <p>
-          Since the September 1 Patch 1.0.11, many players report the Spider Crab <strong className="text-white">floating in the air above the tidepool, out of reach</strong> — it cannot be lured down or damaged, and the fight can&apos;t be won that run. Three separate Steam threads appeared within a day of the update (25+ replies combined, including &ldquo;no way to beat him in the air&rdquo;), and the developer has not shipped a fix yet — 1.0.11 is still the newest patch as of September 2, 2026.
+          Since the September 1 Patch 1.0.11, many players report the Spider Crab <strong className="text-white">floating in the air above the tidepool, out of reach</strong> — it cannot be lured down or damaged, and the fight can&apos;t be won that run. Three separate Steam threads appeared within a day of the update (25+ replies combined, including &ldquo;no way to beat him in the air&rdquo;). <strong className="text-white">Patch 1.0.12 (September 4) did not include a fix</strong>, and fresh &ldquo;same bug&rdquo; reports kept landing on the largest thread through September 9, 2026 — the bug is still live.
         </p>
         <p>
-          <strong className="text-white">Community-reported workaround (unverified by our editors):</strong> a player in the largest bug thread says you can bring the crab back down — throw your boss bait behind the cockpit of the broken captain&apos;s boat and reel it in, so the crab follows the bait and gets wedged in the captain&apos;s seat where you can hit it. It may save an otherwise lost run; treat it as unconfirmed until more players verify it.
+          <strong className="text-white">Community workaround (corroborated, not officially fixed):</strong> players in the bug threads say you can bring the crab back down — throw your boss bait behind the cockpit of the broken captain&apos;s boat and reel it in, so the crab follows the bait and gets wedged in the captain&apos;s seat where you can hit it. The trick was re-posted as recently as the September 9 thread activity, but it is not reliable for everyone: one player reports the crab clipping through the boat anyway, and another got the kill by dragging the fight underwater instead. Treat it as a community tool, not a guarantee.
         </p>
         <p className="text-xs text-gray-400">
           The strategy below is the normal, pre-1.0.11 fight and still applies once the bug is fixed or patched out. Check the{' '}
@@ -88,7 +88,7 @@ export default function SpiderCrabPage() {
             {
               label: 'Steam Discussions: "FLOATING CRABS" (bug reports after Patch 1.0.11)',
               href: 'https://steamcommunity.com/app/4001890/discussions/0/581681246928694953/',
-              note: 'largest of three post-1.0.11 bug threads; source of the community workaround quoted above',
+              note: 'largest of three post-1.0.11 bug threads; source of the community workaround; still receiving fresh bug reports as of September 9, 2026',
             },
           ]}
         />

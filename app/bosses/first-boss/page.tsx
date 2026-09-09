@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: 'Is the first boss broken after Patch 1.0.11?',
-    a: 'For some players, yes. Since the September 1, 2026 update, multiple Steam threads report the Giant Spider Crab floating in the air above the tidepool, unkillable and out of reach — and 1.0.11 is still the newest patch, so the developer has not fixed it yet. A community-reported workaround: throw your boss bait behind the cockpit of the broken captain\'s boat and reel it in so the crab gets wedged in the captain\'s seat and becomes hittable again (unverified by our editors). The full Spider Crab guide tracks the bug and will drop the notice once a fix ships.'
+    a: 'For some players, yes. Since the September 1, 2026 update, multiple Steam threads report the Giant Spider Crab floating in the air above the tidepool, unkillable and out of reach. Patch 1.0.12 (September 4) did not fix it, and reports continued through September 9, 2026. A community workaround: throw your boss bait behind the cockpit of the broken captain\'s boat and reel it in so the crab gets wedged in the captain\'s seat and becomes hittable again (community-corroborated, though not guaranteed — see the Spider Crab guide for the caveats). The full Spider Crab guide tracks the bug and will drop the notice once a fix ships.'
   },
 ];
 
@@ -40,11 +40,11 @@ export default function FirstBossPage() {
         description="The first boss is the Giant Spider Crab at the starter lighthouse — summon it with the Empty Beer Can, dodge the charge, and win Boat Key Part #1."
         url="https://howtofish101.com/bosses/first-boss/"
         datePublished="2026-08-28"
-        dateModified="2026-09-02"
+        dateModified="2026-09-10"
       />
       <Breadcrumb items={[{ name: 'Boss Battles', href: '/bosses/' }, { name: 'First Boss', href: '/bosses/first-boss/' }]} />
       <h1 className="text-3xl font-extrabold text-white">The First Boss in How to Fish: Giant Spider Crab</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 2, 2026 · Game version 1.0.11 (known bug — see notice below)</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 10, 2026 · Game version 1.0.12 (known bug — see notice below)</p>
 
       <div className="bg-gold/10 border border-gold/40 rounded-xl p-6 space-y-3">
         <p className="font-bold text-white text-sm">The short answer:</p>
@@ -64,7 +64,7 @@ export default function FirstBossPage() {
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p className="font-bold text-white text-sm">⚠️ Patch 1.0.11 bug: the crab may float out of reach</p>
         <p>
-          Since the September 1 update, players on Steam report the Spider Crab hovering in the air above the tidepool — unkillable and unbeatable that run. The developer has not shipped a fix yet (1.0.11 remains the newest patch as of September 2, 2026). A community-reported workaround: throw your boss bait behind the cockpit of the broken captain&apos;s boat and reel it in so the crab gets stuck in the captain&apos;s seat, where you can hit it — unverified by our editors, but it may save the run. The{' '}
+          Since the September 1 update, players on Steam report the Spider Crab hovering in the air above the tidepool — unkillable and unbeatable that run. <strong className="text-white">Patch 1.0.12 (September 4) did not include a fix</strong>, and fresh reports kept landing through September 9, 2026. A community workaround: throw your boss bait behind the cockpit of the broken captain&apos;s boat and reel it in so the crab gets stuck in the captain&apos;s seat, where you can hit it — corroborated by repeated player posts (most recently September 9), though not everyone succeeds: one player saw the crab clip through the boat, and another won by fighting it underwater. The{' '}
           <Link href="/bosses/spider-crab/" className="text-aqua hover:underline">full Spider Crab guide</Link> tracks fix status, and the{' '}
           <Link href="/troubleshooting/" className="text-aqua hover:underline">troubleshooting hub</Link> covers related save and bug safety.
         </p>

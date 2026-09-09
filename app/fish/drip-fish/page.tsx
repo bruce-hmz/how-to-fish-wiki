@@ -37,7 +37,7 @@ export default function DripFishPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Fish Database', href: '/fish/' }, { name: 'Drip Fish Guide', href: '/fish/drip-fish/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Drip Fish: Confirmed Catches, Odds Talk &amp; Gachapon</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 3, 2026 · Game version 1.0.11</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 10, 2026 · Game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <div className="bg-cyan-950/60 border border-cyan-500/40 rounded-lg p-4">
@@ -102,8 +102,11 @@ export default function DripFishPage() {
             How to hunt it: Drip variants use <strong className="text-white">the same lure, rod, or trigger as their normal
             version</strong> — there is no separate Drip lure. The normal Voxelfish is a Professional Lure catch, which is why
             the documented hunts all look the same: <strong className="text-white">Island 4, Professional Lure, and patience</strong>.
-            No odds have ever been published, so nobody can tell you it takes 40 casts or 400 — only that it has repeatedly
-            taken hours.
+            Hunters who landed it frame its rarity as <strong className="text-white">endangered-species tier</strong> — the
+            top of the game&rsquo;s rarity ladder, below only luck itself. No odds have ever been published, so nobody can
+            tell you it takes 40 casts or 400 — only that it has repeatedly taken hours. The{' '}
+            <Link href="#community-techniques" className="text-aqua hover:underline">techniques below</Link> are the best
+            known way to shorten the grind.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs bg-ocean-950/70 rounded-lg overflow-hidden border-collapse">
@@ -114,12 +117,17 @@ export default function DripFishPage() {
                 <tr>
                   <td className="px-3 py-2 font-bold text-cyan-300">Drip Goldfish</td>
                   <td className="px-3 py-2">Islands 2–3, behind the drip slot machine</td>
-                  <td className="px-3 py-2">Multiple players confirm</td>
+                  <td className="px-3 py-2">Multiple independent reports confirm</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-bold text-cyan-300">Drip Voxelfish</td>
                   <td className="px-3 py-2">Island 4 with the Professional Lure (same lure as the normal Voxelfish)</td>
                   <td className="px-3 py-2">Confirmed catchable; heavy RNG</td>
+                </tr>
+                <tr>
+                  <td className="px-3 py-2 font-bold text-cyan-300">Drip Seahorse</td>
+                  <td className="px-3 py-2">Pure RNG (one island-3 sighting reported)</td>
+                  <td className="px-3 py-2">Single-thread reports only</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-bold text-cyan-300">Drip Goby</td>
@@ -134,6 +142,44 @@ export default function DripFishPage() {
             separately</strong> — catching the Drip Voxelfish does not fill the normal Voxelfish entry, and vice versa. You need
             both. And if you thought fish were the end of it: at least one hunter reports Drip boss variants exist too (500+
             regular crabs, still no Drip Crab Boss).
+          </p>
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <h2 id="community-techniques" className="text-2xl font-bold text-white">Community Techniques for Faster Drip Hunting</h2>
+        <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
+          <p className="text-xs leading-relaxed">
+            The closest thing to a real technique players have found — reported independently on{' '}
+            <strong className="text-white">both Steam and Reddit</strong>, so treat it as community-corroborated rather
+            than official:
+          </p>
+          <p className="text-xs leading-relaxed">
+            <strong className="text-white">Bait-and-release (&ldquo;one cast, many fish&rdquo;):</strong> cast once into a
+            good spot, and as you reel each catch in, <strong className="text-white">right-click to drop the non-Drip fish
+            back into the water without stopping the reel</strong> — the cast stays alive and keeps producing. One Reddit
+            100%-completion report credits it with <strong className="text-white">5–7 fish per cast</strong>; a Steam
+            thread describing the same method lands on 4–5. Two honest caveats from the same threads: the crab rod is
+            reported to handle this technique worse than other rods, and the constant hooking can pull in{' '}
+            <strong className="text-white">bosses</strong> mid-grind — in one player&rsquo;s words it &ldquo;turns the game
+            into a full FPS,&rdquo; so expect the occasional interrupted session.
+          </p>
+          <p className="text-xs leading-relaxed">
+            <strong className="text-white">Where to cast it:</strong> the Drip Goldfish reports keep converging on{' '}
+            <strong className="text-white">islands 2–3, behind the drip slot machine</strong> — a fresh September 9 reply
+            nailed the promise (&ldquo;go to second island, 30 seconds later drip gold fish&rdquo;). For everything else,
+            Drip catches can surface on <strong className="text-white">any island</strong>; one hunter recommends grinding
+            the last island for volume. The Drip Seahorse remains pure luck — the thread&rsquo;s answers amount to
+            &ldquo;RNG&rdquo;, with a single island-3 sighting reported.
+          </p>
+          <p className="text-xs leading-relaxed">
+            <strong className="text-white">Planning the 100% run:</strong> the most complete public route farms{' '}
+            <strong className="text-white">~$100k early</strong> (our{' '}
+            <Link href="/money/" className="text-aqua hover:underline">money-making guide</Link> covers the fast routes) so
+            Professional Lures never bottleneck the hunt, and knocks out the{' '}
+            <Link href="/achievements/" className="text-aqua hover:underline">bare-hands final-boss achievement</Link> on
+            Easy difficulty while the run is still forgiving. The Fishipedia framing from above still applies — 49 regular
+            and 49 Drip entries must each be filled.
           </p>
         </div>
       </section>
@@ -182,7 +228,9 @@ export default function DripFishPage() {
 
       <Sources
         items={[
-          { label: 'Steam Discussion: “Catching every drip fish”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606641006/', note: 'Voxelfish hunt, Island 4 Professional Lure report, goldfish slot-machine location' },
+          { label: 'Steam Discussion: “Catching every drip fish”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606641006/', note: 'Voxelfish hunt, Island 4 Professional Lure report, goldfish slot-machine location, seahorse + any-island reports, September 2026 technique confirmations' },
+          { label: 'Steam Discussion: “why do we insist on putting rng based completion in games like this”', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681621355209433/', note: 'source of the bait-and-release multi-cast technique (right-click drop, 4–5 fish per cast)' },
+          { label: 'Reddit: “HowToFish — All Creature and Drip Creatures 100% complete”', href: 'https://www.reddit.com/r/HowToFish/comments/1vx08om/howtofish_all_creature_and_drip_creatures_100/', note: 'independent bait-and-release corroboration (5–7 fish per cast) and the $100k-early route' },
           { label: 'Steam Discussion: “Does the drippy Voxelfish exist?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606534846/', note: 'confirmed catchable (“we fished it today”) and drip boss-variant mention' },
           { label: 'Steam Discussion: “I did collect all the drip fish but i didnt get the achivment”', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681246928692020/', note: 'achievement-not-unlocking report behind the FAQ' },
           { label: 'Mobalytics: How to Fish — All 49 Fish, Creatures and Lures', href: 'https://mobalytics.gg/gamebase/guides/how-to-fish-all-fish-creatures-lures', note: 'Fishipedia tracks 49 regular + 49 Drip entries separately; Drip uses the same lure as the normal version' },
