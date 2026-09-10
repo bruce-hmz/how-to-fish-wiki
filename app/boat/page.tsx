@@ -73,11 +73,12 @@ export default function BoatPage() {
         <h2 className="text-xl font-bold text-white">FAQ: Boat Missing After an Update?</h2>
         <p>
           If your boat vanished the moment you loaded in after a patch — you are not alone, and it is not something
-          you did wrong. Four players in one{' '}
+          you did wrong. Players in one{' '}
           <a href="https://steamcommunity.com/app/4001890/discussions/0/581680664978545225/" className="text-aqua hover:underline" target="_blank" rel="noopener noreferrer">Steam thread</a>{' '}
-          reported the same bug across two update cycles: it first appeared with the August 27 update batch and again
-          after <strong>Patch 1.0.12</strong> (September 4, 2026), where a player on the volcano island loaded in with
-          &ldquo;got the keys, but no boat for that.&rdquo;
+          — still receiving new reports as of September 10, 2026 — have hit the same bug across multiple update
+          cycles: it first appeared with the August 27 update batch and again after <strong>Patch 1.0.12</strong>
+          (September 4, 2026), where a player on the volcano island loaded in with &ldquo;got the keys, but no boat
+          for that,&rdquo; and on island 4, where a player&rsquo;s boat disappeared right after losing the tuna fight.
         </p>
         <p>
           What the reports have in common: the boat disappears right after loading in post-update, your progression
@@ -88,9 +89,12 @@ export default function BoatPage() {
         <p>
           Things to try, in order (community workarounds, not editor-verified for this specific bug): quit to the main
           menu and reload your save first — a reply in the thread reports that after reloading, the boat
-          &ldquo;should respawn&rdquo;; if the boat is still gone, try the trick
+          &ldquo;should respawn&rdquo;; if you are on <strong>island 4</strong>, the boat is often not actually gone —
+          a September 10 answer (from a player pointed there by another thread) reports it respawns{' '}
+          <strong>hidden to the left of the dock stairs</strong>, away from the guns and the ammo shack, so sweep that
+          spot before assuming the save is broken; if the boat is still missing, try the trick
           that fixes the related loading-screen bug — from the main menu choose <strong>Host Game → Session Type →
-          Singleplayer</strong>, then load in. If neither works, back up your save before further attempts (see the{' '}
+          Singleplayer</strong>, then load in. If none of that works, back up your save before further attempts (see the{' '}
           <Link href="/troubleshooting/save-file/" className="text-aqua hover:underline">save-file recovery guide</Link>),
           post in the Steam thread above so the devs can see the report count, and check{' '}
           <Link href="/updates/" className="text-aqua hover:underline">the patch history</Link> — a future fix will be
@@ -105,7 +109,7 @@ export default function BoatPage() {
             {
               label: 'Steam Discussion: "just loaded in after the update and my boat is missing"',
               href: 'https://steamcommunity.com/app/4001890/discussions/0/581680664978545225/',
-              note: '4 independent reports across the Aug 27 and Sep 4 updates; source of the volcano-island "keys, but no boat" case',
+              note: 'reports across the Aug 27 and Sep 4 updates plus fresh posts through September 10; source of the volcano-island "keys, but no boat" case, the island-4 tuna-fight-loss trigger, and the hidden-left-of-the-dock-stairs respawn answer',
             },
             {
               label: 'Official patch notes feed (app 4001890)',
@@ -117,7 +121,7 @@ export default function BoatPage() {
       </div>
       <FaqJsonLd faqs={[{
         q: 'Why is my boat missing after a How to Fish update?',
-        a: 'It is a known recurring bug reported by several players after the August 27 update batch and again after Patch 1.0.12 (September 4, 2026) — including one player who loaded in with boat keys but no boat on the volcano island. Your key unlocks are retained, and no verified fix exists yet. Quit to the main menu and reload your save first — a community reply reports the boat respawns after a reload; if that fails, try Host Game → Session Type → Singleplayer from the main menu, then load in. Back up your save before further attempts and report the bug in the Steam forums.',
+        a: 'It is a known recurring bug reported by several players after the August 27 update batch and again after Patch 1.0.12 (September 4, 2026) — including one player who loaded in with boat keys but no boat on the volcano island, and one whose boat vanished on island 4 right after losing the tuna fight. Your key unlocks are retained, and no verified fix exists yet. Quit to the main menu and reload your save first — a community reply reports the boat respawns after a reload; on island 4 the boat is often not gone at all but respawns hidden to the left of the dock stairs (away from the guns and ammo shack); if that fails, try Host Game → Session Type → Singleplayer from the main menu, then load in. Back up your save before further attempts and report the bug in the Steam forums.',
       }]} />
     </div>
   );

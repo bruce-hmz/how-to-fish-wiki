@@ -5,7 +5,7 @@ import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Save File Location, Backups & Lost Progress Recovery',
-  description: 'Exactly where How to Fish stores its save files on Windows and Steam Deck, a backup routine that takes 30 seconds, how to roll back an older save, and what Patches 1.0.4–1.0.12 actually changed about saving.',
+  description: 'Exactly where How to Fish stores its save files on Windows and Steam Deck, a backup routine that takes 30 seconds, how to sync saves between Steam Deck, PC and GeForce NOW, how to roll back an older save, and what Patches 1.0.4–1.0.12 actually changed about saving.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/save-file/' },
 };
 
@@ -32,6 +32,18 @@ const faqs = [
     q: 'My save will not load at all — what now?',
     a: 'Run the recovery order on this page: stop loading attempts, close the game normally, copy the entire folder, then verify game files in Steam and try once more. Patch 1.0.6 added a validation step before loading, and Patch 1.0.11 made that check permanent on every load (with backups kept when a file does turn out corrupt), which means badly damaged data is more likely to be refused than half-loaded — but it cannot repair the file. If the save still fails, report it to the developers and wait rather than deleting anything.'
   },
+  {
+    q: 'I played on Steam Deck — why didn\u2019t my saves show up on my PC?',
+    a: 'Since Patch 1.0.12 your saves live in Steam Cloud, but the upload only happens through the official trigger: play and exit How to Fish once on the device that has your saves, then let Steam sync on the other device before launching there. That play-and-exit-once step is exactly what a September 6 Steam thread missed — the reporter\u2019s Deck progression never reached his PC and he asked for cloud support that had shipped two days earlier, while a replier pointed out the cloud storage was already configured. If the second device still shows an old world after syncing, check Steam\u2019s sync-conflict guidance above before overwriting anything.'
+  },
+  {
+    q: 'Do my saves sync through GeForce NOW?',
+    a: 'They should: with Steam Cloud storage (Patch 1.0.12) your saves follow your Steam account, and GeForce NOW sessions log in with that same account. A September report in r/GeForceNOW of How to Fish saves not syncing (snippet-level, community-reported) is consistent with the upload trigger: saves upload when you play and exit the game once, so a cloud session that ends without a clean in-game exit can miss the upload. Quit through the game\u2019s Main Menu at the end of a GFN session, then let the cloud sync before playing locally.'
+  },
+  {
+    q: 'How do I completely restart the game?',
+    a: 'From the Main Menu choose Host Game → New Game — that starts a fresh save, and your old island markers and unlocks do not carry over. This is the community-confirmed answer to a player whose old world markers were still there after trying to start over. If there is any chance you will want the old world back, copy your save folder first — the backup habit on this page applies double before wiping.'
+  },
 ];
 
 export default function SaveFilePage() {
@@ -43,10 +55,10 @@ export default function SaveFilePage() {
         description="Where How to Fish stores saves on Windows and Steam Deck, a 30-second backup routine, rollback steps, and what every patch changed about saving."
         url="https://howtofish101.com/troubleshooting/save-file/"
         datePublished="2026-08-27"
-        dateModified="2026-09-05"
+        dateModified="2026-09-11"
       />
       <h1 className="text-3xl font-extrabold text-white">How to Fish Saves: Location, Backups &amp; Recovery</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 5, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 11, 2026 · Game version 1.0.12</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
         <p className="font-bold text-white text-sm">If gear is missing right now, three rules first:</p>
@@ -200,6 +212,9 @@ export default function SaveFilePage() {
           { label: 'Steam Discussion: “Saved game and lost everything?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582805931178592050/', note: 'typical loss pattern described by affected players' },
           { label: 'Steam Discussion: “Save issue” — game saves deleted themselves', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681246928691506/', note: 'recent loss report that motivated the Patch 1.0.11 section' },
           { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'basis of the patch timeline above, including 1.0.11’s corruption check and automatic backups and 1.0.12’s Steam Cloud storage' },
+          { label: 'Steam Discussion: “i played on steam deck but the saved progression didnt come to my pc”', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681621355262528/', note: 'the Deck→PC sync case behind the cloud-sync FAQ; replier confirms cloud storage was configured' },
+          { label: 'Steam Discussion: “How do I completely restart the game?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/581680955258875289/', note: 'source of the Host Game → New Game fresh-start answer' },
+          { label: 'r/GeForceNOW: “Help with Save Files not saving?”', href: 'https://www.reddit.com/r/GeForceNOW/comments/1w6nn2d/help_with_save_files_not_saving/', note: 'community-reported GFN sync failure behind the GeForce NOW FAQ' },
         ]}
       />
       <FaqJsonLd faqs={faqs} />

@@ -5,7 +5,7 @@ import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Best Settings, Performance Fixes & Black Screen Help',
-  description: 'How to Fish settings and fixes: black screen launch options, overlay conflicts, audio stutter, Steam Deck configuration, and the quality-of-life gaps still present as of Patch 1.0.9.',
+  description: 'How to Fish settings and fixes: black screen launch options, Error 51 and won\u2019t-start help, overlay conflicts, audio stutter, Steam Deck configuration, and the quality-of-life gaps still present in recent builds.',
   alternates: { canonical: 'https://howtofish101.com/settings/' },
 };
 
@@ -20,11 +20,15 @@ const faqs = [
   },
   {
     q: 'Why do my keybinds reset every time I restart the game?',
-    a: 'Players have reported custom keybinds and some settings failing to persist across restarts on current builds. Nothing in the settings menus has fixed it yet as of Patch 1.0.9, so re-binding each session is unfortunately still the norm for affected setups — and worth reporting through Steam discussions with your setup details.'
+      a: 'Players have reported custom keybinds and some settings failing to persist across restarts on current builds. Nothing in the settings menus has fixed it yet through Patch 1.0.12 (the 1.0.10–1.0.12 notes contain no keybind-persistence fix), so re-binding each session is unfortunately still the norm for affected setups — and worth reporting through Steam discussions with your setup details.'
   },
   {
     q: 'Is there a frame rate limiter?',
     a: 'Yes — cap the framerate in-game rather than forcing V-Sync, which adds input lag to casting and reeling timing. Note that Patch 1.0.5 changed how the lowest locked FPS behaves (the floor moved to 30), so very low caps are treated differently than before that patch.'
+  },
+  {
+    q: 'What is Steam Error 51 — and how do I fix it?',
+    a: 'Error 51 is a Steam-side launch failure: the game never reaches a working window. It belongs to a small won\u2019t-start family reported through September 2026 that also includes a \u201cUnity error #2\u201d popup at boot and a beige frozen screen that locks the monitor. Honest status: affected players have already tried reinstalling, verifying files, running as administrator and restarting the PC without success, and no verified fix exists yet — the standard ladder (launch options -dx11 or -force-vulkan, file verification, updated GPU drivers) is unverified for this family. The contrast: if your game does boot but crashes or freezes during play, a community-verified fix exists — switch from borderless to fullscreen with V-Sync on.'
   },
 ];
 
@@ -33,7 +37,7 @@ export default function SettingsPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Troubleshooting & Settings', href: '/settings/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Best Settings &amp; Performance Fixes</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 27, 2026 · Game version 1.0.9</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 11, 2026 · Game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <h2 className="text-xl font-bold text-white">First, Know Which Launch Problem You Have</h2>
@@ -42,6 +46,29 @@ export default function SettingsPage() {
             <Link href="/troubleshooting/error-0x11c7/" className="text-aqua hover:underline">error 0x11C7 fix</Link> first.
           </li>
           <li><strong className="text-white">The window opens but stays black</strong> — renderer trouble. Work through the launch options below.</li>
+          <li><strong className="text-white">Steam Error 51, a &ldquo;Unity error #2&rdquo; popup at boot, the process runs but no window appears, or a frozen beige screen locks the monitor</strong> — the game never reaches a working window. That is a distinct won&apos;t-start family with its own section below; launch options usually will not touch it.</li>
+        </ul>
+
+        <h2 className="text-xl font-bold text-white">Won&rsquo;t Start at All: Error 51, &ldquo;Unity error #2&rdquo; &amp; Frozen Screens</h2>
+        <p className="text-xs leading-relaxed">
+          A separate failure family exists where the game never creates a working window: Steam reports{' '}
+          <strong className="text-white">error 51</strong> (a Steam-side launch failure), a{' '}
+          <strong className="text-white">&ldquo;Unity error #2&rdquo;</strong> popup appears at boot, the process loads after an update but
+          no window ever opens, or the game freezes on a solid beige screen that locks the whole monitor. Honest status as of
+          September 2026: these reports are active and essentially unanswered, and no verified fix exists for the family yet —
+          so treat the steps below as standard Steam first-aid, clearly not proven for this game.
+        </p>
+        <ul className="list-disc pl-5 space-y-2 text-xs">
+          <li><strong className="text-white">What affected players already tried without success:</strong> reinstalling the game, verifying file integrity, running as administrator, and restarting the PC. If you post your own report, list what you have already ruled out instead of re-running them.</li>
+          <li><strong className="text-white">Frozen screen first:</strong> if the game locked your monitor on a solid color, force-quit the process before anything else — Task Manager on Windows (Ctrl+Shift+Esc), or hold the Deck&rsquo;s Power button and force-close the game. Recovery steps for your saves live in the{' '}
+            <Link href="/troubleshooting/save-file/" className="text-aqua hover:underline">save-file guide</Link>.</li>
+          <li><strong className="text-white">Do not expect the fullscreen fix here.</strong> Switching borderless → fullscreen + V-Sync on fixed a verified crash-during-play case (see the{' '}
+            <Link href="/troubleshooting/performance-stutter/" className="text-aqua hover:underline">performance guide</Link>) — but that game booted first. It does not apply when the title never starts.</li>
+          <li><strong className="text-white">Then run the standard ladder anyway</strong> (unverified for this family): the launch options below, file verification, a current GPU driver, and a clean reinstall as the last resort.</li>
+          <li><strong className="text-white">Not the 0x11C7 case:</strong> if a security popup appeared or nothing happens on Play with no error dialog, that is Windows Smart App Control silently blocking the executable — the{' '}
+            <Link href="/troubleshooting/error-0x11c7/" className="text-aqua hover:underline">error 0x11C7 fix</Link> has a documented path and is the first thing to check. General bug-handling rules live in the{' '}
+            <Link href="/troubleshooting/" className="text-aqua hover:underline">troubleshooting hub</Link>.</li>
+          <li><strong className="text-white">Report yours</strong> in Steam discussions with your specs — with several threads sitting at zero replies, the report count is what gets developer attention.</li>
         </ul>
 
         <h2 className="text-xl font-bold text-white">Launch Options for Black Screens</h2>
@@ -126,6 +153,10 @@ export default function SettingsPage() {
           { label: 'How to Fish on Steam (store page)', href: 'https://store.steampowered.com/app/4001890/How_to_Fish/', note: 'official minimum specifications quoted above' },
           { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'FPS-floor change (1.0.5), axis inversion (1.0.5), PS glyph fix (1.0.8), relay readout (1.0.9)' },
           { label: 'Steam Discussion: bad performance thread', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606619650/', note: 'flagship-hardware stutter reports behind the known-gaps list' },
+          { label: 'Steam Discussion: “The game just won\u2019t start” (error 51, re-bumped Sep 10)', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681621355291796/', note: 'error-51 report: reinstall + PC restart did not help; still unanswered' },
+          { label: 'Steam Discussion: “beige screen… locks me out of everything on the monitor”', href: 'https://steamcommunity.com/app/4001890/discussions/0/564793434686102548/', note: 'frozen-screen symptom; reinstall, verify files and run-as-admin all failed' },
+          { label: 'Steam Discussion: “new update rolled around and now my game loads and runs, but doesnt open”', href: 'https://steamcommunity.com/app/4001890/discussions/0/564793434686123091/', note: 'post-update process-runs-but-no-window case' },
+          { label: 'Steam Discussion: Unity crash thread with the verified borderless → fullscreen + V-Sync fix', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681621355379924/', note: 'also carries the separate \u201cUnity error #2\u201d boot-failure report' },
         ]}
       />
       <FaqJsonLd faqs={faqs} />
