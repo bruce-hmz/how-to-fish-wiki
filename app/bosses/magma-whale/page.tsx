@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Volcanic Magma Whale Final Boss Strategy',
-  description: 'Beat the final Magma Whale boss in Mount Inferno crater. Bare hand achievement strategy and the Legendary Volcanic Rod reward in How to Fish.',
+  description: 'Beat the final Magma Whale boss in Mount Inferno crater. Phase strategy, community tactics, bare hand achievement, and the Legendary Volcanic Rod reward in How to Fish.',
   alternates: { canonical: 'https://howtofish101.com/bosses/magma-whale/' },
 };
 
@@ -67,6 +67,29 @@ export default function MagmaWhalePage() {
           <strong>Phase 3 (30%–0% HP)</strong>: The whale enters a frenzy, chaining all three attacks rapidly with minimal downtime. Lava geysers erupt randomly across the arena floor, creating additional hazards. The key to Phase 3 is patience — do not overcommit to damage windows. Wait for the post-Dive Attack stun when the whale lies on the surface for 4 seconds. This is your only safe damage window in the final phase. Two or three stun cycles should finish it off.
         </p>
 
+        <h2 className="text-xl font-bold text-white">Community Tactics &amp; What to Expect</h2>
+        <p>
+          Nothing in the phase plan above went stale: the official{' '}
+          <Link href="/updates/" className="text-aqua hover:underline">1.0.12 notes</Link>{' '}
+          changed exactly one thing about this fight — explosives now damage the whale when it lands on its tail — and
+          touch nothing about attack patterns or harpoon windows. What the community adds is how the fight{' '}
+          <em>feels</em>. After one player called the final boss <em>&ldquo;an absolute chore and not fun at all&rdquo;</em>{' '}
+          where <em>&ldquo;spaghetti coding makes it completely RNG whether or not youre gonna win that fight,&rdquo;</em> the
+          top reply was two words: <em>&ldquo;just keep moving!&rdquo;</em> Another finisher agrees —{' '}
+          <em>&ldquo;what i did was just move.... a LOT.&rdquo;</em> Constant motion is the whole game plan, and it matters
+          most in phases 2 and 3, where Dive Attacks and drifting lava rocks punish a boat that sits still.
+        </p>
+        <p>
+          Two honest caveats to go with it. First, one post-1.0.12 player reports the whale is still instantly lethal on
+          landing despite the explosive fix — <em>&ldquo;HIS TAIL ACCIDENTALLY TOUCHED ME WHEN HE LANDED GUESS I DIE&rdquo;</em>{' '}
+          — so treat the Tail Slam and every landing as a get-out-of-the-way moment, not a 40-damage shrug; that instant
+          kill is a single community report we have not seen corroborated, but the cheap defense (never be under the
+          whale) costs you nothing. Second, dynamite is the other big lever: stacked dynamite is dependable damage in all
+          three phases since the 1.0.12 fix (see the callout above), and the same thread adds that the regular —
+          non-mutated — bowhead whale players run into on the water &ldquo;just blow[s] up with dynamite.&rdquo; We have not
+          documented that regular-whale encounter ourselves, so take that phrasing as the player&rsquo;s own.
+        </p>
+
         <h2 className="text-xl font-bold text-white">Bare Hands Achievement (Handyman)</h2>
         <p>
           Whittle the whale down to 1% HP using your full arsenal, then unequip all weapons and land the killing blow with bare fists. This unlocks the{' '}
@@ -107,6 +130,16 @@ export default function MagmaWhalePage() {
               label: 'Steam Discussion: Whale Boss 2nd Phase Immune to Explosive Damage?',
               href: 'https://steamcommunity.com/app/4001890/discussions/0/581681298840556965/',
               note: 'the pre-1.0.12 phase-2 dynamite report the patch note answers',
+            },
+            {
+              label: 'Steam Discussion: Last Boss is an absolute chore (September 13, 2026)',
+              href: 'https://steamcommunity.com/app/4001890/discussions/0/564793766239599085/',
+              note: 'community "just keep moving" tactics and the chore/RNG expectation-setting quotes',
+            },
+            {
+              label: 'Steam Discussion: THE WHALE SHOULD NOT ONESHOT (September 10, 2026)',
+              href: 'https://steamcommunity.com/app/4001890/discussions/0/564793434686198062/',
+              note: 'post-1.0.12 tail-touch instant-kill report (single account, uncorroborated)',
             },
           ]}
         />
