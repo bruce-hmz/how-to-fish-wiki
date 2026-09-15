@@ -14,6 +14,7 @@ const faqs = [
   { q: 'Why is my slot machine skin invisible?', a: 'A 4K rendering bug made some slot-machine skins invisible. Patch 1.0.5 addressed it — if you still see it on the current build, verify game files and capture the result before re-spinning.' },
   { q: 'Is the roulette table rigged?', a: 'It was genuinely bugged, not just unlucky: patch 1.0.10 fixed roulette physics that let the ball clip through the wheel at high bet values. Landing green is clearly attainable — roughly 28% of players own the "All in" achievement for betting green and winning — but the developers have never published real odds, so treat long losing streaks as normal table variance.' },
   { q: 'The skin machine took my money but no prize appeared — is it bugged?', a: 'Two players reported exactly this on Reddit in late August: the drip machine consumed a spin and no weapon skin appeared. Before treating it as a bug, know that prize items drop into the world — since Patch 1.0.10, up to 64 ground-dropped items persist in your save, so reload your session and sweep around the machine before re-spinning. If the machine eats spins every single time on the fully updated build, capture it on video and treat it as a bug report, not bad luck.' },
+  { q: 'I put a fish in the Reel of Fortune and nothing happened — is it bugged?', a: 'Almost certainly the wrong fish, not a bug. Community answers confirm the machine only accepts special (drip) fish — a regular catch is just ignored. Feed it a drip fish for a weapon-skin spin, then switch skins with Z or C while handling the item.' },
   { q: 'I see the rainbow skin in the machine but can never win it — why?', a: 'That is the RNG wall, not a malfunction. One player logged an estimated 300–400 spins chasing the rainbow SMG without landing it — while another player in the same thread says it was the first rainbow skin they got. Odds are unpublished, so nobody can tell you if spin 401 is close. One honest warning from the same thread: several players now suspect the pistol and fishing-rod rainbow skins do not exist in the prize pool at all — do not burn your cash fishing for a skin no one has ever pulled.' },
 ];
 
@@ -51,6 +52,19 @@ export default function CasinoPage() {
           breaking the table for your next session. Patch 1.0.11 then moved the island-6 table slightly,
           because the devs acknowledged its old position was &ldquo;annoying to bet from&rdquo;. If your only
           roulette experience is from before those fixes, the table you remember was literally broken.
+        </p>
+
+        <h2 className="text-xl font-bold text-white">The Reel of Fortune (Weapon-Skin Wheel)</h2>
+        <p>
+          The Reel of Fortune is the island's prize wheel: it takes a <strong>special drip fish</strong> and
+          deals out a <Link href="/creatures/rare-variants/" className="text-aqua hover:underline">weapon skin</Link>,
+          not cash. Its most common failure mode is feeding it a regular catch — the machine does nothing,
+          exactly what one Steam player reported in a thread that sat unanswered for over three weeks until
+          the community clarified the input must be a drip fish, not a regular one. Skins you win apply to
+          the item itself, and community answers report you can switch skins with <strong>Z or C</strong>{' '}
+          while handling the item. See the{' '}
+          <Link href="/fish/drip-fish/" className="text-aqua hover:underline">drip fish list</Link> for what
+          to stock before a session.
         </p>
 
         <h2 className="text-xl font-bold text-white">The Gachapon Route (Drip Rock Crab)</h2>
