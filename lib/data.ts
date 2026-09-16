@@ -1,13 +1,29 @@
+/**
+ * Adapter over the verified game data layer (src/data/game/).
+ * Gameplay facts live ONLY in the data layer — do not add facts here.
+ */
+import {
+  FISH,
+  BOSSES,
+  LURES,
+  LOCATION_BY_SLUG,
+  LURE_BY_SLUG,
+  DRIP_SYSTEM_FACTS,
+  CURRENT_GAME_VERSION,
+} from '@/src/data/game';
+
+export { DRIP_SYSTEM_FACTS, CURRENT_GAME_VERSION };
+
 export interface FishItem {
   id: string;
   name: string;
-  rarity: 'Common' | 'Uncommon' | 'Rare' | 'Epic' | 'Legendary' | 'Drip' | 'Uncatalogued';
-  value: number;
-  habitat: string;
+  island: string;
   bait: string;
-  weather: string;
-  description: string;
-  status?: 'verified' | 'community' | 'cross-checked';
+  value: number;
+  /** True when a source recorded a sell value (IGN table). */
+  valueDocumented: boolean;
+  /** Provenance note rendered in the table. */
+  note?: string;
 }
 
 export interface BossInfo {
@@ -15,145 +31,63 @@ export interface BossInfo {
   name: string;
   location: string;
   summonBait: string;
-  hp: string;
-  weakness: string;
-  keyRewards: string[];
-  strategy: string[];
+  unlocks: string;
+  note: string;
 }
 
 export const GAME_INFO = {
-  name: "How to Fish",
-  developer: "Dazed Games",
-  publisher: "Dazed Games",
-  releaseDate: "August 20, 2026",
-  steamAppId: "4001890",
-  steamUrl: "https://store.steampowered.com/app/4001890/How_to_Fish/",
-  genre: "1-4 Player Physics Fishing Simulator",
-  peakPlayers: "373,971 Peak Concurrent Players (Aug 26, SteamDB)",
-  description: "A 1-4 player physics-based fishing simulator. After a boat crash on a mysterious archipelago, survive, master casting, battle gigantic marine bosses, and find your way home."
+  name: 'How to Fish',
+  developer: 'Dazed Games',
+  publisher: 'Dazed Games',
+  releaseDate: 'August 20, 2026',
+  steamAppId: '4001890',
+  steamUrl: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
+  genre: '1-4 Player Physics Fishing Simulator',
+  peakPlayers: '373,971 Peak Concurrent Players (Aug 26, SteamDB)',
+  description:
+    'A 1-4 player physics-based fishing simulator. After a boat crash on a mysterious archipelago, survive, master casting, battle gigantic marine bosses, and find your way home.',
 };
 
-export const FISH_DATABASE: FishItem[] = [
-  { id: "brown-crab", name: "Brown Crab", rarity: "Common", value: 2, habitat: "Starter Beach", bait: "None / Clam", weather: "Any", description: "Easy starter catch. Punch with knuckles to collect meat." },
-  { id: "coastal-shrimp", name: "Coastal Shrimp", rarity: "Common", value: 4, habitat: "Shallow Waters", bait: "Clam Meat", weather: "Any", description: "Quick nibble. Essential starter bait for larger predatory fish." },
-  { id: "bluegill", name: "Bluegill", rarity: "Common", value: 8, habitat: "Calm Bays", bait: "Worm", weather: "Clear", description: "Standard panfish commonly found near shallow docks." },
-  { id: "striped-bass", name: "Striped Bass", rarity: "Uncommon", value: 18, habitat: "Deep Open Water", bait: "Shrimp / Small Fish", weather: "Foggy", description: "Fights hard on standard rods. Needs good reel timing." },
-  { id: "red-snapper", name: "Red Snapper", rarity: "Uncommon", value: 25, habitat: "Coral Reefs", bait: "Hot Dog / Cut Meat", weather: "Sunny", description: "Prized commercial fish with steady high resale value." },
-  { id: "electric-eel", name: "Electric Eel", rarity: "Rare", value: 65, habitat: "Sunken Shipwreck", bait: "Glowing Grub", weather: "Night", description: "Emits lightning shocks when reeled in. Stuns players if dropped." },
-  { id: "ghost-manta", name: "Ghost Manta", rarity: "Rare", value: 120, habitat: "Abyssal Trench", bait: "Deep Sea Jig", weather: "Rain", description: "Translucent ray gliding through deep ocean trenches." },
-  { id: "drip-rock-crab", name: "Drip Rock Crab", rarity: "Drip", value: 5, habitat: "Secret Tidepools", bait: "Rainbow Clam", weather: "Rain", description: "Glowing blue variant. Insert into Casino Gachapon machine to spin for exclusive skins." },
-  { id: "drip-fish", name: "Drip Fish", rarity: "Drip", value: 250, habitat: "Volcano Undersea Vent", bait: "Beer / Special Lure", weather: "Thunderstorm", description: "Legendary iridescent fish. Key requirement for end-game weapon ascensions." },
-  { id: "golden-tuna", name: "Golden Tuna", rarity: "Epic", value: 450, habitat: "Far Outer Ocean", bait: "Squid Strips", weather: "Sunset", description: "Massive fast-swimming game fish that tests rod tensile strength." },
-  { id: "kraken-spawn", name: "Kraken Spawn", rarity: "Legendary", value: 1200, habitat: "Bermuda Whirlpool", bait: "Boss Meat", weather: "Night Storm", description: "Tentacled mythological creature. Requires upgraded reinforced boat." },
-  { id: "lobster", name: "Lobster", rarity: "Uncatalogued", value: 9, habitat: "Starter Island (Lighthouse)", bait: "Hot Dog", weather: "Unknown", description: "Cross-checked against two independent sources: G2A island fish guide and IGN's all-fish table (Island 1, Hot Dog bait, $9). Sell value from IGN; weather still unverified in-game.", status: "cross-checked" },
-  { id: "piranha", name: "Piranha", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Hot Dog", weather: "Unknown", description: "Single-source via G2A island guide (Hot Dog bait). IGN's all-fish table instead lists Beginner Lure, $4 — bait conflict unresolved, value not adopted. Pending in-game verification.", status: "community" },
-  { id: "mackerel", name: "Mackerel", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Free Lure", weather: "Unknown", description: "Single-source via G2A island guide (Free Lure). IGN instead lists a standard Fishing Rod catch, $6 — bait method conflict unresolved, value not adopted. Pending in-game verification.", status: "community" },
-  { id: "gar", name: "Gar", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Free Lure", weather: "Unknown", description: "Bait reported variously: G2A and Game8 say Free Lure on Island 2, IGN says standard Fishing Rod ($5). Island 2 agrees across all three sources. Value not adopted pending in-game verification.", status: "community" },
-  { id: "pike", name: "Pike", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Free Lure / Beginner Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification. Special variant: the Old Pike is guide-documented as a boss-class catch on Island 2 — Beginner Boss Lure ($40, pool shared with Sunfish) or a $150 Shotgun hunt (G2A; Game8, Aug 28, 2026). See the fish database FAQ.", status: "cross-checked" },
-  { id: "cod", name: "Cod", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Beginner Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "goldfish", name: "Goldfish", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Free Lure / Beginner Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "perch", name: "Perch", rarity: "Uncatalogued", value: 0, habitat: "Island 2 (Lake)", bait: "Beginner Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification. The special perch variant is the creature players most often report as the last one missing from the Collector checklist; no reliable acquisition method has been documented (see the rare variants guide).", status: "cross-checked" },
-  { id: "triggerfish", name: "Triggerfish", rarity: "Uncatalogued", value: 18, habitat: "Island 2 (Lake)", bait: "Beginner Lure", weather: "Unknown", description: "Cross-checked against two independent sources: G2A island fish guide and IGN's all-fish table (Island 2, Beginner Lure, $18). Sell value from IGN; weather still unverified in-game.", status: "cross-checked" },
-  { id: "angelfish", name: "Angelfish", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "boxfish", name: "Boxfish", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "catfish", name: "Catfish", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "sea-urchin", name: "Sea Urchin", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "seahorse", name: "Seahorse", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "clownfish", name: "Clownfish", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "salmon", name: "Salmon", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "needlefish", name: "Needlefish", rarity: "Uncatalogued", value: 0, habitat: "Coral Maze Lagoon", bait: "Standard Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "parrotfish", name: "Parrotfish", rarity: "Uncatalogued", value: 350, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Cross-checked against two independent sources: G2A island fish guide and IGN's all-fish table (Island 4, Professional Lure, $350). Sell value from IGN; weather still unverified in-game.", status: "cross-checked" },
-  { id: "voxelfish", name: "Voxelfish", rarity: "Uncatalogued", value: 340, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Cross-checked against two independent sources: G2A island fish guide and IGN's all-fish table (Island 4, Professional Lure, $340, listed Endangered). Sell value from IGN; weather still unverified in-game.", status: "cross-checked" },
-  { id: "halibut", name: "Halibut", rarity: "Uncatalogued", value: 290, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Cross-checked against two independent sources: G2A island fish guide and IGN's all-fish table (Island 4, Professional Lure, $290). Sell value from IGN; weather still unverified in-game.", status: "cross-checked" },
-  { id: "eel", name: "Eel", rarity: "Uncatalogued", value: 280, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Cross-checked against two independent sources: G2A island fish guide and IGN's all-fish table (Island 4, Professional Lure, $280). Sell value from IGN; weather still unverified in-game.", status: "cross-checked" },
-  { id: "tigerfish", name: "Tigerfish", rarity: "Uncatalogued", value: 310, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Cross-checked against two independent sources: G2A island fish guide and IGN's all-fish table (Island 4, Professional Lure, $310). Sell value from IGN; weather still unverified in-game.", status: "cross-checked" },
-  { id: "flying-fish", name: "Flying Fish", rarity: "Uncatalogued", value: 320, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Cross-checked against two independent sources: G2A island fish guide and IGN's all-fish table (Island 4, Professional Lure, $320). Sell value from IGN; weather still unverified in-game.", status: "cross-checked" },
-  { id: "sengarat", name: "Sengarat", rarity: "Uncatalogued", value: 280, habitat: "Island 4 (Skies)", bait: "Professional Lure", weather: "Unknown", description: "Cross-checked against two independent sources: G2A island fish guide and IGN's all-fish table (Island 4, Professional Lure, $280). Sell value from IGN; weather still unverified in-game.", status: "cross-checked" },
-  { id: "anglerfish", name: "Anglerfish", rarity: "Uncatalogued", value: 0, habitat: "Mount Inferno & Deep Trench", bait: "Scientific Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "blobfish", name: "Blobfish", rarity: "Uncatalogued", value: 0, habitat: "Mount Inferno & Deep Trench", bait: "Scientific Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "oarfish", name: "Oarfish", rarity: "Uncatalogued", value: 0, habitat: "Mount Inferno & Deep Trench", bait: "Scientific Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "superdwarf-fish", name: "Superdwarf Fish", rarity: "Uncatalogued", value: 1700, habitat: "Mount Inferno & Deep Trench", bait: "Scientific Lure", weather: "Unknown", description: "Cross-checked against two independent sources: G2A island fish guide and IGN's all-fish table (deep/volcano zone, Scientific Lure, $1,700, listed Endangered). Sell value from IGN; weather still unverified in-game.", status: "cross-checked" },
-  { id: "stonefish", name: "Stonefish", rarity: "Uncatalogued", value: 0, habitat: "Mount Inferno & Deep Trench", bait: "Scientific Lure", weather: "Unknown", description: "Community-documented via G2A island fish guide (Aug 24, 2026). Stats pending in-game verification.", status: "cross-checked" },
-  { id: "rock-crab", name: "Rock Crab", rarity: "Uncatalogued", value: 0, habitat: "Starter Island (Lighthouse)", bait: "Free Lure", weather: "Unknown", description: "Single-source via G2A island guide (Free Lure). IGN instead lists Hot Dog bait, $7 on Island 1 — bait conflict unresolved, value not adopted. Pending in-game verification.", status: "community" },
-];
+function locationName(slug: string): string {
+  const loc = LOCATION_BY_SLUG[slug];
+  if (!loc) throw new Error(`Unknown location slug: ${slug}`);
+  return loc.name.replace(' — ', ' (') + (loc.name.includes(' — ') ? ')' : '');
+}
 
-export const BOSSES_DATABASE: BossInfo[] = [
-  {
-    id: "spider-crab",
-    name: "Giant Spider Crab",
-    location: "Starter Lighthouse Reef",
-    summonBait: "Empty Beer Can (Rage Bait)",
-    hp: "800 HP",
-    weakness: "Soft Belly (when flipped)",
-    keyRewards: ["Boat Key Part #1", "200 Gold", "Spider Crab Shell Shield (10% drop)"],
-    strategy: [
-      "Buy beer from the tavern NPC and give it to the beach drunk to get an Empty Beer Can.",
-      "Cast the empty beer can into the bubbling tidepool near the lighthouse to anger the Spider Crab.",
-      "Dodge sideways when it charges; it will crash into rocks and stun itself for 6 seconds.",
-      "Equip your sharpened Knife or Brass Knuckles and attack the glowing joint plates."
-    ]
-  },
+function lureNames(slugs: string[]): string {
+  const names = slugs.map((s) => {
+    const lure = LURE_BY_SLUG[s];
+    if (!lure) throw new Error(`Unknown lure slug: ${s}`);
+    return lure.name;
+  });
+  return names.join(' / ');
+}
 
+export const FISH_DATABASE: FishItem[] = FISH.map((f) => ({
+  id: f.slug,
+  name: f.name,
+  island: locationName(f.facts.locationSlug),
+  bait: lureNames(f.facts.lureSlugs),
+  value: f.facts.sellValueUsd ?? 0,
+  valueDocumented: f.facts.sellValueUsd !== undefined,
+  note: f.provenance.note,
+}));
 
+export const BOSSES_DATABASE: BossInfo[] = BOSSES.map((b) => ({
+  id: b.slug,
+  name: b.name,
+  location: locationName(b.facts.locationSlug),
+  summonBait: b.facts.summon,
+  unlocks: b.facts.unlocks ?? '—',
+  note: [b.facts.notes, b.provenance.note].filter(Boolean).join(' ') || '',
+}));
 
-  {
-    id: "pufferfish",
-    name: "Colossal Spiky Pufferfish",
-    location: "Coral Maze Lagoon",
-    summonBait: "Hot Dog Feast Lure",
-    hp: "1,500 HP",
-    weakness: "Mouth & Dorsal Fin",
-    keyRewards: ["Boat Key Part #2", "500 Gold", "Pufferfish Trophy (25% drop)"],
-    strategy: [
-      "Position your boat near the coral arches to block its rolling charge attack.",
-      "When the boss inflates, take cover behind terrain to avoid the 360-degree spike barrage.",
-      "Hook its vulnerable dorsal fin while deflating to deal 3x critical stagger damage.",
-      "In co-op, have one player steer the boat while others focus gunfire/harpoons."
-    ]
-  },
-  {
-    id: "magma-whale",
-    name: "Volcanic Magma Whale (Final Boss)",
-    location: "Mount Inferno Crater Lake",
-    summonBait: "Volcano Core Baited Hook",
-    hp: "3,000 HP",
-    weakness: "Blowhole (during surface)",
-    keyRewards: ["Boat Key Part #3", "Legendary Volcanic Rod", "1,500 Gold"],
-    strategy: [
-      "Navigate boat up the lava river canal to the crater summit.",
-      "Avoid lava projectiles by constantly moving; do not stay stationary in the boat.",
-      "When the Magma Whale breaches, shoot water containers or frost lures to solidify its armor.",
-      "For the secret achievement, land the final finishing blow with your bare fists!"
-    ]
-  },
-  {
-    id: "giant-piranha",
-    name: "Giant Piranha (Second Boss)",
-    location: "Island 2 Lake",
-    summonBait: "Modified Leech (Quest Item)",
-    hp: "1,200 HP",
-    weakness: "Mouth (jump recovery)",
-    keyRewards: ["Giant Piranha Skeleton", "Island 3 Coordinates", "1,500 Cash"],
-    strategy: [
-      "Collect three ground-spawned Leeches on Island 2 and hand them to the lady by the lake for the Modified Leech.",
-      "Equip the Modified Leech as bait and cast only when healing items and ammo are ready.",
-      "Sidestep its leap attack instead of backing away, then punish the landing recovery.",
-      "Clear just enough small piranhas to open a firing lane, then focus the boss before its escape bar refills."
-    ]
-  },
-  {
-    id: "albatross",
-    name: "Albatross (Terrorizing Bird)",
-    location: "Island 4 Skies",
-    summonBait: "Fresh Tuna Carcass",
-    hp: "2,200 HP",
-    weakness: "Wing joints (post-dive)",
-    keyRewards: ["Albatross Head", "Terrorizing Bird Achievement", "Sky Compass"],
-    strategy: [
-      "Finish the Pufferfish hand-in first, then reach Island 4 and buy the Professional Boss Lure.",
-      "Catch a Tuna with the lure, defeat it, and drop the carcass on open ground as bait.",
-      "Stay in open sightlines and keep strafing sideways — the bird commits to each dive pass.",
-      "Fire during the post-dive recovery window; never stand still under its shadow."
-    ]
-  }
-];
+/** Verified lure price list for the /lures/ page. */
+export const LURE_DATABASE = LURES.map((l) => ({
+  id: l.slug,
+  name: l.name,
+  price: l.facts.priceUsd,
+  priceDocumented: l.facts.priceUsd !== undefined,
+  obtained: l.facts.obtained ?? '',
+  note: l.facts.notes ?? '',
+}));

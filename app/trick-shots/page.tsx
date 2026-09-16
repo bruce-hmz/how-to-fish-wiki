@@ -41,7 +41,7 @@ export default function TrickShotsPage() {
       <FaqJsonLd faqs={faqs} />
       <Breadcrumb items={[{ name: 'Trick Shots', href: '/trick-shots/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Trick Shots &amp; Killscore Multipliers</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 27, 2026 · Game version 1.0.9 · Values cross-checked against community documentation</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12 · Values cross-checked against community documentation</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6">
         <h2 className="text-xl font-bold text-white">What Killscore Changes</h2>
@@ -77,9 +77,9 @@ export default function TrickShotsPage() {
 
         <h2 className="text-xl font-bold text-white">Worked Payout Examples</h2>
         <ul className="list-disc pl-5 space-y-2 text-xs">
-          <li><strong className="text-white">$18 Striped Bass</strong> killed with 360 + Headshot + Last Bullet: 18 × 1.5 × 1.25 × 1.25 ≈ <strong>$42</strong>.</li>
-          <li><strong className="text-white">$450 Golden Tuna</strong>, same combo: ≈ <strong>$1,054</strong>.</li>
-          <li>Add a full 1.5x cook on top of that Tuna: ≈ <strong>$1,581</strong> for one frame-perfect fish.</li>
+          <li><strong className="text-white">$18 Triggerfish</strong> killed with 360 + Headshot + Last Bullet: 18 × 1.5 × 1.25 × 1.25 ≈ <strong>$42</strong>.</li>
+          <li><strong className="text-white">$350 Parrotfish</strong>, same combo: ≈ <strong>$820</strong>.</li>
+          <li>Add a full 1.5x cook on top of that Parrotfish: ≈ <strong>$1,230</strong> for one frame-perfect fish.</li>
         </ul>
         <p className="text-[11px] text-gray-500">Arithmetic uses the documented factor table above; underlying sell prices come from our fish database. Treat edge-case rounding in-game as authoritative.</p>
 

@@ -40,7 +40,7 @@ export default function RareVariantsPage() {
       />
       <Breadcrumb items={[{ name: 'Fish Database', href: '/fish/' }, { name: 'Rare Variants', href: '/creatures/rare-variants/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Rare Fish Variants in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 29, 2026 · Game version 1.0.10</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
 
       <div className="bg-gold/10 border border-gold/40 rounded-xl p-6 space-y-3">
         <p>
@@ -127,8 +127,8 @@ export default function RareVariantsPage() {
           <li><strong className="text-white">Learn the baseline first.</strong> Catch the normal version of each species until its look is boring — a variant is only recognizable against a known normal.</li>
           <li><strong className="text-white">Progress islands before grinding variants.</strong> New islands add new species pools, and every new species is another variant target — grinding Island 1 variants with starter gear burns hours for a shrinking payoff.</li>
           <li><strong className="text-white">Hold anything visually odd.</strong> Do not sell a strange-looking catch until you have checked your achievements and quest needs — several chains want unusual fish handed in, and a sold quest fish is a re-catch.</li>
-          <li><strong className="text-white">Vary bait and weather.</strong> Species tables tie fish to baits and weather windows, so rotating conditions is the only honest way to widen encounters while rates remain undocumented.</li>
-          <li><strong className="text-white">Log your own numbers.</strong> Note island, bait, weather, and sell price per variant — with nothing official published, your log is the only real data set you have.</li>
+          <li><strong className="text-white">Rotate lures.</strong> The fish you catch are determined by your equipped lure — so rotating lure tiers is the only honest way to widen encounters while variant rates remain undocumented.</li>
+          <li><strong className="text-white">Log your own numbers.</strong> Note island, lure, and sell price per variant — with nothing official published, your log is the only real data set you have.</li>
         </ol>
       </section>
 

@@ -44,49 +44,32 @@ export default function MultiplayerPage() {
 
         <h2 className="text-xl font-bold text-white">Crew Roles in Detail</h2>
         <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
-          <li><strong>The Captain</strong>: Steers the vessel, navigates currents, and maneuvers during boss attacks.</li>
-          <li><strong>The Angler</strong>: Uses specialized lures to hook the boss and maintain tension.</li>
-          <li><strong>The Fighter</strong>: Equips ranged weapons (Harpoon Gun, Rifle) to deal damage to bosses and dispatch aggressive fish that board the boat. The Fighter also manages subduing reeled-in catches with the Knife.</li>
-          <li><strong>The Engineer</strong>: Monitors hull integrity, repairs damage mid-fight using the Repair Kit ($100 from dock shops), manages fuel levels, and operates the Sonar Radar to call out hazards. In boss fights, the Engineer patches hull breaches that would otherwise sink the boat.</li>
+          <li><strong>The Captain</strong>: Steers the vessel and maneuvers during boss attacks.</li>
+          <li><strong>The Angler</strong>: Uses the lure tiers to keep income flowing while others fight.</li>
+          <li><strong>The Fighter</strong>: Handles ranged weapons to deal damage to bosses and dispatch aggressive fish that board the boat — the community's documented picks live in the weapons guide.</li>
         </ul>
         <p>
           Roles are informal — any player can perform any action. But in boss fights especially, having dedicated roles prevents the chaos of everyone trying to steer or everyone fishing while the boat takes damage. Assign roles before engaging bosses.
         </p>
 
-        <h2 className="text-xl font-bold text-white">Boss HP Scaling Table</h2>
+        <h2 className="text-xl font-bold text-white">What We Do Not Print: Boss HP Scaling</h2>
         <p>
-          Boss health pools scale with the number of players present when the Rage Bait is cast. Players who join mid-fight do not change the scaling — it locks at the moment of summoning.
-        </p>
-        <div className="overflow-x-auto mt-4">
-          <table className="w-full text-left text-xs">
-            <thead className="bg-ocean-950 text-gray-400 border-b border-ocean-800">
-              <tr><th className="p-3">Boss</th><th className="p-3">1P (Base)</th><th className="p-3">2P (1.5x)</th><th className="p-3">3P (2x)</th><th className="p-3">4P (2.5x)</th></tr>
-            </thead>
-            <tbody className="divide-y divide-ocean-800/50">
-              <tr><td className="p-3 font-bold text-white">Spider Crab</td><td className="p-3">800</td><td className="p-3">1,200</td><td className="p-3">1,600</td><td className="p-3">2,000</td></tr>
-              <tr><td className="p-3 font-bold text-white">Pufferfish</td><td className="p-3">1,500</td><td className="p-3">2,250</td><td className="p-3">3,000</td><td className="p-3">3,750</td></tr>
-              <tr><td className="p-3 font-bold text-white">Magma Whale</td><td className="p-3">3,000</td><td className="p-3">4,500</td><td className="p-3">6,000</td><td className="p-3">7,500</td></tr>
-<tr><td className="p-3 font-bold text-white">Giant Piranha</td><td className="p-3">1,200</td><td className="p-3">1,800</td><td className="p-3">2,400</td><td className="p-3">3,000</td></tr>
-<tr><td className="p-3 font-bold text-white">Albatross</td><td className="p-3">2,200</td><td className="p-3">3,300</td><td className="p-3">4,400</td><td className="p-3">5,500</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2 className="text-xl font-bold text-white">Loot Sharing Rules</h2>
-        <p>
-          How to Fish uses a generous loot sharing system in co-op. Key quest items like Boat Key Parts are awarded to all players simultaneously — no fighting over drops. Gold rewards from boss kills and fish sales are split evenly among all crew members. However, rare cosmetic drops (weapon skins, boat skins, trophies) are rolled independently for each player, meaning everyone has their own chance at rare loot regardless of group size.
-        </p>
-        <p>
-          Fish caught during co-op belong to whichever player reeled them in. There is no steal mechanic — if one Angler hooks a fish, only they can reel and sell it. This prevents griefing but also means passive players earn less income.
+          Boss HP scaling numbers circulate online, but the developers have never published a scaling table,
+          and no guide database documents one — an earlier version of this page carried a per-player
+          multiplier table (1.5x/2x/2.5x) that was unsourced and has been removed. What is verifiable:
+          fights are tuned for crews (the official difficulty modes from 1.0.9 change creature health and
+          damage outright), and the{' '}
+          <Link href="/difficulty/" className="text-aqua hover:underline">difficulty guide</Link> is the
+          reliable lever when a fight stalls.
         </p>
 
-        <h2 className="text-xl font-bold text-white">Common Co-op Strategies</h2>
-        <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
-          <li><strong>Fish Farming Convoy</strong>: Two boats fishing side-by-side in a rich hotspot. One player uses Golden Minnow bait to attract legendary fish while others use standard bait. The legendary attraction aura benefits nearby boats within a 20-meter radius.</li>
-          <li><strong>Boss Rush Duo</strong>: The most efficient boss-farming composition. One Captain-Fighter, one Angler-Engineer. The Captain baits boss attacks while the Angler maintains hook tension for stagger damage multipliers.</li>
-          <li><strong>Full Crew Exploration</strong>: With 4 players, assign one as a dedicated Explorer who dives into underwater caves and secret locations while the rest fish from the boat. The Explorer can discover hidden merchants and treasure chests that surface players miss.</li>
-          <li><strong>Split Island Farming</strong>: In a 3–4 player crew, split across different islands to farm simultaneously. Fish and items can be traded between players by dropping items on shared boats at docks.</li>
-        </ul>
+        <h2 className="text-xl font-bold text-white">Loot &amp; Money Rules That Are Verified</h2>
+        <p>
+          Money is pooled: all gold lands in one shared crew wallet (see the FAQ below — there is no
+          separate-wallet option). Items and money do not carry over to other saves, but skins do
+          (community-tested, September 2026). The host&apos;s world save governs the session — world-state
+          changes like boss kills persist only on the host&apos;s save.
+        </p>
 
         <p className="text-xs text-gray-400 leading-relaxed border-l-2 border-aqua/40 pl-3">
           Playing completely alone instead? Our{' '}

@@ -10,7 +10,7 @@ export const metadata = {
 
 const faqs = [
   { q: 'Is the Casino worth it in How to Fish?', a: 'As an income strategy, no — the expected value of spins is below steady fishing and boss kills. As a skin and cosmetics shortcut, yes. Treat it as entertainment spending, not a money route.' },
-  { q: 'How does the gachapon machine work?', a: 'Bring a Drip Rock Crab — the glowing variant from secret tidepools — and insert it into the Casino Gachapon machine for a spin at exclusive skins. The machine consumes the crab either way.' },
+  { q: 'How does the gachapon machine work?', a: 'Bring a Drip creature — the glowing variant of a regular species, caught with the same lure as its normal version — and feed it into the Casino prize machine for a spin at exclusive skins. The machine consumes the creature either way.' },
   { q: 'Why is my slot machine skin invisible?', a: 'A 4K rendering bug made some slot-machine skins invisible. Patch 1.0.5 addressed it — if you still see it on the current build, verify game files and capture the result before re-spinning.' },
   { q: 'Is the roulette table rigged?', a: 'It was genuinely bugged, not just unlucky: patch 1.0.10 fixed roulette physics that let the ball clip through the wheel at high bet values. Landing green is clearly attainable — roughly 28% of players own the "All in" achievement for betting green and winning — but the developers have never published real odds, so treat long losing streaks as normal table variance.' },
   { q: 'The skin machine took my money but no prize appeared — is it bugged?', a: 'Two players reported exactly this on Reddit in late August: the drip machine consumed a spin and no weapon skin appeared. Before treating it as a bug, know that prize items drop into the world — since Patch 1.0.10, up to 64 ground-dropped items persist in your save, so reload your session and sweep around the machine before re-spinning. If the machine eats spins every single time on the fully updated build, capture it on video and treat it as a bug report, not bad luck.' },
@@ -67,12 +67,13 @@ export default function CasinoPage() {
           to stock before a session.
         </p>
 
-        <h2 className="text-xl font-bold text-white">The Gachapon Route (Drip Rock Crab)</h2>
+        <h2 className="text-xl font-bold text-white">The Gachapon Route (Drip Creatures)</h2>
         <p>
-          The Gachapon machine has one special input: the <Link href="/fish/drip-fish/" className="text-aqua hover:underline">Drip Rock Crab</Link>, the
-          glowing blue variant found in secret tidepools during rain. Insert the crab, pull the lever, and
-          the machine dispenses an exclusive skin from its pool. The crab is consumed win or lose, so stock
-          several before a session — each rain window only yields a couple of spawns.
+          The prize machines take <strong>Drip creatures</strong> as input — glowing variants caught with the
+          same lure as their normal version (a{' '}
+          <Link href="/fish/drip-fish/" className="text-aqua hover:underline">Drip guide</Link> covers the
+          known variants and hunting techniques). Feed one in, and the machine dispenses an exclusive skin
+          from its pool. The creature is consumed win or lose, so stock several before a session.
         </p>
 
         <h2 className="text-xl font-bold text-white">Are the Odds Published?</h2>

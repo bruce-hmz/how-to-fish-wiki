@@ -42,7 +42,7 @@ export default function JoinFriendsPage() {
         dateModified="2026-09-04"
       />
       <h1 className="text-3xl font-extrabold text-white">Cannot Join Friends: Lobby &amp; Black Screen Fixes</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 4, 2026 · Game version 1.0.11</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
         <p className="font-bold text-white text-sm">The three fixes that clear most cases:</p>

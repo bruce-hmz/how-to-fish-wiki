@@ -3,128 +3,133 @@ import Sources from '@/components/Sources';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Volcanic Magma Whale Final Boss Strategy',
-  description: 'Beat the final Magma Whale boss in Mount Inferno crater. Phase strategy, community tactics, bare hand achievement, and the Legendary Volcanic Rod reward in How to Fish.',
+  title: 'Mutated Bowhead Whale — Final Boss Guide (How to Fish)',
+  description:
+    'The How to Fish final boss is the Mutated Bowhead Whale on the volcano island: Fish Bucket → Bowhead Whale → final fight. Community tactics, the 1.0.12 explosive fix, and the Handyman bare-hands achievement.',
   alternates: { canonical: 'https://howtofish101.com/bosses/magma-whale/' },
 };
 
-export default function MagmaWhalePage() {
+export default function FinalBossPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
-      <Breadcrumb items={[{ name: 'Boss Battles', href: '/bosses/' }, { name: 'Magma Whale', href: '/bosses/magma-whale/' }]} />
-      <h1 className="text-3xl font-extrabold text-white">Volcanic Magma Whale (Final Boss)</h1>
+      <Breadcrumb items={[{ name: 'Boss Battles', href: '/bosses/' }, { name: 'Mutated Bowhead Whale', href: '/bosses/magma-whale/' }]} />
+      <h1 className="text-3xl font-extrabold text-white">Mutated Bowhead Whale (Final Boss)</h1>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+
+      <div className="bg-gold/10 border border-gold/40 rounded-xl p-6 space-y-3">
+        <p className="font-bold text-white text-sm">Name correction (September 2026 audit)</p>
+        <p className="text-xs text-gray-300 leading-relaxed">
+          This guide was previously titled &ldquo;Volcanic Magma Whale.&rdquo; That name appears in no
+          external source. Two independent guide databases (G2A, Mobalytics) name the final boss the{' '}
+          <strong className="text-white">Mutated Bowhead Whale</strong>, summoned by using a{' '}
+          <strong className="text-white">Bowhead Whale</strong> as bait; players on Steam just call it
+          &ldquo;the whale&rdquo; or &ldquo;the last boss.&rdquo; The URL stays the same so existing links
+          keep working.
+        </p>
+      </div>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-ocean-950 p-4 rounded-lg text-xs">
-          <div><span className="text-gray-400">Location:</span> <strong className="text-white block">Deep Volcanic Trench</strong></div>
-          <div><span className="text-gray-400">HP Pool:</span> <strong className="text-coral-light block">3,000 HP</strong></div>
-          <div><span className="text-gray-400">Summon Bait:</span> <strong className="text-gold block">Volcano Core</strong></div>
-          <div><span className="text-gray-400">Key Weakness:</span> <strong className="text-aqua block">Blowhole (during surface)</strong></div>
+          <div><span className="text-gray-400">Location:</span> <strong className="text-white block">Island 5 — Volcano</strong></div>
+          <div><span className="text-gray-400">Summon bait:</span> <strong className="text-gold block">A Bowhead Whale</strong></div>
+          <div><span className="text-gray-400">Unlocks:</span> <strong className="text-aqua block">Game completion</strong></div>
+          <div><span className="text-gray-400">HP:</span> <strong className="text-white block">Undocumented</strong></div>
         </div>
-        <p className="text-[11px] text-gray-500 -mt-4">
-          HP and damage figures are community-tested and can shift between patches — the Magma Whale was explicitly
-          nerfed in <Link href="/updates/" className="text-gray-400 hover:text-aqua underline underline-offset-2">Patch 1.0.4</Link>.
-        </p>
 
         <div className="bg-aqua/10 border border-aqua/40 rounded-xl p-5 space-y-2">
-          <p className="font-bold text-white text-sm">✅ Patch 1.0.12 made explosives reliable in every phase (September 4, 2026)</p>
+          <p className="font-bold text-white text-sm">✅ Patch 1.0.12 made explosives reliable (September 4, 2026)</p>
           <p className="text-xs leading-relaxed">
             Before this patch, players found that dynamite stopped working in the later phases: <em>&ldquo;phase 1 dynamite works,
             phase 2 takes no damage — is this intentional or a bug?&rdquo;</em> It was a bug. The official 1.0.12 notes fix exactly
             that: <strong className="text-white">&ldquo;Final boss should now take damage from explosives even when landing on its
-            tail.&rdquo;</strong> In practice, the whale&rsquo;s body used to sit on your planted dynamite without triggering it — so if
+            tail.&rdquo;</strong> In practice, the whale&apos;s body used to sit on your planted dynamite without triggering it — so if
             you saw &ldquo;explosive immunity&rdquo; in older clips or guides, that was the bug, not a mechanic. Stacked dynamite is now a
-            dependable damage source throughout all three phases. Full notes in our{' '}
+            dependable damage source throughout the fight. Full notes in our{' '}
             <Link href="/updates/" className="text-aqua hover:underline">patch history</Link>.
           </p>
         </div>
-      </div>
 
-      <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
-        <h2 className="text-xl font-bold text-white">Accessing the Deep Volcanic Trench</h2>
+        <h2 className="text-xl font-bold text-white">The Chain to the Final Fight</h2>
         <p>
-          The Magma Whale resides in the Deep Volcanic Trench beneath Mount Inferno Caldera. To reach it, you must first upgrade your boat with <strong>Heat-Shielded Titanium Hull ($2,000)</strong> — without it, your boat takes continuous fire damage in the lava canal and sinks within 30 seconds. Navigate through the lava canal from the south side of Mount Inferno, following the obsidian rock markers. The trench entrance is a massive underwater cavern at coordinates (X: 890, Y: -420).
-        </p>
-        <p>
-          The <strong>Volcano Core</strong> bait is crafted by combining 3 Obsidian Shards (mined from Mount Inferno rocks) with 1 Magma Eel (caught in the lava pools using Fireproof Lure). Cast the Volcano Core into the trench center to begin the fight.
-        </p>
-
-        <h2 className="text-xl font-bold text-white">Attack Patterns</h2>
-        <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
-          <li><strong>Magma Breath</strong>: The whale surfaces and exhales a 120-degree cone of molten rock across the water surface. The telegraph is a deep rumbling and orange glow from its blowhole 2 seconds before firing. Steer your boat perpendicular to its facing direction to escape the cone. Deals 60 damage per second to anything caught in the stream.</li>
-          <li><strong>Tail Slam</strong>: The whale pivots and slams its massive tail onto the water, creating a shockwave that travels outward in a ring. Jump the shockwave by timing a boat boost (press Shift) at the moment the ring reaches you, or take 40 damage and get pushed back significantly.</li>
-          <li><strong>Dive Attack</strong>: The whale dives deep, disappearing for 5 seconds, then erupts directly beneath your boat. Watch for rising bubbles — they mark the eruption point. Move away from the bubble column immediately. A direct hit deals 80 damage and can flip your boat, requiring a 3-second recovery.</li>
-        </ul>
-
-        <h2 className="text-xl font-bold text-white">Phase Breakdown</h2>
-        <p>
-          <strong>Phase 1 (100%–60% HP)</strong>: The whale alternates between Magma Breath and Tail Slam with generous recovery windows between attacks. Focus on hitting the blowhole with harpoon shots when it surfaces to breathe — blowhole hits deal 2x damage. Keep your boat moving in wide circles around the arena to maintain distance.
-        </p>
-        <p>
-          <strong>Phase 2 (60%–30% HP)</strong>: The whale submerges and begins using Dive Attacks mixed with surface Magma Breath combos. The arena also begins filling with floating lava rocks that damage your boat on contact. Navigate carefully between rocks while watching for dive bubbles. During this phase, the whale surfaces less frequently, so every blowhole window is critical. Use the Titanium Harpoon for maximum damage during brief surface moments.
-        </p>
-        <p>
-          <strong>Phase 3 (30%–0% HP)</strong>: The whale enters a frenzy, chaining all three attacks rapidly with minimal downtime. Lava geysers erupt randomly across the arena floor, creating additional hazards. The key to Phase 3 is patience — do not overcommit to damage windows. Wait for the post-Dive Attack stun when the whale lies on the surface for 4 seconds. This is your only safe damage window in the final phase. Two or three stun cycles should finish it off.
+          The final boss sits at the end of a two-step bait chain on the volcano island: use the{' '}
+          <strong>Fish Bucket</strong> quest item to summon the regular <strong>Bowhead Whale</strong>, defeat
+          it, then use the <strong>Bowhead Whale itself as bait</strong> — that summons the Mutated Bowhead
+          Whale. (Community shorthand from a real thread: the regular, non-mutated bowhead &ldquo;just blows
+          up with dynamite&rdquo;; the mutated one is the fight that ends the game.) The parallel island-5
+          boss catch is the Goblin Shark on the Scientific Boss Lure.
         </p>
 
         <h2 className="text-xl font-bold text-white">Community Tactics &amp; What to Expect</h2>
         <p>
-          Nothing in the phase plan above went stale: the official{' '}
-          <Link href="/updates/" className="text-aqua hover:underline">1.0.12 notes</Link>{' '}
-          changed exactly one thing about this fight — explosives now damage the whale when it lands on its tail — and
-          touch nothing about attack patterns or harpoon windows. What the community adds is how the fight{' '}
-          <em>feels</em>. After one player called the final boss <em>&ldquo;an absolute chore and not fun at all&rdquo;</em>{' '}
+          After one player called the final boss <em>&ldquo;an absolute chore and not fun at all&rdquo;</em>{' '}
           where <em>&ldquo;spaghetti coding makes it completely RNG whether or not youre gonna win that fight,&rdquo;</em> the
           top reply was two words: <em>&ldquo;just keep moving!&rdquo;</em> Another finisher agrees —{' '}
-          <em>&ldquo;what i did was just move.... a LOT.&rdquo;</em> Constant motion is the whole game plan, and it matters
-          most in phases 2 and 3, where Dive Attacks and drifting lava rocks punish a boat that sits still.
+          <em>&ldquo;what i did was just move.... a LOT.&rdquo;</em> Constant motion is the whole game plan,
+          and it pairs with the 1.0.12 dynamite fix above: plant explosives, keep the boat moving, never sit
+          under the whale.
         </p>
         <p>
-          Two honest caveats to go with it. First, one post-1.0.12 player reports the whale is still instantly lethal on
-          landing despite the explosive fix — <em>&ldquo;HIS TAIL ACCIDENTALLY TOUCHED ME WHEN HE LANDED GUESS I DIE&rdquo;</em>{' '}
-          — so treat the Tail Slam and every landing as a get-out-of-the-way moment, not a 40-damage shrug; that instant
-          kill is a single community report we have not seen corroborated, but the cheap defense (never be under the
-          whale) costs you nothing. Second, dynamite is the other big lever: stacked dynamite is dependable damage in all
-          three phases since the 1.0.12 fix (see the callout above), and the same thread adds that the regular —
-          non-mutated — bowhead whale players run into on the water &ldquo;just blow[s] up with dynamite.&rdquo; We have not
-          documented that regular-whale encounter ourselves, so take that phrasing as the player&rsquo;s own.
+          One honest caveat: one post-1.0.12 player reports the whale is still instantly lethal on landing
+          despite the explosive fix — <em>&ldquo;HIS TAIL ACCIDENTALLY TOUCHED ME WHEN HE LANDED GUESS I
+          DIE&rdquo;</em> — so treat every landing as a get-out-of-the-way moment. That instant kill is a
+          single community report we have not seen corroborated, but the cheap defense (never be under the
+          whale) costs you nothing.
         </p>
 
         <h2 className="text-xl font-bold text-white">Bare Hands Achievement (Handyman)</h2>
         <p>
-          Whittle the whale down to 1% HP using your full arsenal, then unequip all weapons and land the killing blow with bare fists. This unlocks the{' '}
+          Kill the final boss with your bare fists to unlock the{' '}
           <Link href="/achievements/" className="text-aqua hover:underline"><strong>Handyman</strong></Link>{' '}
-          achievement — &quot;Defeat the final boss with your bare hands&quot; — earned by only 1.7% of players
-          worldwide. The bare-fist hit deals only 1 damage, so make sure the whale is at absolute minimum health
-          before attempting this. For the full weapon progression that gets you to this fight, see the{' '}
-          <Link href="/weapons/" className="text-aqua hover:underline">weapons guide</Link>.
+          achievement — officially described as &ldquo;Defeat the final boss with your bare hands,&rdquo;
+          earned by <strong>1.7%</strong> of players worldwide (Steam global stats). Patch 1.0.4 fixed it so
+          the achievement unlocks for everyone in the session, not just the finisher. The exact damage a
+          bare-fist hit deals is not documented — the practical route players describe is whittling the boss
+          down with your full arsenal first and landing the killing blow empty-handed.
         </p>
 
-        <h2 className="text-xl font-bold text-white">Rewards</h2>
-        <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
-          <li><strong>Boat Key Part #3</strong> (100%): The final engine component. Unlocks the Turbine Engine and access to the open ocean endgame zone.</li>
-          <li><strong>Legendary Volcanic Rod</strong> (100%): The strongest fishing rod in the game. Catches any fish instantly without reeling minigame. Glows orange with ember particles.</li>
-          <li><strong>1,500 Gold</strong> (100%): Enough to buy most remaining upgrades.</li>
-          <li><strong>Magma Whale Mount Skin</strong> (8%): Rare cosmetic that reskins your boat as a miniature lava whale.</li>
-          <li><strong>Inferno Crown</strong> (3%): Ultra-rare head cosmetic with fire particle effects.</li>
-        </ul>
+        <h2 className="text-xl font-bold text-white">What We Removed</h2>
+        <p className="text-xs text-gray-400 leading-relaxed">
+          An earlier version of this page carried a 3,000 HP pool, exact damage numbers per attack, phase
+          thresholds, map coordinates, a &ldquo;Heat-Shielded Titanium Hull ($2,000)&rdquo; requirement, a
+          &ldquo;Volcano Core&rdquo; craft recipe (3 Obsidian Shards + 1 Magma Eel), and a reward list
+          including a &ldquo;Legendary Volcanic Rod&rdquo; and two cosmetic drop rates. None of it was
+          sourced from any guide database, patch note, or player thread — it was removed in our September
+          2026 fact audit. The verified content above is what the sources actually support.
+        </p>
+
+        <div className="bg-ocean-950 border border-ocean-700 rounded-lg p-4 text-xs text-gray-400">
+          <strong className="text-gold">Stuck on this fight?</strong> Patch 1.0.9 added Easy Mode: creatures
+          have 25% less health and deal 50% less damage — the difficulty the community recommends for the
+          Handyman attempt while a run is still forgiving. Details in the{' '}
+          <Link href="/difficulty/" className="text-aqua hover:underline">difficulty guide</Link>.
+        </div>
 
         <Sources
           items={[
             {
-              label: 'Steam Community Achievements — How to Fish',
-              href: 'https://steamcommunity.com/stats/4001890/achievements',
-              note: 'Handyman global unlock rate (1.7%)',
+              label: 'G2A News: all fish, bosses, rods and bait by island',
+              href: 'https://www.g2a.com/news/features/guide/how-to-fish-all-fish-bosses-rods-and-bait-by-island/',
+              note: 'Fish Bucket → Bowhead Whale → Mutated Bowhead Whale final-boss chain',
             },
             {
-              label: 'How to Fish on Steam',
-              href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
-              note: 'Official game description and release info',
+              label: 'Mobalytics: How to Fish — All 49 Fish, Creatures and Lures',
+              href: 'https://mobalytics.gg/gamebase/guides/how-to-fish-all-fish-creatures-lures',
+              note: 'independent corroboration of the final-boss name and bait chain',
+            },
+            {
+              label: 'Steam Community Achievements — How to Fish',
+              href: 'https://steamcommunity.com/stats/4001890/achievements',
+              note: 'Handyman global unlock rate (1.7%) and official wording',
             },
             {
               label: 'Patch 1.0.12 official notes (Steam News, September 4, 2026)',
               href: 'https://store.steampowered.com/news/app/4001890/view/698774889153168485',
               note: 'source of the verbatim final-boss explosive-on-tail fix',
+            },
+            {
+              label: 'Patch 1.0.4 official notes (Steam)',
+              href: 'https://steamcommunity.com/games/4001890/announcements/detail/711158520539513916',
+              note: '"Magma Whale boss nerfed" — the final boss nerf; Handyman session-wide unlock fix',
             },
             {
               label: 'Steam Discussion: Whale Boss 2nd Phase Immune to Explosive Damage?',
@@ -134,7 +139,7 @@ export default function MagmaWhalePage() {
             {
               label: 'Steam Discussion: Last Boss is an absolute chore (September 13, 2026)',
               href: 'https://steamcommunity.com/app/4001890/discussions/0/564793766239599085/',
-              note: 'community "just keep moving" tactics and the chore/RNG expectation-setting quotes',
+              note: 'community "just keep moving" tactics, the chore/RNG expectation-setting quotes, and the regular-bowhead dynamite line',
             },
             {
               label: 'Steam Discussion: THE WHALE SHOULD NOT ONESHOT (September 10, 2026)',

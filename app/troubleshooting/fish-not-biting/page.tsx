@@ -40,7 +40,7 @@ export default function FishNotBitingPage() {
       />
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Fish Not Biting', href: '/troubleshooting/fish-not-biting/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Fish Not Biting in How to Fish? Here&rsquo;s the Fix</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 28, 2026 · Game version 1.0.10</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3">
         <p>

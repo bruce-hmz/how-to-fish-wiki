@@ -41,11 +41,11 @@ export default function CookedWeaponsPage() {
       />
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Cooked Weapons', href: '/troubleshooting/cooked-weapons/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Un-Cook a Weapon in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 28, 2026 · Game version 1.0.10</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3">
         <p>
-          How to Fish’s grills do not judge what you put on them. Leave a gun next to the sizzle, drag it up Mount Inferno, or drop it in lava and the game will char it like yesterday’s catch — complete with the burned model. Players keep discovering this the hard way on the volcano island, where simply carrying a weapon through the crater can leave it roasted.
+          How to Fish’s grills do not judge what you put on them. Leave a gun next to the sizzle, drag it up the volcano, or drop it in lava and the game will char it like yesterday’s catch — complete with the burned model. Players keep discovering this the hard way on the volcano island, where simply carrying a weapon through the crater can leave it roasted.
         </p>
         <p>
           The annoying part is not the look — a cooked weapon still shoots — it is that <strong className="text-white">skins can no longer be applied</strong>, so your cosmetics are stuck behind the char until you clear the burn state.
@@ -114,7 +114,7 @@ export default function CookedWeaponsPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-white">Keeping Your Gear Un-Toasted</h2>
         <ul className="list-disc pl-5 space-y-2 text-sm text-gray-300">
-          <li>Treat the <strong className="text-white">Mount Inferno climb</strong> as a hands-free section: leave spare guns on the boat and carry what you must.</li>
+          <li>Treat the <strong className="text-white">volcano island climb</strong> as a hands-free section: leave spare guns on the boat and carry what you must.</li>
           <li>Cooking food batches? Park weapons a healthy distance from the station first — the grill can’t tell dinner from defense.</li>
           <li>Now that water cleans gear, a dunk after a volcano run is cheap insurance — but prevention still beats swimming after your shotgun.</li>
           <li>The same Save → Main Menu → Quit discipline from the{' '}

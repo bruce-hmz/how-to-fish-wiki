@@ -40,7 +40,7 @@ export default function AudioDuplicationPage() {
       />
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Audio Duplication', href: '/troubleshooting/audio-duplication/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Duplicated, Crunchy or Robotic Sound in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 28, 2026 · Game version 1.0.10</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3">
         <p>

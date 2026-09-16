@@ -3,54 +3,61 @@ import Sources from '@/components/Sources';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'All Weapons & Attachments Guide',
+  title: 'Weapons Guide: What Is Verified (Knife, Shotgun, Dynamite)',
   description:
-    'Every How to Fish weapon — knife, harpoon gun, rifle, titanium harpoon, dynamite, bare fists. Unlock order, boss loadouts, and the Fully equipped achievement.',
+    'The verified How to Fish arsenal: the $45 knife, the $150 shotgun, dynamite and the own-explosives rule, attachments, and the Fully equipped achievement — plus the fabricated weapons we removed.',
   alternates: { canonical: 'https://howtofish101.com/weapons/' },
 };
 
-const weapons = [
+const verifiedWeapons = [
   {
     name: 'Bare Fists',
     type: 'Melee (default)',
     unlock: 'Available from the start',
-    damage: 'Very low per hit',
-    use: 'Emergency self-defense and the secret Handyman achievement',
+    use: 'Emergency self-defense and the Handyman achievement (kill the final boss bare-handed, 1.7% of players)',
+    source: 'Official achievements',
   },
   {
     name: 'Knife',
     type: 'Melee',
-    unlock: 'Starter loadout',
-    damage: 'Low, fast swing',
-    use: 'Subduing reeled-in catches and finishing staggered bosses at close range',
+    unlock: 'Island 1 shop — $45 (IGN + G2A agree)',
+    use: 'The recommended early weapon: subdues reeled-in catches and handles aggressive boarders in a few hits',
+    source: 'IGN, G2A',
   },
   {
-    name: 'Harpoon Gun',
+    name: 'Brass Knuckles',
+    type: 'Melee',
+    unlock: 'Early shop purchase (speedrun routes buy rod + knuckles + beer immediately)',
+    use: 'Starter upgrade over bare fists for punching catches',
+    source: 'Community speedrun thread',
+  },
+  {
+    name: 'Shotgun',
     type: 'Ranged',
-    unlock: 'Purchased after the first boat key ($200)',
-    damage: '45 per shot',
-    use: 'The workhorse ranged option for mid-game bosses and aggressive fish',
+    unlock: '$150 (Game8) — also the documented Old Pike hunting tool',
+    use: 'Community favorite for the piranha boss (max it first post-1.0.12) and the solo albatross kill',
+    source: 'Game8; Steam threads',
   },
   {
-    name: 'Rifle',
+    name: 'SMG',
     type: 'Ranged',
-    unlock: 'Late-game shop unlock',
-    damage: 'High per shot, slow reload',
-    use: 'Long-range burst damage during boss stagger windows',
+    unlock: 'Shop purchase (island/price undocumented)',
+    use: 'Repeatedly named the comfortable pick for the albatross fight',
+    source: 'Steam thread',
   },
   {
-    name: 'Titanium Harpoon',
-    type: 'Ranged (upgrade)',
-    unlock: 'Endgame upgrade of the Harpoon Gun',
-    damage: 'Highest sustained ranged DPS',
-    use: 'Deep Trench bosses and the Magma Whale finale',
+    name: 'Sniper rifle',
+    type: 'Ranged',
+    unlock: 'Shop purchase (island/price undocumented)',
+    use: 'Long-range tool for the casino hide-and-snipe albatross tactic and 360-no-scope practice',
+    source: 'Steam threads; achievement guides',
   },
   {
     name: 'Dynamite',
     type: 'Explosive (consumable)',
-    unlock: 'Sold at the Island 2 (Forest) item shop, ~$25 per stick',
-    damage: 'Area of effect, one-time use — the blast hits the thrower too',
-    use: "Clearing fish swarms and the Everyone's dream seagull achievement",
+    unlock: 'Shop purchase (price undocumented; ~$25 per stick is unconfirmed)',
+    use: 'Add clearout in the piranha fight; reliable final-boss damage since the 1.0.12 fix; the Everyone\'s dream seagull achievement',
+    source: 'Steam threads; patch notes',
   },
 ];
 
@@ -58,136 +65,71 @@ export default function WeaponsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Weapons', href: '/weapons/' }]} />
-      <h1 className="text-3xl font-extrabold text-white">All Weapons &amp; Attachments Guide</h1>
+      <h1 className="text-3xl font-extrabold text-white">Weapons Guide — Verified Only</h1>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <p>
-          Fishing rods bring in the money, but weapons keep you alive. How to Fish ships with a compact arsenal of
-          melee, ranged, and explosive tools, and each boss encounter in the archipelago is tuned around a specific
-          loadout. This page covers every weapon, when to buy it, and how to kit out a single gun for the{' '}
-          <strong className="text-white">Fully equipped</strong> achievement.
+          How to Fish ships melee, ranged, and explosive tools, and weapon skins are a whole collection
+          layer. This page lists only what sources actually document — the weapon itself, a price when one
+          was recorded, and the community&apos;s fight-specific picks. Damage values are not published by
+          the developers and are not listed at all.
         </p>
 
-        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Complete Weapon List</h2>
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">The Documented Arsenal</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead className="bg-ocean-950 text-gray-400 border-b border-ocean-800">
               <tr>
                 <th className="p-3">Weapon</th>
                 <th className="p-3">Type</th>
-                <th className="p-3">How to Unlock</th>
-                <th className="p-3">Damage Profile</th>
+                <th className="p-3">How to Get It</th>
                 <th className="p-3">Best Use</th>
+                <th className="p-3">Source</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-ocean-800/50">
-              {weapons.map((w) => (
+              {verifiedWeapons.map((w) => (
                 <tr key={w.name}>
                   <td className="p-3 font-bold text-white">{w.name}</td>
                   <td className="p-3">{w.type}</td>
                   <td className="p-3">{w.unlock}</td>
-                  <td className="p-3">{w.damage}</td>
                   <td className="p-3">{w.use}</td>
+                  <td className="p-3 text-gray-500">{w.source}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
 
-        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">What to Buy First</h2>
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Attachments Are Real</h2>
         <p>
-          Early gold is scarce, so the purchase order matters. Save for the <strong>Harpoon Gun ($200)</strong> as
-          your first major weapon purchase — it single-handedly makes the Spider Crab and Pufferfish fights
-          manageable by letting you deal damage from outside claw and spike range. Skip the Rifle until you have
-          already invested in a Deep-Sea Rod and Hull Armor Tier 1: without survivability you will not live long
-          enough to benefit from the higher per-shot damage. The Titanium Harpoon upgrade is a pure endgame purchase
-          and should only come after your boat can reliably reach the Deep Trench.
-        </p>
-        <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
-          <li>
-            <strong>1. Harpoon Gun</strong> — 45 damage per shot at range; carries you through every mid-game boss
-            fight.
-          </li>
-          <li>
-            <strong>2. Hull Armor Tier 1 ($350)</strong> — not a weapon, but it halves incoming spike and claw
-            damage so your weapons get more uptime.
-          </li>
-          <li>
-            <strong>3. Rifle</strong> — long-range burst for the dive-bomb and airborne boss phases where the
-            harpoon reload is too slow.
-          </li>
-          <li>
-            <strong>4. Titanium Harpoon</strong> — the final ranged upgrade; mandatory DPS for the{' '}
-            <Link href="/bosses/magma-whale/" className="text-aqua hover:underline">Magma Whale</Link> finale.
-          </li>
-        </ul>
-
-        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">
-          Fully Equipped Achievement: All Attachments on One Weapon
-        </h2>
-        <p>
-          The <Link href="/achievements/" className="text-aqua hover:underline">Fully equipped</Link> achievement
-          (49.8% of players) asks you to <strong>apply all attachments to a single weapon</strong> — not to own
-          every weapon in the game. Attachments unlock progressively at shops as you defeat bosses, and each one
-          must be installed on the same gun. The Harpoon Gun is the cheapest platform to complete: its scope,
-          reinforced line, and reel attachments are all purchasable by the time you clear the Pufferfish, so you can
-          unlock this mid-game instead of waiting for the endgame rifle attachments.
+          The <Link href="/achievements/" className="text-aqua hover:underline">Fully equipped</Link>{' '}
+          achievement (49.8% of players) asks you to apply all attachments to a single weapon, and the
+          official 1.0.11 patch notes prove the attachment economy: the iron sight was removed as a
+          purchasable (&ldquo;players only ever bought it by mistake&rdquo;), and downgrading from suppressor
+          to compensator was blocked. Scopes, suppressors, and compensators exist; the cheapest platform to
+          complete the achievement on is not documented.
         </p>
 
-        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Boss Loadout Cheatsheet</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
-            <thead className="bg-ocean-950 text-gray-400 border-b border-ocean-800">
-              <tr>
-                <th className="p-3">Boss</th>
-                <th className="p-3">Recommended Weapons</th>
-                <th className="p-3">Why It Works</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-ocean-800/50">
-              <tr>
-                <td className="p-3 font-bold text-white">
-                  <Link href="/bosses/spider-crab/" className="hover:text-aqua">Spider Crab</Link>
-                </td>
-                <td className="p-3">Knife + Harpoon Gun</td>
-                <td className="p-3">Harpoon the legs from range, knife the soft body during shell-slam staggers.</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-bold text-white">
-                  <Link href="/bosses/pufferfish/" className="hover:text-aqua">Pufferfish</Link>
-                </td>
-                <td className="p-3">Harpoon Gun + Knife</td>
-                <td className="p-3">Harpoon the mouth during dive-bomb stuns; knife the dorsal fin between spike waves.</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-bold text-white">
-                  <Link href="/bosses/giant-piranha/" className="hover:text-aqua">Giant Piranha</Link>
-                </td>
-                <td className="p-3">Harpoon Gun + Dynamite</td>
-                <td className="p-3">Dynamite clears the leech swarms; harpoon the boss during its escape-bar rests.</td>
-              </tr>
-              <tr>
-                <td className="p-3 font-bold text-white">
-                  <Link href="/bosses/magma-whale/" className="hover:text-aqua">Magma Whale</Link>
-                </td>
-                <td className="p-3">Titanium Harpoon + Rifle, then Bare Fists</td>
-                <td className="p-3">
-                  Burn the whale down with the Titanium Harpoon and Rifle, then finish at minimum HP with bare fists
-                  for the Handyman achievement.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">What We Removed</h2>
+        <p className="text-xs text-gray-400 leading-relaxed">
+          An earlier version of this page carried a &ldquo;Harpoon Gun ($200, 45 damage)&rdquo;, a
+          &ldquo;Titanium Harpoon&rdquo; endgame upgrade, a &ldquo;Rifle&rdquo; with a fixed loadout order,
+          Hull Armor purchases, and per-boss weapon prescriptions with damage math. None of it traced to a
+          guide database, patch note, or player thread — the real documented ranged meta is the
+          shotgun/SMG/sniper picks above. The fabricated entries were removed in our September 2026 fact
+          audit, not hedged.
+        </p>
 
         <p className="text-xs text-gray-400">
           For the bait side of the loadout equation, see the{' '}
-          <Link href="/lures/" className="text-aqua hover:underline">lures &amp; baits guide</Link>, and for
-          crew-based weapon role assignments check the{' '}
-          <Link href="/multiplayer/" className="text-aqua hover:underline">4-player co-op guide</Link>. One hazard loadouts skip too often: gear parked on a grill — or hauled through volcano heat — comes back <em>cooked</em>, which blocks skins until you clear the burn state (see the{' '}
-          <Link href="/troubleshooting/cooked-weapons/" className="text-aqua hover:underline">
-            cooked weapon rescue guide
-          </Link>
-          ).
+          <Link href="/lures/" className="text-aqua hover:underline">lures &amp; baits guide</Link>; for
+          crew weapon roles check the{' '}
+          <Link href="/multiplayer/" className="text-aqua hover:underline">co-op guide</Link>. One hazard
+          loadouts skip too often: gear parked on a grill comes back <em>cooked</em>, which blocks skins
+          until you clear the burn state (see the{' '}
+          <Link href="/troubleshooting/cooked-weapons/" className="text-aqua hover:underline">cooked weapon rescue guide</Link>).
         </p>
 
         <Sources
@@ -195,12 +137,27 @@ export default function WeaponsPage() {
             {
               label: 'Steam Community Achievements — How to Fish',
               href: 'https://steamcommunity.com/stats/4001890/achievements',
-              note: 'Fully equipped description and global unlock rate',
+              note: 'Fully equipped, Handyman, Everyone\'s dream descriptions and global unlock rates',
             },
             {
-              label: 'How to Fish on Steam',
-              href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
-              note: 'Official store page and game description',
+              label: 'IGN Wiki: How to Get the Boat Keys',
+              href: 'https://www.ign.com/wikis/how-to-fish/How_to_Get_the_Boat_Keys',
+              note: 'the $45 knife recommendation',
+            },
+            {
+              label: 'Game8: The Old Pike Boss Guide',
+              href: 'https://game8.co/games/How-to-Fish/archives/617342',
+              note: 'the $150 shotgun',
+            },
+            {
+              label: 'Steam Discussion: Boss health/timers',
+              href: 'https://steamcommunity.com/app/4001890/discussions/0/581680664978608620/',
+              note: 'SMG-for-albatross / shotgun-main community weapon picks',
+            },
+            {
+              label: 'Patch 1.0.11 official notes (Steam)',
+              href: 'https://store.steampowered.com/news/app/4001890/view/698774255287927884',
+              note: 'attachment-economy proof: iron sight removal, suppressor/compensator rule',
             },
           ]}
         />

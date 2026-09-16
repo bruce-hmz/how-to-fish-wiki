@@ -5,7 +5,7 @@ import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Frequently Asked Questions',
-  description: 'Straight answers about How to Fish: platforms, controllers, saves, game length, the endgame volcanic rod, PvP, modding, and offline play — each tied to deeper guides.',
+  description: 'Straight answers about How to Fish: platforms, controllers, saves, game length, the endgame, PvP, modding, and offline play — each tied to deeper guides.',
   alternates: { canonical: 'https://howtofish101.com/faq/' },
 };
 
@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: 'How many fish exist in the game?',
-    a: 'Community catalogs count 49 unique logbook entries across six rarity tiers, including Legendary species and Drip variants. Our fish database publishes species one at a time as their spawn conditions get verified.',
+    a: 'Community catalogs count 49 creatures: 38 regular species plus 11 boss-class catches, each with drip variants tracked separately in the logbook. Regular fish are determined by your equipped lure — our fish database lists every verified species, island, and lure pairing.',
     link: { href: '/fish/', label: 'fish database' },
   },
   {
@@ -31,8 +31,8 @@ const faqs = [
   },
   {
     q: 'Is there a max level cap?',
-    a: 'No official level-cap number has ever been published — pages quoting “level 50” are guessing. What is confirmed: the Legendary Volcanic Rod drops from the final boss fight rather than any level milestone, and combat difficulty is tuned through the Easy/Hard modes introduced in Patch 1.0.9.',
-    link: { href: '/bosses/magma-whale/', label: 'Magma Whale rewards' },
+    a: 'No official level-cap number has ever been published — pages quoting “level 50” are guessing, and the same goes for claimed endgame gear drops like a “Legendary Volcanic Rod”: no source documents one. What is confirmed: combat difficulty is tuned through the Easy/Hard modes introduced in Patch 1.0.9, and the official endgame milestones are the achievements (finishing the game, the full logbook, the bare-hands final-boss kill).',
+    link: { href: '/achievements/', label: 'all 28 achievements' },
   },
   {
     q: 'Can you PvP against other players?',
@@ -80,7 +80,7 @@ export default function FAQPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6 text-sm text-gray-300">
       <Breadcrumb items={[{ name: 'FAQ', href: '/faq/' }]} />
       <h1 className="text-3xl font-bold text-white">Frequently Asked Questions</h1>
-      <p className="text-xs text-gray-500 -mt-2">Answers checked August 27, 2026 · Game version 1.0.9</p>
+      <p className="text-xs text-gray-500 -mt-2">Answers checked September 16, 2026 · Game version 1.0.12</p>
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-5">
         {faqs.map((item) => (
           <div key={item.q} className="border-b border-ocean-800 pb-4 last:border-0 last:pb-0">

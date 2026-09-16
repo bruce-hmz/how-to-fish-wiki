@@ -12,8 +12,7 @@ export const metadata = {
 const faqs = [
   { q: 'How do I spawn the Giant Piranha in How to Fish?', a: 'Collect three Leeches from the ground on Island 2, hand all three to the lady by the lake, and she gives you a Modified Leech. Equip it as bait and cast into the lake to start the fight.' },
   { q: 'Where do Leeches spawn on Island 2?', a: 'Leeches are ground pickups in the tall grass inland on Island 2 — not fishing catches and not at the waterline. Look for dark, wriggling spots away from the shore; you need exactly three for the quest. Our leech guide covers the radar red-dot trick and the fixes when none spawn.' },
-  { q: 'What do I get for beating the Giant Piranha?', a: 'The Giant Piranha Skeleton is the key drop. Carry it back to the quest NPC to receive the Island 3 coordinates, plus about 1,500 cash from the hand-in.' },
-  { q: 'Why does the Giant Piranha escape my fight?', a: 'The boss has an escape bar that refills while it is ignored. If you spend too long clearing the small piranha adds, the boss breaks away and you must re-cast the Modified Leech. Clear only enough adds to open a firing lane.' },
+  { q: 'What do I get for beating the Giant Piranha?', a: 'The Giant Piranha Skeleton is the key drop. Carry it back to the quest NPC to unlock Island 3.' },
 ];
 
 export default function GiantPiranhaPage() {
@@ -21,19 +20,16 @@ export default function GiantPiranhaPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <FaqJsonLd faqs={faqs} />
       <Breadcrumb items={[{ name: 'Boss Battles', href: '/bosses/' }, { name: 'Giant Piranha', href: '/bosses/giant-piranha/' }]} />
-      <h1 className="text-3xl font-extrabold text-white">Giant Piranha Boss Fight (Second Boss)</h1>
+      <h1 className="text-3xl font-extrabold text-white">Giant Piranha Boss Fight (Island 2 Gate)</h1>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12 (rebalanced — see notice below)</p>
+
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-ocean-950 p-4 rounded-lg text-xs">
-          <div><span className="text-gray-400">Location:</span> <strong className="text-white block">Island 2 Lake</strong></div>
-          <div><span className="text-gray-400">HP Pool:</span> <strong className="text-coral-light block">1,200 HP</strong></div>
-          <div><span className="text-gray-400">Required Bait:</span> <strong className="text-gold block">Modified Leech</strong></div>
-          <div><span className="text-gray-400">Key Weakness:</span> <strong className="text-aqua block">Mouth (jump recovery)</strong></div>
+          <div><span className="text-gray-400">Location:</span> <strong className="text-white block">Island 2 — the lake</strong></div>
+          <div><span className="text-gray-400">Required bait:</span> <strong className="text-gold block">Modified Leech</strong></div>
+          <div><span className="text-gray-400">Unlocks:</span> <strong className="text-aqua block">Island 3 (skeleton hand-in)</strong></div>
+          <div><span className="text-gray-400">HP:</span> <strong className="text-white block">Undocumented</strong></div>
         </div>
-        <p className="text-[11px] text-gray-500">
-          HP and damage figures are community-tested and can shift between patches — see the{' '}
-          <Link href="/updates/" className="text-gray-400 hover:text-aqua underline underline-offset-2">official patch notes history</Link>{' '}
-          for balance changes.
-        </p>
 
         <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
           <p className="font-bold text-white text-sm">⚠️ Patch 1.0.12 rebalanced this fight (September 4, 2026)</p>
@@ -42,8 +38,7 @@ export default function GiantPiranhaPage() {
             post-patch Steam thread reports the fight got harder, not easier: <em>&ldquo;after todays balancing patch, we cant beat
             him. Up to 4 friends, we run out of time, every time.&rdquo;</em> What worked for that crew, straight from the same thread:
             max out the shotgun first, <strong className="text-white">eat the small piranhas</strong> to keep food and health up
-            mid-fight, and spend dynamite on the swarm adds so your shots stay on the boss. The strategy below still describes the
-            fight&rsquo;s mechanics — treat the HP figures as pre-patch numbers until more post-1.0.12 reports come in.
+            mid-fight, and spend dynamite on the swarm adds so your shots stay on the boss.
           </p>
         </div>
 
@@ -51,55 +46,34 @@ export default function GiantPiranhaPage() {
         <p>
           Unlike the Spider Crab, the Giant Piranha is gated behind a quest chain rather than a shop lure. On
           Island 2, the lady by the lake asks for Leeches. These are <strong>ground pickups</strong>, not catches —
-          search the tall grass inland — away from the shoreline — for dark, wriggling spawns. You need
+          search the tall grass inland, away from the shoreline, for dark, wriggling spawns. You need
           exactly three. Hand them all in and she returns a <strong>Modified Leech</strong>, the only bait that
           triggers the encounter. Cast it into the lake and the water erupts.
         </p>
         <p className="text-xs text-gray-400 border-l-2 border-gold/60 pl-3">
           Common mistake: searching the shoreline. Leeches spawn in the grass inland (the Island 2 radar marks them with red dots). Also ignore older guides that say five Leeches. The quest counts 3/3 — extra pickups
-          are just sellable meat.
+          are just sellable meat. Full details in the <Link href="/guides/leeches/" className="text-aqua hover:underline">leech guide</Link>.
         </p>
 
-        <h2 className="text-xl font-bold text-white">Phase 1: Leap Attacks &amp; Piranha Swarms</h2>
+        <h2 className="text-xl font-bold text-white">Fighting It: What Is Actually Documented</h2>
         <p>
-          The Giant Piranha spends Phase 1 circling the lake and launching itself at you in long leaps. The
-          telegraph is a half-second pause plus a splash — sidestep <em>sideways</em> at the splash instead of
-          backing up, because its leap distance covers retreat easily. Each missed leap leaves the boss
-          beached for about three seconds with its mouth gaping: that is your damage window. Meanwhile,
-          smaller piranhas spawn continuously and harass your legs.
-        </p>
-
-        <h2 className="text-xl font-bold text-white">Phase 2: The Escape Bar Race</h2>
-        <p>
-          Below 50% HP the boss stops committing to leaps and starts circling with an <strong>escape bar</strong>
-          filling above its head. If the bar refills completely, the Giant Piranha breaks away and you must
-          re-cast the Modified Leech to restart the fight (at full HP). The trap is over-farming the small
-          piranha adds — clear <em>just enough</em> to open a clean firing lane, then pour damage into the boss.
-          Hit-and-run tactics beat a defensive standoff here.
-        </p>
-
-        <h2 className="text-xl font-bold text-white">Recommended Gear Loadout</h2>
-        <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
-          <li><strong>Upgraded Firearm or Harpoon</strong>: Sustained ranged damage wins the escape-bar race. The knife alone is too slow in Phase 2.</li>
-          <li><strong>Healing Items x3+</strong>: Small piranha bites chip health fast. Do not start the fight on empty pockets.</li>
-          <li><strong>Medium Rod</strong>: Lets you yank small piranhas out of the water for quick cash between attempts.</li>
-          <li><strong>Ammo Reserve</strong>: Running dry mid-Phase 2 is the most common solo wipe.</li>
-        </ul>
-
-        <h2 className="text-xl font-bold text-white">Solo vs. Co-op Strategy</h2>
-        <p>
-          Solo: stay mobile, sidestep leaps, and burst the mouth window. In co-op the boss HP scales up to 2.5x
-          with four anglers — assign one player to add-control with a knife while the others focus fire the
-          boss. The escape bar drains with sustained damage, so overlapping fire from multiple players makes
-          Phase 2 much easier than solo.
+          The verified facts: small piranhas swarm you during the fight (eating them is both crowd control
+          and food, per the post-1.0.12 thread), the shotgun is the community&apos;s weapon of choice, and
+          dynamite on the adds keeps your ammunition on the boss. This fight is also the &ldquo;mini-boss&rdquo;
+          tier the game&apos;s <em>Competitive eating</em> achievement winks at. What is <strong>not</strong>{' '}
+          documented anywhere reliable: the boss&apos;s HP, its damage values, phase thresholds, or the
+          &ldquo;escape bar&rdquo; behavior an earlier version of this page described — those specifics were
+          unsigned and were removed in our September 2026 fact audit rather than hedged.
         </p>
 
         <h2 className="text-xl font-bold text-white">After the Fight: The Skeleton Matters</h2>
         <p>
           Keep the <strong>Giant Piranha Skeleton</strong> — do not sell it. Carrying it back to the quest NPC
-          completes the hand-in and unlocks the <Link href="/map/" className="text-aqua hover:underline">Island 3 coordinates</Link>.
+          completes the hand-in and unlocks the{' '}
+          <Link href="/map/" className="text-aqua hover:underline">Island 3 coordinates</Link>.
           This is the only progression path forward, so a lost skeleton means re-fighting the boss. If you
-          died mid-hand-in, check our <Link href="/troubleshooting/items-disappeared/" className="text-aqua hover:underline">items disappeared guide</Link> before
+          died mid-hand-in, check our{' '}
+          <Link href="/troubleshooting/items-disappeared/" className="text-aqua hover:underline">items disappeared guide</Link> before
           saving over the loss.
         </p>
 
@@ -125,9 +99,14 @@ export default function GiantPiranhaPage() {
       <Sources
         items={[
           {
-            label: 'How to Fish on Steam',
-            href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
-            note: 'Official game info; fight phases verified in-game by our editors',
+            label: 'G2A News: all fish, bosses, rods and bait by island',
+            href: 'https://www.g2a.com/news/features/guide/how-to-fish-all-fish-bosses-rods-and-bait-by-island/',
+            note: 'Modified Leech quest chain and skeleton hand-in',
+          },
+          {
+            label: 'Mobalytics: How to Fish — All 49 Fish, Creatures and Lures',
+            href: 'https://mobalytics.gg/gamebase/guides/how-to-fish-all-fish-creatures-lures',
+            note: 'independent corroboration of the quest-bait structure',
           },
           {
             label: 'Patch 1.0.12 official notes (Steam News, September 4, 2026)',

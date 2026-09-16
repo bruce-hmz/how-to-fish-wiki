@@ -2,33 +2,37 @@
 import { useMemo, useState } from 'react';
 import { FISH_DATABASE, FishItem } from '@/lib/data';
 
-const RARITY_RANK: Record<FishItem['rarity'], number> = {
-  Common: 1,
-  Uncommon: 2,
-  Rare: 3,
-  Epic: 4,
-  Legendary: 5,
-  Drip: 6,
-  Uncatalogued: 7,
-};
+type SortKey = 'default' | 'name' | 'value' | 'island';
 
-type SortKey = 'default' | 'name' | 'value' | 'rarity';
+const ISLAND_ORDER: Record<string, number> = {
+  'Island 1 (Lighthouse)': 1,
+  'Island 2 (Forest)': 2,
+  'Island 3 (Desert)': 3,
+  'Island 4 (Sky)': 4,
+  'Island 5 (Volcano)': 5,
+  'Island 6 (Casino)': 6,
+};
 
 export default function FishTable() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [rarityFilter, setRarityFilter] = useState('All');
+  const [islandFilter, setIslandFilter] = useState('All');
   const [sortKey, setSortKey] = useState<SortKey>('default');
   const [sortAsc, setSortAsc] = useState(true);
 
+  const islands = useMemo(
+    () => ['All', ...Array.from(new Set(FISH_DATABASE.map((f) => f.island))).sort((a, b) => (ISLAND_ORDER[a] ?? 9) - (ISLAND_ORDER[b] ?? 9))],
+    []
+  );
+
   const filteredFish = useMemo(() => {
     const term = searchTerm.toLowerCase();
-    const filtered = FISH_DATABASE.filter(f => {
+    const filtered = FISH_DATABASE.filter((f) => {
       const matchesSearch =
         f.name.toLowerCase().includes(term) ||
-        f.habitat.toLowerCase().includes(term) ||
+        f.island.toLowerCase().includes(term) ||
         f.bait.toLowerCase().includes(term);
-      const matchesRarity = rarityFilter === 'All' || f.rarity === rarityFilter;
-      return matchesSearch && matchesRarity;
+      const matchesIsland = islandFilter === 'All' || f.island === islandFilter;
+      return matchesSearch && matchesIsland;
     });
     if (sortKey === 'default') return filtered;
     const sorted = [...filtered].sort((a, b) => {
@@ -37,16 +41,16 @@ export default function FishTable() {
           return a.name.localeCompare(b.name);
         case 'value':
           return a.value - b.value;
-        case 'rarity':
-          return RARITY_RANK[a.rarity] - RARITY_RANK[b.rarity];
+        case 'island':
+          return (ISLAND_ORDER[a.island] ?? 9) - (ISLAND_ORDER[b.island] ?? 9);
       }
     });
     return sortAsc ? sorted : sorted.reverse();
-  }, [searchTerm, rarityFilter, sortKey, sortAsc]);
+  }, [searchTerm, islandFilter, sortKey, sortAsc]);
 
   function toggleSort(key: Exclude<SortKey, 'default'>) {
     if (sortKey === key) {
-      setSortAsc(v => !v);
+      setSortAsc((v) => !v);
     } else {
       setSortKey(key);
       setSortAsc(true);
@@ -56,31 +60,28 @@ export default function FishTable() {
   const sortIndicator = (key: Exclude<SortKey, 'default'>) =>
     sortKey === key ? (sortAsc ? ' ▲' : ' ▼') : '';
 
-  const getRarityBadge = (rarity: FishItem['rarity']) => {
-    switch (rarity) {
-      case 'Common': return 'bg-gray-700 text-gray-200 border-gray-600';
-      case 'Uncommon': return 'bg-emerald-950 text-emerald-300 border-emerald-700';
-      case 'Rare': return 'bg-blue-950 text-blue-300 border-blue-700';
-      case 'Epic': return 'bg-purple-950 text-purple-300 border-purple-700';
-      case 'Legendary': return 'bg-amber-950 text-amber-300 border-amber-700';
-      case 'Drip': return 'bg-cyan-950 text-cyan-300 border-cyan-500 animate-pulse';
-      case 'Uncatalogued': return 'bg-ocean-950 text-gray-300 border-dashed border-ocean-600';
-    }
-  };
   return (
     <div className="bg-ocean-900/90 border border-ocean-800 rounded-xl p-6 shadow-xl">
       <div className="flex flex-col sm:flex-row gap-4 mb-6 justify-between items-center">
         <input
           type="text"
-          placeholder="Search fish name, habitat, or bait..."
+          placeholder="Search fish, island, or lure..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full sm:w-80 bg-ocean-950 border border-ocean-700 text-white rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-aqua"
         />
         <div className="flex items-center space-x-2 w-full sm:w-auto overflow-x-auto pb-2 sm:pb-0">
-          {['All', 'Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Drip', 'Uncatalogued'].map((r) => (
-            <button key={r} onClick={() => setRarityFilter(r)} className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${rarityFilter === r ? 'bg-aqua text-ocean-950' : 'bg-ocean-950 text-gray-400 hover:text-white border border-ocean-800'}`}>
-              {r}
+          {islands.map((r) => (
+            <button
+              key={r}
+              onClick={() => setIslandFilter(r)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
+                islandFilter === r
+                  ? 'bg-aqua text-ocean-950'
+                  : 'bg-ocean-950 text-gray-400 hover:text-white border border-ocean-800'
+              }`}
+            >
+              {r === 'All' ? 'All islands' : r}
             </button>
           ))}
         </div>
@@ -90,42 +91,77 @@ export default function FishTable() {
           <thead className="bg-ocean-950/80 text-xs text-gray-400 uppercase border-b border-ocean-800">
             <tr>
               <th className="px-4 py-3">
-                <button onClick={() => toggleSort('name')} className="uppercase tracking-wide hover:text-white transition-colors" aria-sort={sortKey === 'name' ? (sortAsc ? 'ascending' : 'descending') : 'none'}>
+                <button
+                  onClick={() => toggleSort('name')}
+                  className="uppercase tracking-wide hover:text-white transition-colors"
+                  aria-sort={sortKey === 'name' ? (sortAsc ? 'ascending' : 'descending') : 'none'}
+                >
                   Fish Species{sortIndicator('name')}
                 </button>
               </th>
               <th className="px-4 py-3">
-                <button onClick={() => toggleSort('rarity')} className="uppercase tracking-wide hover:text-white transition-colors" aria-sort={sortKey === 'rarity' ? (sortAsc ? 'ascending' : 'descending') : 'none'}>
-                  Rarity{sortIndicator('rarity')}
+                <button
+                  onClick={() => toggleSort('island')}
+                  className="uppercase tracking-wide hover:text-white transition-colors"
+                  aria-sort={sortKey === 'island' ? (sortAsc ? 'ascending' : 'descending') : 'none'}
+                >
+                  Island{sortIndicator('island')}
                 </button>
               </th>
+              <th className="px-4 py-3">Lure / Bait</th>
               <th className="px-4 py-3">
-                <button onClick={() => toggleSort('value')} className="uppercase tracking-wide hover:text-white transition-colors" aria-sort={sortKey === 'value' ? (sortAsc ? 'ascending' : 'descending') : 'none'}>
+                <button
+                  onClick={() => toggleSort('value')}
+                  className="uppercase tracking-wide hover:text-white transition-colors"
+                  aria-sort={sortKey === 'value' ? (sortAsc ? 'ascending' : 'descending') : 'none'}
+                >
                   Sell Value{sortIndicator('value')}
                 </button>
               </th>
-              <th className="px-4 py-3">Habitat Location</th>
-              <th className="px-4 py-3">Preferred Bait</th>
-              <th className="px-4 py-3">Weather</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-ocean-800/60">
             {filteredFish.map((fish) => (
               <tr key={fish.id} className="hover:bg-ocean-850/60 transition-colors">
-                <td className="px-4 py-3.5 font-bold text-white flex items-center space-x-2"><span>🐟</span><span>{fish.name}</span></td>
-                <td className="px-4 py-3.5"><span className={`px-2 py-0.5 rounded text-xs border font-medium ${getRarityBadge(fish.rarity)}`}>{fish.rarity}</span></td>
-                <td className="px-4 py-3.5 font-semibold text-gold">{fish.value > 0 ? <>${fish.value}</> : <span className="text-gray-500">—</span>}{fish.status && fish.status !== 'verified' && <span className="ml-1 text-[10px] text-gray-500" title={fish.status === 'cross-checked' ? 'Confirmed by two independent community sources' : 'Single community source, pending in-game verification'}>~</span>}</td>
-                <td className="px-4 py-3.5 text-gray-300">{fish.habitat}</td>
+                <td className="px-4 py-3.5 font-bold text-white">
+                  <span className="flex items-center gap-2">
+                    <span>🐟</span>
+                    <span>
+                      {fish.name}
+                      {fish.note && (
+                        <span
+                          className="ml-1 text-[10px] text-gray-500 cursor-help"
+                          title={fish.note}
+                        >
+                          ⓘ
+                        </span>
+                      )}
+                    </span>
+                  </span>
+                </td>
+                <td className="px-4 py-3.5 text-gray-300">{fish.island}</td>
                 <td className="px-4 py-3.5 text-gray-300">{fish.bait}</td>
-                <td className="px-4 py-3.5 text-gray-400 text-xs">{fish.weather}</td>
+                <td className="px-4 py-3.5 font-semibold text-gold">
+                  {fish.valueDocumented ? (
+                    <>${fish.value}</>
+                  ) : (
+                    <span className="text-gray-500" title="No source has documented a sell value yet">
+                      undocumented
+                    </span>
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
       <p className="text-xs text-gray-500 mt-4 text-center">
-        Showing {filteredFish.length} of {FISH_DATABASE.length} documented marine species.
-        {sortKey !== 'default' ? ` Sorted by ${sortKey} (${sortAsc ? 'ascending' : 'descending'}).` : ' Click a column header to sort.'}
+        Showing {filteredFish.length} of {FISH_DATABASE.length} catalogued species. Boss-class catches (Old
+        Pike, Tuna, Goblin Shark, the whales) live in the{' '}
+        <a href="/bosses/" className="text-aqua hover:underline">
+          boss hub
+        </a>
+        .
       </p>
     </div>
   );

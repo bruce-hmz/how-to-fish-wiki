@@ -34,7 +34,7 @@ export default function DynamiteGuidePage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Weapons', href: '/weapons/' }, { name: 'Dynamite', href: '/guides/dynamite/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Use Dynamite in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 1, 2026 · Game version 1.0.10 · Acquisition details are guide-documented</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12 · Acquisition details are guide-documented</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p>
@@ -42,7 +42,10 @@ export default function DynamiteGuidePage() {
           aggressive swarms like the leeches that guard Island 2, and — with the right setup — turns a harmless seagull
           into the <Link href="/achievements/everyones-dream/" className="text-aqua hover:underline">Everyone’s dream achievement</Link>.
           It is also the fastest way in the game to kill yourself, your friends, and your own bait, so this page
-          covers the safety rules alongside the payoff.
+          covers the safety rules alongside the payoff. One patch-note update: since 1.0.12, stacked dynamite
+          is dependable damage against the final boss too — the official notes fixed explosives failing to
+          damage it &ldquo;even when landing on its tail&rdquo; (see the{' '}
+          <Link href="/bosses/magma-whale/" className="text-aqua hover:underline">final boss guide</Link>).
         </p>
       </div>
 

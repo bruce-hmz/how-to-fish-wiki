@@ -127,19 +127,20 @@ export default function DifficultyPage() {
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Boss Tips by Difficulty</h2>
         <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
           <li>
-            <strong>Easy</strong>: Boss health drops 25%, so burst windows matter less — you can win through
-            patience alone. The Pufferfish Phase 3 dive-bombs become survivable even without Hull Armor.
+            <strong>Easy</strong>: Boss health drops 25% and incoming damage halves, so you can win through
+            patience alone — this is also the difficulty the community recommends for the{' '}
+            <Link href="/achievements/" className="text-aqua hover:underline">bare-hands Handyman run</Link>.
           </li>
           <li>
-            <strong>Normal</strong>: Follow the loadout advice in each{' '}
-            <Link href="/bosses/" className="text-aqua hover:underline">boss guide</Link> — Hull Armor Tier 1 before
-            the Pufferfish, Heat-Shielded Hull before the Magma Whale.
+            <strong>Normal</strong>: Follow the summon chains and community tactics in each{' '}
+            <Link href="/bosses/" className="text-aqua hover:underline">boss guide</Link> — the difficulty
+            setting is often worth more than any gear purchase.
           </li>
           <li>
             <strong>Hard</strong>: +25% boss HP stretches every fight by roughly a quarter, so bring more cooked
-            fish than the guides suggest and never enter a finale without full engine upgrades. The{' '}
-            <Link href="/weapons/" className="text-aqua hover:underline">Titanium Harpoon</Link> stops being a
-            luxury.
+            food than the guides suggest and never enter a finale under-armed — the{' '}
+            <Link href="/weapons/" className="text-aqua hover:underline">weapons guide</Link> covers the
+            documented arsenal.
           </li>
         </ul>
 

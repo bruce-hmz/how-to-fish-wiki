@@ -5,16 +5,15 @@ import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Albatross Boss Guide: Tuna Bait Chain',
-  description: 'Spawn and beat the Albatross in How to Fish: catch the Tuna with a Professional Boss Lure on Island 4, bait the dive passes, and claim the Albatross Head.',
+  description: 'Spawn and beat the Albatross (terrorizing bird) in How to Fish: catch the Tuna with a Professional Boss Lure on Island 4, use it as bait, and defend the scared islanders.',
   alternates: { canonical: 'https://howtofish101.com/bosses/albatross/' },
 };
 
 const faqs = [
-  { q: 'How do I spawn the Albatross in How to Fish?', a: 'The Albatross is a two-stage chain on Island 4: first catch a Tuna using the Professional Boss Lure, then drop the fresh Tuna carcass on open ground as bait. The bird arrives from the air within seconds.' },
-  { q: 'Why is the Albatross not spawning for me?', a: 'The chain requires finishing the Pufferfish hand-in first. If the bird never comes, confirm your active quest log shows the Island 4 objective, use a fresh Tuna (not a stored one), and place the carcass in an open area away from buildings and trees.' },
-  { q: 'What is the terrorizing bird in How to Fish?', a: 'The terrorizing bird is the community nickname for the Albatross, the giant bird boss of Island 4. Defeating it grants the Terrorizing Bird achievement and the Albatross Head quest item.' },
-  { q: 'What do I do with the Albatross Head?', a: 'Keep it — it is a quest hand-in item, not a trophy. Delivering it to the next NPC advances the story route and rewards the Sky Compass, which marks the remaining flight-path secrets on your map.' },
-  { q: 'The Albatross soft-locked my game — how do I recover?', a: 'One player reported the fight soft-locking their save; the community fix circulating on Reddit is to open Saves/local.txt, Ctrl+F the albatross quest item, and remove or repair that entry. Treat this as a last resort — hand-editing save files risks corruption — and note that patches since 1.0.11 keep automatic save backups (see our save file guide) to fall back on. If the Head vanished rather than soft-locking, the items disappeared guide covers that case.' },
+  { q: 'How do I spawn the Albatross in How to Fish?', a: 'The Albatross is a two-stage chain on Island 4: first catch a Tuna using the Professional Boss Lure, then use the defeated Tuna as bait. The bird arrives from the air.' },
+  { q: 'Why is the Albatross not spawning for me?', a: 'Confirm you are on island 4 with the Professional Boss Lure (not the regular Professional Lure — the Tuna is a boss-class catch and needs the boss version), and that you have finished the earlier island gates. If the bird never comes, the usual cause is using a regular fish as bait instead of the Tuna.' },
+  { q: 'What is the terrorizing bird in How to Fish?', a: 'The terrorizing bird is the Albatross, the giant bird boss of Island 4. The official achievement wording is "Defend the scared islanders from the terrorizing bird" (Terrorizing bird, 42.8% of players).' },
+  { q: 'The Albatross soft-locked my game — how do I recover?', a: 'One player reported the fight soft-locking their save; the community fix circulating on Reddit is to open Saves/local.txt, Ctrl+F the albatross quest item, and remove or repair that entry. Treat this as a last resort — hand-editing save files risks corruption — and note that patches since 1.0.11 keep automatic save backups (see our save file guide) to fall back on. If a quest item vanished rather than soft-locking, the items disappeared guide covers that case.' },
 ];
 
 export default function AlbatrossPage() {
@@ -23,63 +22,24 @@ export default function AlbatrossPage() {
       <FaqJsonLd faqs={faqs} />
       <Breadcrumb items={[{ name: 'Boss Battles', href: '/bosses/' }, { name: 'Albatross', href: '/bosses/albatross/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Albatross Boss Fight (Terrorizing Bird)</h1>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-ocean-950 p-4 rounded-lg text-xs">
-          <div><span className="text-gray-400">Location:</span> <strong className="text-white block">Island 4 Skies</strong></div>
-          <div><span className="text-gray-400">HP Pool:</span> <strong className="text-coral-light block">2,200 HP</strong></div>
-          <div><span className="text-gray-400">Required Bait:</span> <strong className="text-gold block">Fresh Tuna Carcass</strong></div>
-          <div><span className="text-gray-400">Key Weakness:</span> <strong className="text-aqua block">Wing joints (post-dive)</strong></div>
+          <div><span className="text-gray-400">Location:</span> <strong className="text-white block">Island 4 (Sky)</strong></div>
+          <div><span className="text-gray-400">Required bait:</span> <strong className="text-gold block">A defeated Tuna</strong></div>
+          <div><span className="text-gray-400">Unlocks:</span> <strong className="text-aqua block">Route to Island 5 + achievement</strong></div>
+          <div><span className="text-gray-400">HP:</span> <strong className="text-white block">Undocumented</strong></div>
         </div>
-        <p className="text-[11px] text-gray-500">
-          HP and damage figures are community-tested and can shift between patches — see the{' '}
-          <Link href="/updates/" className="text-gray-400 hover:text-aqua underline underline-offset-2">official patch notes history</Link>{' '}
-          for balance changes.
-        </p>
 
-        <h2 className="text-xl font-bold text-white">Spawn Chain: Lure the Tuna, Bait the Bird</h2>
+        <h2 className="text-xl font-bold text-white">Spawn Chain: Catch the Tuna, Bait the Bird</h2>
         <p>
           The Albatross does not respond to a normal lure. The encounter is a two-stage chain on Island 4:
-          first buy the <strong>Professional Boss Lure</strong>, hook and defeat a <strong>Tuna</strong> with
-          it, then drop the fresh carcass on open ground. Seconds later the Albatross — the giant bird
-          players call the <em>terrorizing bird</em> — swoops in from the air. Finish the earlier Pufferfish
-          hand-in before attempting this chain, or the quest will not advance.
-        </p>
-        <p className="text-xs text-gray-400 border-l-2 border-gold/60 pl-3">
-          Placement matters: bait in an open field with clear sky above. Carcasses dropped under trees or
-          beside buildings can fail to trigger the arrival.
-        </p>
-
-        <h2 className="text-xl font-bold text-white">Phase 1: Committed Dive Passes</h2>
-        <p>
-          The Albatross fights like an aerial Spider Crab: every attack is a committed dive pass with a long
-          recovery. Watch its shadow — when the shadow locks onto your position, the dive is coming. Strafe
-          sideways at the last moment; the bird overshoots, skids, and spends 2-3 seconds recovering with its
-          wing joints exposed. That recovery window is the only safe damage phase in the entire fight.
-          Standing still or backing up in a straight line gets you caught by the follow-up swoop.
-        </p>
-
-        <h2 className="text-xl font-bold text-white">Phase 2: Grounded Rage &amp; Wind Gusts</h2>
-        <p>
-          Below 40% HP the bird stays grounded and alternates wing-slam shockwaves with knockback wind
-          gusts. The shockwaves radiate outward — jump over the ring as it reaches you, then punish the slam
-          recovery. Wind gusts push you toward cliff edges: keep your back to open terrain, never to a drop.
-          This phase is a DPS check more than a dodge test, so save your best ammunition for it.
-        </p>
-
-        <h2 className="text-xl font-bold text-white">Recommended Gear Loadout</h2>
-        <ul className="list-disc pl-5 space-y-2 text-xs text-gray-300">
-          <li><strong>Professional Boss Lure</strong>: Non-negotiable — it is the only way to hook the Tuna that starts the chain.</li>
-          <li><strong>Ranged Weapon with Ammo Reserve</strong>: The wing joints sit high; melee-only builds struggle to reach them safely.</li>
-          <li><strong>Stamina Recovery Items</strong>: Constant strafing drains stamina; a mid-fight cramp near a cliff edge is fatal.</li>
-          <li><strong>Cleared Landing Zone</strong>: Fight in an open field so the shadow telegraph is always visible.</li>
-        </ul>
-
-        <h2 className="text-xl font-bold text-white">Solo vs. Co-op Strategy</h2>
-        <p>
-          Solo: discipline wins — one punish window per dive, never two. In co-op, spread out so dive passes
-          can only target one player at a time, and agree on a callout for Phase 2 shockwaves. Boss HP scales
-          with crew size (up to 2.5x at four anglers), but the exposed recovery windows stay the same length,
-          so overlapping fire trivializes the DPS check.
+          first hook and defeat a <strong>Tuna</strong> with the <strong>Professional Boss Lure</strong> (the
+          Tuna is itself a boss-class catch — the regular Professional Lure will not do), then use the Tuna
+          as bait. The Albatross — the giant bird players call the <em>terrorizing bird</em> — swoops in
+          from the air. Both guide databases document this chain; the Tuna was also{' '}
+          <Link href="/updates/" className="text-aqua hover:underline">nerfed slightly</Link> in patch 1.0.12.
         </p>
 
         <h2 className="text-xl font-bold text-white">Community Tactics: Surviving the Dive</h2>
@@ -99,14 +59,19 @@ export default function AlbatrossPage() {
             of cooked fish across the grassy center — the gulls that harass you each grab one and stop
             grabbing more. Stand in the middle, side-step the dropping attack, wait for the lunge, and blast
             point-blank. This is the solo kill that a player video on Reddit demonstrates.</li>
+          <li><strong>Weapon notes from the same threads</strong>: the SMG is repeatedly named as the
+            comfortable pick for this boss, with shotguns as the main alternative — matched to the ammo and
+            range you actually have, not to a fixed &ldquo;best&quot; list.</li>
         </ul>
 
-        <h2 className="text-xl font-bold text-white">After the Fight: Keep the Head</h2>
-        <p>
-          The <strong>Albatross Head</strong> is a quest item, not a sellable trophy. Handing it in unlocks the
-          Sky Compass and the <em>Terrorizing Bird</em> achievement. If it vanished after a crash or
-          disconnect, read our <Link href="/troubleshooting/items-disappeared/" className="text-aqua hover:underline">items disappeared guide</Link> before
-          saving again.
+        <h2 className="text-xl font-bold text-white">What We Removed</h2>
+        <p className="text-xs text-gray-400 leading-relaxed">
+          An earlier version of this page described exact HP (2,200), phase thresholds (40%), wing-joint
+          weak points, a &ldquo;Sky Compass&rdquo; reward, and stamina-management mechanics. None of that
+          appears in any guide database, patch note, or player thread we can source — the verified chain is
+          the Tuna bait plus the tactics above, and the fight&apos;s reward is progression to island 5 with
+          the Terrorizing bird achievement. The unsupported specifics were removed in our September 2026
+          fact audit.
         </p>
 
         <div className="bg-ocean-950 border border-ocean-700 rounded-lg p-4 text-xs text-gray-400">
@@ -131,9 +96,24 @@ export default function AlbatrossPage() {
       <Sources
         items={[
           {
-            label: 'How to Fish on Steam',
-            href: 'https://store.steampowered.com/app/4001890/How_to_Fish/',
-            note: 'Official game info; fight phases verified in-game by our editors',
+            label: 'G2A News: all fish, bosses, rods and bait by island',
+            href: 'https://www.g2a.com/news/features/guide/how-to-fish-all-fish-bosses-rods-and-bait-by-island/',
+            note: 'Tuna-as-bait chain for the Albatross',
+          },
+          {
+            label: 'Mobalytics: How to Fish — All 49 Fish, Creatures and Lures',
+            href: 'https://mobalytics.gg/gamebase/guides/how-to-fish-all-fish-creatures-lures',
+            note: 'independent corroboration: Professional Boss Lure hooks the Tuna; Albatross takes the Tuna',
+          },
+          {
+            label: 'Steam Community global achievements (app 4001890)',
+            href: 'https://steamcommunity.com/stats/4001890/achievements',
+            note: 'official Terrorizing bird achievement wording and unlock rate',
+          },
+          {
+            label: 'Steam Discussion: Boss health/timers — SMG for albatross',
+            href: 'https://steamcommunity.com/app/4001890/discussions/0/581680664978608620/',
+            note: 'community weapon picks per boss',
           },
         ]}
       />

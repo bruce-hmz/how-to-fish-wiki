@@ -12,7 +12,7 @@ export default function MapPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Archipelago Map', href: '/map/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Archipelago Zones, Hotspots &amp; Navigation</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 27, 2026 · Game version 1.0.9</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p>
@@ -31,34 +31,34 @@ export default function MapPage() {
         <h2 className="text-2xl font-bold text-white">The Five Stages, In Order</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">Stage 1 · Starter Island (Lighthouse)</h3>
-            <p className="text-xs text-gray-400 mb-2">Clam beaches, your first rod, the tavern beer run, and the Spider Crab tidepool that gates everything.</p>
+            <h3 className="font-bold text-white text-base mb-1">Stage 1 · Island 1 (Lighthouse)</h3>
+            <p className="text-xs text-gray-400 mb-2">Clam beaches, your first rod, the beer run, and the Spider Crab tidepool that gates everything.</p>
             <Link href="/bosses/spider-crab/" className="text-xs text-aqua hover:underline">Spider Crab guide →</Link>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">Stage 2 · Island 2 (Lake)</h3>
-            <p className="text-xs text-gray-400 mb-2">Freshwater boss arena unlocked by the three-leech favor. Mind the Piranha escape bar once circling starts.</p>
+            <h3 className="font-bold text-white text-base mb-1">Stage 2 · Island 2 (Forest Lake)</h3>
+            <p className="text-xs text-gray-400 mb-2">Freshwater boss arena unlocked by the three-leech favor. Mind the piranha swarm once the fight starts.</p>
             <Link href="/bosses/giant-piranha/" className="text-xs text-aqua hover:underline">Giant Piranha guide →</Link>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">Stage 3 · Coral Maze Lagoon</h3>
-            <p className="text-xs text-gray-400 mb-2">Pufferfish territory. Pre-position the boat at the coral arches before summoning, not after.</p>
+            <h3 className="font-bold text-white text-base mb-1">Stage 3 · Island 3 (Desert)</h3>
+            <p className="text-xs text-gray-400 mb-2">Pufferfish territory (Carrot summon). The Blue Shark boss catch and the Grill unlock live here too.</p>
             <Link href="/bosses/pufferfish/" className="text-xs text-aqua hover:underline">Pufferfish guide →</Link>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">Side Locale · Casino Island</h3>
-            <p className="text-xs text-gray-400 mb-2">Hand-in stop on the Stage 3 exit path; the gachapon machine trades Drip catches for cosmetics.</p>
+            <h3 className="font-bold text-white text-base mb-1">Side Locale · Island 6 (Casino)</h3>
+            <p className="text-xs text-gray-400 mb-2">The roulette table and prize machines; Drip catches convert into cosmetics here.</p>
             <Link href="/casino/" className="text-xs text-aqua hover:underline">Casino &amp; gachapon →</Link>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">Stage 4 · Island 4 (Skies)</h3>
-            <p className="text-xs text-gray-400 mb-2">Albatross airspace: catch a tuna locally, plant the carcass, keep open sightlines between dive passes.</p>
+            <h3 className="font-bold text-white text-base mb-1">Stage 4 · Island 4 (Sky)</h3>
+            <p className="text-xs text-gray-400 mb-2">Albatross airspace: catch the Tuna on the Professional Boss Lure, use it as bait, keep open sightlines between dive passes.</p>
             <Link href="/bosses/albatross/" className="text-xs text-aqua hover:underline">Albatross guide →</Link>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">Stage 5 · Mount Inferno &amp; Deep Trench</h3>
-            <p className="text-xs text-gray-400 mb-2">Lava river canal to the crater lake; keep moving through magma volleys. Deepest open water sits past this gate.</p>
-            <Link href="/bosses/magma-whale/" className="text-xs text-aqua hover:underline">Magma Whale guide →</Link>
+            <h3 className="font-bold text-white text-base mb-1">Stage 5 · Island 5 (Volcano)</h3>
+            <p className="text-xs text-gray-400 mb-2">Fish Bucket → Bowhead Whale → the Mutated Bowhead Whale final boss. The Goblin Shark and the $1,700 Superdwarf Fish live here.</p>
+            <Link href="/bosses/magma-whale/" className="text-xs text-aqua hover:underline">Final boss guide →</Link>
           </div>
         </div>
         <p className="text-xs text-gray-500">Gate-by-gate unlock requirements live on the <Link href="/islands/" className="text-aqua hover:underline">island progression page</Link>.</p>
@@ -67,9 +67,8 @@ export default function MapPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-white">Navigation That Actually Helps</h2>
         <ul className="list-disc pl-5 space-y-2 bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 text-sm text-gray-300">
-          <li><strong className="text-white">Buy the radar early.</strong> It anchors half of all navigation pain stories — players describe eyeballing headings, sailing blind, and burning fuel needed later.</li>
-          <li><strong className="text-white">Fuel arithmetic beats optimism:</strong> $2 per unit on a base 50-unit tank; higher engine tiers trade upfront cost for efficiency. Numbers sit in the <Link href="/boat/" className="text-aqua hover:underline">boat upgrades guide</Link>.</li>
-          <li><strong className="text-white">Watch the sky:</strong> several catch windows key off weather and night cycles — rain-fed tidepool Drips, thunderstorm vent fishing. Check conditions before long hauls (<Link href="/fish/" className="text-aqua hover:underline">fish list</Link>).</li>
+          <li><strong className="text-white">Buy the radar early.</strong> It anchors half of all navigation pain stories — players describe eyeballing headings and sailing blind (it also marks quest ground-pickups like the leeches with red dots).</li>
+          <li><strong className="text-white">Match the lure, not the weather:</strong> regular fish are determined by your equipped lure — no weather or day/night system exists to plan around (players are still requesting one). The tier list is on the <Link href="/fish/" className="text-aqua hover:underline">fish list</Link>.</li>
           <li><strong className="text-white">Lost-at-sea protocol:</strong> stop zig-zagging, open the map for discovered landmarks, and steer for the last island you unlocked instead of guessing toward undiscovered ones.</li>
         </ul>
       </section>

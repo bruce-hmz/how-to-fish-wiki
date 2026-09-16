@@ -40,7 +40,7 @@ export default function LeechesPage() {
       />
       <Breadcrumb items={[{ name: 'Islands', href: '/islands/' }, { name: 'Leech Quest', href: '/guides/leeches/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Get Leeches in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 29, 2026 · Game version 1.0.10</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
 
       <div className="bg-gold/10 border border-gold/40 rounded-xl p-6 space-y-3">
         <p>

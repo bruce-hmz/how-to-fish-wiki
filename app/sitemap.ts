@@ -52,11 +52,56 @@ const UPDATED_2026_08_27 = new Set([
   '/troubleshooting/cooked-weapons/',
 ]);
 
+// Pages reworked in the 2026-09-16 gameplay fact audit (see docs/GAMEPLAY_FACT_AUDIT.md).
+const UPDATED_2026_09_16 = new Set([
+  '/',
+  '/fish/',
+  '/fish/drip-fish/',
+  '/lures/',
+  '/bosses/',
+  '/bosses/spider-crab/',
+  '/bosses/giant-piranha/',
+  '/bosses/pufferfish/',
+  '/bosses/albatross/',
+  '/bosses/magma-whale/',
+  '/bosses/first-boss/',
+  '/boat/',
+  '/weapons/',
+  '/cooking/',
+  '/guide/',
+  '/money/',
+  '/islands/',
+  '/map/',
+  '/multiplayer/',
+  '/faq/',
+  '/casino/',
+  '/trick-shots/',
+  '/difficulty/',
+  '/creatures/rare-variants/',
+  '/guides/dynamite/',
+  '/guides/leeches/',
+  '/guides/death/',
+  '/achievements/bean/',
+  '/achievements/360-no-scope/',
+  '/achievements/everyones-dream/',
+  '/multiplayer/friendly-fire/',
+  '/troubleshooting/save-file/',
+  '/troubleshooting/items-disappeared/',
+  '/troubleshooting/cooked-weapons/',
+  '/troubleshooting/join-friends/',
+  '/troubleshooting/fish-not-biting/',
+  '/troubleshooting/audio-duplication/',
+  '/troubleshooting/error-0x11c7/',
+  '/troubleshooting/what-to-do-next/',
+]);
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ['', '/guide/', '/fish/', '/fish/drip-fish/', '/bosses/', '/bosses/pufferfish/', '/bosses/spider-crab/', '/bosses/magma-whale/', '/bosses/giant-piranha/', '/bosses/first-boss/', '/bosses/albatross/', '/lures/', '/weapons/', '/money/', '/map/', '/boat/', '/islands/', '/guides/leeches/', '/guides/dynamite/', '/guides/death/', '/cooking/', '/multiplayer/', '/multiplayer/friendly-fire/', '/settings/', '/difficulty/', '/casino/', '/trick-shots/', '/achievements/', '/achievements/bean/', '/achievements/360-no-scope/', '/achievements/everyones-dream/', '/creatures/rare-variants/', '/game/system-requirements/', '/game/launch/', '/updates/', '/videos/', '/troubleshooting/', '/troubleshooting/save-file/', '/troubleshooting/items-disappeared/', '/troubleshooting/cooked-weapons/', '/troubleshooting/join-friends/', '/troubleshooting/fish-not-biting/', '/troubleshooting/performance-stutter/', '/troubleshooting/audio-duplication/', '/troubleshooting/error-0x11c7/', '/troubleshooting/what-to-do-next/', '/about/', '/editorial-policy/', '/privacy/', '/terms/', '/faq/'];
   return routes.map((route) => ({
     url: `${baseUrl}${route || '/'}`,
-    lastModified: UPDATED_2026_09_01.has(route || '/')
+    lastModified: UPDATED_2026_09_16.has(route || '/')
+      ? '2026-09-16'
+      : UPDATED_2026_09_01.has(route || '/')
       ? '2026-09-01'
       : UPDATED_2026_08_29.has(route || '/')
       ? '2026-08-29'

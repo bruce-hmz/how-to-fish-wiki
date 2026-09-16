@@ -50,29 +50,12 @@ export default function DripFishPage() {
       </div>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-white">Confirmed Drip Entries</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs bg-ocean-900/70 rounded-xl overflow-hidden border-collapse">
-            <thead className="bg-ocean-950/90 text-gray-400 uppercase border-b border-ocean-800">
-              <tr><th className="px-3 py-2">Entry</th><th className="px-3 py-2">Habitat</th><th className="px-3 py-2">Bait</th><th className="px-3 py-2">Shop value*</th></tr>
-            </thead>
-            <tbody className="divide-y divide-ocean-800/60 align-top">
-              <tr>
-                <td className="px-3 py-2 font-bold text-cyan-300">Drip Rock Crab</td>
-                <td className="px-3 py-2">Secret tidepools (rain)</td>
-                <td className="px-3 py-2">Rainbow Clam</td>
-                <td className="px-3 py-2">$5</td>
-              </tr>
-              <tr>
-                <td className="px-3 py-2 font-bold text-cyan-300">Drip Fish</td>
-                <td className="px-3 py-2">Volcano undersea vent (thunderstorm)</td>
-                <td className="px-3 py-2">Beer / special lure</td>
-                <td className="px-3 py-2">$250</td>
-              </tr>
-            </tbody>
-          </table>
+        <h2 className="text-2xl font-bold text-white">The One Confirmed Rule (and What We Removed)</h2>
+        <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
+          <p className="text-xs leading-relaxed">
+            <strong className="text-white">Drip variants are caught with the same lure as their normal version</strong> — there is no separate drip lure, no rain window, and no time-of-day gate. That rule is the only acquisition mechanic any source documents. An earlier version of this page carried a &ldquo;confirmed entries&rdquo; table claiming the Drip Rock Crab needed a &ldquo;Rainbow Clam&rdquo; in rain-fed secret tidepools and a &ldquo;Drip Fish&rdquo; needed &ldquo;Beer at the volcano vent during thunderstorms&rdquo; — both were fabricated and removed (the real island-4 Professional Lure catch is the <em>Dripper</em>, documented by G2A, Mobalytics, and the Steam grind threads). Details on machine payouts live on the <Link href="/casino/" className="text-aqua hover:underline">Casino guide</Link>; the verified species table is the <Link href="/fish/" className="text-aqua hover:underline">fish list</Link>.
+          </p>
         </div>
-        <p className="text-xs text-gray-500">*Sell values shown for completeness — the entire point of these two is feeding the gachapon instead. Details live on the <Link href="/casino/" className="text-aqua hover:underline">Casino guide</Link>; general rarity tiers are on the <Link href="/fish/" className="text-aqua hover:underline">fish list</Link>.</p>
       </section>
 
       <section className="space-y-4">

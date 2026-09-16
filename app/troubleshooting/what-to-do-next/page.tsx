@@ -27,7 +27,7 @@ export default function WhatToDoNextPage() {
         dateModified="2026-08-27"
       />
       <h1 className="text-3xl font-extrabold text-white">What Should I Do Next? (Progression Troubleshooter)</h1>
-      <p className="text-xs text-gray-500 -mt-2">Last verified August 27, 2026</p>
+      <p className="text-xs text-gray-500 -mt-2">Last verified September 16, 2026 · Game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6">
         <h2 className="text-xl font-bold text-white">The Universal Fix</h2>

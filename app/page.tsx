@@ -2,30 +2,37 @@ import Link from 'next/link';
 import FishTable from '@/components/FishTable';
 import { FaqJsonLd } from '@/components/JsonLd';
 
+export const metadata = {
+  title: 'How to Fish Wiki — Verified Fish, Bosses, Lures & Progression',
+  description:
+    'Source-checked How to Fish guides: the verified 38-species fish database with islands and lures, every boss summon chain from the Spider Crab to the Mutated Bowhead Whale, patch notes to 1.0.12, and troubleshooting for real player bugs.',
+  alternates: { canonical: 'https://howtofish101.com/' },
+};
+
 const homeFaqs = [
   {
     q: 'What is How to Fish?',
-    a: 'How to Fish is a 1-4 player physics-based fishing survival game by Dazed Games. After a boat crash strands you on a mysterious archipelago, you scavenge clams, craft rods, battle colossal marine bosses, and collect three boat keys to escape.',
+    a: 'How to Fish is a 1-4 player physics-based fishing survival game by Dazed Games. After a boat crash strands you on a mysterious archipelago, you scavenge clams, buy rods and lures, battle colossal marine bosses, and trade your way island by island toward the final boss.',
   },
   {
     q: 'How many fish are in How to Fish?',
-    a: 'Community catalogs track 49 unique species across six rarity tiers: Common, Uncommon, Rare, Epic, Legendary, and Drip. Each species has its own preferred bait, habitat, weather window, and sell value — our fish database publishes entries as their spawn conditions are verified.',
+    a: 'Community catalogs track 49 creatures: 38 regular species plus 11 boss-class catches, each with drip variants tracked separately. Regular fish are determined by your equipped lure — Free, Beginner, Standard, Professional, and Scientific tiers unlock with island progression. Our fish database lists every verified species, island, and lure pairing.',
   },
   {
     q: 'How do you beat the Pufferfish boss?',
-    a: 'Summon it with a Hot Dog Feast rage bait at Coral Maze Lagoon, then target the mouth and dorsal fin during Phase 1, dodge spike waves in Phase 2, and burst down the enrage phase at 30% HP with a knife loadout.',
+    a: 'Summon it with a Carrot as quest bait on the desert island (island 3), then fight it with your best weapon and cooked food on hand. It was nerfed in the official Patch 1.0.4, and Easy mode (Patch 1.0.9) cuts creature health and damage if you are stuck. Our Pufferfish guide has the verified details.',
   },
   {
     q: 'Is How to Fish multiplayer?',
-    a: 'Yes, the game supports drop-in online co-op through Steam invites. Classic crews are 1-4 players — boss HP scales with crew size (up to 2.5x at four) — and since Patch 1.0.4 lobbies can hold up to 8 players. Loot is shared equally among all anglers.',
+    a: 'Yes, the game supports drop-in online co-op through Steam invites, and since Patch 1.0.4 lobbies can hold up to 8 players (up from 4). Money pools into one shared crew wallet; items and money do not carry between saves, but skins do.',
   },
   {
     q: 'What platforms is How to Fish on?',
-    a: 'How to Fish is available on Windows PC through Steam. A free demo lets you sample the opening islands before buying, and your progress carries over to the full game. Console and mobile versions have not been announced.',
+    a: 'How to Fish is available on Windows PC through Steam, is Steam Deck Verified, and runs on GeForce NOW (both official since Patch 1.0.11). Console and mobile versions have not been announced.',
   },
   {
     q: 'How long does it take to beat How to Fish?',
-    a: 'Community reports vary: first clears land around 4–8 hours through the five-boss gauntlet and boat restoration. Completionists chasing every achievement and the full logbook should plan days, not hours — no official figure exists. Our FAQ breaks down where those numbers come from.',
+    a: 'Community reports vary: first clears land around 4–8 hours through the boss chain and boat restoration, and the official Bean achievement asks you to finish within one hour. Completionists chasing every achievement and the full logbook should plan days, not hours — no official figure exists.',
   },
 ];
 
@@ -39,7 +46,7 @@ export default function HomePage() {
           <div className="inline-flex items-center space-x-2 bg-aqua/10 border border-aqua/30 rounded-full px-3 py-1 text-xs font-semibold text-aqua">
             <span>Viral Hit</span>
             <span>•</span>
-            <span>268,000+ Concurrent Anglers</span>
+            <span>373,971 Peak Concurrent Players</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
@@ -49,8 +56,8 @@ export default function HomePage() {
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
             Welcome to the ultimate community database for Dazed Games&apos; 1-4 player physics fishing hit.
             Stranded after a boat crash on a mysterious archipelago, you survive, master casting, battle colossal
-            marine titans, and recover your three missing boat keys. This wiki covers every species, boss fight,
-            lure, island, and hidden secret — written by anglers, for anglers.
+            marine titans, and trade your way island by island to the final boss. This wiki covers every species,
+            boss fight, lure, and island — with every gameplay fact source-checked.
           </p>
 
           <div className="flex flex-wrap gap-3 pt-2">
@@ -90,29 +97,30 @@ export default function HomePage() {
         <h2 className="text-2xl font-bold text-white">What Is How to Fish?</h2>
         <div className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-6 space-y-4 text-sm text-gray-300 leading-relaxed">
           <p>
-            How to Fish is an indie survival fishing game developed by Dazed Games and released on Steam in 2026.
-            It exploded in popularity thanks to its chaotic physics engine — rods flex, lines snap, catches fight
-            back, and up to four players can trip over each other on the same tiny boat. Within weeks of launch it
-            peaked at over 268,000 concurrent players, making it one of the year&apos;s biggest viral hits.
+            How to Fish is an indie survival fishing game developed by Dazed Games and released on Steam on
+            August 20, 2026. It exploded in popularity thanks to its chaotic physics engine — rods flex, lines
+            snap, catches fight back, and up to eight players can trip over each other on the same tiny boat.
+            It passed 1 million players in two days and peaked at over 373,000 concurrent players, making it
+            one of the year&apos;s biggest viral hits.
           </p>
           <p>
-            The premise is simple: your boat crashes on a storm-lashed archipelago and scatters three keys across
-            the islands. To escape, you must learn to fish, upgrade your gear, defeat three colossal guardians —
-            the Spider Crab, the Spiky Pufferfish, and the Magma Whale — and repair your vessel. Along the way
-            you&apos;ll fill a 49-species logbook, discover glowing Drip creatures, and gamble catches at the
-            Casino Island gachapon machine.
+            The premise is simple: your boat crashes on a mysterious archipelago and you need the Boat Keys to
+            properly set sail. To get them, you learn to fish, upgrade your gear, defeat the Giant Spider Crab
+            — then fight island by island through the Giant Piranha, the Pufferfish, the Albatross, and the
+            final boss, the Mutated Bowhead Whale. Along the way you&apos;ll fill a 49-creature logbook,
+            discover glowing Drip variants, and gamble catches at the Casino island&apos;s prize machines.
           </p>
           <p>
-            This wiki exists to answer one question thoroughly: how to fish, fight, and survive the game's
-            storm-lashed archipelago. Every guide below is tested in-game and updated as patches roll out.
+            This wiki exists to answer one question thoroughly: how to fish, fight, and survive the game&apos;s
+            archipelago. Every gameplay fact on it is source-checked against official patch notes, Steam
+            data, and at least two independent guide databases — see our editorial policy.
           </p>
           <p>
-            Progression follows a satisfying loop: sell catches for cash, buy stronger rods and knives, unlock
+            Progression follows a satisfying loop: sell catches for cash, buy better lures and knives, unlock
             deeper fishing grounds, and repeat. Early sessions revolve around clams and shallow-water crabs;
-            mid-game opens up hot dog bass runs, night beer baiting, and the gachapon casino; the endgame is a
-            hunt for Legendary specimens like the Sunken Crew and the three glowing Drip species hidden in
-            fog-shrouded corners of the map. Each milestone nudges you toward the next tool tier, so the loop
-            never stalls.
+            mid-game opens up the desert-island roster and the grill; the endgame is the volcano island —
+            the Goblin Shark, the Superdwarf Fish, and the final boss chain. Each milestone nudges you toward
+            the next lure tier, so the loop never stalls.
           </p>
         </div>
       </section>
@@ -126,8 +134,8 @@ export default function HomePage() {
             <h3 className="font-bold text-lg text-white mb-2">Physics-Based Angling</h3>
             <p className="text-gray-400 text-xs leading-relaxed mb-4">
               Master mouse sensitivity, rod flex, and line snap resistance. Punch or slash catches with knuckles
-              to collect meat, then upgrade to the $45 knife for aggressive species. Bait choice dictates bite
-              speed — clams for crabs, hot dogs for bass, beer for rare night spawns.
+              to collect meat, then upgrade to the $45 knife for aggressive species. Lure choice dictates the
+              catch — Free, Beginner, Standard, Professional, and Scientific tiers unlock with the islands.
             </p>
             <Link href="/guide/" className="text-xs font-semibold text-aqua hover:underline">Read the fishing guide →</Link>
           </div>
@@ -136,9 +144,9 @@ export default function HomePage() {
             <div className="text-3xl mb-3">⚔️</div>
             <h3 className="font-bold text-lg text-white mb-2">Colossal Boss Battles</h3>
             <p className="text-gray-400 text-xs leading-relaxed mb-4">
-              Use specialized rage baits like empty beer cans and volcano cores to summon the Spider Crab,
-              Spiky Pufferfish, and Magma Whale. Each fight has three phases with escalating attack patterns.
-              Defeating all three bosses yields the boat keys needed to finish the story.
+              Quest items summon the bosses: the Empty Beer Can calls the Spider Crab, the Modified Leech the
+              Giant Piranha, the Carrot the Pufferfish, and a defeated Tuna or Bowhead Whale bait the island-4
+              and final fights. Beat each gate to unlock the next island.
             </p>
             <Link href="/bosses/" className="text-xs font-semibold text-coral-light hover:underline">View all boss guides →</Link>
           </div>
@@ -147,9 +155,9 @@ export default function HomePage() {
             <div className="text-3xl mb-3">🎰</div>
             <h3 className="font-bold text-lg text-white mb-2">Drip Fish & Casino</h3>
             <p className="text-gray-400 text-xs leading-relaxed mb-4">
-              Capture glowing Drip creatures — rare blue variants that only spawn at night during rain — and feed
-              them into the Casino Gachapon machine to gamble for exclusive weapon and boat skins. Never sell
-              them to the shop; the gachapon payout is worth ten times more.
+              Catch glowing Drip creatures — rare color-shifted variants caught with the same lure as their
+              normal version — and feed them into the Casino prize machines for exclusive weapon and boat
+              skins. Never sell them to the shop; odds are unpublished but the skins are the whole point.
             </p>
             <Link href="/fish/drip-fish/" className="text-xs font-semibold text-gold hover:underline">Drip fish guide →</Link>
           </div>
@@ -165,15 +173,15 @@ export default function HomePage() {
           </p>
           <ol className="list-decimal pl-5 space-y-2 text-xs">
             <li><strong>Eat clams first</strong> — press E on beach sand to pick them up, hold left-click to eat. Your hunger bar drains fast and starving anglers catch nothing.</li>
-            <li><strong>Buy the Crab Rod ($2)</strong> from the beach kiosk. Right-click casts into tidepools; left-click reels when a crab bites.</li>
-            <li><strong>Save for the Knife ($45)</strong> before any other upgrade. Large catches thrash and damage you; the knife subdues them safely.</li>
-            <li><strong>Learn the value key (F)</strong> — inspect every catch before selling. Some trash-looking species sell for $80+.</li>
-            <li><strong>Never sell Drip creatures</strong> — blue glowing variants belong in the Casino gachapon, not the shop.</li>
-            <li><strong>Fish dawn and dusk</strong> — the spawn table rotates by time of day. Rain windows boost rare rates by 40%.</li>
-            <li><strong>Summon the Spider Crab early</strong> — it drops your first boat key and unlocks the repair dock.</li>
+            <li><strong>Buy the Crab Rod ($2–3)</strong> from the fisherman. It comes with the Free Lure for the starter roster.</li>
+            <li><strong>Save for the Knife ($45)</strong> before any other upgrade — IGN and G2A both recommend it. Catches thrash and damage you; the knife subdues them safely.</li>
+            <li><strong>Learn the value key (F)</strong> — inspect every catch before selling.</li>
+            <li><strong>Never sell Drip creatures</strong> — blue glowing variants belong in the Casino prize machines, not the shop.</li>
+            <li><strong>Upgrade by lure tier</strong> — the fish you catch are determined by your equipped lure, not the island you stand on.</li>
+            <li><strong>Summon the Spider Crab early</strong> — trade its shell for the Boat Keys and the archipelago opens.</li>
           </ol>
           <p>
-            For the full route with island unlocks, weather systems, and night-predator survival, read the
+            For the full route with island unlocks, lure tiers, and boss chains, read the
             complete <Link href="/guide/" className="text-aqua hover:underline">beginner walkthrough</Link>.
           </p>
         </div>
@@ -183,14 +191,14 @@ export default function HomePage() {
         <div className="flex justify-between items-end">
           <div>
             <h2 className="text-2xl font-bold text-white">Interactive Marine Species Database</h2>
-            <p className="text-xs text-gray-400">Search value, preferred bait, weather requirements, and rarity tiers for every documented species.</p>
+            <p className="text-xs text-gray-400">Search island, lure, and documented sell values for every verified species.</p>
           </div>
           <Link href="/fish/" className="text-xs text-aqua font-semibold hover:underline">View full database →</Link>
         </div>
         <p className="text-xs text-gray-400 -mt-2">
-          Every entry lists sell value, habitat, preferred bait, and the weather window that triggers the spawn.
-          Filter by rarity tier to plan your logbook completion route — Legendary species like the Magma Eel
-          only appear during storms at the Volcanic Trench.
+          Every entry lists the island, the lure that catches it, and the sell value where a source recorded
+          one. Filter by island to plan your logbook completion route — every row is cross-verified against
+          two independent guide databases.
         </p>
         <FishTable />
       </section>
@@ -200,27 +208,27 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <Link href="/bosses/pufferfish/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-coral/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Pufferfish Boss Guide</h3>
-            <p className="text-xs text-gray-400">Hot Dog Feast summon, spike-wave dodging, and the Puffer Spike Launcher drop.</p>
+            <p className="text-xs text-gray-400">The Carrot summon on the desert island, and the gate to island 4.</p>
           </Link>
           <Link href="/bosses/spider-crab/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-coral/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Spider Crab Boss Guide</h3>
-            <p className="text-xs text-gray-400">First boat key fight — claw swipes, burrow attacks, and shell-slam counters.</p>
+            <p className="text-xs text-gray-400">First boss — the beer chain, the floating-crab bug, and the Boat Keys trade.</p>
           </Link>
           <Link href="/bosses/magma-whale/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-coral/50 transition-all">
-            <h3 className="font-bold text-white text-sm mb-1">Magma Whale Boss Guide</h3>
-            <p className="text-xs text-gray-400">Final boss at the Deep Trench — Volcano Core bait and legendary rod reward.</p>
+            <h3 className="font-bold text-white text-sm mb-1">Final Boss Guide</h3>
+            <p className="text-xs text-gray-400">The Mutated Bowhead Whale — bait chain, community tactics, and the Handyman run.</p>
           </Link>
           <Link href="/fish/drip-fish/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-gold/50 transition-all">
-            <h3 className="font-bold text-white text-sm mb-1">Drip Fish Locations</h3>
-            <p className="text-xs text-gray-400">Night-rain spawn conditions, every variant, and gachapon reward tiers.</p>
+            <h3 className="font-bold text-white text-sm mb-1">Drip Fish Guide</h3>
+            <p className="text-xs text-gray-400">Every community-sighted variant, honest odds talk, and hunting techniques.</p>
           </Link>
           <Link href="/boat/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Boat Keys & Upgrades</h3>
-            <p className="text-xs text-gray-400">Where each key drops, engine upgrade tree, and fuel management tips.</p>
+            <p className="text-xs text-gray-400">The shell-for-keys trade, engine achievements, and the missing-boat bug.</p>
           </Link>
           <Link href="/multiplayer/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Co-op Crew Guide</h3>
-            <p className="text-xs text-gray-400">Crew roles, boss HP scaling table, and loot-sharing rules for 4-player crews.</p>
+            <p className="text-xs text-gray-400">8-player lobbies, the shared wallet, and what carries between saves.</p>
           </Link>
           <Link href="/bosses/giant-piranha/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-coral/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Giant Piranha Boss Guide</h3>

@@ -15,11 +15,12 @@ const KILLSCORE = [
 const COOK_FACTOR = 1.5;
 
 export default function PriceCalculator() {
-  const [fishId, setFishId] = useState(FISH_DATABASE[0].id);
+  const PRICED_FISH = FISH_DATABASE.filter((f) => f.valueDocumented);
+  const [fishId, setFishId] = useState(PRICED_FISH[0]?.id ?? '');
   const [picked, setPicked] = useState<Set<string>>(new Set());
   const [cooked, setCooked] = useState(false);
 
-  const fish = FISH_DATABASE.find(f => f.id === fishId) ?? FISH_DATABASE[0];
+  const fish = PRICED_FISH.find(f => f.id === fishId) ?? PRICED_FISH[0];
 
   const killscoreFactor = useMemo(
     () => KILLSCORE.filter(k => picked.has(k.id)).reduce((acc, k) => acc * k.factor, 1),
@@ -50,9 +51,9 @@ export default function PriceCalculator() {
             onChange={(e) => setFishId(e.target.value)}
             className="w-full bg-ocean-950 border border-ocean-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-aqua"
           >
-            {FISH_DATABASE.map((f) => (
+            {FISH_DATABASE.filter((f) => f.valueDocumented).map((f) => (
               <option key={f.id} value={f.id}>
-                {f.name} — ${f.value} ({f.rarity})
+                {f.name} — ${f.value}
               </option>
             ))}
           </select>

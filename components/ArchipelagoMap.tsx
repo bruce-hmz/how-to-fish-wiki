@@ -18,11 +18,11 @@ type Zone = {
 const ZONES: Zone[] = [
   {
     id: 'starter',
-    name: 'Starter Island (Lighthouse)',
+    name: 'Island 1 (Lighthouse)',
     icon: '🗼',
     x: 10, y: 50, stage: 'Stage 1',
-    desc: 'Clam beaches, the shop kiosk and tavern, and the rain-gated tidepools where Drip Rock Crabs appear.',
-    badges: ['🌧 Rain → tidepool Drips', '🔑 Boat Key Part #1'],
+    desc: 'Clam beaches, the fisherman shop, and the lighthouse tidepool. Beat the Spider Crab and trade its shell for the Boat Keys.',
+    badges: ['🔑 Boat Keys (shell trade)', '🦀 Free Lure + Hot Dog roster'],
     links: [
       { href: '/bosses/spider-crab/', label: 'Spider Crab guide' },
       { href: '/guide/', label: 'Starter walkthrough' },
@@ -30,20 +30,20 @@ const ZONES: Zone[] = [
   },
   {
     id: 'lake',
-    name: 'Island 2 (Lake)',
+    name: 'Island 2 (Forest Lake)',
     icon: '🐟',
     x: 27, y: 28, stage: 'Stage 2',
-    desc: 'Freshwater lake arena. Bring the three leeches for the Modified Leech summon, and watch the escape bar once the Piranha circles.',
-    badges: ['🔑 Island 3 coordinates (Skeleton hand-in)'],
+    desc: 'Freshwater lake arena. Bring the three leeches for the Modified Leech summon, and mind the piranha swarm during the fight.',
+    badges: ['🔑 Island 3 unlock (Skeleton hand-in)', '🎣 Beginner Lure tier'],
     links: [{ href: '/bosses/giant-piranha/', label: 'Giant Piranha guide' }],
   },
   {
-    id: 'coral',
-    name: 'Coral Maze Lagoon',
-    icon: '🪸',
+    id: 'desert',
+    name: 'Island 3 (Desert)',
+    icon: '🏜️',
     x: 45, y: 48, stage: 'Stage 3',
-    desc: 'Pufferfish home turf. Pre-position the boat at the coral arches before summoning; Rainbow Lure pulls the whole tropical roster.',
-    badges: ['🔑 Boat Key Part #2'],
+    desc: 'Desert island. Summon the Pufferfish with the Carrot, hook the Blue Shark on the Standard Boss Lure, and unlock the Grill.',
+    badges: ['🥕 Pufferfish gate', '🔥 Grill unlock (Grillmaster)'],
     links: [
       { href: '/bosses/pufferfish/', label: 'Pufferfish guide' },
       { href: '/lures/', label: 'Lure recommendations' },
@@ -51,10 +51,10 @@ const ZONES: Zone[] = [
   },
   {
     id: 'casino',
-    name: 'Casino Island',
+    name: 'Island 6 (Casino)',
     icon: '🎰',
     x: 47, y: 82, stage: 'Side locale',
-    desc: 'Hand-in stop on the Stage 3 exit path. The gachapon machine trades Drip catches for exclusive cosmetics.',
+    desc: 'The roulette table and prize machines. Drip catches convert into exclusive cosmetics here.',
     badges: ['🎚 Blank-prize render bug: cycle held item'],
     links: [
       { href: '/casino/', label: 'Casino & gachapon guide' },
@@ -63,22 +63,22 @@ const ZONES: Zone[] = [
   },
   {
     id: 'skies',
-    name: 'Island 4 (Skies)',
+    name: 'Island 4 (Sky)',
     icon: '🦅',
     x: 64, y: 26, stage: 'Stage 4',
-    desc: 'Albatross airspace. Catch a tuna locally, plant the carcass as bait, and keep open sightlines between dive passes.',
-    badges: ['🧭 Sky Compass on hand-in'],
+    desc: 'Albatross airspace. Catch the Tuna on the Professional Boss Lure, use it as bait, and keep open sightlines between dive passes.',
+    badges: ['🐟 Tuna → Albatross chain', '🎣 Professional Lure tier'],
     links: [{ href: '/bosses/albatross/', label: 'Albatross guide' }],
   },
   {
-    id: 'inferno',
-    name: 'Mount Inferno & Deep Trench',
+    id: 'volcano',
+    name: 'Island 5 (Volcano)',
     icon: '🌋',
     x: 82, y: 52, stage: 'Stage 5',
-    desc: 'Lava river canal to the crater lake, then the deepest zones. Vent fishing during thunderstorms is where Drip Fish live — and where guns get cooked.',
-    badges: ['⛈ Storm → vent Drip Fish', '🔥 Cooked-weapon risk zone', '🔑 Boat Key Part #3'],
+    desc: 'The volcano island. Fish Bucket → Bowhead Whale → the Mutated Bowhead Whale final boss; the Goblin Shark and the $1,700 Superdwarf Fish live here too.',
+    badges: ['🐋 Final-boss chain', '🔥 Cooked-weapon risk zone', '🎣 Scientific Lure tier'],
     links: [
-      { href: '/bosses/magma-whale/', label: 'Magma Whale guide' },
+      { href: '/bosses/magma-whale/', label: 'Final boss guide' },
       { href: '/troubleshooting/cooked-weapons/', label: 'Burned-gear rescue' },
     ],
   },
@@ -160,8 +160,8 @@ export default function ArchipelagoMap() {
       </div>
 
       <p className="text-xs text-gray-400">
-        Sailing blind between markers is how crews get lost — the <span className="text-gray-300">radar purchase</span> is the single most-recommended early buy. Weather matters: several
-        catch windows open only in rain or storms (see the <Link href="/fish/" className="text-aqua hover:underline">fish list</Link>).
+        Sailing blind between markers is how crews get lost — the <span className="text-gray-300">radar purchase</span> is the single most-recommended early buy. Which fish you catch is
+        determined by your <span className="text-gray-300">equipped lure</span>, so plan trips around the lure tiers on the <Link href="/fish/" className="text-aqua hover:underline">fish list</Link>.
       </p>
     </div>
   );

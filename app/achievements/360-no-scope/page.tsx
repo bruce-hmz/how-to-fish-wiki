@@ -40,7 +40,7 @@ export default function NoScope360Page() {
       />
       <Breadcrumb items={[{ name: 'Achievements', href: '/achievements/' }, { name: '360 No Scope', href: '/achievements/360-no-scope/' }]} />
       <h1 className="text-3xl font-extrabold text-white">360 No Scope Achievement in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified August 29, 2026 · Game version 1.0.10</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
 
       <div className="bg-gold/10 border border-gold/40 rounded-xl p-6 space-y-3">
         <p>

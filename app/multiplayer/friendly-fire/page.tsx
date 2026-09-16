@@ -34,7 +34,7 @@ export default function FriendlyFirePage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Multiplayer', href: '/multiplayer/' }, { name: 'Friendly Fire', href: '/multiplayer/friendly-fire/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Friendly Fire &amp; Slap Revives in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 4, 2026 · Game version 1.0.11</p>
+      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p>
