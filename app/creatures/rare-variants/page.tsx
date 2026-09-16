@@ -109,7 +109,7 @@ export default function RareVariantsPage() {
         <ul className="list-disc pl-5 space-y-2 text-sm text-gray-300">
           <li><strong className="text-white">Collector</strong> — &ldquo;Find and kill all the creatures&rdquo; (10.8% of players). The kill-everything checklist that variant hunting naturally feeds.</li>
           <li><strong className="text-white">Drip</strong> — &ldquo;Kill a drip creature&rdquo; (96.4%). Nearly everyone stumbles into one.</li>
-          <li><strong className="text-white">Fishipedia</strong> — &ldquo;Find and kill all drip creatures&rdquo; (1.4%). The single rarest achievement in the game, and a warning about how long true completion takes.</li>
+          <li><strong className="text-white">Fishipedia</strong> — &ldquo;Find and kill all drip creatures&rdquo; (1.4%). The single rarest achievement in the game, and a warning about how long true completion takes. The <Link href="/guides/fishipedia/" className="text-aqua hover:underline">Fishipedia checklist</Link> breaks the 49 creatures down by island and lure.</li>
         </ul>
         <p className="text-xs text-gray-400">
           Track your own progress with the{' '}

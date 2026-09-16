@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import LoadoutRecommender from '@/components/LoadoutRecommender';
 import { LURE_DATABASE } from '@/lib/data';
+import { getBossesSummonedByLure, guideHref } from '@/lib/entity-graph';
 
 export const metadata = {
   title: 'All Lures & Baits: What Each One Catches',
@@ -18,6 +19,11 @@ export default function LuresPage() {
   const questBaits = LURE_DATABASE.filter((l) =>
     ['empty-beer-can', 'modified-leech', 'carrot', 'fish-bucket'].includes(l.id)
   );
+
+  // Which boss-class creature each lure/bait hooks, and whether a dedicated
+  // guide exists — derived from the summon lines in the data layer.
+  const hookedBoss = (lureId: string) =>
+    getBossesSummonedByLure(lureId).map((b) => ({ name: b.name, href: guideHref(b.slug) }));
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
@@ -76,7 +82,18 @@ export default function LuresPage() {
               {bossLures.map((l) => (
                 <tr key={l.id}>
                   <td className="p-3 font-bold text-white">{l.name}</td>
-                  <td className="p-3 text-gray-300">{l.note}</td>
+                  <td className="p-3 text-gray-300">
+                    {l.note}
+                    {hookedBoss(l.id)
+                      .filter((b) => b.href)
+                      .map((b) => (
+                        <span key={b.name} className="block mt-1 text-[11px]">
+                          <Link href={b.href!} className="text-aqua hover:underline">
+                            {b.name} catch guide →
+                          </Link>
+                        </span>
+                      ))}
+                  </td>
                   <td className="p-3 text-gray-300">
                     {l.id === 'beginner-boss-lure' && 'Island 2 (Forest)'}
                     {l.id === 'standard-boss-lure' && 'Island 3 (Desert)'}
@@ -112,7 +129,22 @@ export default function LuresPage() {
               {questBaits.map((l) => (
                 <tr key={l.id}>
                   <td className="p-3 font-bold text-white">{l.name}</td>
-                  <td className="p-3 text-gray-300">{l.obtained || l.note}</td>
+                  <td className="p-3 text-gray-300">
+                    {l.obtained || l.note}
+                    {hookedBoss(l.id).map((b) => (
+                      <span key={b.name} className="block mt-1 text-[11px] text-gray-400">
+                        Summons: <span className="text-gray-300">{b.name}</span>
+                        {b.href ? (
+                          <>
+                            {' · '}
+                            <Link href={b.href} className="text-aqua hover:underline">
+                              catch guide →
+                            </Link>
+                          </>
+                        ) : null}
+                      </span>
+                    ))}
+                  </td>
                 </tr>
               ))}
             </tbody>

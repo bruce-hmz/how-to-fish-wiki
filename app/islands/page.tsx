@@ -131,7 +131,9 @@ export default function IslandsPage() {
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
             <h3 className="text-white font-bold text-sm mb-2">Stage 5 — Volcano island: the final chain</h3>
             <p className="text-xs text-gray-400">
-              Fish Bucket summons the Bowhead Whale; the Bowhead Whale is the bait for the{' '}
+              The{' '}
+              <Link href="/bosses/bowhead-whale/" className="text-aqua hover:underline">Fish Bucket
+              summons the Bowhead Whale</Link>; the Bowhead Whale is the bait for the{' '}
               <Link href="/bosses/magma-whale/" className="text-aqua hover:underline">Mutated Bowhead
               Whale</Link> — the final boss that finishes the game. The Goblin Shark (Scientific Boss Lure)
               is the parallel boss catch here, and the Scientific Lure&apos;s $1,700 Superdwarf Fish is the

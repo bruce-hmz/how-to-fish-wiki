@@ -65,7 +65,8 @@ export default function AchievementsPage() {
           <strong>Everyone&apos;s dream</strong> (4.1% — kill a seagull with dynamite). Chasing that 1% Bean yourself?
           <Link href="/achievements/bean/" className="text-aqua hover:underline">our dedicated Bean route guide</Link>
           covers the clock-safe path as of Patch 1.0.9. Chasing the rest of the rare wall? Deeper coverage:
-          <Link href="/fish/drip-fish/" className="text-aqua hover:underline">Fishipedia drip hunting</Link>
+          <Link href="/guides/fishipedia/" className="text-aqua hover:underline">the Fishipedia missing-creature checklist</Link>
+          · <Link href="/fish/drip-fish/" className="text-aqua hover:underline">Fishipedia drip hunting</Link>
           · <Link href="/bosses/magma-whale/" className="text-aqua hover:underline">Handyman bare-fist finale</Link>
           · <Link href="/money/" className="text-aqua hover:underline">Rich Millionaire income planning</Link>
           · <Link href="/difficulty/" className="text-aqua hover:underline">Easy-mode fast boss takedowns for Easy (10 seconds)</Link>

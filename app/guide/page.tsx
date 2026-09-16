@@ -106,6 +106,8 @@ export default function GuidePage() {
         <span>·</span>
         <Link href="/lures/" className="hover:text-aqua underline underline-offset-2">Lures &amp; baits</Link>
         <span>·</span>
+        <Link href="/guides/fishipedia/" className="hover:text-aqua underline underline-offset-2">Fishipedia checklist</Link>
+        <span>·</span>
         <Link href="/troubleshooting/what-to-do-next/" className="hover:text-aqua underline underline-offset-2">Stuck? What to do next</Link>
       </div>
 

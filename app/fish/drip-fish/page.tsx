@@ -123,7 +123,9 @@ export default function DripFishPage() {
           <p className="text-xs leading-relaxed">
             One trap for 100%-chasers: the Fishipedia tracks <strong className="text-white">all 49 regular and 49 Drip creatures
             separately</strong> — catching the Drip Voxelfish does not fill the normal Voxelfish entry, and vice versa. You need
-            both. And if you thought fish were the end of it: at least one hunter reports Drip boss variants exist too (500+
+            both. Every creature&apos;s Drip entry, island by island, is listed in the{' '}
+            <Link href="/guides/fishipedia/" className="text-aqua hover:underline">Fishipedia missing-creature checklist</Link>.
+            And if you thought fish were the end of it: at least one hunter reports Drip boss variants exist too (500+
             regular crabs, still no Drip Crab Boss).
           </p>
         </div>

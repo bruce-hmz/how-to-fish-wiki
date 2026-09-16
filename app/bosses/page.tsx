@@ -10,7 +10,14 @@ export const metadata = {
 };
 
 // Boss slugs that currently have a dedicated strategy page.
-const PAGED_BOSSES = new Set(['spider-crab', 'giant-piranha', 'pufferfish', 'albatross']);
+const PAGED_BOSSES = new Set([
+  'spider-crab',
+  'giant-piranha',
+  'pufferfish',
+  'albatross',
+  'old-pike',
+  'bowhead-whale',
+]);
 
 export default function BossesPage() {
   return (
@@ -75,7 +82,7 @@ export default function BossesPage() {
           <li>
             <strong className="text-white">The Old Pike — Island 2 (Forest).</strong> Hook it with the{' '}
             <Link href="/lures/" className="text-aqua hover:underline">Beginner Boss Lure</Link> ($40; the Sunfish shares the lure pool and can bite first), or skip fishing and hunt it with the $150 Shotgun. Full answer in the{' '}
-            <Link href="/fish/" className="text-aqua hover:underline">fish database FAQ</Link>.
+            <Link href="/bosses/old-pike/" className="text-aqua hover:underline">Old Pike catch guide</Link>.
           </li>
           <li>
             <strong className="text-white">Blue Shark — Island 3 (Desert).</strong> Standard Boss Lure from the
@@ -95,6 +102,14 @@ export default function BossesPage() {
         <p className="text-xs text-gray-500">
           All four are guide-documented (G2A + Mobalytics cross-verified, Game8 for the Old Pike route), not
           in-game verified by us — the same provenance standard as the fish table.
+        </p>
+        <p>
+          The island-5 whale chain sits between those two tiers: the Fish Bucket quest item summons the
+          regular{' '}
+          <Link href="/bosses/bowhead-whale/" className="text-aqua hover:underline">Bowhead Whale</Link>,
+          and the defeated whale is itself the bait for the Mutated Bowhead Whale — the final boss covered
+          in the{' '}
+          <Link href="/bosses/magma-whale/" className="text-aqua hover:underline">final-boss guide</Link>.
         </p>
 
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Difficulty Settings Beat Grinded Gear</h2>

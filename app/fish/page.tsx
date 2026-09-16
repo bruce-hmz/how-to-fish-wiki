@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'What are Drip fish?',
-    a: 'Drip creatures are glowing, color-shifted variants of the regular roster — a separate collection layer with its own achievement (Fishipedia, "find and kill all drip creatures"). A drip variant is caught with the same lure as its normal version; there is no separate drip lure. Drip catches feed the Casino prize machines, where they convert into cosmetic skins. Our Drip guide covers the known variants and hunting techniques in detail.',
+    a: 'Drip creatures are glowing, color-shifted variants of the regular roster — a separate collection layer with its own achievement (Fishipedia, "find and kill all drip creatures"). A drip variant is caught with the same lure as its normal version; there is no separate drip lure. Drip catches feed the Casino prize machines, where they convert into cosmetic skins. Our Drip guide covers the known variants and hunting techniques in detail, and the Fishipedia checklist lists all 49 creatures with the exact lure for each one.',
   },
   {
     q: 'Do weather or time of day change what you catch?',
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: 'How do I get the Old Pike?',
-    a: 'The Old Pike is not a regular rod catch — player guides (G2A, Game8) document it as a boss-class catch on Island 2, the forest island. The documented route is the Beginner Boss Lure, sold for $40 in item shops: cast it and keep trying, because the Sunfish shares the same lure pool and can bite first. The early-game alternative is to skip fishing entirely and buy the Shotgun for $150 to hunt it down directly. Treat these details as guide-documented rather than in-game verified — the same standard applied to every row in the table above. Boss-class catches are tracked in the boss hub.',
+    a: 'The Old Pike is not a regular rod catch — player guides (G2A, Game8) document it as a boss-class catch on Island 2, the forest island. The documented route is the Beginner Boss Lure, sold for $40 in item shops: cast it and keep trying, because the Sunfish shares the same lure pool and can bite first. The early-game alternative is to skip fishing entirely and buy the Shotgun for $150 to hunt it down directly. Treat these details as guide-documented rather than in-game verified — the same standard applied to every row in the table above. Boss-class catches are tracked in the boss hub, and the full step-by-step route is on the Old Pike catch guide.',
   },
 ];
 
@@ -47,7 +47,7 @@ export default function FishPage() {
           <strong className="text-white">How to use this table:</strong> regular fish in How to Fish are determined by your equipped <strong className="text-aqua">lure</strong>, not your current island — but each lure tier unlocks with an island step, so the island column tells you when a species becomes reachable. Every row&apos;s location and lure is cross-verified against two independent guide databases (the G2A island guide and the Mobalytics fish list). Sell values are shown only where the IGN fish table recorded one; everything else is honestly marked <em>undocumented</em> rather than guessed.
         </p>
         <p>
-          The full lure tier list — including the four Boss Lures and quest baits like the Carrot and Modified Leech — lives in the <a href="/lures/" className="text-aqua hover:underline">lures &amp; baits guide</a>, and the 11 boss-class catches live in the <a href="/bosses/" className="text-aqua hover:underline">boss hub</a>.
+          The full lure tier list — including the four Boss Lures and quest baits like the Carrot and Modified Leech — lives in the <a href="/lures/" className="text-aqua hover:underline">lures &amp; baits guide</a>, and the 11 boss-class catches live in the <a href="/bosses/" className="text-aqua hover:underline">boss hub</a>. The island-2 mini-boss has its own step-by-step page: <a href="/bosses/old-pike/" className="text-aqua hover:underline">how to catch the Old Pike</a>.
         </p>
       </div>
 
@@ -99,6 +99,8 @@ export default function FishPage() {
 
       <div className="flex flex-wrap gap-3 text-xs text-gray-400 pt-2">
         <a href="/achievements/" className="hover:text-aqua underline underline-offset-2">Collection achievements</a>
+        <span>·</span>
+        <a href="/guides/fishipedia/" className="hover:text-aqua underline underline-offset-2">Fishipedia missing-creature checklist</a>
         <span>·</span>
         <a href="/casino/" className="hover:text-aqua underline underline-offset-2">Casino &amp; gachapon</a>
         <span>·</span>
