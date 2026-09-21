@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import FishipediaChecklist from '@/components/FishipediaChecklist';
 import Sources from '@/components/Sources';
 import { ArticleJsonLd, FaqJsonLd } from '@/components/JsonLd';
-import { FISHIPEDIA_GROUPS, FISHIPEDIA_TOTALS, type FishipediaEntry } from '@/lib/fishipedia';
+import { FISHIPEDIA_GROUPS, FISHIPEDIA_TOTALS } from '@/lib/fishipedia';
 import { getRelatedQuests, sourcesFor, lastVerified, guideHref } from '@/lib/entity-graph';
 import { BOSSES, FISH, CURRENT_GAME_VERSION } from '@/src/data/game';
 
@@ -34,50 +35,6 @@ const faqs = [
     a: 'The special perch variant is the most-reported last missing entry in Collector-style runs, and no verified acquisition method for it exists. The Goby was added to the verified catalog in the September 2026 audit, and the Bowlfish’s species status rests on a single source — all three are flagged in the checklist below.',
   },
 ];
-
-function ChecklistRow({ entry }: { entry: FishipediaEntry }) {
-  return (
-    <li className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-3 px-4 py-3 items-baseline sm:items-center border-b border-ocean-800/50 last:border-0">
-      <div className="sm:col-span-4 font-bold text-white text-sm leading-snug">
-        {entry.name}
-        {entry.caveat ? (
-          <span
-            className="ml-1.5 text-[10px] text-gray-500 cursor-help align-middle"
-            title={entry.caveat}
-          >
-            ⓘ
-          </span>
-        ) : null}
-      </div>
-      <div className="sm:col-span-2 text-[11px] text-gray-500">
-        {entry.kindLabel}
-        {entry.chainStep ? ' · chain catch' : ''}
-      </div>
-      <div className="sm:col-span-4 text-xs text-gray-300 leading-snug">
-        {entry.method}
-        {entry.methodDetail ? (
-          <span className="ml-1.5 text-[10px] text-gray-500 cursor-help" title={entry.methodDetail}>
-            ⓘ
-          </span>
-        ) : null}
-      </div>
-      <div className="sm:col-span-2 text-xs">
-        {entry.guideHref ? (
-          <Link href={entry.guideHref} className="text-aqua hover:underline font-semibold">
-            Guide →
-          </Link>
-        ) : (
-          <span
-            className="text-gray-600"
-            title="No dedicated page yet — the location and catch method in this row are the full documented answer."
-          >
-            Guide unavailable
-          </span>
-        )}
-      </div>
-    </li>
-  );
-}
 
 export default function FishipediaPage() {
   const { total, fish, boss, fishipediaAchievement, collectorAchievement, dripRule } = FISHIPEDIA_TOTALS;
@@ -149,45 +106,11 @@ export default function FishipediaPage() {
           All {total} creatures, grouped by island in progression order. {dripRule} The ⓘ marks carry the
           data layer&apos;s own caveats (single-source or still-pending facts).
         </p>
-        <nav className="flex flex-wrap gap-2 text-xs" aria-label="Jump to island">
-          {FISHIPEDIA_GROUPS.map((g) => (
-            <a
-              key={g.locationSlug}
-              href={`#island-${g.islandNumber}`}
-              className="bg-ocean-900 border border-ocean-800 hover:border-aqua/50 hover:text-aqua transition-colors text-gray-300 px-3 py-1.5 rounded-lg"
-            >
-              Island {g.islandNumber} ({g.count})
-            </a>
-          ))}
-        </nav>
-        <div className="space-y-6">
-          {FISHIPEDIA_GROUPS.map((group) => (
-            <div key={group.locationSlug} className="bg-ocean-900/80 border border-ocean-800 rounded-xl overflow-hidden">
-              <h3
-                id={`island-${group.islandNumber}`}
-                className="px-4 py-3 bg-ocean-950 text-white font-bold text-sm border-b border-ocean-800 flex flex-wrap items-baseline gap-x-2"
-              >
-                <span>
-                  Island {group.islandNumber} — {group.locationName.replace(`Island ${group.islandNumber} — `, '')}
-                </span>
-                <span className="text-[11px] font-normal text-gray-500">
-                  {group.count} creatures · {group.fishCount} fish · {group.bossCount} boss-class
-                </span>
-              </h3>
-              <ul>
-                <li className="hidden sm:grid grid-cols-12 gap-3 px-4 py-2 text-[10px] uppercase tracking-wider text-gray-500 border-b border-ocean-800/50">
-                  <span className="col-span-4">Creature</span>
-                  <span className="col-span-2">Type</span>
-                  <span className="col-span-4">Location / Lure or summon</span>
-                  <span className="col-span-2">Guide</span>
-                </li>
-                {group.entries.map((entry) => (
-                  <ChecklistRow key={entry.slug} entry={entry} />
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <p className="text-sm text-gray-400">
+          Search it, filter it by island, and tick off what you have caught — the checklist remembers your
+          ticks in this browser so you can come back and carry on where you stopped.
+        </p>
+        <FishipediaChecklist groups={FISHIPEDIA_GROUPS} total={total} />
         <p className="text-xs text-gray-500">
           The checklist is generated from the verified game-data layer — every row above is a real catalog
           entry with provenance. “Guide unavailable” means no dedicated page exists yet; the location and

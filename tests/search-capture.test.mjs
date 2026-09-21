@@ -89,10 +89,15 @@ test('no hardcoded creature list lives in the fishipedia page', () => {
   const src = readFileSync(BATCH_PAGES[2], 'utf8');
   // The only creature names allowed as literals on the page are the
   // hand-written prosp prose mentions; assert the checklist itself is
-  // rendered from FISHIPEDIA_GROUPS (data-driven).
-  assert.match(src, /FISHIPEDIA_GROUPS\.map/, 'checklist must iterate data groups');
-  assert.match(src, /group\.entries\.map/, 'rows must come from group entries');
+  // rendered from the data layer (Batch 2A moved the row rendering into the
+  // FishipediaChecklist client island, which takes the same groups as a prop).
+  assert.match(src, /FISHIPEDIA_GROUPS/, 'checklist must consume the data-derived groups');
+  assert.match(src, /<FishipediaChecklist groups=\{FISHIPEDIA_GROUPS\} total=\{total\} \/>/);
   assert.ok(!/hardcode/i.test(src));
+
+  const component = readFileSync('components/FishipediaChecklist.tsx', 'utf8');
+  assert.match(component, /group\.entries\.map/, 'rows must come from group entries');
+  assert.doesNotMatch(component, /from '@\/src\/data\/game'/, 'no second creature list in the client island');
 });
 
 // ---- provenance ----

@@ -109,6 +109,12 @@ export default function IslandsPage() {
               <Link href="/bosses/giant-piranha/" className="text-aqua hover:underline">Giant Piranha</Link>.
               Walking the Skeleton back to the quest NPC is the only way to unlock Island 3.
             </p>
+            <p className="text-xs text-gray-400 mt-2">
+              The island&apos;s regular roster runs on the Beginner Lure — the{' '}
+              <Link href="/fish/triggerfish/" className="text-aqua hover:underline">Triggerfish</Link> is one of
+              the species that becomes reachable here; the full tier list is on the{' '}
+              <Link href="/fish/" className="text-aqua hover:underline">fish database</Link>.
+            </p>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
             <h3 className="text-white font-bold text-sm mb-2">Stage 3 — Desert island: the Pufferfish gate</h3>

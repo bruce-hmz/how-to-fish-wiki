@@ -61,7 +61,9 @@ export default function LuresPage() {
         </div>
         <p className="text-xs text-gray-500">
           Which fish lives on which island? The full per-species table lives in the{' '}
-          <Link href="/fish/" className="text-aqua hover:underline">fish database</Link>.
+          <Link href="/fish/" className="text-aqua hover:underline">fish database</Link> — for example the
+          island-2 Beginner Lure catch{' '}
+          <Link href="/fish/triggerfish/" className="text-aqua hover:underline">Triggerfish</Link>.
         </p>
 
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2 pt-4">Boss Lures</h2>

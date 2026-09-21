@@ -37,6 +37,7 @@ export const GUIDE_ROUTES: Record<string, string> = {
   'mutated-bowhead-whale': '/bosses/magma-whale/',
   'old-pike': '/bosses/old-pike/',
   'bowhead-whale': '/bosses/bowhead-whale/',
+  triggerfish: '/fish/triggerfish/',
 };
 
 export function guideHref(slug: string): string | null {

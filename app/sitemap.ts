@@ -99,11 +99,24 @@ const UPDATED_2026_09_16 = new Set([
   '/troubleshooting/what-to-do-next/',
 ]);
 
+// Batch 2A (2026-09-21): new /fish/triggerfish/ landing page, the interactive
+// Fishipedia checklist, and the internal links added to the pages below.
+const UPDATED_2026_09_21 = new Set([
+  '/fish/triggerfish/',
+  '/fish/',
+  '/fish/drip-fish/',
+  '/lures/',
+  '/islands/',
+  '/guides/fishipedia/',
+]);
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['', '/guide/', '/fish/', '/fish/drip-fish/', '/bosses/', '/bosses/pufferfish/', '/bosses/spider-crab/', '/bosses/magma-whale/', '/bosses/giant-piranha/', '/bosses/first-boss/', '/bosses/albatross/', '/bosses/old-pike/', '/bosses/bowhead-whale/', '/guides/fishipedia/', '/lures/', '/weapons/', '/money/', '/map/', '/boat/', '/islands/', '/guides/leeches/', '/guides/dynamite/', '/guides/death/', '/cooking/', '/multiplayer/', '/multiplayer/friendly-fire/', '/settings/', '/difficulty/', '/casino/', '/trick-shots/', '/achievements/', '/achievements/bean/', '/achievements/360-no-scope/', '/achievements/everyones-dream/', '/creatures/rare-variants/', '/game/system-requirements/', '/game/launch/', '/updates/', '/videos/', '/troubleshooting/', '/troubleshooting/save-file/', '/troubleshooting/items-disappeared/', '/troubleshooting/cooked-weapons/', '/troubleshooting/join-friends/', '/troubleshooting/fish-not-biting/', '/troubleshooting/performance-stutter/', '/troubleshooting/audio-duplication/', '/troubleshooting/error-0x11c7/', '/troubleshooting/what-to-do-next/', '/about/', '/editorial-policy/', '/privacy/', '/terms/', '/faq/'];
+  const routes = ['', '/guide/', '/fish/', '/fish/triggerfish/', '/fish/drip-fish/', '/bosses/', '/bosses/pufferfish/', '/bosses/spider-crab/', '/bosses/magma-whale/', '/bosses/giant-piranha/', '/bosses/first-boss/', '/bosses/albatross/', '/bosses/old-pike/', '/bosses/bowhead-whale/', '/guides/fishipedia/', '/lures/', '/weapons/', '/money/', '/map/', '/boat/', '/islands/', '/guides/leeches/', '/guides/dynamite/', '/guides/death/', '/cooking/', '/multiplayer/', '/multiplayer/friendly-fire/', '/settings/', '/difficulty/', '/casino/', '/trick-shots/', '/achievements/', '/achievements/bean/', '/achievements/360-no-scope/', '/achievements/everyones-dream/', '/creatures/rare-variants/', '/game/system-requirements/', '/game/launch/', '/updates/', '/videos/', '/troubleshooting/', '/troubleshooting/save-file/', '/troubleshooting/items-disappeared/', '/troubleshooting/cooked-weapons/', '/troubleshooting/join-friends/', '/troubleshooting/fish-not-biting/', '/troubleshooting/performance-stutter/', '/troubleshooting/audio-duplication/', '/troubleshooting/error-0x11c7/', '/troubleshooting/what-to-do-next/', '/about/', '/editorial-policy/', '/privacy/', '/terms/', '/faq/'];
   return routes.map((route) => ({
     url: `${baseUrl}${route || '/'}`,
-    lastModified: UPDATED_2026_09_16.has(route || '/')
+    lastModified: UPDATED_2026_09_21.has(route || '/')
+      ? '2026-09-21'
+      : UPDATED_2026_09_16.has(route || '/')
       ? '2026-09-16'
       : UPDATED_2026_09_01.has(route || '/')
       ? '2026-09-01'

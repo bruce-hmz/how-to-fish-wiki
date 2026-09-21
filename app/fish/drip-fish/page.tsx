@@ -207,7 +207,10 @@ export default function DripFishPage() {
         <p className="text-xs text-gray-400">
           Achievement still locked after all that? Our{' '}
           <Link href="/achievements/" className="text-aqua hover:underline">achievements &amp; collector bugs guide</Link> covers
-          the full kill-all-creatures blocker list.
+          the full kill-all-creatures blocker list. Hunting one specific creature instead? The island-2
+          Beginner Lure catch has its own page —{' '}
+          <Link href="/fish/triggerfish/" className="text-aqua hover:underline">how to catch Triggerfish and
+          Drip Triggerfish</Link>.
         </p>
       </section>
 
