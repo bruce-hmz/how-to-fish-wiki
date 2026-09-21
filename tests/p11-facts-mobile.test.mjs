@@ -228,10 +228,12 @@ test('P1.1/Achievements: no page still prints the superseded 2026-08-26 numbers'
     const src = readFileSync(file, 'utf8');
     assert.doesNotMatch(
       src,
-      /single rarest achievement|the rarest achievement in the game/i,
+      /single rarest achievement|the rarest achievement in the game|the rarest in the game/i,
       `${file}: superseded rarity claim`
     );
   }
+  // It is still the rarest COLLECTION achievement, which is what the pages say.
+  assert.match(readFileSync(FISHIPEDIA_PAGE, 'utf8'), /rarest collection goal in the game/);
 });
 
 test('P1.1/Fishipedia: corrected meta description keeps the intent and drops the claim', () => {

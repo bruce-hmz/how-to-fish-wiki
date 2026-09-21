@@ -80,7 +80,7 @@ export default function FishipediaPage() {
       <div className="bg-aqua/10 border border-aqua/40 rounded-xl p-6 space-y-3 text-sm">
         <p className="font-bold text-white">
           Quick answer: the Fishipedia achievement asks you to “find and kill all drip creatures” —{' '}
-          {fishipediaAchievement.globalPercent}% of players have it, the rarest in the game. The catalog holds{' '}
+          {fishipediaAchievement.globalPercent}% of players have it, the rarest collection goal in the game. The catalog holds{' '}
           {total} creatures ({fish} regular fish + {boss} boss-class) and the community catalog lists a Drip
           entry for each, but that {catalogDripEntryCount}-entry Drip set is a community figure, not official
           data — the evidence note below says exactly what is confirmed. The method itself is not in dispute:
