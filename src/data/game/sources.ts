@@ -129,6 +129,36 @@ export const SOURCES: SourceRef[] = [
     kind: 'COMMUNITY_VERIFIED',
     retrievedAt: '2026-09-10',
   },
+
+  // ---- Sources added by the 2026-09-21 drip-count evidence review ----
+  {
+    id: 'game8-drip-guide',
+    name: 'Game8: Drip Creatures Guide — How to Catch (drip rule, rainbow notification, boss counting)',
+    url: 'https://game8.co/games/How-to-Fish/archives/617424',
+    kind: 'COMMUNITY_VERIFIED',
+    retrievedAt: '2026-09-21',
+  },
+  {
+    id: 'steam-drip-boss-thread',
+    name: 'Steam Discussion: "Does the drippy Voxelfish exist?" (drip boss claims and counter-claim)',
+    url: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606534846/',
+    kind: 'COMMUNITY_VERIFIED',
+    retrievedAt: '2026-09-21',
+  },
+  {
+    id: 'grindnstrat-achievements',
+    name: 'GrindNStrat: How to Fish — all 28 achievements guide (separate drip tracking in the encyclopedia)',
+    url: 'https://grindnstrat.com/how-to-fish-all-28-achievements-guide/',
+    kind: 'COMMUNITY_VERIFIED',
+    retrievedAt: '2026-09-21',
+  },
+  {
+    id: 'steam-achievements-2026-09-21',
+    name: 'Steam Community global achievement stats (app 4001890), re-fetched 2026-09-21',
+    url: 'https://steamcommunity.com/stats/4001890/achievements',
+    kind: 'OFFICIAL',
+    retrievedAt: '2026-09-21',
+  },
 ];
 
 export const SOURCE_BY_ID: Record<string, SourceRef> = Object.fromEntries(

@@ -5,10 +5,14 @@
  * creature list anywhere in the page. Add a verified creature to the data
  * layer and it appears here (and on the page) automatically.
  *
- * Scope note: both the catalog total (49) and the Fishipedia achievement's
- * requirement span the same 49 creatures, so no creature is excluded today.
- * If a future entity type should not count, exclude it HERE — and the
- * exclusion is enforced by tests/search-capture.test.mjs.
+ * Scope note (revised 2026-09-21): this adapter renders the 49-creature
+ * CATALOG. It is not evidence that the Fishipedia achievement requires 49
+ * independently obtained Drip states — the official achievement text only says
+ * "Find and kill all drip creatures", and the size of the Drip set is a
+ * single-source community figure (see DRIP_SYSTEM_FACTS). No creature is
+ * excluded from the checklist today; if a future entity type should not count,
+ * exclude it HERE — and the exclusion is enforced by
+ * tests/search-capture.test.mjs.
  */
 import { FISH, BOSSES, ACHIEVEMENT_BY_SLUG, DRIP_SYSTEM_FACTS } from '@/src/data/game';
 import type { AchievementEntity, BaseEntity, BossEntity } from '@/src/data/game';
@@ -127,10 +131,19 @@ export const FISHIPEDIA_TOTALS = {
   total: FISHIPEDIA_ENTRIES.length,
   fish: FISHIPEDIA_ENTRIES.filter((e) => e.kind === 'fish').length,
   boss: FISHIPEDIA_ENTRIES.filter((e) => e.kind === 'boss').length,
-  /** Boss-class creatures that end a chain (summoned with another creature). */
-  dripVariantCount: DRIP_SYSTEM_FACTS.dripVariantCount,
   catalogSize: DRIP_SYSTEM_FACTS.totalCatalogSize,
+  /**
+   * Drip entries the community catalog lists — SINGLE-SOURCE (Mobalytics).
+   * Pages must render this with its status, never as a verified count of
+   * independently obtainable Drip states.
+   */
+  catalogDripEntryCount: DRIP_SYSTEM_FACTS.catalogDripEntryCount,
+  catalogDripEntryCountStatus: DRIP_SYSTEM_FACTS.catalogDripEntryCountStatus,
+  /** Whether the 11 boss-class rows need their own Drip catch — DISPUTED. */
+  bossDripStatus: DRIP_SYSTEM_FACTS.bossDripStatus,
+  bossDripNote: DRIP_SYSTEM_FACTS.bossDripNote,
   dripRule: DRIP_SYSTEM_FACTS.rule,
+  dripRng: DRIP_SYSTEM_FACTS.rng,
   fishipediaAchievement: {
     name: FISHIPEDIA_ACHIEVEMENT.name,
     description: FISHIPEDIA_ACHIEVEMENT.facts.description,

@@ -13,18 +13,18 @@ const sources = sourcesFor([...FISH, ...BOSSES]);
 export const metadata = {
   title: 'How to Complete the Fishipedia — Missing Creature Checklist',
   description:
-    'The Fishipedia achievement ("find and kill all drip creatures", 1.4%) spans 49 creatures — 38 regular fish plus 11 boss-class. Full checklist with location and lure for every missing entry, verified for 1.0.12.',
+    'The Fishipedia achievement ("find and kill all drip creatures", 3.6%) is the game’s rarest collection goal. Full 49-creature checklist with the verified location and lure for every entry, plus what is confirmed — and what is still disputed — about Drip variants. Verified for 1.0.12.',
   alternates: { canonical: 'https://howtofish101.com/guides/fishipedia/' },
 };
 
 const faqs = [
   {
     q: 'How many creatures do I need for the Fishipedia in How to Fish?',
-    a: '49. The achievement tracks the drip variants of every creature in the catalog: 38 regular fish plus 11 boss-class catches. Every creature has a Drip variant, and each is catchable with the same lure as its normal version — there is no separate drip lure.',
+    a: 'The catalog holds 49 creatures (38 regular fish plus 11 boss-class), and the community catalog lists a Drip entry for every one of them. Treat that 49 as a community figure rather than an official one: the achievement text only says "find and kill all drip creatures", and no official source, patch note or game file states how many Drip creatures it counts. The method is what every source agrees on — a Drip variant is caught with the same lure as its normal version, and there is no separate drip lure.',
   },
   {
     q: 'Does catching a normal creature count for the Fishipedia?',
-    a: 'No — the two completion achievements track different things. Collector is "Find and kill all the creatures" (10.8% global unlock); Fishipedia is "Find and kill all drip creatures" (1.4%). A regular catch does not progress the drip counter.',
+    a: 'They are two separate achievements, so they are not the same counter. Collector is "Find and kill all the creatures" (18.5% global unlock); Fishipedia is "Find and kill all drip creatures" (3.6%). For a regular fish, landing the normal version does not fill its Drip entry. For the 11 boss-class rows the sources conflict — Game8’s drip guide states bosses count as both regular and Drip variants from a single defeat, while another player reports grinding hundreds of crabs without ever seeing a Drip boss — so this site does not claim either outcome.',
   },
   {
     q: "Why won't the Fishipedia achievement unlock?",
@@ -37,7 +37,19 @@ const faqs = [
 ];
 
 export default function FishipediaPage() {
-  const { total, fish, boss, fishipediaAchievement, collectorAchievement, dripRule } = FISHIPEDIA_TOTALS;
+  const {
+    total,
+    fish,
+    boss,
+    fishipediaAchievement,
+    collectorAchievement,
+    dripRule,
+    dripRng,
+    catalogDripEntryCount,
+    catalogDripEntryCountStatus,
+    bossDripStatus,
+    bossDripNote,
+  } = FISHIPEDIA_TOTALS;
 
   // Boss-class rows that are part of a documented quest/chain (for the
   // quest-gated triage block) — derived from the data layer, not hand-written.
@@ -68,11 +80,13 @@ export default function FishipediaPage() {
       <div className="bg-aqua/10 border border-aqua/40 rounded-xl p-6 space-y-3 text-sm">
         <p className="font-bold text-white">
           Quick answer: the Fishipedia achievement asks you to “find and kill all drip creatures” —{' '}
-          {fishipediaAchievement.globalPercent}% of players have it. It spans {total} creatures (
-          {fish} regular fish + {boss} boss-class), and every one of them has a Drip variant. Catch each
-          drip variant <strong>with the same lure as its normal version</strong> — there is no separate
-          drip lure. Missing one? Use the checklist below: find your island, check the lure, close the
-          gap.
+          {fishipediaAchievement.globalPercent}% of players have it, the rarest in the game. The catalog holds{' '}
+          {total} creatures ({fish} regular fish + {boss} boss-class) and the community catalog lists a Drip
+          entry for each, but that {catalogDripEntryCount}-entry Drip set is a community figure, not official
+          data — the evidence note below says exactly what is confirmed. The method itself is not in dispute:
+          catch each Drip variant <strong>with the same lure as its normal version</strong>, because there is
+          no separate drip lure. Missing one? Use the checklist below: find your island, check the lure, close
+          the gap.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-ocean-950 p-4 rounded-lg text-xs">
           <div>
@@ -99,6 +113,62 @@ export default function FishipediaPage() {
           {fishipediaAchievement.globalPercent}%) is the drip layer. They are separate achievements.
         </p>
       </div>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-white">
+          What Is Confirmed About Drip Variants — and What Is Not
+        </h2>
+        <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-4 text-sm text-gray-300">
+          <p className="text-xs text-gray-400">
+            Re-checked against primary sources on 2026-09-21. The three blocks below separate what the sources
+            establish from what they only repeat.
+          </p>
+          <div className="space-y-4 text-xs">
+            <div className="border-l-2 border-aqua/60 pl-3 space-y-1">
+              <strong className="text-white block">Confirmed — multiple independent sources</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  The catalog holds <strong className="text-white">{total} creatures</strong>: {fish} regular
+                  fish plus {boss} boss-class. Three separate guide databases count 49, and the official
+                  Collector achievement is the in-game counterpart to that catalog.
+                </li>
+                <li>
+                  Collector and Fishipedia are <strong className="text-white">two separate achievements</strong>{' '}
+                  with different descriptions — one tracks the regular catalog, the other the Drip layer. The
+                  official Steam text is the only official statement about either scope.
+                </li>
+                <li>{dripRule}</li>
+                <li>{dripRng}</li>
+                <li>
+                  A Drip creature keeps its normal name, differs only in colour, and is listed in its own
+                  column of the Tab encyclopedia.
+                </li>
+              </ul>
+            </div>
+            <div className="border-l-2 border-gold/60 pl-3 space-y-1">
+              <strong className="text-white block">
+                Single-source — community catalog figure ({catalogDripEntryCountStatus})
+              </strong>
+              <p>
+                The size of the Drip set. The {catalogDripEntryCount}-entry figure comes from one community
+                guide database; no official note, patch log or game file states it. Use it as a working
+                checklist, not as a verified completion requirement.
+              </p>
+            </div>
+            <div className="border-l-2 border-coral/60 pl-3 space-y-1">
+              <strong className="text-white block">
+                Disputed — sources conflict on boss-class rows ({bossDripStatus})
+              </strong>
+              <p>{bossDripNote}</p>
+            </div>
+          </div>
+          <p className="text-xs text-gray-400">
+            Practical upshot: the checklist below is the full verified catalog with the exact lure for every
+            entry, and it stays the best missing-creature tool for the game. Ticking all {total} rows is your
+            own note-keeping — it is not a claim that the in-game Fishipedia counter has reached {total}.
+          </p>
+        </div>
+      </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-white">Fishipedia Checklist</h2>

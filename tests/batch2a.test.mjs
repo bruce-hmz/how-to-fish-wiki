@@ -10,7 +10,9 @@
  *    behaviour when storage is missing or throws
  *  - the server-rendered HTML still carries all 49 creatures (checked against
  *    the real build output when a build exists)
- *  - the Fishipedia SEO surface is byte-identical to what shipped
+ *  - the Fishipedia URL, title, H1 and canonical are unchanged (the description
+ *    and quick answer were later rewritten by P1.1 — see
+ *    tests/p11-facts-mobile.test.mjs)
  *  - /fish/triggerfish/ exists, is canonical-correct, is sitemapped, is linked
  *    from Fishipedia, and carries no resurrected fabricated mechanics
  */
@@ -214,8 +216,10 @@ test('2A/Fishipedia: progress counts are derived, never hardcoded', () => {
 
 test('2A/Fishipedia: the two collection layers stay separate', () => {
   // The data layer documents two counters, so the tool tracks two layers and
-  // never merges them into one "complete" claim.
-  assert.match(DRIP_SYSTEM_FACTS.rule, /same lure as their normal version/i);
+  // never merges them into one "complete" claim. (P1.1 narrowed the rule to the
+  // part every source agrees on — see tests/p11-facts-mobile.test.mjs.)
+  assert.match(DRIP_SYSTEM_FACTS.rule, /same (lure|rod or lure) as their normal version/i);
+  assert.equal(DRIP_SYSTEM_FACTS.bossDripStatus, 'DISPUTED');
   const toggled = progress.toggleProgress(progress.EMPTY_PROGRESS, 'caught', 'triggerfish');
   assert.deepEqual(toggled, { caught: ['triggerfish'], drip: [] });
   const dripToggled = progress.toggleProgress(toggled, 'drip', 'triggerfish');
@@ -338,7 +342,7 @@ test('2A/Fishipedia: the initial server HTML still contains all 49 creatures', (
   assert.doesNotMatch(html, /hidden[^"]*"[^>]*>Search creatures/);
 });
 
-test('2A/Fishipedia: SEO surface (URL, title, H1, description, canonical, quick answer) is unchanged', () => {
+test('2A/Fishipedia: SEO surface (URL, title, H1, canonical) is unchanged by the interaction upgrade', () => {
   const page = readFileSync(FISHIPEDIA_PAGE, 'utf8');
   assert.ok(
     page.includes("title: 'How to Complete the Fishipedia — Missing Creature Checklist'"),
@@ -352,18 +356,15 @@ test('2A/Fishipedia: SEO surface (URL, title, H1, description, canonical, quick 
     page.includes('<h1 className="text-3xl font-extrabold text-white">How to Complete the Fishipedia in How to Fish</h1>'),
     'H1 changed'
   );
-  assert.ok(
-    page.includes(
-      "'The Fishipedia achievement (\"find and kill all drip creatures\", 1.4%) spans 49 creatures — 38 regular fish plus 11 boss-class. Full checklist with location and lure for every missing entry, verified for 1.0.12.'"
-    ),
-    'meta description changed'
-  );
-  assert.ok(
-    page.includes('Quick answer: the Fishipedia achievement asks you to'),
-    'quick answer changed'
-  );
+  assert.ok(page.includes('Quick answer: the Fishipedia achievement asks you to'), 'quick answer removed');
   assert.ok(page.includes('2026-09-16'), 'verification stamp changed');
   assert.ok(page.includes('1.0.12'), 'game version stamp changed');
+  // The meta description and quick answer were deliberately rewritten in P1.1
+  // because they asserted the drip count as certain. They must keep the target
+  // intent and the version pin — the exact wording is asserted in
+  // tests/p11-facts-mobile.test.mjs.
+  assert.match(page, /description:\s*\n?\s*'The Fishipedia achievement/);
+  assert.match(page, /3\.6%/, 'meta description must carry the refreshed official rate');
   // The page must stay a Server Component (no 'use client' at the top).
   assert.doesNotMatch(page.slice(0, 200), /'use client'/);
   // Interactive bits live in the client island only.

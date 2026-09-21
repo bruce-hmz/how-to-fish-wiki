@@ -121,12 +121,14 @@ export default function DripFishPage() {
             </table>
           </div>
           <p className="text-xs leading-relaxed">
-            One trap for 100%-chasers: the Fishipedia tracks <strong className="text-white">all 49 regular and 49 Drip creatures
+            One trap for 100%-chasers: the Fishipedia tracks <strong className="text-white">regular and Drip entries
             separately</strong> — catching the Drip Voxelfish does not fill the normal Voxelfish entry, and vice versa. You need
-            both. Every creature&apos;s Drip entry, island by island, is listed in the{' '}
+            both. The catalog holds 49 creatures and the community catalog lists a Drip entry for each, but that 49-entry Drip
+            set is a <strong className="text-white">single community source, not official data</strong>, and the sources
+            conflict on whether the 11 boss-class rows need their own Drip catch (Game8 says bosses count as both variants
+            from one defeat; another player reports grinding hundreds of crabs without a Drip boss). Every creature&apos;s
+            entry, island by island, is listed in the{' '}
             <Link href="/guides/fishipedia/" className="text-aqua hover:underline">Fishipedia missing-creature checklist</Link>.
-            And if you thought fish were the end of it: at least one hunter reports Drip boss variants exist too (500+
-            regular crabs, still no Drip Crab Boss).
           </p>
         </div>
       </section>
@@ -163,8 +165,8 @@ export default function DripFishPage() {
             <Link href="/money/" className="text-aqua hover:underline">money-making guide</Link> covers the fast routes) so
             Professional Lures never bottleneck the hunt, and knocks out the{' '}
             <Link href="/achievements/" className="text-aqua hover:underline">bare-hands final-boss achievement</Link> on
-            Easy difficulty while the run is still forgiving. The Fishipedia framing from above still applies — 49 regular
-            and 49 Drip entries must each be filled.
+            Easy difficulty while the run is still forgiving. The Fishipedia framing from above still applies — the regular
+            and Drip layers are separate checklists, so a normal catch never closes a Drip slot.
           </p>
         </div>
       </section>
@@ -219,9 +221,11 @@ export default function DripFishPage() {
           { label: 'Steam Discussion: “Catching every drip fish”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606641006/', note: 'Voxelfish hunt, Island 4 Professional Lure report, goldfish slot-machine location, seahorse + any-island reports, September 2026 technique confirmations' },
           { label: 'Steam Discussion: “why do we insist on putting rng based completion in games like this”', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681621355209433/', note: 'source of the bait-and-release multi-cast technique (right-click drop, 4–5 fish per cast)' },
           { label: 'Reddit: “HowToFish — All Creature and Drip Creatures 100% complete”', href: 'https://www.reddit.com/r/HowToFish/comments/1vx08om/howtofish_all_creature_and_drip_creatures_100/', note: 'independent bait-and-release corroboration (5–7 fish per cast) and the $100k-early route' },
-          { label: 'Steam Discussion: “Does the drippy Voxelfish exist?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606534846/', note: 'confirmed catchable (“we fished it today”) and drip boss-variant mention' },
+          { label: 'Steam Discussion: “Does the drippy Voxelfish exist?”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606534846/', note: 'confirmed catchable (“we fished it today”); also the drip-boss conflict — one player grinding 500+ crabs for a Drip boss, another reporting boss names already rainbow from their base forms' },
           { label: 'Steam Discussion: “I did collect all the drip fish but i didnt get the achivment”', href: 'https://steamcommunity.com/app/4001890/discussions/0/581681246928692020/', note: 'achievement-not-unlocking report behind the FAQ' },
-          { label: 'Mobalytics: How to Fish — All 49 Fish, Creatures and Lures', href: 'https://mobalytics.gg/gamebase/guides/how-to-fish-all-fish-creatures-lures', note: 'Fishipedia tracks 49 regular + 49 Drip entries separately; Drip uses the same lure as the normal version' },
+          { label: 'Game8: Drip Creatures Guide — How to Catch', href: 'https://game8.co/games/How-to-Fish/archives/617424', note: 'Drip = same island and same rod/lure as the normal version, rainbow catch notification, RNG-based; states bosses count as both regular and Drip variants from a single defeat' },
+          { label: 'Mobalytics: How to Fish — All 49 Fish, Creatures and Lures', href: 'https://mobalytics.gg/gamebase/guides/how-to-fish-all-fish-creatures-lures', note: 'the single source for the 49-regular + 49-Drip split; Drip uses the same lure as the normal version' },
+          { label: 'GrindNStrat: How to Fish — all 28 achievements guide', href: 'https://grindnstrat.com/how-to-fish-all-28-achievements-guide/', note: 'independent confirmation that Drip variants are tracked in their own encyclopedia column' },
           { label: 'Steam Discussion: “I’m getting zero drip fish”', href: 'https://steamcommunity.com/app/4001890/discussions/0/582806239606702906/', note: 'first-island abundance pattern and unpublished-odds confirmation' },
           { label: 'Official patch notes feed (app 4001890)', href: 'https://store.steampowered.com/feeds/news/app/4001890/', note: 'no Drip odds have ever appeared here — checked each patch' },
         ]}

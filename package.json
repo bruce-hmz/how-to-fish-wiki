@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node --test tests/game-data.test.mjs tests/search-capture.test.mjs tests/batch2a.test.mjs"
+    "test": "node --test tests/game-data.test.mjs tests/search-capture.test.mjs tests/batch2a.test.mjs tests/p11-facts-mobile.test.mjs"
   },
   "dependencies": {
     "next": "14.2.5",

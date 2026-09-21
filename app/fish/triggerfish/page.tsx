@@ -179,14 +179,17 @@ export default function TriggerfishPage() {
         </p>
         <ul className="list-disc pl-5 space-y-2">
           <li>
-            <strong className="text-white">Every creature has a Drip variant.</strong> The data layer records{' '}
-            {DRIP_SYSTEM_FACTS.dripVariantCount} Drip variants across a{' '}
-            {DRIP_SYSTEM_FACTS.totalCatalogSize}-creature catalog, so a Drip Triggerfish is part of the set.
+            <strong className="text-white">It fills its own slot.</strong> The Drip layer is tracked by the{' '}
+            {DRIP_SYSTEM_FACTS.trackedBy}. For a regular fish like Triggerfish, landing the normal version does
+            not fill the Drip entry, and the Drip Triggerfish does not fill the regular one.
           </li>
           <li>
-            <strong className="text-white">It fills its own slot.</strong> The Drip layer is tracked by the{' '}
-            {DRIP_SYSTEM_FACTS.trackedBy}. A regular Triggerfish does not fill the Drip entry, and the Drip
-            Triggerfish does not fill the regular one.
+            <strong className="text-white">The size of the Drip set is a community figure.</strong> The
+            community catalog lists {DRIP_SYSTEM_FACTS.catalogDripEntryCount} Drip entries across a{' '}
+            {DRIP_SYSTEM_FACTS.totalCatalogSize}-creature catalog (
+            {DRIP_SYSTEM_FACTS.catalogDripEntryCountStatus} — one guide database, no official note states it),
+            and sources conflict on whether the boss-class rows need their own Drip catch. Treat the checklist
+            as a working list, not as an official completion requirement.
           </li>
           <li>
             <strong className="text-white">Not documented:</strong> any drop rate or spawn rate, any weather or

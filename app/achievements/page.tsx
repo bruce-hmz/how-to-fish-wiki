@@ -59,9 +59,10 @@ export default function AchievementsPage() {
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2">Hardest Achievements</h2>
         <p>
           The numbers above make the difficulty gap obvious. Story beats like <strong>Getting started</strong> (98.3%)
-          and <strong>Drip</strong> (96.4%) unlock for almost everyone, while the true grind sits at the bottom of the
-          table: <strong>Bean</strong> (1.0% — finish the whole game in under one hour), <strong>Fishipedia</strong>
-          (1.4% — kill every drip creature), <strong>Handyman</strong> (1.7% — beat the final boss bare-handed), and
+          and <strong>Drip</strong> (96.5%) unlock for almost everyone, while the true grind sits at the bottom of the
+          table: <strong>Bean</strong> (1.0% — finish the whole game in under one hour), <strong>Handyman</strong>
+          (1.7% — beat the final boss bare-handed), <strong>Fishipedia</strong>
+          (3.6% — kill every drip creature), and
           <strong>Everyone&apos;s dream</strong> (4.1% — kill a seagull with dynamite). Chasing that 1% Bean yourself?
           <Link href="/achievements/bean/" className="text-aqua hover:underline">our dedicated Bean route guide</Link>
           covers the clock-safe path as of Patch 1.0.9. Chasing the rest of the rare wall? Deeper coverage:
@@ -73,7 +74,7 @@ export default function AchievementsPage() {
           · <Link href="/achievements/everyones-dream/" className="text-aqua hover:underline">the dynamite seagull setup behind Everyone's dream</Link>.
         </p>
         <p>
-          Completionist runs land in the middle: <strong>Collector</strong> (10.8%) needs every creature in the logbook,
+          Completionist runs land in the middle: <strong>Collector</strong> (18.5%) needs every creature in the logbook,
           and <strong>Easy</strong> (20.5%) asks for a boss kill within 10 seconds — only realistic with a fully
           upgraded late-game loadout. Check our boss guides for the phase-by-phase routes that make both farmable.
         </p>
@@ -87,7 +88,7 @@ export default function AchievementsPage() {
         <h2 className="text-xl font-bold text-white border-b border-ocean-800 pb-2 pt-2">Checked Everything but the Achievement Won&apos;t Unlock?</h2>
         <p>
           Two independent reports describe the same completionist problem. On Steam (August 28), a player hunting
-          <strong> Collector</strong> — find and kill all the creatures (10.8%) — had the logbook&apos;s perch entry stay
+          <strong> Collector</strong> — find and kill all the creatures (18.5%) — had the logbook&apos;s perch entry stay
           blacked out even after catching and killing the species, drip version included; the entry later cleared on its
           own. On Reddit (August 31), a player reports the checklist fully checked off with no achievement popping.
           Neither report produced an official fix, but both players&apos; logs eventually registered — so before assuming

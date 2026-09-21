@@ -49,7 +49,11 @@ test('Fishipedia checklist is generated from the data layer: 38 fish + 11 boss =
   assert.equal(entries.filter((e) => e.kind === 'fish').length, 38);
   assert.equal(entries.filter((e) => e.kind === 'boss').length, 11);
   assert.equal(entries.length, DRIP_SYSTEM_FACTS.totalCatalogSize);
-  assert.equal(entries.length, DRIP_SYSTEM_FACTS.dripVariantCount);
+  // The catalog size is the verified fact. The Drip SET size is a single-source
+  // community figure (P1.1 evidence review) and must never be asserted as a
+  // verified count of independently obtainable Drip states.
+  assert.equal(DRIP_SYSTEM_FACTS.catalogDripEntryCountStatus, 'SINGLE_SOURCE');
+  assert.equal(DRIP_SYSTEM_FACTS.bossDripStatus, 'DISPUTED');
   // Every row maps 1:1 to a real entity and carries the full answer fields.
   const slugs = new Set(entries.map((e) => e.slug));
   assert.equal(slugs.size, entries.length, 'duplicate checklist rows');

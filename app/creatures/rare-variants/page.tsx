@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: 'Is there an achievement for collecting rare variants?',
-    a: 'Not directly. The store lists the variant hunt as a goal, but Steam\'s achievement list has no "collect every rare variant" trophy. The closest are Collector (find and kill all the creatures, 10.8%) and Fishipedia (find and kill all drip creatures, 1.4% — the rarest achievement in the game).'
+    a: 'Not directly. The store lists the variant hunt as a goal, but Steam\'s achievement list has no "collect every rare variant" trophy. The closest are Collector (find and kill all the creatures, 18.5%) and Fishipedia (find and kill all drip creatures, 3.6% — the rarest collection achievement in the game).'
   },
 ];
 
@@ -85,7 +85,7 @@ export default function RareVariantsPage() {
               <tr>
                 <td className="px-3 py-2 font-bold text-white">Tracked by</td>
                 <td className="px-3 py-2">Your own log — nothing in Steam&rsquo;s list</td>
-                <td className="px-3 py-2">Drip (kill one, 96.4%) and Fishipedia (kill all, 1.4%)</td>
+                <td className="px-3 py-2">Drip (kill one, 96.5%) and Fishipedia (kill all, 3.6%)</td>
               </tr>
               <tr>
                 <td className="px-3 py-2 font-bold text-white">More reading</td>
@@ -107,9 +107,9 @@ export default function RareVariantsPage() {
           trophies are:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-sm text-gray-300">
-          <li><strong className="text-white">Collector</strong> — &ldquo;Find and kill all the creatures&rdquo; (10.8% of players). The kill-everything checklist that variant hunting naturally feeds.</li>
-          <li><strong className="text-white">Drip</strong> — &ldquo;Kill a drip creature&rdquo; (96.4%). Nearly everyone stumbles into one.</li>
-          <li><strong className="text-white">Fishipedia</strong> — &ldquo;Find and kill all drip creatures&rdquo; (1.4%). The single rarest achievement in the game, and a warning about how long true completion takes. The <Link href="/guides/fishipedia/" className="text-aqua hover:underline">Fishipedia checklist</Link> breaks the 49 creatures down by island and lure.</li>
+          <li><strong className="text-white">Collector</strong> — &ldquo;Find and kill all the creatures&rdquo; (18.5% of players). The kill-everything checklist that variant hunting naturally feeds.</li>
+          <li><strong className="text-white">Drip</strong> — &ldquo;Kill a drip creature&rdquo; (96.5%). Nearly everyone stumbles into one.</li>
+          <li><strong className="text-white">Fishipedia</strong> — &ldquo;Find and kill all drip creatures&rdquo; (3.6%) — the rarest collection achievement, and a warning about how long true completion takes. The <Link href="/guides/fishipedia/" className="text-aqua hover:underline">Fishipedia checklist</Link> breaks the 49 creatures down by island and lure.</li>
         </ul>
         <p className="text-xs text-gray-400">
           Track your own progress with the{' '}
@@ -138,7 +138,7 @@ export default function RareVariantsPage() {
           <p>No official variant spawn rates or percentages exist in any developer note so far.</p>
           <p>No confirmed sell-price multiplier — the &ldquo;variants sell for double&rdquo; claims circulating in comments are not backed by anything we can verify. Check your own sale prices first.</p>
           <p>No variant-specific lure, spawn timer, or guaranteed farming method has been proven. Guides claiming one are extrapolating.</p>
-          <p>The fish database total is not confirmed as the final species count — the Fishipedia achievement&rsquo;s 1.4% unlock rate suggests even the fastest players have not finished cataloguing.</p>
+          <p>The fish database total is not confirmed as the final species count — the Fishipedia achievement&rsquo;s 3.6% unlock rate suggests even the fastest players have not finished cataloguing.</p>
         </div>
       </section>
 

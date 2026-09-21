@@ -280,8 +280,10 @@ export default function FishipediaChecklist({
           Your ticks are saved in this browser only (<code className="text-gray-400">localStorage</code>) — they
           are never uploaded, never synced across devices, and they do not touch your game save. These counters
           are your own notes, not the in-game Collector or Fishipedia achievement progress. The two layers are
-          tracked separately because the game tracks them separately: a regular catch does not fill the Drip
-          entry, and vice versa.
+          tracked separately because the game tracks them separately: for a regular fish, landing the normal
+          version does not fill its Drip entry, and vice versa. For the 11 boss-class rows the sources conflict
+          on whether a single defeat counts for both layers, so this tool records what you tick and does not
+          decide that question for you.
         </p>
 
         <div className="space-y-3">

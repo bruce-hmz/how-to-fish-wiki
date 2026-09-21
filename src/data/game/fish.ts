@@ -171,16 +171,69 @@ export const FISH_BY_SLUG: Record<string, FishEntity> = Object.fromEntries(
   FISH.map((f) => [f.slug, f])
 );
 
-/** System-level drip facts (not per-species). */
+/**
+ * System-level drip facts (not per-species).
+ *
+ * EVIDENCE REVIEW 2026-09-21 — the "49 creatures, therefore 49 independently
+ * obtainable Drip states" framing was re-checked against primary sources and
+ * does NOT survive as a certain fact. What the review found:
+ *
+ *  CONFIRMED (multi-source, incl. official)
+ *   - 49 regular creatures in the catalog. G2A, Mobalytics and Game8 all count
+ *     49; the official "Collector — Find and kill all the creatures"
+ *     achievement is the in-game counterpart.
+ *   - Collector and Fishipedia are two SEPARATE achievements with different
+ *     descriptions (official Steam global stats), so the two counters are not
+ *     the same counter.
+ *   - Drip creatures are colour-shifted variants carrying the same name, caught
+ *     with the same rod/lure as the normal version, RNG-based, and tracked in a
+ *     separate encyclopedia column. Game8's drip guide, Mobalytics, GrindNStrat
+ *     and the Steam drip threads all agree on this.
+ *
+ *  SINGLE-SOURCE (one community guide database, not game data)
+ *   - The SIZE of the Drip set. Only Mobalytics states that the Tab menu tracks
+ *     "all 49 regular and 49 Drip creatures separately". No official note, patch
+ *     log or game file is cited by anyone for that number, so it is recorded
+ *     here as a community catalog figure — never as a verified count of
+ *     independently obtainable states.
+ *
+ *  DISPUTED (sources conflict — neither side may be presented as settled)
+ *   - Whether the 11 boss-class rows need their OWN Drip catch. Game8's drip
+ *     guide says "Bosses are considered both regular and Drip variants, so
+ *     defeating one counts toward both categories", and a player reading the
+ *     in-game list reports boss names already render rainbow "just from their
+ *     base forms". Against that, a different player reports catching "over 500"
+ *     crabs without ever seeing a "drip crab boss". All three are community
+ *     reports; none is confirmed by game data.
+ *
+ * Consequence for pages: render the Drip set as a community catalog figure with
+ * its status visible, and never claim that ticking 49 boxes equals the in-game
+ * Fishipedia achievement state.
+ */
 export const DRIP_SYSTEM_FACTS = {
+  /** Regular creatures in the catalog — cross-verified by three guide databases. */
   totalCatalogSize: 49,
-  dripVariantCount: 49,
-  rule: 'Every creature has a Drip variant; drip variants are caught with the same lure as their normal version — there is no separate drip lure.',
-  trackedBy: 'Fishipedia achievement ("Find and kill all drip creatures", 1.4% global unlock)',
+  /**
+   * Drip entries the community catalog lists. SINGLE-SOURCE (Mobalytics) and
+   * unconfirmed against game data — do not render as a certain count.
+   */
+  catalogDripEntryCount: 49,
+  catalogDripEntryCountStatus: 'SINGLE_SOURCE' as const,
+  /** Do the 11 boss-class rows need their own Drip catch, or count automatically? */
+  bossDripStatus: 'DISPUTED' as const,
+  bossDripNote:
+    'Game8\'s drip guide states bosses count as both regular and Drip variants from a single defeat, and a player reading the in-game list reports boss names already showing as rainbow from their base forms; another player reports grinding 500+ crabs without a Drip Crab Boss. Community sources conflict, so this site does not claim either outcome.',
+  /** The acquisition rule every source agrees on. */
+  rule: 'Drip variants are caught with the same rod or lure as their normal version — there is no separate drip lure.',
+  /** RNG behaviour, corroborated by the drip guide and player threads. */
+  rng: 'Drip catches are RNG-based: you land many normal versions of a creature before its Drip variant appears.',
+  trackedBy:
+    'Fishipedia achievement ("Find and kill all drip creatures") — a separate counter from Collector ("Find and kill all the creatures")',
   provenance: {
     sourceType: 'COMMUNITY_VERIFIED' as const,
-    sourceIds: ['mobalytics-fish-list', 'steam-drip-threads', 'steam-achievements'],
-    verifiedAt: D,
-    confidence: 'high',
+    sourceIds: ['game8-drip-guide', 'mobalytics-fish-list', 'steam-drip-threads', 'grindnstrat-achievements'],
+    verifiedAt: '2026-09-21',
+    confidence: 'medium' as const,
+    note: 'The drip rule, RNG behaviour and separate tracking are multi-source. The 49-entry Drip set is SINGLE-SOURCE (Mobalytics). Boss-class Drip independence is DISPUTED (Game8 + one player report vs one player report).',
   },
 };
