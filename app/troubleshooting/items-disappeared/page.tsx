@@ -37,12 +37,12 @@ export default function ItemsDisappearedPage() {
         description="Triage burned vs despawned vs physically flung gear in How to Fish, then follow the recovery ladder and patch-by-patch loss table."
         url="https://howtofish101.com/troubleshooting/items-disappeared/"
         datePublished="2026-08-27"
-        dateModified="2026-08-28"
+        dateModified="2026-09-22"
       />
       <FaqJsonLd faqs={faqs} />
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Items Disappeared', href: '/troubleshooting/items-disappeared/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Items or Weapons Disappeared After Loading</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
         <p className="font-bold text-white text-sm">Before anything else:</p>
@@ -144,6 +144,7 @@ export default function ItemsDisappearedPage() {
           <li><strong className="text-white">Milestone saves:</strong> manual Save → Main Menu after boss kills, purchases, and quest hand-ins.</li>
           <li><strong className="text-white">Two rotating backups</strong>, not one — a silently damaged file copied twice in a row shouldn’t erase both copies.</li>
           <li><strong className="text-white">Co-op:</strong> host owns the world state; guests rejoining have seen inventory roll backwards, so agree who triggers real saves.</li>
+          <li><strong className="text-white">Connection first:</strong> if the loss happened while joining or hosting, check the <Link href="/troubleshooting/join-friends/" className="text-aqua hover:underline">co-op connection checklist</Link> before repeating a save or rollback.</li>
           <li><strong className="text-white">Hot-zone discipline:</strong> Patch 1.0.10 keeps up to 64 ground items in the save (prioritized: weapons, tools, quest items, creatures) — better, but the cap is real, so don’t treat the world as infinite storage, and keep nothing spare riding through the volcano island in your pockets.</li>
         </ul>
       </section>

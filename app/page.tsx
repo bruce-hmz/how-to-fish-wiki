@@ -3,9 +3,9 @@ import FishTable from '@/components/FishTable';
 import { FaqJsonLd } from '@/components/JsonLd';
 
 export const metadata = {
-  title: 'How to Fish Wiki — Verified Fish, Bosses, Lures & Progression',
+  title: 'How to Fish Wiki: Fish, Bosses & Walkthrough',
   description:
-    'Source-checked How to Fish guides: the verified 38-species fish database with islands and lures, every boss summon chain from the Spider Crab to the Mutated Bowhead Whale, patch notes to 1.0.12, and troubleshooting for real player bugs.',
+    'How to Fish guides for finding species, following boss progression, choosing lures, and recovering from save or co-op problems. Evidence notes identify official, community, and disputed details.',
   alternates: { canonical: 'https://howtofish101.com/' },
 };
 
@@ -134,8 +134,8 @@ export default function HomePage() {
           </p>
           <p>
             This wiki exists to answer one question thoroughly: how to fish, fight, and survive the game&apos;s
-            archipelago. Every gameplay fact on it is source-checked against official patch notes, Steam
-            data, and at least two independent guide databases — see our editorial policy.
+            archipelago. Key gameplay facts cite official patch notes, Steam data, and independent guide
+            databases, with disputed or single-source entries labeled — see our editorial policy.
           </p>
           <p>
             Progression follows a satisfying loop: sell catches for cash, buy better lures and knives, unlock
@@ -219,8 +219,9 @@ export default function HomePage() {
         </div>
         <p className="text-xs text-gray-400 -mt-2">
           Every entry lists the island, the lure that catches it, and the sell value where a source recorded
-          one. Filter by island to plan your logbook completion route — every row is cross-verified against
-          two independent guide databases.
+          one. Most regular mappings are reported by two independent guide databases; single-source and
+          disputed entries are labeled on the <Link href="/fish/" className="text-aqua hover:underline">fish list</Link> and
+          <Link href="/guides/fishipedia/" className="text-aqua hover:underline"> Fishipedia checklist</Link>.
         </p>
         <FishTable />
       </section>

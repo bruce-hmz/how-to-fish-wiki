@@ -4,8 +4,8 @@ import { ArticleJsonLd, FaqJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
 
 export const metadata = {
-  title: 'Save File Location, Backups & Lost Progress Recovery',
-  description: 'Exactly where How to Fish stores its save files on Windows and Steam Deck, a backup routine that takes 30 seconds, how to sync saves between Steam Deck, PC and GeForce NOW, how to roll back an older save, and what Patches 1.0.4–1.0.12 actually changed about saving.',
+  title: 'Save File Location, Backup & Recovery',
+  description: 'Find How to Fish saves on Windows or Steam Deck, make a safe backup, handle Steam Cloud migration, and recover from corruption or lost progress.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/save-file/' },
 };
 
@@ -76,6 +76,7 @@ export default function SaveFilePage() {
           <li><strong className="text-white">Accidental deletion or missing progress:</strong> preserve the current folder and look for your own dated backup; do not delete or overwrite it while investigating.</li>
           <li><strong className="text-white">Cloud or device migration:</strong> play and exit once on the device with the wanted intact progress, wait for Steam Cloud to finish, and resolve any conflict by preserving both copies first.</li>
         </ul>
+        <p className="text-xs text-gray-400">If the world loads but gear is missing, use the <Link href="/troubleshooting/items-disappeared/" className="text-aqua hover:underline">items-disappeared triage</Link> before attempting rollback. For a multiplayer-only failure, use the <Link href="/troubleshooting/join-friends/" className="text-aqua hover:underline">join-friends checklist</Link>.</p>
       </div>
 
       <div className="bg-cyan-950/60 border border-cyan-500/40 rounded-xl p-5 space-y-2">
@@ -209,7 +210,7 @@ export default function SaveFilePage() {
           {faqs.map((f) => (
             <div key={f.q} className="p-5 space-y-2">
               <h3 className="font-bold text-white">{f.q}</h3>
-              <p>{f.a}</p>
+              <p className="break-words [overflow-wrap:anywhere]">{f.a}</p>
             </div>
           ))}
         </div>

@@ -4,8 +4,8 @@ import { FaqJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
 
 export const metadata = {
-  title: 'Killscore Multipliers: Full Table & 5x Recipe',
-  description: 'Every How to Fish Killscore modifier with values: 360 spins, headshots, last bullet, no scope, point blank, plus the stacking bonuses, how multiplication works past 5x, and the seagull recipe.' ,
+  title: 'Killscore Multipliers: Documented Values & 5x Guide',
+  description: 'How to Fish Killscore modifiers with community-documented values, an explicit 5x achievement target, and clearly labeled illustrative payout math.',
   alternates: { canonical: 'https://howtofish101.com/trick-shots/' },
 };
 
@@ -21,12 +21,12 @@ const faqs = [
   {
     q: 'Can Killscore go above 5x?'
       .replace("#", ""),
-    a: 'Yes — and this changes how you should think about the system. Five style modifiers carry confirmed numbers, four more (Killsteal, Fly Fishing, Overkill, Finally) multiply in with undisclosed values, and because everything multiplies rather than adds, layered kills climb past 5x. The Impressive achievement simply requires touching 5x; it is not a ceiling.'
+    a: 'The official achievement confirms 5x as a target, but the game does not publish a complete multiplier table. Five modifier values are community-documented, while Killsteal, Fly Fishing, Overkill, and Finally have undisclosed values. Layered kills may go higher, but values above 5x are not independently verified here.'
   },
   {
     q: 'Does Killscore stack with cooking?'
       .replace("$", ""),
-    a: 'They are separate levers on the final sale price. Killscore comes from how stylishly you killed; grilling the catch afterwards applies its own bonus of up to 1.5x. Stack both — a stylishly killed, properly cooked catch sells for multiplied-on-multiplied value.'
+    a: 'They are separate reported levers on the final sale price. Killscore comes from how stylishly you killed; community guides report a cooking bonus of up to 1.5x. Use the combination as an experiment in your own save rather than a guaranteed payout.'
   },
   {
     q: 'What weapon makes trick shots easiest?'
@@ -41,15 +41,15 @@ export default function TrickShotsPage() {
       <FaqJsonLd faqs={faqs} />
       <Breadcrumb items={[{ name: 'Trick Shots', href: '/trick-shots/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Trick Shots &amp; Killscore Multipliers</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12 · Values cross-checked against community documentation</p>
+      <p className="text-xs text-gray-500 -mt-4">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12 · Values are community-documented unless labeled official</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6">
         <h2 className="text-xl font-bold text-white">What Killscore Changes</h2>
         <p className="text-xs leading-relaxed">
-          Killscore is a post-kill value modifier: finish a creature with flair — spins, headshots, distance, improvised tools — and its sell price rises before you ever reach a merchant. It is an economy engine first and a style system second, and it stacks multiplicatively with cooking. Two achievements frame the range: <em>Noob</em> wants a kill with no multiplier at all, <em>Impressive</em> wants you to hit 5x.
+          Killscore is a post-kill value modifier: finish a creature with flair — spins, headshots, distance, improvised tools — and its sell price rises before you ever reach a merchant. It is an economy engine first and a style system second. Community guides report that it can combine with cooking, but the exact interaction is not an official formula. Two achievements frame the range: <em>Noob</em> wants a kill with no multiplier at all, <em>Impressive</em> wants you to hit 5x.
         </p>
 
-        <h2 className="text-xl font-bold text-white">Every Confirmed Modifier</h2>
+        <h2 className="text-xl font-bold text-white">Community-Documented Modifiers</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs border-collapse">
             <thead className="bg-ocean-950/90 text-gray-400 uppercase border-b border-ocean-800">
@@ -72,18 +72,18 @@ export default function TrickShotsPage() {
           </table>
         </div>
         <p className="text-xs text-gray-500 leading-relaxed">
-          These multiply together instead of adding. Point Blank alone is barely noticeable; chain four or five conditions inside the same second and the score compounds well past the 5x achievement gate.
+          The table above is a community report, not a complete official formula. The examples below assume the listed factors multiply; use the in-game result as authoritative, especially for undisclosed modifiers and any total above the 5x achievement target.
         </p>
 
         <h2 className="text-xl font-bold text-white">Worked Payout Examples</h2>
         <ul className="list-disc pl-5 space-y-2 text-xs">
-          <li><strong className="text-white">$18 Triggerfish</strong> killed with 360 + Headshot + Last Bullet: 18 × 1.5 × 1.25 × 1.25 ≈ <strong>$42</strong>.</li>
-          <li><strong className="text-white">$350 Parrotfish</strong>, same combo: ≈ <strong>$820</strong>.</li>
-          <li>Add a full 1.5x cook on top of that Parrotfish: ≈ <strong>$1,230</strong> for one frame-perfect fish.</li>
+          <li><strong className="text-white">Illustrative assumption:</strong> if the listed factors multiply, an $18 Triggerfish with 360 + Headshot + Last Bullet is 18 × 1.5 × 1.25 × 1.25 ≈ <strong>$42</strong>.</li>
+          <li>Under the same assumption, a documented $350 Parrotfish would be ≈ <strong>$820</strong>.</li>
+          <li>If the community-reported 1.5x cooking factor also applies, that illustrative Parrotfish total would be ≈ <strong>$1,230</strong>; this is not a guaranteed in-game payout.</li>
         </ul>
         <p className="text-[11px] text-gray-500">Arithmetic uses the documented factor table above; underlying sell prices come from our fish database. Treat edge-case rounding in-game as authoritative.</p>
 
-        <h2 className="text-xl font-bold text-white">The Reliable 5x Recipe: Seagull Hunting</h2>
+        <h2 className="text-xl font-bold text-white">An Attempted 5x Route: Seagull Hunting</h2>
         <ol className="list-decimal pl-5 space-y-2 text-xs leading-relaxed">
           <li>Equip a hitscan gun — shotgun for close work, sniper when you want distance credit.</li>
           <li>Find a low-health airborne seagull hovering over water.</li>

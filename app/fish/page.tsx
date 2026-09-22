@@ -4,16 +4,16 @@ import { FaqJsonLd } from '@/components/JsonLd';
 import Sources from '@/components/Sources';
 
 export const metadata = {
-  title: 'Fish List: Every Species, Island & Lure (Verified)',
+  title: 'Fish List: Species, Islands & Lures',
   description:
-    'Searchable How to Fish fish database: which island each species lives on, which lure catches it, and documented sell values — cross-verified against two independent guide databases.',
+    'Searchable How to Fish fish database: documented island and lure mappings, sell values where recorded, and evidence notes for single-source or disputed entries.',
   alternates: { canonical: 'https://howtofish101.com/fish/' },
 };
 
 const faqs = [
   {
     q: 'How many fish are in How to Fish?',
-    a: 'Community catalogs track 49 creatures total: 38 regular species plus the 11 boss-class catches (Old Pike, Sunfish, Blue Shark, Pufferfish, Tuna, Albatross, Goblin Shark, the whales…). Every regular-species row below is cross-verified against two independent guide databases (G2A and Mobalytics), and sell values are only shown where a source recorded one.',
+    a: 'Community catalogs track 49 creatures total: 38 regular species plus 11 boss-class catches. Most regular location and lure mappings are reported by both G2A and Mobalytics, while Bowlfish is single-source and boss-class Drip counting remains disputed. Sell values are only shown where a source recorded one; use the Fishipedia checklist for the caveats and separate Drip layer.',
   },
   {
     q: "Why won't fish bite even when I use bait?",
@@ -21,11 +21,11 @@ const faqs = [
   },
   {
     q: 'What are Drip fish?',
-    a: 'Drip creatures are glowing, color-shifted variants of the regular roster — a separate collection layer with its own achievement (Fishipedia, "find and kill all drip creatures"). A drip variant is caught with the same lure as its normal version; there is no separate drip lure. Drip catches feed the Casino prize machines, where they convert into cosmetic skins. Our Drip guide covers the known variants and hunting techniques in detail, and the Fishipedia checklist lists all 49 creatures with the exact lure for each one.',
+    a: 'Drip creatures are glowing, color-shifted variants with a separate collection layer and achievement (Fishipedia, "find and kill all drip creatures"). A Drip variant uses the same lure as its normal version; there is no separate Drip lure. The community lists Drip entries alongside the 49-creature catalog, but the official achievement does not publish a total and sources disagree on boss-class counting. See the Drip guide and the Fishipedia checklist for evidence notes.',
   },
   {
     q: 'Do weather or time of day change what you catch?',
-    a: 'No system like that is documented. Neither of the two guide databases that back this table lists any weather or time-of-day conditions — capture depends on your lure, your rod, and (for bosses) the summon item. Players have been requesting day/night cycles and dynamic weather as a future feature, which is a good sign it does not exist yet (September 2026, game version 1.0.12). An earlier version of this table carried a weather column; it was removed in our fact audit because no source supported it.',
+    a: 'No weather or time-of-day condition is listed in the guide sources used for this table. Use the documented lure, rod, and (for bosses) summon item; treat exact weather or time-window claims as unverified.',
   },
   {
     q: 'How do I get the Old Pike?',
@@ -39,12 +39,12 @@ export default function FishPage() {
       <Breadcrumb items={[{ name: 'Fish Database', href: '/fish/' }]} />
       <div>
         <h1 className="text-3xl font-extrabold text-white tracking-tight">How to Fish — Fish List by Island &amp; Lure</h1>
-        <p className="text-xs text-gray-500 mt-1">Last verified September 16, 2026 · Game version 1.0.12</p>
+        <p className="text-xs text-gray-500 mt-1">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12</p>
       </div>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p>
-          <strong className="text-white">How to use this table:</strong> regular fish in How to Fish are determined by your equipped <strong className="text-aqua">lure</strong>, not your current island — but each lure tier unlocks with an island step, so the island column tells you when a species becomes reachable. Every row&apos;s location and lure is cross-verified against two independent guide databases (the G2A island guide and the Mobalytics fish list). Sell values are shown only where the IGN fish table recorded one; everything else is honestly marked <em>undocumented</em> rather than guessed.
+          <strong className="text-white">How to use this table:</strong> regular fish in How to Fish are determined by your equipped <strong className="text-aqua">lure</strong>, not your current island — but each lure tier unlocks with an island step, so the island column tells you when a species becomes reachable. Most regular mappings are reported by the G2A island guide and the Mobalytics fish list; Bowlfish is single-source and boss-class Drip counting is disputed. Sell values are shown only where the IGN fish table recorded one; everything else is honestly marked <em>undocumented</em> rather than guessed. See the <a href="/guides/fishipedia/" className="text-aqua hover:underline">Fishipedia checklist</a> for the evidence notes.
         </p>
         <p>
           The full lure tier list — including the four Boss Lures and quest baits like the Carrot and Modified Leech — lives in the <a href="/lures/" className="text-aqua hover:underline">lures &amp; baits guide</a>, and the 11 boss-class catches live in the <a href="/bosses/" className="text-aqua hover:underline">boss hub</a>. The island-2 mini-boss has its own step-by-step page: <a href="/bosses/old-pike/" className="text-aqua hover:underline">how to catch the Old Pike</a>.

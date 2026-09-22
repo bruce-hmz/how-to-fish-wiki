@@ -136,6 +136,7 @@ export default function JoinFriendsPage() {
           <li>Restart the whole Steam client on the affected machine, then retry once. The cause can be in the client, the session, or the current build.</li>
           <li>Verify game files (Properties → Installed Files) on whichever end joins-but-never-loads.</li>
           <li>Session type confusion after changing privacy? The change applies on a game restart — flip it, quit fully, relaunch.</li>
+          <li>If the join succeeds but equipment or progress is missing, stop saving and follow the <Link href="/troubleshooting/items-disappeared/" className="text-aqua hover:underline">items-disappeared triage</Link>; use the <Link href="/troubleshooting/save-file/" className="text-aqua hover:underline">save recovery guide</Link> before restoring anything.</li>
         </ol>
 
         <h2 className="text-xl font-bold text-white">Session Types Since 1.0.5</h2>

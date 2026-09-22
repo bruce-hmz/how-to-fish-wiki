@@ -113,12 +113,15 @@ const UPDATED_2026_09_21 = new Set([
 // Batch 1 SEO/content repairs updated September 22, 2026.
 const UPDATED_2026_09_22 = new Set([
   '/',
+  '/fish/',
+  '/trick-shots/',
   '/map/',
   '/guides/fishipedia/',
   '/fish/drip-fish/',
   '/boat/',
   '/money/',
   '/troubleshooting/save-file/',
+  '/troubleshooting/items-disappeared/',
   '/troubleshooting/join-friends/',
 ]);
 
