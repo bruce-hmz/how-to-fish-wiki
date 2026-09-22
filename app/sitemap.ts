@@ -110,11 +110,25 @@ const UPDATED_2026_09_21 = new Set([
   '/guides/fishipedia/',
 ]);
 
+// Batch 1 SEO/content repairs updated September 22, 2026.
+const UPDATED_2026_09_22 = new Set([
+  '/',
+  '/map/',
+  '/guides/fishipedia/',
+  '/fish/drip-fish/',
+  '/boat/',
+  '/money/',
+  '/troubleshooting/save-file/',
+  '/troubleshooting/join-friends/',
+]);
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ['', '/guide/', '/fish/', '/fish/triggerfish/', '/fish/drip-fish/', '/bosses/', '/bosses/pufferfish/', '/bosses/spider-crab/', '/bosses/magma-whale/', '/bosses/giant-piranha/', '/bosses/first-boss/', '/bosses/albatross/', '/bosses/old-pike/', '/bosses/bowhead-whale/', '/guides/fishipedia/', '/lures/', '/weapons/', '/money/', '/map/', '/boat/', '/islands/', '/guides/leeches/', '/guides/dynamite/', '/guides/death/', '/cooking/', '/multiplayer/', '/multiplayer/friendly-fire/', '/settings/', '/difficulty/', '/casino/', '/trick-shots/', '/achievements/', '/achievements/bean/', '/achievements/360-no-scope/', '/achievements/everyones-dream/', '/creatures/rare-variants/', '/game/system-requirements/', '/game/launch/', '/updates/', '/videos/', '/troubleshooting/', '/troubleshooting/save-file/', '/troubleshooting/items-disappeared/', '/troubleshooting/cooked-weapons/', '/troubleshooting/join-friends/', '/troubleshooting/fish-not-biting/', '/troubleshooting/performance-stutter/', '/troubleshooting/audio-duplication/', '/troubleshooting/error-0x11c7/', '/troubleshooting/what-to-do-next/', '/about/', '/editorial-policy/', '/privacy/', '/terms/', '/faq/'];
   return routes.map((route) => ({
     url: `${baseUrl}${route || '/'}`,
-    lastModified: UPDATED_2026_09_21.has(route || '/')
+    lastModified: UPDATED_2026_09_22.has(route || '/')
+      ? '2026-09-22'
+      : UPDATED_2026_09_21.has(route || '/')
       ? '2026-09-21'
       : UPDATED_2026_09_16.has(route || '/')
       ? '2026-09-16'

@@ -16,7 +16,7 @@ const homeFaqs = [
   },
   {
     q: 'How many fish are in How to Fish?',
-    a: 'Community catalogs track 49 creatures: 38 regular species plus 11 boss-class catches, each with drip variants tracked separately. Regular fish are determined by your equipped lure — Free, Beginner, Standard, Professional, and Scientific tiers unlock with island progression. Our fish database lists every verified species, island, and lure pairing.',
+    a: 'Community catalogs track 49 creatures: 38 regular species plus 11 boss-class catches. The community also lists Drip entries, but the official achievement does not publish a total and sources disagree on boss-class Drip counting. Regular fish are determined by your equipped lure — Free, Beginner, Standard, Professional, and Scientific tiers unlock with island progression. Our fish database lists every verified species, island, and lure pairing.',
   },
   {
     q: 'How do you beat the Pufferfish boss?',
@@ -24,7 +24,7 @@ const homeFaqs = [
   },
   {
     q: 'Is How to Fish multiplayer?',
-    a: 'Yes, the game supports drop-in online co-op through Steam invites, and since Patch 1.0.4 lobbies can hold up to 8 players (up from 4). Money pools into one shared crew wallet; items and money do not carry between saves, but skins do.',
+    a: 'Yes. The Steam storefront describes How to Fish as a 1–4 player game, while Patch 1.0.4 raised the Steam lobby cap to 8. Money pools into one shared crew wallet; items and money do not carry between saves, but skins do.',
   },
   {
     q: 'What platforms is How to Fish on?',
@@ -57,7 +57,7 @@ export default function HomePage() {
             Welcome to the ultimate community database for Dazed Games&apos; 1-4 player physics fishing hit.
             Stranded after a boat crash on a mysterious archipelago, you survive, master casting, battle colossal
             marine titans, and trade your way island by island to the final boss. This wiki covers every species,
-            boss fight, lure, and island — with every gameplay fact source-checked.
+            boss fight, lure, and island — with sources attached to the key gameplay facts.
           </p>
 
           <div className="flex flex-wrap gap-3 pt-2">
@@ -70,8 +70,30 @@ export default function HomePage() {
             <Link href="/bosses/pufferfish/" className="bg-coral/20 hover:bg-coral/30 text-coral-light font-bold px-5 py-2.5 rounded-lg text-sm border border-coral/40 transition-all">
               Pufferfish Boss Strategy
             </Link>
+            <Link href="/fish/triggerfish/" className="bg-ocean-800 hover:bg-ocean-700 text-white font-bold px-5 py-2.5 rounded-lg text-sm border border-ocean-600 transition-all">
+              Triggerfish Guide
+            </Link>
           </div>
         </div>
+      </section>
+
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 -mt-8" aria-label="Start with an answer">
+        <Link href="/guide/" className="bg-ocean-900/80 border border-aqua/30 rounded-xl p-4 hover:border-aqua transition-colors">
+          <span className="text-xs font-semibold text-aqua">START HERE</span>
+          <span className="block text-sm font-bold text-white mt-1">Progress through the islands →</span>
+        </Link>
+        <Link href="/fish/" className="bg-ocean-900/80 border border-aqua/30 rounded-xl p-4 hover:border-aqua transition-colors">
+          <span className="text-xs font-semibold text-aqua">FIND A FISH</span>
+          <span className="block text-sm font-bold text-white mt-1">Search species, island, and lure →</span>
+        </Link>
+        <Link href="/guides/fishipedia/" className="bg-ocean-900/80 border border-aqua/30 rounded-xl p-4 hover:border-aqua transition-colors">
+          <span className="text-xs font-semibold text-aqua">COLLECT</span>
+          <span className="block text-sm font-bold text-white mt-1">Use the Fishipedia checklist →</span>
+        </Link>
+        <Link href="/troubleshooting/" className="bg-ocean-900/80 border border-aqua/30 rounded-xl p-4 hover:border-aqua transition-colors">
+          <span className="text-xs font-semibold text-aqua">FIX A PROBLEM</span>
+          <span className="block text-sm font-bold text-white mt-1">Troubleshoot saves and co-op →</span>
+        </Link>
       </section>
 
       <section className="space-y-6">
@@ -100,7 +122,7 @@ export default function HomePage() {
             How to Fish is an indie survival fishing game developed by Dazed Games and released on Steam on
             August 20, 2026. It exploded in popularity thanks to its chaotic physics engine — rods flex, lines
             snap, catches fight back, and up to eight players can trip over each other on the same tiny boat.
-            It passed 1 million players in two days and peaked at over 373,000 concurrent players, making it
+            It passed 1 million players in two days and peaked at 373,971 concurrent players, making it
             one of the year&apos;s biggest viral hits.
           </p>
           <p>
@@ -108,7 +130,7 @@ export default function HomePage() {
             properly set sail. To get them, you learn to fish, upgrade your gear, defeat the Giant Spider Crab
             — then fight island by island through the Giant Piranha, the Pufferfish, the Albatross, and the
             final boss, the Mutated Bowhead Whale. Along the way you&apos;ll fill a 49-creature logbook,
-            discover glowing Drip variants, and gamble catches at the Casino island&apos;s prize machines.
+            discover glowing Drip variants, and trade special catches for cosmetic rewards.
           </p>
           <p>
             This wiki exists to answer one question thoroughly: how to fish, fight, and survive the game&apos;s
@@ -264,11 +286,11 @@ export default function HomePage() {
           </Link>
           <Link href="/troubleshooting/save-file/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Save Bug &amp; Lost Items</h3>
-            <p className="text-xs text-gray-400">What Patch 1.0.9 fixed, the autosave rules, and the safe recovery order.</p>
+            <p className="text-xs text-gray-400">Patch save changes, backups, cloud sync, and the safe recovery order.</p>
           </Link>
           <Link href="/islands/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-aqua/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Island Unlock Order</h3>
-            <p className="text-xs text-gray-400">The five-stage chain from Starter Island to the Deep Trench endgame.</p>
+            <p className="text-xs text-gray-400">The five-stage chain from Starter Island to the final boss route.</p>
           </Link>
           <Link href="/cooking/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-coral/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Cooking &amp; Grill Recipes</h3>
@@ -276,7 +298,7 @@ export default function HomePage() {
           </Link>
           <Link href="/game/launch/" className="bg-ocean-900/70 border border-ocean-800 rounded-xl p-5 hover:border-gold/50 transition-all">
             <h3 className="font-bold text-white text-sm mb-1">Launch Report</h3>
-            <p className="text-xs text-gray-400">1M players in 10 days, 268K concurrent peak, and the two-dev story.</p>
+            <p className="text-xs text-gray-400">1M players in two days, a 373,971 concurrent peak, and the two-dev story.</p>
           </Link>
         </div>
       </section>

@@ -17,12 +17,12 @@ const faqs = [
   },
   {
     q: 'How many players can actually play together?',
-    a: 'A lobby holds up to 8 anglers since Patch 1.0.4, but balance is tuned around the classic crew: boss HP tops out at the 4-player multiplier. Expecting eight people to get a fair fight is not what the cap was built for.'
+    a: 'A lobby holds up to 8 anglers since Patch 1.0.4. The official notes establish the lobby cap; they do not publish a separate boss-scaling rule for eight players, so treat combat balance as undocumented.'
   },
   {
     q: 'Does joining mid-boss-fight break anything?'
       .replace("@", ""),
-    a: 'Boss health locks the moment the Rage Bait is cast based on who was present. Late arrivals do not inflate it — but they also do not shrink a fight that spawned understaffed, so a duo summoning before the third friend arrives will carry the 2x pool into the whole encounter.'
+    a: 'Joining during a boss encounter is not documented as a connection fix or a supported way to change boss scaling. Have the host finish the current encounter or return to the lobby before troubleshooting the join itself.'
   },
   {
     q: 'Version mismatch that will not go away — anything left to try?',
@@ -39,17 +39,17 @@ export default function JoinFriendsPage() {
         description="Ordered co-op fixes for join black screens, version mismatch, and invisible lobbies — plus what Patches 1.0.4 through 1.0.11 changed."
         url="https://howtofish101.com/troubleshooting/join-friends/"
         datePublished="2026-08-27"
-        dateModified="2026-09-04"
+        dateModified="2026-09-22"
       />
       <h1 className="text-3xl font-extrabold text-white">Cannot Join Friends: Lobby &amp; Black Screen Fixes</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
-        <p className="font-bold text-white text-sm">The three fixes that clear most cases:</p>
+        <p className="font-bold text-white text-sm">Start with the branch that matches what you see:</p>
         <ol className="list-decimal list-inside space-y-1 text-xs">
-          <li><strong className="text-white">Everyone quits to desktop and relaunches</strong> — the joiner <em>and</em> the host.</li>
-          <li><strong className="text-white">Host recreates the lobby and sends a brand-new invite</strong> (dead half-joined sessions never revive).</li>
-          <li><strong className="text-white">Still stuck? Swap hosts</strong> — NAT asymmetry makes one of you consistently the better server.</li>
+          <li><strong className="text-white">Version mismatch:</strong> compare the patch number on both title screens, finish Steam updates, then retry.</li>
+          <li><strong className="text-white">Invite accepted but black screen:</strong> both players quit to desktop; the host creates a fresh lobby and sends a new invite.</li>
+          <li><strong className="text-white">Host creation stays stuck:</strong> have a friend create the lobby and join that room instead; this is a community workaround, not a guaranteed fix.</li>
         </ol>
       </div>
 
@@ -74,7 +74,7 @@ export default function JoinFriendsPage() {
               <tr>
                 <td className="px-3 py-2 font-bold text-white">1.0.9</td>
                 <td className="px-3 py-2">Main menu gained a Steam connection / relay debug readout.</td>
-                <td className="px-3 py-2">Before blaming your router, open the game: a red relay indicator pinpoints network trouble upstream of every setting below.</td>
+                <td className="px-3 py-2">Use the readout as a diagnostic signal, then continue with the version, invite, and host checks below.</td>
               </tr>
               <tr>
                 <td className="px-3 py-2 font-bold text-white">1.0.10</td>
@@ -100,12 +100,12 @@ export default function JoinFriendsPage() {
               <tr>
                 <td className="px-3 py-2">Invite accepted → screen dims forever</td>
                 <td className="px-3 py-2">Dead half-joined session</td>
-                <td className="px-3 py-2">Quit out fully; host recreates lobby; use a fresh invite. Rejoining the corpse never works.</td>
+                <td className="px-3 py-2">Both players quit fully; host recreates the lobby and sends a fresh invite. If it repeats, try having the other player host.</td>
               </tr>
               <tr>
                 <td className="px-3 py-2">Kicked back to main menu seconds after loading</td>
                 <td className="px-3 py-2">Version mismatch or stale code</td>
-                <td className="px-3 py-2">Compare build numbers on both title screens; let Steam finish pending updates; reboot Steam itself.</td>
+                <td className="px-3 py-2">Compare build numbers on both title screens; let Steam finish pending updates; then retry once.</td>
               </tr>
               <tr>
                 <td className="px-3 py-2">Friend’s lobby not visible anywhere</td>
@@ -128,12 +128,12 @@ export default function JoinFriendsPage() {
 
         <h2 className="text-xl font-bold text-white">The Full Checklist, Fastest First</h2>
         <ol className="list-decimal pl-5 space-y-2 text-xs leading-relaxed">
-          <li>Quit to desktop on <strong>every machine</strong>, relaunch, retry once through a fresh invite.</li>
-          <li>If that failed: host deletes the lobby entirely, creates anew, invites again. One retry, not five — hammering a wedged session deepens it.</li>
-          <li>Check versions: identical patch number on both title screens. If the guest’s Steam shows a queued update, finish it before the next attempt.</li>
-          <li>Open the main-menu <strong>relay readout (new in 1.0.9)</strong>. Red means the route to Steam networking is unhealthy — switch networks or reboot the router rather than reconfiguring the game.</li>
-          <li>Swap the host role once. The better-uploaded player should serve; wired Ethernet beats Wi-Fi for the hosting side specifically.</li>
-          <li>Restart the whole Steam client on the affected machine — remaining stuck cases live in client cache, not the game.</li>
+          <li>Check versions first: both title screens must show the same patch number. Finish queued Steam updates before retrying.</li>
+          <li>For a dim or black join screen, quit the game on every machine, relaunch, and have the host create a fresh lobby.</li>
+          <li>If host creation itself stays stuck, have another player host and send a new invite; this workaround has community reports but no official guarantee.</li>
+          <li>Open the main-menu <strong>relay readout (new in 1.0.9)</strong>. Record whether it reports a connection problem; it does not identify a single cause by itself.</li>
+          <li>Swap the host role once. This is a diagnostic retry; the game does not publish a NAT requirement or a guaranteed best host.</li>
+          <li>Restart the whole Steam client on the affected machine, then retry once. The cause can be in the client, the session, or the current build.</li>
           <li>Verify game files (Properties → Installed Files) on whichever end joins-but-never-loads.</li>
           <li>Session type confusion after changing privacy? The change applies on a game restart — flip it, quit fully, relaunch.</li>
         </ol>

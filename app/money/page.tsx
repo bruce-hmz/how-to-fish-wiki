@@ -34,11 +34,11 @@ const faqs = [
   },
   {
     q: 'Should I gamble at the casino to get rich?',
-    a: 'No. Spins have worse expected value than simply fishing, the odds table has never been published by Dazed Games, and single jackpot screenshots are survivors’ stories, not strategy. Use the casino for what it is good at — feeding Drip creatures into the prize machines for cosmetics — and set a loss budget you actually stop at.',
+    a: 'Do not use spins as a dependable income route. Dazed Games has not published the odds table, so jackpot screenshots cannot establish a repeatable return. Use the casino for cosmetic rewards, keep quest items and Drip catches out of the sell loop, and set a loss limit before spending.',
   },
   {
     q: 'Do trick shot multipliers stack past 5x?',
-    a: 'Five style modifiers carry community-documented numbers (360 spins 1.5x, headshot and last-bullet 1.25x each, no-scope 1.2x, point-blank 1.1x), four more stack in with undisclosed values, and because everything multiplies, layered kills compound past 5x — the official Impressive achievement ("get a 5x killscore multiplier") is a milestone, not a ceiling. The full factor table lives on our trick shots page.',
+    a: 'Five style modifiers carry community-documented numbers (360 spins 1.5x, headshot and last-bullet 1.25x each, no-scope 1.2x, point-blank 1.1x), while four more have undisclosed values. The official Impressive achievement only confirms a 5x milestone; whether layered kills reliably compound beyond 5x is not independently verified. The full factor table lives on our trick shots page.',
   },
   {
     q: 'What is the single most valuable catch?',
@@ -51,7 +51,7 @@ export default function MoneyPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Money Guide', href: '/money/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Make Money Fast in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p>
@@ -63,6 +63,15 @@ export default function MoneyPage() {
           to inspect any creature&apos;s price in-game before selling.
         </p>
       </div>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-white">Money Routes by Progression Stage</h2>
+        <ol className="list-decimal pl-5 space-y-3 bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 text-xs leading-relaxed">
+          <li><strong className="text-white">Starter island:</strong> sell shells and surplus clams, buy the Crab Rod, then use Hot Dog bait for documented Rock Crab and Lobster values. Keep quest bait and boss drops aside.</li>
+          <li><strong className="text-white">Islands 2–3:</strong> move to the Beginner and Standard lure tiers, inspect each catch with F, and sell only catches you have confirmed are not needed for a quest or hand-in.</li>
+          <li><strong className="text-white">Islands 4–5:</strong> save for the Professional and Scientific lures; the documented high-value roster is the repeatable route once those islands are open. Cook or style catches only where your own save confirms the payout increase.</li>
+        </ol>
+      </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-white">What Catches Actually Sell For (Documented Values Only)</h2>
@@ -89,12 +98,7 @@ export default function MoneyPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500">
-          Audit note: this table previously led with &ldquo;Kraken Spawn $1,200&rdquo;, &ldquo;Golden Tuna
-          $450&rdquo;, &ldquo;Ghost Manta $120&rdquo;, and &ldquo;Electric Eel $65&rdquo;. None of those
-          species exist in any guide database — they were fabricated and removed in the September 2026 fact
-          audit. The verified top earners are the island-4/5 rosters above.
-        </p>
+        <p className="text-xs text-gray-500">Use these as documented reference values, then press F in your own save before selling because prices can change with patches or source corrections.</p>
       </section>
 
       <section className="space-y-4">

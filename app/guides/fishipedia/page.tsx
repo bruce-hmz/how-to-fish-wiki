@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: 'Which creature is most commonly the last one missing?',
-    a: 'The special perch variant is the most-reported last missing entry in Collector-style runs, and no verified acquisition method for it exists. The Goby was added to the verified catalog in the September 2026 audit, and the Bowlfish’s species status rests on a single source — all three are flagged in the checklist below.',
+    a: 'The special perch variant is the most-reported last missing entry in Collector-style runs, and no verified acquisition method for it exists. Goby is included in the working catalog, while Bowlfish’s species status rests on a single source — all three are flagged in the checklist below.',
   },
 ];
 
@@ -64,7 +64,7 @@ export default function FishipediaPage() {
         description="Find the exact creature you are missing: the full 49-creature checklist (38 regular fish + 11 boss-class), grouped by island, with the verified location and lure for every entry and the quest chains behind the boss summons."
         url="https://howtofish101.com/guides/fishipedia/"
         datePublished="2026-09-16"
-        dateModified="2026-09-16"
+        dateModified="2026-09-22"
       />
       <Breadcrumb
         items={[
@@ -74,7 +74,7 @@ export default function FishipediaPage() {
       />
       <h1 className="text-3xl font-extrabold text-white">How to Complete the Fishipedia in How to Fish</h1>
       <p className="text-xs text-gray-500 -mt-4">
-        Last verified {verifiedAt} · Game version {CURRENT_GAME_VERSION}
+        Updated September 22, 2026 · Mechanics reviewed for game version {CURRENT_GAME_VERSION}
       </p>
 
       <div className="bg-aqua/10 border border-aqua/40 rounded-xl p-6 space-y-3 text-sm">
@@ -120,8 +120,7 @@ export default function FishipediaPage() {
         </h2>
         <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-4 text-sm text-gray-300">
           <p className="text-xs text-gray-400">
-            Re-checked against primary sources on 2026-09-21. The three blocks below separate what the sources
-            establish from what they only repeat.
+            The three blocks below separate what the sources establish from what they only repeat.
           </p>
           <div className="space-y-4 text-xs">
             <div className="border-l-2 border-aqua/60 pl-3 space-y-1">
@@ -194,9 +193,8 @@ export default function FishipediaPage() {
           <h3 className="text-xl font-bold text-white">Missing early-game creatures (islands 1–2)</h3>
           <ul className="list-disc pl-5 space-y-2 text-xs">
             <li>
-              <strong className="text-white">Goby</strong> was added to the verified catalog in the
-              September 2026 audit — it was in the guide databases but missing from this site before.
-              Catch it on island 2 with the <em>Beginner Lure</em>. Its Drip Goby variant has no reliable
+              <strong className="text-white">Goby</strong> is included in the working catalog. Catch it
+              on island 2 with the <em>Beginner Lure</em>. Its Drip Goby variant has no reliable
               public catch report yet.
             </li>
             <li>
@@ -223,9 +221,8 @@ export default function FishipediaPage() {
               Mobalytics lists it (G2A lists just Boxfish) — its species status rests on a single source.
             </li>
             <li>
-              Rows like <strong className="text-white">Bass, Eel, Red Snapper, Bluegill</strong> were
-              corrected in the September 2026 audit — older copy placed them in fabricated zones. The
-              island + lure in this checklist are the verified versions.
+              For rows like <strong className="text-white">Bass, Eel, Red Snapper, Bluegill</strong>, use
+              the island and lure pairing shown in this checklist.
             </li>
           </ul>
 
@@ -293,8 +290,7 @@ export default function FishipediaPage() {
           <div className="p-5">
             <h3 className="font-bold text-white">Goby</h3>
             <p>
-              Only added to the verified catalog in the September 2026 audit — it genuinely exists (island
-              2, Beginner Lure) but is easy to overlook because older lists lacked it. The Drip Goby is
+              Goby (island 2, Beginner Lure) is easy to overlook because older lists lacked it. The Drip Goby is
               the harder variant: no reliable catch report yet.
             </p>
           </div>

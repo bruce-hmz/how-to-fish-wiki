@@ -34,11 +34,11 @@ const faqs = [
   },
   {
     q: 'I played on Steam Deck — why didn\u2019t my saves show up on my PC?',
-    a: 'Since Patch 1.0.12 your saves live in Steam Cloud, but the upload only happens through the official trigger: play and exit How to Fish once on the device that has your saves, then let Steam sync on the other device before launching there. That play-and-exit-once step is exactly what a September 6 Steam thread missed — the reporter\u2019s Deck progression never reached his PC and he asked for cloud support that had shipped two days earlier, while a replier pointed out the cloud storage was already configured. If the second device still shows an old world after syncing, check Steam\u2019s sync-conflict guidance above before overwriting anything.'
+    a: 'Since Patch 1.0.12 your saves live in Steam Cloud, but the upload only happens through the official trigger: play and exit How to Fish once on the device that has the wanted intact progress, then let Steam sync on the other device before launching there. That play-and-exit-once step is exactly what a September 6 Steam thread missed — the reporter\u2019s Deck progression never reached his PC and he asked for cloud support that had shipped two days earlier, while a replier pointed out the cloud storage was already configured. If the second device still shows an old world after syncing, check Steam\u2019s sync-conflict guidance above before overwriting anything.'
   },
   {
     q: 'Do my saves sync through GeForce NOW?',
-    a: 'They should: with Steam Cloud storage (Patch 1.0.12) your saves follow your Steam account, and GeForce NOW sessions log in with that same account. A September report in r/GeForceNOW of How to Fish saves not syncing (snippet-level, community-reported) is consistent with the upload trigger: saves upload when you play and exit the game once, so a cloud session that ends without a clean in-game exit can miss the upload. Quit through the game\u2019s Main Menu at the end of a GFN session, then let the cloud sync before playing locally.'
+    a: 'They should: with Steam Cloud storage (Patch 1.0.12) your saves follow your Steam account, and GeForce NOW sessions log in with that same account. A September report in r/GeForceNOW of How to Fish saves not syncing is snippet-level and community-reported, so its cause is unconfirmed. Use the official upload trigger — play and exit once on the device with the wanted progress — then wait for Steam Cloud before playing locally.'
   },
   {
     q: 'How do I completely restart the game?',
@@ -55,10 +55,10 @@ export default function SaveFilePage() {
         description="Where How to Fish stores saves on Windows and Steam Deck, a 30-second backup routine, rollback steps, and what every patch changed about saving."
         url="https://howtofish101.com/troubleshooting/save-file/"
         datePublished="2026-08-27"
-        dateModified="2026-09-11"
+        dateModified="2026-09-22"
       />
       <h1 className="text-3xl font-extrabold text-white">How to Fish Saves: Location, Backups &amp; Recovery</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 11, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
         <p className="font-bold text-white text-sm">If gear is missing right now, three rules first:</p>
@@ -67,6 +67,15 @@ export default function SaveFilePage() {
           <li><strong className="text-white">Close the game normally</strong> (Main Menu → Quit) instead of alt-F4.</li>
           <li><strong className="text-white">Copy the entire save folder</strong> somewhere safe before trying anything below.</li>
         </ol>
+      </div>
+
+      <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-5 space-y-3">
+        <p className="font-bold text-white text-sm">Choose the save problem before changing files:</p>
+        <ul className="list-disc pl-5 space-y-1 text-xs">
+          <li><strong className="text-white">Corruption or load failure:</strong> stop launching, copy the whole folder, then verify files and test only on a copy.</li>
+          <li><strong className="text-white">Accidental deletion or missing progress:</strong> preserve the current folder and look for your own dated backup; do not delete or overwrite it while investigating.</li>
+          <li><strong className="text-white">Cloud or device migration:</strong> play and exit once on the device with the wanted intact progress, wait for Steam Cloud to finish, and resolve any conflict by preserving both copies first.</li>
+        </ul>
       </div>
 
       <div className="bg-cyan-950/60 border border-cyan-500/40 rounded-xl p-5 space-y-2">

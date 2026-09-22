@@ -12,7 +12,7 @@ export default function Footer() {
             <p className="text-xs text-gray-400 leading-relaxed mb-3">
               Community guide, fish database, and walkthrough for Dazed Games 1-4 player physics fishing simulator.
             </p>
-            <p className="text-xs text-aqua font-semibold">🎮 268,000+ Concurrent Anglers</p>
+            <p className="text-xs text-aqua font-semibold">🎮 373,971 Peak Concurrent Players</p>
           </div>
           <div>
             <div className="font-bold text-white mb-3 text-xs tracking-wider uppercase">Guides & Bosses</div>
@@ -25,7 +25,7 @@ export default function Footer() {
               <li><Link href="/weapons/" className="hover:text-aqua transition-colors">Weapons & Attachments</Link></li>
               <li><Link href="/money/" className="hover:text-aqua transition-colors">How to Make Money Fast</Link></li>
               <li><Link href="/game/system-requirements/" className="hover:text-aqua transition-colors">System Requirements</Link></li>
-              <li><Link href="/updates/" className="hover:text-aqua transition-colors">Patch Notes 1.0.4–1.0.9</Link></li>
+              <li><Link href="/updates/" className="hover:text-aqua transition-colors">Patch Notes 1.0.4–1.0.12</Link></li>
               <li><Link href="/difficulty/" className="hover:text-aqua transition-colors">Difficulty Modes Guide</Link></li>
               <li><Link href="/videos/" className="hover:text-aqua transition-colors">Trailers & Gameplay Videos</Link></li>
               <li><Link href="/cooking/" className="hover:text-aqua transition-colors">Cooking & Grill Recipes</Link></li>
@@ -39,7 +39,7 @@ export default function Footer() {
               <li><Link href="/islands/" className="hover:text-aqua transition-colors">Island Unlock Order</Link></li>
               <li><Link href="/game/launch/" className="hover:text-aqua transition-colors">Launch Report & Milestones</Link></li>
               <li><Link href="/lures/" className="hover:text-aqua transition-colors">Best Lures & Baits</Link></li>
-              <li><Link href="/multiplayer/" className="hover:text-aqua transition-colors">4-Player Co-op Guide</Link></li>
+              <li><Link href="/multiplayer/" className="hover:text-aqua transition-colors">Co-op Guide (up to 8 players)</Link></li>
             </ul>
           </div>
           <div>

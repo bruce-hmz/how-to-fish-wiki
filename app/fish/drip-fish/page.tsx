@@ -37,7 +37,7 @@ export default function DripFishPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Fish Database', href: '/fish/' }, { name: 'Drip Fish Guide', href: '/fish/drip-fish/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Drip Fish: Confirmed Catches, Odds Talk &amp; Gachapon</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 10, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <div className="bg-cyan-950/60 border border-cyan-500/40 rounded-lg p-4">
@@ -50,10 +50,10 @@ export default function DripFishPage() {
       </div>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-white">The One Confirmed Rule (and What We Removed)</h2>
+        <h2 className="text-2xl font-bold text-white">How to Hunt a Drip Catch</h2>
         <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
           <p className="text-xs leading-relaxed">
-            <strong className="text-white">Drip variants are caught with the same lure as their normal version</strong> — there is no separate drip lure, no rain window, and no time-of-day gate. That rule is the only acquisition mechanic any source documents. An earlier version of this page carried a &ldquo;confirmed entries&rdquo; table claiming the Drip Rock Crab needed a &ldquo;Rainbow Clam&rdquo; in rain-fed secret tidepools and a &ldquo;Drip Fish&rdquo; needed &ldquo;Beer at the volcano vent during thunderstorms&rdquo; — both were fabricated and removed (the real island-4 Professional Lure catch is the <em>Dripper</em>, documented by G2A, Mobalytics, and the Steam grind threads). Details on machine payouts live on the <Link href="/casino/" className="text-aqua hover:underline">Casino guide</Link>; the verified species table is the <Link href="/fish/" className="text-aqua hover:underline">fish list</Link>.
+            <strong className="text-white">Drip variants are caught with the same lure as their normal version</strong> — there is no separate Drip lure. Equip the normal lure, fish the listed habitat, catch and kill the glowing variant, then confirm that its separate row registered in the in-game journal and the <Link href="/guides/fishipedia/" className="text-aqua hover:underline">Fishipedia checklist</Link>. After it registers, treat later catches as duplicates that can be traded for cosmetics; no official odds or pity rule is published. The verified species table is the <Link href="/fish/" className="text-aqua hover:underline">fish list</Link>.
           </p>
         </div>
       </section>

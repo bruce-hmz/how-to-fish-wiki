@@ -14,10 +14,16 @@ export default function BoatPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Boat Upgrades', href: '/boat/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Boat Keys, Engine Upgrades &amp; the Missing-Boat Bug</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <h2 className="text-xl font-bold text-white">How to Get the Boat Keys</h2>
+        <ol className="list-decimal pl-5 space-y-2 text-xs leading-relaxed">
+          <li>Complete the Empty Beer Can chain and summon the Giant Spider Crab.</li>
+          <li>Defeat the Spider Crab and pick up its Spider Crab Shell.</li>
+          <li>Hand the shell to the fisherman to receive the Boat Keys.</li>
+          <li>Use the keys to operate the starter boat; later boss hand-ins and progression items unlock later routes separately.</li>
+        </ol>
         <p>
           The starter island&apos;s boat is locked behind one documented trade: defeat the{' '}
           <Link href="/bosses/spider-crab/" className="text-aqua hover:underline">Giant Spider Crab</Link>{' '}
@@ -30,9 +36,8 @@ export default function BoatPage() {
           <Link href="/islands/" className="text-aqua hover:underline">island progression guide</Link>.
         </p>
         <p className="text-xs text-gray-500">
-          Audit note: an earlier version of this page described a three-part &ldquo;Boat Key Part&rdquo;
-          system dropping from three different bosses. Only the Spider Crab shell trade is documented — the
-          rest of the gates are island unlocks, not key parts.
+          The documented key hand-in is separate from later island progression: later bosses and quest items
+          open routes, but they are not additional Boat Key parts.
         </p>
 
         <h2 className="text-xl font-bold text-white">Engine Upgrades</h2>
@@ -41,11 +46,8 @@ export default function BoatPage() {
           <em>&ldquo;Getting an upgrade&rdquo;</em> achievement is &ldquo;Upgrade the engine on the
           boat&rdquo; (82.5% of players), and <em>&ldquo;I am speed&rdquo;</em> is &ldquo;Buy the best
           engine for the boat&rdquo; (51.4%). What is <strong>not</strong> documented anywhere reliable: the
-          number of engine tiers, their prices, speed multipliers, or fuel mechanics. An earlier version of
-          this page printed a full engine/hull/fuel pricing tree ($350 Outboard → $1,200 Diesel → $3,500
-          Turbine, four hull tiers, $2 fuel) — none of it was sourced, and it was removed in our September
-          2026 fact audit. When a guide database documents the real numbers, they will appear here with the
-          source attached.
+          number of engine tiers, their prices, speed multipliers, or fuel mechanics. Treat the achievement
+          text as proof that upgrades exist, not as a published price or performance table.
         </p>
 
         <h2 className="text-xl font-bold text-white">FAQ: Boat Missing After an Update?</h2>

@@ -4,7 +4,8 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
   title: 'Interactive Route Map, Zones & Hotspots',
-  description: 'The How to Fish archipelago in canonical stage order: what each zone contains, navigation tools worth buying, and which circulating map rumors survived fact-checking.'
+  description: 'The How to Fish archipelago in canonical stage order: what each zone contains, navigation tools worth buying, and which circulating map rumors survived fact-checking.',
+  alternates: { canonical: 'https://howtofish101.com/map/' },
 };
 
 export default function MapPage() {
@@ -12,7 +13,7 @@ export default function MapPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Archipelago Map', href: '/map/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Archipelago Zones, Hotspots &amp; Navigation</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p>
@@ -46,8 +47,8 @@ export default function MapPage() {
             <Link href="/bosses/pufferfish/" className="text-xs text-aqua hover:underline">Pufferfish guide →</Link>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
-            <h3 className="font-bold text-white text-base mb-1">Side Locale · Island 6 (Casino)</h3>
-            <p className="text-xs text-gray-400 mb-2">The roulette table and prize machines; Drip catches convert into cosmetics here.</p>
+            <h3 className="font-bold text-white text-base mb-1">Side Locale · Roulette (Island 6)</h3>
+            <p className="text-xs text-gray-400 mb-2">Patch 1.0.11 moved the roulette table on island 6; treat this as an optional side stop, separate from the five main progression stages.</p>
             <Link href="/casino/" className="text-xs text-aqua hover:underline">Casino &amp; gachapon →</Link>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
