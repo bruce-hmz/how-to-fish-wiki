@@ -47,7 +47,7 @@ export default function IslandsPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Island Unlock Guide', href: '/islands/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Island Unlock Order &amp; Progression Guide</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <p>
@@ -85,7 +85,7 @@ export default function IslandsPage() {
           <Link href="/bosses/" className="text-aqua hover:underline">boss guides</Link>; which lure catches
           which fish on each island is the{' '}
           <Link href="/fish/" className="text-aqua hover:underline">fish database</Link>; the casino side
-          island (island 6, roulette and prize machines) is covered in the{' '}
+          island (the optional Island 6 roulette stop noted in Patch 1.0.11) is covered in the{' '}
           <Link href="/casino/" className="text-aqua hover:underline">casino guide</Link>.
         </p>
 
@@ -121,8 +121,7 @@ export default function IslandsPage() {
             <p className="text-xs text-gray-400">
               Use the <strong className="text-white">Carrot</strong> as quest bait to summon the{' '}
               <Link href="/bosses/pufferfish/" className="text-aqua hover:underline">Pufferfish</Link> —
-              not a crafted bait; the old &ldquo;Hot Dog Feast&rdquo; claim was fabricated and removed. The
-              island also hosts the Blue Shark boss catch and the Grill unlock.
+              not a crafted bait. The island also hosts the Blue Shark boss catch and the Grill unlock.
             </p>
           </div>
           <div className="bg-ocean-950 p-4 rounded-lg border border-ocean-800">
@@ -180,13 +179,7 @@ export default function IslandsPage() {
           is where any announcement will land first.
         </p>
 
-        <p className="text-xs text-gray-500">
-          Audit note (September 2026): this page previously named stage 3 the &ldquo;Coral Maze
-          Lagoon&rdquo; and stage 5 &ldquo;Mount Inferno / Deep Volcanic Trench&rdquo;, claimed a
-          &ldquo;Boat Key Part #2/#3&rdquo; reward system, and repeated the Hot Dog Feast and Volcano Core
-          summon recipes. None of that appears in any external source; the chain above is the verified
-          version.
-        </p>
+        <p className="text-xs text-gray-500">The five-stage chain above is the progression route; optional side locations and unpublished future content are kept separate.</p>
 
         <Sources
           items={[

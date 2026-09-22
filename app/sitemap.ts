@@ -123,6 +123,19 @@ const UPDATED_2026_09_22 = new Set([
   '/troubleshooting/save-file/',
   '/troubleshooting/items-disappeared/',
   '/troubleshooting/join-friends/',
+  '/achievements/360-no-scope/',
+  '/achievements/everyones-dream/',
+  '/achievements/',
+  '/bosses/',
+  '/bosses/spider-crab/',
+  '/casino/',
+  '/game/launch/',
+  '/guides/dynamite/',
+  '/guides/leeches/',
+  '/islands/',
+  '/troubleshooting/performance-stutter/',
+  '/troubleshooting/',
+  '/settings/',
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {

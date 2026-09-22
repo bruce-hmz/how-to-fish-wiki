@@ -13,7 +13,7 @@ export default function SpiderCrabPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Boss Battles', href: '/bosses/' }, { name: 'Spider Crab', href: '/bosses/spider-crab/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Giant Spider Crab Boss Guide</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12 (known bug — see notice below)</p>
+      <p className="text-xs text-gray-500 -mt-4">Last reviewed September 22, 2026 · Game version 1.0.12 (known bug — see notice below)</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-6 space-y-3 text-sm text-gray-300">
         <p className="font-bold text-white text-base">⚠️ Known Bug: the crab floats and can&apos;t be hit (since Patch 1.0.11)</p>
@@ -58,19 +58,18 @@ export default function SpiderCrabPage() {
           after its charge</strong>, and that stun is your damage window — attack while it is dizzy. Beyond
           that, treat the fight as a physics-melee brawl: any weapon works, the{' '}
           <Link href="/weapons/" className="text-aqua hover:underline">knife</Link> recommended by guides for
-          the early game is enough. Exact HP, damage values, and phase percentages have never been published
-          by the developers or documented in a guide database — an earlier version of this page printed them,
-          and they were removed in our September 2026 fact audit.
+          the early game is enough. Exact HP, damage values, and phase percentages are not published by the
+          developers or documented in a guide database, so treat numerical estimates as unverified.
         </p>
 
         <h2 className="text-xl font-bold text-white">Reward: The Boat Keys</h2>
         <p>
-          Defeat the crab, grab the <strong>Spider Crab Shell</strong> it drops, and trade the shell back to
-          the fisherman — he hands over the <strong>Boat Keys</strong>. That trade is the entire starter-island
-          gate: with the keys you can hop into the repaired boat and sail to{' '}
-          <Link href="/islands/" className="text-aqua hover:underline">island 2</Link>. (An earlier version of
-          this page claimed a &ldquo;Boat Key Part #1 of 3&rdquo; system, 200 gold, and a 10% shield drop —
-          none of that was sourced; the verified reward is the shell-for-keys trade.)
+          Defeat the crab, grab the <strong>Spider Crab Shell</strong>, and trade it back to the fisherman —
+          he hands over the <strong>Boat Keys</strong>. That trade opens the repaired boat and the route to{' '}
+          <Link href="/islands/" className="text-aqua hover:underline">Island 2</Link> via the{' '}
+          <Link href="/boat/" className="text-aqua hover:underline">boat guide</Link>. The exact boss HP,
+          damage, and repeat-drop rules are undocumented, so use the shell-for-keys trade as the progression
+          answer rather than relying on community drop estimates.
         </p>
 
         <div className="bg-ocean-950 border border-ocean-700 rounded-lg p-4 text-xs text-gray-400">

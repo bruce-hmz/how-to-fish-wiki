@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: 'What is a 360 no scope worth in Killscore?',
-    a: 'The 360 spin is the highest-value confirmed modifier at 1.5x, and firing from the hip adds the No Scope modifier at 1.2x — so the combo alone multiplies a kill by 1.8x before any other bonuses. Values stack multiplicatively with headshots, point blank, and last bullet.'
+    a: 'Community guides document the 360 spin at 1.5x and No Scope at 1.2x. If you multiply those reported factors, the illustrative combo is 1.8x; the game does not publish a complete formula, so treat that math and any further stacking as unverified.'
   },
   {
     q: 'Which weapon and target make it easiest?',
@@ -36,11 +36,11 @@ export default function NoScope360Page() {
         description="Weaken a slow target, hipfire a full 360 spin, and finish the kill — the achievement method, the 1.5x killscore value, weapon choice, and why attempts fail."
         url="https://howtofish101.com/achievements/360-no-scope/"
         datePublished="2026-08-29"
-        dateModified="2026-08-29"
+        dateModified="2026-09-22"
       />
       <Breadcrumb items={[{ name: 'Achievements', href: '/achievements/' }, { name: '360 No Scope', href: '/achievements/360-no-scope/' }]} />
       <h1 className="text-3xl font-extrabold text-white">360 No Scope Achievement in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12</p>
 
       <div className="bg-gold/10 border border-gold/40 rounded-xl p-6 space-y-3">
         <p>
@@ -73,12 +73,10 @@ export default function NoScope360Page() {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-white">Why It Is Worth Doing More Than Once</h2>
         <p className="text-gray-300 leading-relaxed">
-          The 360 spin is the strongest confirmed Killscore modifier in the game at{' '}
-          <strong className="text-white">1.5x</strong>, and hipfiring adds <strong className="text-white">No Scope (1.2x)</strong> on
-          the same kill — 1.8x before anything else. Because modifiers <em>multiply</em>, the same creature can carry a
-          headshot (1.25x), point blank (1.1x), and last bullet (1.25x) on top, which is exactly how players push kills
-          past the 5x Impressive threshold. A stylishly killed catch then stacks a further cooking multiplier of up to
-          1.5x when you grill it — the full arithmetic is in the{' '}
+          Community guides document the 360 spin at <strong className="text-white">1.5x</strong> and No Scope at
+          <strong className="text-white">1.2x</strong>. Multiplying those reported factors gives an illustrative 1.8x
+          combo; the complete formula, totals above 5x, and any cooking interaction remain unverified. The full arithmetic
+          assumptions are in the{' '}
           <Link href="/money/" className="text-aqua hover:underline">money guide</Link> and the{' '}
           <Link href="/trick-shots/" className="text-aqua hover:underline">Killscore table</Link>.
         </p>

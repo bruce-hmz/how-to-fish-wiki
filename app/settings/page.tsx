@@ -37,7 +37,7 @@ export default function SettingsPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       <Breadcrumb items={[{ name: 'Troubleshooting & Settings', href: '/settings/' }]} />
       <h1 className="text-3xl font-extrabold text-white">Best Settings &amp; Performance Fixes</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 11, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Last reviewed September 22, 2026 · Game version 1.0.12</p>
 
       <div className="bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 space-y-6 text-sm text-gray-300">
         <h2 className="text-xl font-bold text-white">First, Know Which Launch Problem You Have</h2>
@@ -114,8 +114,8 @@ export default function SettingsPage() {
 
         <h2 className="text-xl font-bold text-white">Co-op Connection Quick Checks</h2>
         <ul className="list-disc pl-5 space-y-2 text-xs">
-          <li><strong className="text-white">Same version first:</strong> lobby mismatches usually mean someone has a pending Steam update. Restarting Steam clears most “invalid lobby code” states.</li>
-          <li><strong className="text-white">Use the built-in diagnostic:</strong> Patch 1.0.9 added a Steam connection/relay readout on the main menu. If the indicator shows red there, the problem is upstream of settings — reboot the router or switch networks before blaming the session.</li>
+          <li><strong className="text-white">Same version first:</strong> lobby mismatches usually mean someone has a pending Steam update. Restarting Steam can refresh an “invalid lobby code” state.</li>
+          <li><strong className="text-white">Use the built-in diagnostic:</strong> Patch 1.0.9 added a Steam connection/relay readout on the main menu. A red indicator is a diagnostic signal, not a confirmed cause; record it with the symptom.</li>
           <li>For the full ordered playbook — invite failures, black screens on join, host swaps — see the{' '}
             <Link href="/troubleshooting/join-friends/" className="text-aqua hover:underline">cannot join friends guide</Link>.</li>
         </ul>

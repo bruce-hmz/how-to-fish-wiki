@@ -5,18 +5,18 @@ import Sources from '@/components/Sources';
 
 export const metadata = {
   title: 'Fix Stuttering & 100% GPU Usage in How to Fish',
-  description: 'How to Fish pushing your GPU to 100% or stuttering on a high-end PC? The in-game FPS limiter is unreliable — cap frames in your GPU driver instead. Plus the mouse-polling-rate fix for lag on fast flicks, tearing fixes, and what changed after recent patches.',
+  description: 'How to Fish pushing your GPU to 100% or stuttering on a high-end PC? Player reports of the in-game FPS limiter not holding point to a driver-side cap. Plus reported mouse-polling checks, tearing fixes, and recent patch context.',
   alternates: { canonical: 'https://howtofish101.com/troubleshooting/performance-stutter/' },
 };
 
 const faqs = [
   {
     q: 'Why is How to Fish using 100% of my GPU?',
-    a: 'The game renders uncapped frames: with the in-game limiter unreliable, it pushes as many FPS as the hardware allows, which pins utilization (and fan noise) at maximum. The accepted fix from the community: set a maximum frame rate in your GPU driver — NVIDIA Control Panel (Max Frame Rate) or AMD Adrenalin — instead of inside the game. One player measured utilization dropping from 90%+ to about 15% after capping in the driver.'
+    a: 'Some player reports describe uncapped rendering when the in-game limiter does not hold, which can raise utilization and fan noise. A commonly reported workaround is a maximum frame rate in your GPU driver — NVIDIA Control Panel (Max Frame Rate) or AMD Adrenalin — instead of inside the game. One player measured utilization dropping from 90%+ to about 15% after capping in the driver.'
   },
   {
     q: 'Does the in-game FPS cap work?',
-    a: 'Multiple players report it does not hold: one set the in-game cap to 60 and still measured 400+ FPS with V-Sync toggled as well. Treat the in-game limiter as unreliable on current builds and set your cap in the NVIDIA Control Panel or AMD Adrenalin. A resolution drop is an emergency fallback — it cut load immediately for a 3080 Ti owner.'
+    a: 'Multiple players report that it did not hold for them: one set the in-game cap to 60 and still measured 400+ FPS with V-Sync toggled as well. If you see the same behavior, try a cap in the NVIDIA Control Panel or AMD Adrenalin. A resolution drop is an emergency fallback — it cut load immediately for a 3080 Ti owner.'
   },
   {
     q: 'Why am I stuttering with a high-end PC (even an RTX 4090)?',
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: 'Why does the game lag when I flick my mouse quickly?',
-    a: 'This is a distinct pattern from general stutter, and it has a community-verified fix: a very high mouse polling rate. Players running gaming mice at 8000 Hz saw huge FPS drops on fast flicks, and setting the polling rate down to 1000 Hz resolved it ("fixed mine") — another player in the same thread paired 125 Hz polling with a 125 FPS driver cap. See Fix #4 below.'
+    a: 'This is a distinct pattern from general stutter. One community thread reports huge FPS drops with an 8000 Hz mouse and improvement after setting 1000 Hz ("fixed mine"); another reply paired 125 Hz polling with a 125 FPS driver cap. Treat those as reported checks, not a universal fix. See Fix #4 below.'
   },
 ];
 
@@ -37,14 +37,14 @@ export default function PerformanceStutterPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 text-sm text-gray-300">
       <ArticleJsonLd
         headline="Fix Stuttering & 100% GPU Usage in How to Fish"
-        description="The in-game FPS limiter is unreliable — cap frames in your GPU driver instead. Verified by measured player reports, plus tearing fixes and patch-history context."
+        description="Player reports of an in-game FPS limiter that does not hold, plus driver-side cap checks, tearing reports, and patch-history context."
         url="https://howtofish101.com/troubleshooting/performance-stutter/"
         datePublished="2026-08-28"
-        dateModified="2026-09-10"
+        dateModified="2026-09-22"
       />
       <Breadcrumb items={[{ name: 'Troubleshooting', href: '/troubleshooting/' }, { name: 'Performance & Stutter', href: '/troubleshooting/performance-stutter/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Fish Performance: Fix 100% GPU, Stuttering &amp; Tearing</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 10, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Last reviewed September 22, 2026 · Game version 1.0.12 · Fixes are community-reported unless marked official</p>
 
       <div className="bg-coral/10 border border-coral/40 rounded-xl p-5 space-y-2">
         <p className="font-bold text-white text-sm">First, which problem do you actually have?</p>
@@ -59,10 +59,10 @@ export default function PerformanceStutterPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-white">Fix #1 — Cap FPS in Your GPU Driver (Not In-Game)</h2>
         <p className="text-gray-300 leading-relaxed">
-          This is the accepted answer on the game&rsquo;s own forums, and it comes with before/after numbers. The
-          in-game limiter does not hold — one player set it to 60 FPS and still measured <strong className="text-white">400+ FPS</strong>,
-          with V-Sync on top. The game keeps rendering every frame your hardware can push, so utilization sits at 90–100%
-          and the card cooks itself.
+          This is a frequently repeated answer on the game&rsquo;s own forums, and it comes with one before/after report. The
+          In the cited report, the in-game limiter did not hold: one player set it to 60 FPS and still measured{' '}
+          <strong className="text-white">400+ FPS</strong>, with V-Sync on top. If your counter also runs past the
+          selected cap, check the driver-side limit and compare utilization before and after.
         </p>
         <ol className="list-decimal pl-5 space-y-3 bg-ocean-900/80 border border-ocean-800 rounded-xl p-6 text-xs leading-relaxed">
           <li><strong className="text-white">NVIDIA:</strong> open NVIDIA Control Panel → Manage 3D Settings → Program Settings → How to Fish → enable <strong>Max Frame Rate</strong> and set it to your monitor&rsquo;s refresh rate (or 60).</li>
@@ -128,9 +128,10 @@ export default function PerformanceStutterPage() {
           <li><strong className="text-white">Retest the flick motion in-game</strong> — the drop-on-flick pattern should be gone; if it persists, cap frames in the driver per Fix #1 and re-check.</li>
         </ol>
         <p className="text-xs text-gray-400">
-          Why it works: every polling cycle is a CPU interrupt the game has to service. At 8000 Hz that is eight times
-          the interrupt load of a standard 1000 Hz mouse, which is felt most when the view moves fast. This fix is
-          community-verified for this game, not official — no patch note mentions polling.
+          One plausible explanation is that every polling cycle adds CPU interrupt work for the game to service. At
+          8000 Hz that is eight times the polling frequency of a standard 1000 Hz mouse, which could matter most when
+          the view moves fast. This check is
+          reported by the community for this game, not official — no patch note mentions polling.
         </p>
       </section>
 

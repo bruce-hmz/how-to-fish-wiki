@@ -25,7 +25,7 @@ export default function BossesPage() {
       <Breadcrumb items={[{ name: 'Boss Battles', href: '/bosses/' }]} />
       <div>
         <h1 className="text-3xl font-extrabold text-white tracking-tight">Boss Battles &amp; Boss-Class Catches</h1>
-        <p className="text-gray-400 text-xs mt-1">Verified summon items, fight access, and progression gates. Last verified September 16, 2026 · Game version 1.0.12.</p>
+        <p className="text-gray-400 text-xs mt-1">Find a summon item, open the matching fight guide, and see what each boss unlocks. Updated September 22, 2026 · Mechanics reviewed for game version 1.0.12.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -100,8 +100,8 @@ export default function BossesPage() {
           </li>
         </ul>
         <p className="text-xs text-gray-500">
-          All four are guide-documented (G2A + Mobalytics cross-verified, Game8 for the Old Pike route), not
-          in-game verified by us — the same provenance standard as the fish table.
+          These are guide-documented rather than in-game verified by us. The Old Pike route has an additional
+          Game8 source; other rows use the sources listed below and should be treated according to their individual notes.
         </p>
         <p>
           The island-5 whale chain sits between those two tiers: the Fish Bucket quest item summons the
@@ -124,10 +124,8 @@ export default function BossesPage() {
         </p>
 
         <p className="text-xs text-gray-500 border-l-2 border-coral/40 pl-3">
-          Audit note (September 2026): this hub previously carried exact HP pools, a boss-HP co-op scaling
-          table, and a three-part &ldquo;Boat Key&rdquo; reward chain. None of that was sourced — IGN documents a
-          single Boat Keys acquisition (Spider Crab Shell trade), and later gates are island unlocks. Those
-          claims were removed, not softened.
+          Boss HP, damage, drop rates, and co-op scaling are not developer-published here; use the summon and
+          progression facts above, and check the patch history when a fight changes.
         </p>
       </div>
     </div>

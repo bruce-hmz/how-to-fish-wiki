@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Launch Report: 1M Players in 2 Days',
   description:
-    'How to Fish launched August 20, 2026 on Steam at $7.99. The full launch story: 1M players in 2 days, 268K day-one concurrent anglers — a peak that kept climbing to 373,971 by Aug 26, and six patches in five days.',
+    'How to Fish launched August 20, 2026 on Steam at $7.99. The launch report covers the official 1M players in 2 days milestone, the 373,971 concurrent peak, and the first patch cadence.',
   alternates: { canonical: 'https://howtofish101.com/game/launch/' },
 };
 
@@ -42,8 +42,8 @@ export default function LaunchPage() {
         <p>
           How to Fish is a physics-based fishing simulator: you crash onto a mysterious archipelago, learn to
           fish to survive, and battle colossal marine bosses — a giant Spider Crab, a spiked Pufferfish, a Giant
-          Piranha, a terrorizing Albatross, and the final Volcanic Magma Whale — collecting three boat key parts
-          to escape. The 1-4 player co-op and meme-friendly physics moments (boat flips, trick shots, seagull
+          Piranha, a terrorizing Albatross, and the final Volcanic Magma Whale — collecting the Boat Keys through
+          the Spider Crab shell hand-in, then opening later island gates. The 1-4 player co-op and meme-friendly physics moments (boat flips, trick shots, seagull
           dynamite) made it clip perfectly for social feeds. Start with our{' '}
           <Link href="/guide/" className="text-aqua hover:underline">beginner walkthrough</Link> or watch the{' '}
           <Link href="/videos/" className="text-aqua hover:underline">official trailers</Link>.

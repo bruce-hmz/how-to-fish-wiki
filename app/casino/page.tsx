@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 const faqs = [
-  { q: 'Is the Casino worth it in How to Fish?', a: 'As an income strategy, no — the expected value of spins is below steady fishing and boss kills. As a skin and cosmetics shortcut, yes. Treat it as entertainment spending, not a money route.' },
+  { q: 'Is the Casino worth it in How to Fish?', a: 'Dazed Games has not published spin odds, so the Casino cannot be compared with fishing using a verified expected value. Use it for cosmetics, set a spending limit, and treat it as entertainment rather than a dependable money route.' },
   { q: 'How does the gachapon machine work?', a: 'Bring a Drip creature — the glowing variant of a regular species, caught with the same lure as its normal version — and feed it into the Casino prize machine for a spin at exclusive skins. The machine consumes the creature either way.' },
   { q: 'Why is my slot machine skin invisible?', a: 'A 4K rendering bug made some slot-machine skins invisible. Patch 1.0.5 addressed it — if you still see it on the current build, verify game files and capture the result before re-spinning.' },
   { q: 'Is the roulette table rigged?', a: 'It was genuinely bugged, not just unlucky: patch 1.0.10 fixed roulette physics that let the ball clip through the wheel at high bet values. Landing green is clearly attainable — roughly 28% of players own the "All in" achievement for betting green and winning — but the developers have never published real odds, so treat long losing streaks as normal table variance.' },
@@ -90,9 +90,9 @@ export default function CasinoPage() {
           <Link href="/guide/" className="text-aqua hover:underline"> beginner walkthrough</Link> for the
           reliable route — and see the{' '}
           <Link href="/money/" className="text-aqua hover:underline">money guide with real numbers</Link>{' '}
-          for what honest fishing actually pays. Casino expected value sits below that baseline, which makes it a cosmetics
-          shortcut rather than a strategy. Set a session budget before you walk in, and stop when it is
-          gone: the house edge compounds exactly like real gambling.
+          for what honest fishing actually pays. Because the odds are unpublished, the Casino cannot be ranked by a
+          verified expected value or house edge. Treat it as a cosmetics shortcut rather than a strategy: set a session
+          budget before you walk in, and stop when it is gone.
         </p>
       </div>
 

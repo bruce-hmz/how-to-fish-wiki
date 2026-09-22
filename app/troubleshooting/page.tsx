@@ -31,7 +31,7 @@ const issues = [
     href: '/troubleshooting/save-file/',
     icon: '💾',
     title: 'Save Files: Location, Backups & Recovery',
-    desc: 'Exact save folder paths for Windows and Steam Deck, a timestamped backup script, rollback steps, and what Patches 1.0.4–1.0.9 actually changed about saving.',
+    desc: 'Exact save folder paths for Windows and Steam Deck, a timestamped backup script, rollback steps, and the current official save and cloud-sync notes.',
   },
   {
     href: '/troubleshooting/items-disappeared/',
@@ -43,13 +43,13 @@ const issues = [
     href: '/troubleshooting/cooked-weapons/',
     icon: '🔥',
     title: 'Burned (Cooked) Weapons & Gear',
-    desc: 'Guns and rods char like fish near grills and lava, and skins stop applying. No official un-cook button as of Patch 1.0.9 — the community Cookness save fix, step by step.',
+    desc: 'Guns and rods char like fish near grills and lava, and skins stop applying. The community Cookness save fix, step by step, with no official un-cook guarantee.',
   },
   {
     href: '/troubleshooting/join-friends/',
     icon: '👥',
     title: 'Cannot Join Friends / Black Screen',
-    desc: 'The ordered fix list that clears most join failures, plus session types since 1.0.5 and the new 1.0.9 relay readout.',
+    desc: 'Separate checks for version mismatch, invite or session type, black screen, and host-stuck cases, with the current relay diagnostic context.',
   },
   {
     href: '/troubleshooting/fish-not-biting/',
@@ -67,7 +67,7 @@ const issues = [
     href: '/troubleshooting/performance-stutter/',
     icon: '📈',
     title: 'Stuttering & 100% GPU?',
-    desc: 'The in-game FPS limiter is unreliable — cap frames in your GPU driver instead. Tearing fixes, the 4090 stutter reports, and update-era checklists.',
+    desc: 'A separate path for uncapped GPU load, frame pacing, mouse polling, and update-era stutter reports when the game already launches.',
   },
   {
     href: '/troubleshooting/what-to-do-next/',

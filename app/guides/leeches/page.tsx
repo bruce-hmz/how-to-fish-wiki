@@ -36,11 +36,11 @@ export default function LeechesPage() {
         description="Where the three leeches spawn on Island 2, the radar red-dot trick, the full-dialogue fix when none spawn, and how the Modified Leech bait unlocks the Giant Piranha fight."
         url="https://howtofish101.com/guides/leeches/"
         datePublished="2026-08-29"
-        dateModified="2026-08-29"
+        dateModified="2026-09-22"
       />
       <Breadcrumb items={[{ name: 'Islands', href: '/islands/' }, { name: 'Leech Quest', href: '/guides/leeches/' }]} />
       <h1 className="text-3xl font-extrabold text-white">How to Get Leeches in How to Fish</h1>
-      <p className="text-xs text-gray-500 -mt-4">Last verified September 16, 2026 · Game version 1.0.12</p>
+      <p className="text-xs text-gray-500 -mt-4">Last reviewed September 22, 2026 · Game version 1.0.12</p>
 
       <div className="bg-gold/10 border border-gold/40 rounded-xl p-6 space-y-3">
         <p>
